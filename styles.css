@@ -1,0 +1,111 @@
+html, body {
+    height: 100%;
+}
+
+
+body {
+    margin:auto;
+    background-color:#c7031e;
+    font-family:georgia;
+    margin-top:-10px;
+}
+
+header {
+    height:40px;
+    background:black;
+    width:100%;
+    z-index:10;
+    color:#fff;
+    position:fixed;
+    font-size:12px;
+    text-align:center;
+}
+
+
+/*----- Tabs -----*/
+.tabs {
+    width:100%;
+    display:inline-block;
+    position:relative;
+    /*    top:022px;*/
+
+}
+
+/*----- Tab Links -----*/
+/* Clearfix */
+.tab-links:after {
+    display:block;
+    clear:both;
+    content:'';
+
+}
+
+.tab-links li {
+    margin:1px 1px;
+    float:left;
+    list-style:none;
+
+}
+
+.tab-links a {
+    padding:3px 3px;
+    display:inline-block;
+    border-radius:3px 3px 0px 0px;
+    background:#000;
+    font-size:12px;
+    font-weight:400;
+    color:#fff;
+    transition:all linear 0.15s;
+}
+
+.tab-links a:hover {
+    background:#909090;
+    text-decoration:none;
+}
+
+li.active a, li.active a:hover {
+    background:#fff;
+    color:#4c4c4c;
+}
+
+/*----- Content of Tabs -----*/
+.tab-content {
+    padding:15px;
+    border-radius:3px;
+    box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+    background:#fff;
+    width:80%;
+    position:relative;
+}
+
+.tab {
+    display:none;
+}
+
+.active {
+    display:block;
+}
+
+
+
+#main1 {
+    margin-left:auto;
+    margin-right:auto;
+    /* top:150px; */
+}
+
+#surahlinks {
+    position:fixed;
+    z-index:10;
+    top:30px;
+    background:#c7031e;
+    margin-left:-30px;
+    margin-right:auto;
+    bottom:auto;
+}
+
+
+
+
+
+

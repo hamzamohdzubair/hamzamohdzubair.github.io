@@ -1,5 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rationality Squared</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2016-12-09T18:11:00+05:30</updated><entry><title>A Basic Course in Data Analysis</title><link href="/BCDA.html" rel="alternate"></link><published>2016-12-09T18:11:00+05:30</published><author><name>Hamza Mohd Zubair</name></author><id>tag:,2016-12-09:BCDA.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Rationality Squared - data</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rationality Squared Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Rationality Squared </a></h1>
+                <nav><ul>
+                    <li><a href="/pages/about.html">About</a></li>
+                    <li><a href="/category/misc.html">misc</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/BCDA.html">A Basic Course in Data Analysis</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2016-12-09T18:11:00+05:30">
+                Published: Fri 09 December 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/hamza-mohd-zubair.html">Hamza Mohd Zubair</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>.</p>
+<p>tags: <a href="/tag/data.html">data</a> </p>
+</footer><!-- /.post-info --><style type="text/css">/*!
 *
 * IPython notebook
 *
@@ -230,7 +264,7 @@ div.unrecognized_cell .inner_cell a:hover {
   text-decoration: none;
 }
 @media (max-width: 540px) {
-  div.unrecognized_cell &gt; div.prompt {
+  div.unrecognized_cell > div.prompt {
     display: none;
   }
 }
@@ -283,19 +317,19 @@ div.input_prompt {
   color: #303F9F;
   border-top: 1px solid transparent;
 }
-div.input_area &gt; div.highlight {
+div.input_area > div.highlight {
   margin: 0.4em;
   border: none;
   padding: 0px;
   background-color: transparent;
 }
-div.input_area &gt; div.highlight &gt; pre {
+div.input_area > div.highlight > pre {
   margin: 0px;
   border: none;
   padding: 0px;
   background-color: transparent;
 }
-/* The following gets added to the &lt;head&gt; if it is detected that the user has a
+/* The following gets added to the <head> if it is detected that the user has a
  * monospace font with inconsistent normal/bold/italic height.  See
  * notebookmain.js.  Such fonts will have keywords vertically offset with
  * respect to the rest of the text.  The user should select a better font.
@@ -341,7 +375,7 @@ div.input_area &gt; div.highlight &gt; pre {
 }
 /*
 
-Original style from softwaremaniacs.org (c) Ivan Sagalaev &lt;Maniac@SoftwareManiacs.Org&gt;
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
 Adapted from GitHub theme
 
 */
@@ -803,7 +837,7 @@ div.text_cell {
   align-items: stretch;
 }
 @media (max-width: 540px) {
-  div.text_cell &gt; div.prompt {
+  div.text_cell > div.prompt {
     display: none;
   }
 }
@@ -868,8 +902,8 @@ h6:hover .anchor-link {
   font-size: 100%;
   font-style: italic;
 }
-&lt;/style&gt;
-&lt;style type="text/css"&gt;.highlight .hll { background-color: #ffffcc }
+</style>
+<style type="text/css">.highlight .hll { background-color: #ffffcc }
 .highlight  { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
@@ -933,8 +967,8 @@ h6:hover .anchor-link {
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */&lt;/style&gt;
-&lt;style type="text/css"&gt;
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style>
+<style type="text/css">
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -970,182 +1004,182 @@ h6:hover .anchor-link {
 .ansi-white-intense-bg { background-color: #A1A6B2; }
 
 .ansi-bold { font-weight: bold; }
-&lt;/style&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Contents"&gt;Contents&lt;a class="anchor-link" href="#Contents"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;a href="#Variable-Importance"&gt;Variable Importance&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href="#Normalization"&gt;Normalization&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#Standardization"&gt;Standardization&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Variable-Importance"&gt;Variable Importance&lt;a class="anchor-link" href="#Variable-Importance"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;ol&gt;
-&lt;li&gt;Filter Method&lt;ul&gt;
-&lt;li&gt;&lt;a href="#Correlation-Method"&gt;Correlation Method&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Covariance&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Wrapper Method&lt;ul&gt;
-&lt;li&gt;Stepwise Regression&lt;/li&gt;
-&lt;li&gt;Linear Regression&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Embedded Method&lt;ul&gt;
-&lt;li&gt;&lt;a href="#Random-Forest-Method"&gt;Random Forest&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;ul&gt;
-&lt;li&gt;Feature Selection&lt;/li&gt;
-&lt;li&gt;Dimensionality Reduction&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Random-Forest-Method"&gt;Random Forest Method&lt;a class="anchor-link" href="#Random-Forest-Method"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [14]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;randomForest&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_subarea output_stream output_stderr output_text"&gt;
-&lt;pre&gt;randomForest 4.6-12
+</style>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Contents">Contents<a class="anchor-link" href="#Contents">¶</a></h2><ol>
+<li><a href="#Variable-Importance">Variable Importance</a> </li>
+<li><a href="#Normalization">Normalization</a></li>
+<li><a href="#Standardization">Standardization</a></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Variable-Importance">Variable Importance<a class="anchor-link" href="#Variable-Importance">¶</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Filter Method<ul>
+<li><a href="#Correlation-Method">Correlation Method</a></li>
+<li>Covariance</li>
+</ul>
+</li>
+<li>Wrapper Method<ul>
+<li>Stepwise Regression</li>
+<li>Linear Regression</li>
+</ul>
+</li>
+<li>Embedded Method<ul>
+<li><a href="#Random-Forest-Method">Random Forest</a></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Feature Selection</li>
+<li>Dimensionality Reduction</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Random-Forest-Method">Random Forest Method<a class="anchor-link" href="#Random-Forest-Method">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [14]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>randomForest<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>randomForest 4.6-12
 Type rfNews() to see new features/changes/bug fixes.
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [5]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;data&lt;span class="o"&gt;=&lt;/span&gt;mtcars
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [7]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;head&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
-&lt;table&gt;
-&lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;th scope="col"&gt;mpg&lt;/th&gt;&lt;th scope="col"&gt;cyl&lt;/th&gt;&lt;th scope="col"&gt;disp&lt;/th&gt;&lt;th scope="col"&gt;hp&lt;/th&gt;&lt;th scope="col"&gt;drat&lt;/th&gt;&lt;th scope="col"&gt;wt&lt;/th&gt;&lt;th scope="col"&gt;qsec&lt;/th&gt;&lt;th scope="col"&gt;vs&lt;/th&gt;&lt;th scope="col"&gt;am&lt;/th&gt;&lt;th scope="col"&gt;gear&lt;/th&gt;&lt;th scope="col"&gt;carb&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;Mazda RX4&lt;/th&gt;&lt;td&gt;21.0 &lt;/td&gt;&lt;td&gt;6    &lt;/td&gt;&lt;td&gt;160  &lt;/td&gt;&lt;td&gt;110  &lt;/td&gt;&lt;td&gt;3.90 &lt;/td&gt;&lt;td&gt;2.620&lt;/td&gt;&lt;td&gt;16.46&lt;/td&gt;&lt;td&gt;0    &lt;/td&gt;&lt;td&gt;1    &lt;/td&gt;&lt;td&gt;4    &lt;/td&gt;&lt;td&gt;4    &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;Mazda RX4 Wag&lt;/th&gt;&lt;td&gt;21.0 &lt;/td&gt;&lt;td&gt;6    &lt;/td&gt;&lt;td&gt;160  &lt;/td&gt;&lt;td&gt;110  &lt;/td&gt;&lt;td&gt;3.90 &lt;/td&gt;&lt;td&gt;2.875&lt;/td&gt;&lt;td&gt;17.02&lt;/td&gt;&lt;td&gt;0    &lt;/td&gt;&lt;td&gt;1    &lt;/td&gt;&lt;td&gt;4    &lt;/td&gt;&lt;td&gt;4    &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;Datsun 710&lt;/th&gt;&lt;td&gt;22.8 &lt;/td&gt;&lt;td&gt;4    &lt;/td&gt;&lt;td&gt;108  &lt;/td&gt;&lt;td&gt; 93  &lt;/td&gt;&lt;td&gt;3.85 &lt;/td&gt;&lt;td&gt;2.320&lt;/td&gt;&lt;td&gt;18.61&lt;/td&gt;&lt;td&gt;1    &lt;/td&gt;&lt;td&gt;1    &lt;/td&gt;&lt;td&gt;4    &lt;/td&gt;&lt;td&gt;1    &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;Hornet 4 Drive&lt;/th&gt;&lt;td&gt;21.4 &lt;/td&gt;&lt;td&gt;6    &lt;/td&gt;&lt;td&gt;258  &lt;/td&gt;&lt;td&gt;110  &lt;/td&gt;&lt;td&gt;3.08 &lt;/td&gt;&lt;td&gt;3.215&lt;/td&gt;&lt;td&gt;19.44&lt;/td&gt;&lt;td&gt;1    &lt;/td&gt;&lt;td&gt;0    &lt;/td&gt;&lt;td&gt;3    &lt;/td&gt;&lt;td&gt;1    &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;Hornet Sportabout&lt;/th&gt;&lt;td&gt;18.7 &lt;/td&gt;&lt;td&gt;8    &lt;/td&gt;&lt;td&gt;360  &lt;/td&gt;&lt;td&gt;175  &lt;/td&gt;&lt;td&gt;3.15 &lt;/td&gt;&lt;td&gt;3.440&lt;/td&gt;&lt;td&gt;17.02&lt;/td&gt;&lt;td&gt;0    &lt;/td&gt;&lt;td&gt;0    &lt;/td&gt;&lt;td&gt;3    &lt;/td&gt;&lt;td&gt;2    &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;Valiant&lt;/th&gt;&lt;td&gt;18.1 &lt;/td&gt;&lt;td&gt;6    &lt;/td&gt;&lt;td&gt;225  &lt;/td&gt;&lt;td&gt;105  &lt;/td&gt;&lt;td&gt;2.76 &lt;/td&gt;&lt;td&gt;3.460&lt;/td&gt;&lt;td&gt;20.22&lt;/td&gt;&lt;td&gt;1    &lt;/td&gt;&lt;td&gt;0    &lt;/td&gt;&lt;td&gt;3    &lt;/td&gt;&lt;td&gt;1    &lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [9]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;tail&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
-&lt;table&gt;
-&lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;th scope="col"&gt;mpg&lt;/th&gt;&lt;th scope="col"&gt;cyl&lt;/th&gt;&lt;th scope="col"&gt;disp&lt;/th&gt;&lt;th scope="col"&gt;hp&lt;/th&gt;&lt;th scope="col"&gt;drat&lt;/th&gt;&lt;th scope="col"&gt;wt&lt;/th&gt;&lt;th scope="col"&gt;qsec&lt;/th&gt;&lt;th scope="col"&gt;vs&lt;/th&gt;&lt;th scope="col"&gt;am&lt;/th&gt;&lt;th scope="col"&gt;gear&lt;/th&gt;&lt;th scope="col"&gt;carb&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;Porsche 914-2&lt;/th&gt;&lt;td&gt;26.0 &lt;/td&gt;&lt;td&gt;4    &lt;/td&gt;&lt;td&gt;120.3&lt;/td&gt;&lt;td&gt; 91  &lt;/td&gt;&lt;td&gt;4.43 &lt;/td&gt;&lt;td&gt;2.140&lt;/td&gt;&lt;td&gt;16.7 &lt;/td&gt;&lt;td&gt;0    &lt;/td&gt;&lt;td&gt;1    &lt;/td&gt;&lt;td&gt;5    &lt;/td&gt;&lt;td&gt;2    &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;Lotus Europa&lt;/th&gt;&lt;td&gt;30.4 &lt;/td&gt;&lt;td&gt;4    &lt;/td&gt;&lt;td&gt; 95.1&lt;/td&gt;&lt;td&gt;113  &lt;/td&gt;&lt;td&gt;3.77 &lt;/td&gt;&lt;td&gt;1.513&lt;/td&gt;&lt;td&gt;16.9 &lt;/td&gt;&lt;td&gt;1    &lt;/td&gt;&lt;td&gt;1    &lt;/td&gt;&lt;td&gt;5    &lt;/td&gt;&lt;td&gt;2    &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;Ford Pantera L&lt;/th&gt;&lt;td&gt;15.8 &lt;/td&gt;&lt;td&gt;8    &lt;/td&gt;&lt;td&gt;351.0&lt;/td&gt;&lt;td&gt;264  &lt;/td&gt;&lt;td&gt;4.22 &lt;/td&gt;&lt;td&gt;3.170&lt;/td&gt;&lt;td&gt;14.5 &lt;/td&gt;&lt;td&gt;0    &lt;/td&gt;&lt;td&gt;1    &lt;/td&gt;&lt;td&gt;5    &lt;/td&gt;&lt;td&gt;4    &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;Ferrari Dino&lt;/th&gt;&lt;td&gt;19.7 &lt;/td&gt;&lt;td&gt;6    &lt;/td&gt;&lt;td&gt;145.0&lt;/td&gt;&lt;td&gt;175  &lt;/td&gt;&lt;td&gt;3.62 &lt;/td&gt;&lt;td&gt;2.770&lt;/td&gt;&lt;td&gt;15.5 &lt;/td&gt;&lt;td&gt;0    &lt;/td&gt;&lt;td&gt;1    &lt;/td&gt;&lt;td&gt;5    &lt;/td&gt;&lt;td&gt;6    &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;Maserati Bora&lt;/th&gt;&lt;td&gt;15.0 &lt;/td&gt;&lt;td&gt;8    &lt;/td&gt;&lt;td&gt;301.0&lt;/td&gt;&lt;td&gt;335  &lt;/td&gt;&lt;td&gt;3.54 &lt;/td&gt;&lt;td&gt;3.570&lt;/td&gt;&lt;td&gt;14.6 &lt;/td&gt;&lt;td&gt;0    &lt;/td&gt;&lt;td&gt;1    &lt;/td&gt;&lt;td&gt;5    &lt;/td&gt;&lt;td&gt;8    &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;Volvo 142E&lt;/th&gt;&lt;td&gt;21.4 &lt;/td&gt;&lt;td&gt;4    &lt;/td&gt;&lt;td&gt;121.0&lt;/td&gt;&lt;td&gt;109  &lt;/td&gt;&lt;td&gt;4.11 &lt;/td&gt;&lt;td&gt;2.780&lt;/td&gt;&lt;td&gt;18.6 &lt;/td&gt;&lt;td&gt;1    &lt;/td&gt;&lt;td&gt;1    &lt;/td&gt;&lt;td&gt;4    &lt;/td&gt;&lt;td&gt;2    &lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [8]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;summary&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_text output_subarea "&gt;
-&lt;pre&gt;      mpg             cyl             disp             hp       
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>data<span class="o">=</span>mtcars
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">head</span><span class="p">(</span>data<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th></th><th scope="col">mpg</th><th scope="col">cyl</th><th scope="col">disp</th><th scope="col">hp</th><th scope="col">drat</th><th scope="col">wt</th><th scope="col">qsec</th><th scope="col">vs</th><th scope="col">am</th><th scope="col">gear</th><th scope="col">carb</th></tr></thead>
+<tbody>
+<tr><th scope="row">Mazda RX4</th><td>21.0 </td><td>6    </td><td>160  </td><td>110  </td><td>3.90 </td><td>2.620</td><td>16.46</td><td>0    </td><td>1    </td><td>4    </td><td>4    </td></tr>
+<tr><th scope="row">Mazda RX4 Wag</th><td>21.0 </td><td>6    </td><td>160  </td><td>110  </td><td>3.90 </td><td>2.875</td><td>17.02</td><td>0    </td><td>1    </td><td>4    </td><td>4    </td></tr>
+<tr><th scope="row">Datsun 710</th><td>22.8 </td><td>4    </td><td>108  </td><td> 93  </td><td>3.85 </td><td>2.320</td><td>18.61</td><td>1    </td><td>1    </td><td>4    </td><td>1    </td></tr>
+<tr><th scope="row">Hornet 4 Drive</th><td>21.4 </td><td>6    </td><td>258  </td><td>110  </td><td>3.08 </td><td>3.215</td><td>19.44</td><td>1    </td><td>0    </td><td>3    </td><td>1    </td></tr>
+<tr><th scope="row">Hornet Sportabout</th><td>18.7 </td><td>8    </td><td>360  </td><td>175  </td><td>3.15 </td><td>3.440</td><td>17.02</td><td>0    </td><td>0    </td><td>3    </td><td>2    </td></tr>
+<tr><th scope="row">Valiant</th><td>18.1 </td><td>6    </td><td>225  </td><td>105  </td><td>2.76 </td><td>3.460</td><td>20.22</td><td>1    </td><td>0    </td><td>3    </td><td>1    </td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [9]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">tail</span><span class="p">(</span>data<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th></th><th scope="col">mpg</th><th scope="col">cyl</th><th scope="col">disp</th><th scope="col">hp</th><th scope="col">drat</th><th scope="col">wt</th><th scope="col">qsec</th><th scope="col">vs</th><th scope="col">am</th><th scope="col">gear</th><th scope="col">carb</th></tr></thead>
+<tbody>
+<tr><th scope="row">Porsche 914-2</th><td>26.0 </td><td>4    </td><td>120.3</td><td> 91  </td><td>4.43 </td><td>2.140</td><td>16.7 </td><td>0    </td><td>1    </td><td>5    </td><td>2    </td></tr>
+<tr><th scope="row">Lotus Europa</th><td>30.4 </td><td>4    </td><td> 95.1</td><td>113  </td><td>3.77 </td><td>1.513</td><td>16.9 </td><td>1    </td><td>1    </td><td>5    </td><td>2    </td></tr>
+<tr><th scope="row">Ford Pantera L</th><td>15.8 </td><td>8    </td><td>351.0</td><td>264  </td><td>4.22 </td><td>3.170</td><td>14.5 </td><td>0    </td><td>1    </td><td>5    </td><td>4    </td></tr>
+<tr><th scope="row">Ferrari Dino</th><td>19.7 </td><td>6    </td><td>145.0</td><td>175  </td><td>3.62 </td><td>2.770</td><td>15.5 </td><td>0    </td><td>1    </td><td>5    </td><td>6    </td></tr>
+<tr><th scope="row">Maserati Bora</th><td>15.0 </td><td>8    </td><td>301.0</td><td>335  </td><td>3.54 </td><td>3.570</td><td>14.6 </td><td>0    </td><td>1    </td><td>5    </td><td>8    </td></tr>
+<tr><th scope="row">Volvo 142E</th><td>21.4 </td><td>4    </td><td>121.0</td><td>109  </td><td>4.11 </td><td>2.780</td><td>18.6 </td><td>1    </td><td>1    </td><td>4    </td><td>2    </td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">summary</span><span class="p">(</span>data<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_text output_subarea ">
+<pre>      mpg             cyl             disp             hp       
  Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  
  1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  
  Median :19.20   Median :6.000   Median :196.3   Median :123.0  
@@ -1165,301 +1199,301 @@ Type rfNews() to see new features/changes/bug fixes.
  Median :0.0000   Median :4.000   Median :2.000  
  Mean   :0.4062   Mean   :3.688   Mean   :2.812  
  3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  
- Max.   :1.0000   Max.   :5.000   Max.   :8.000  &lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [10]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;rownames&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
-&lt;ol class="list-inline"&gt;
-&lt;li&gt;'Mazda RX4'&lt;/li&gt;
-&lt;li&gt;'Mazda RX4 Wag'&lt;/li&gt;
-&lt;li&gt;'Datsun 710'&lt;/li&gt;
-&lt;li&gt;'Hornet 4 Drive'&lt;/li&gt;
-&lt;li&gt;'Hornet Sportabout'&lt;/li&gt;
-&lt;li&gt;'Valiant'&lt;/li&gt;
-&lt;li&gt;'Duster 360'&lt;/li&gt;
-&lt;li&gt;'Merc 240D'&lt;/li&gt;
-&lt;li&gt;'Merc 230'&lt;/li&gt;
-&lt;li&gt;'Merc 280'&lt;/li&gt;
-&lt;li&gt;'Merc 280C'&lt;/li&gt;
-&lt;li&gt;'Merc 450SE'&lt;/li&gt;
-&lt;li&gt;'Merc 450SL'&lt;/li&gt;
-&lt;li&gt;'Merc 450SLC'&lt;/li&gt;
-&lt;li&gt;'Cadillac Fleetwood'&lt;/li&gt;
-&lt;li&gt;'Lincoln Continental'&lt;/li&gt;
-&lt;li&gt;'Chrysler Imperial'&lt;/li&gt;
-&lt;li&gt;'Fiat 128'&lt;/li&gt;
-&lt;li&gt;'Honda Civic'&lt;/li&gt;
-&lt;li&gt;'Toyota Corolla'&lt;/li&gt;
-&lt;li&gt;'Toyota Corona'&lt;/li&gt;
-&lt;li&gt;'Dodge Challenger'&lt;/li&gt;
-&lt;li&gt;'AMC Javelin'&lt;/li&gt;
-&lt;li&gt;'Camaro Z28'&lt;/li&gt;
-&lt;li&gt;'Pontiac Firebird'&lt;/li&gt;
-&lt;li&gt;'Fiat X1-9'&lt;/li&gt;
-&lt;li&gt;'Porsche 914-2'&lt;/li&gt;
-&lt;li&gt;'Lotus Europa'&lt;/li&gt;
-&lt;li&gt;'Ford Pantera L'&lt;/li&gt;
-&lt;li&gt;'Ferrari Dino'&lt;/li&gt;
-&lt;li&gt;'Maserati Bora'&lt;/li&gt;
-&lt;li&gt;'Volvo 142E'&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [12]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;length&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="kp"&gt;dim&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
+ Max.   :1.0000   Max.   :5.000   Max.   :8.000  </pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [10]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">rownames</span><span class="p">(</span>data<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<ol class="list-inline">
+<li>'Mazda RX4'</li>
+<li>'Mazda RX4 Wag'</li>
+<li>'Datsun 710'</li>
+<li>'Hornet 4 Drive'</li>
+<li>'Hornet Sportabout'</li>
+<li>'Valiant'</li>
+<li>'Duster 360'</li>
+<li>'Merc 240D'</li>
+<li>'Merc 230'</li>
+<li>'Merc 280'</li>
+<li>'Merc 280C'</li>
+<li>'Merc 450SE'</li>
+<li>'Merc 450SL'</li>
+<li>'Merc 450SLC'</li>
+<li>'Cadillac Fleetwood'</li>
+<li>'Lincoln Continental'</li>
+<li>'Chrysler Imperial'</li>
+<li>'Fiat 128'</li>
+<li>'Honda Civic'</li>
+<li>'Toyota Corolla'</li>
+<li>'Toyota Corona'</li>
+<li>'Dodge Challenger'</li>
+<li>'AMC Javelin'</li>
+<li>'Camaro Z28'</li>
+<li>'Pontiac Firebird'</li>
+<li>'Fiat X1-9'</li>
+<li>'Porsche 914-2'</li>
+<li>'Lotus Europa'</li>
+<li>'Ford Pantera L'</li>
+<li>'Ferrari Dino'</li>
+<li>'Maserati Bora'</li>
+<li>'Volvo 142E'</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [12]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">length</span><span class="p">(</span>data<span class="p">)</span>
+<span class="kp">dim</span><span class="p">(</span>data<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
 11
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
-&lt;ol class="list-inline"&gt;
-&lt;li&gt;32&lt;/li&gt;
-&lt;li&gt;11&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;ul&gt;
-&lt;li&gt;length(data) gives the number of columns&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [16]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var_imp&lt;span class="o"&gt;=&lt;/span&gt;randomForest&lt;span class="p"&gt;(&lt;/span&gt;mpg &lt;span class="o"&gt;~&lt;/span&gt; &lt;span class="m"&gt;.&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;data&lt;span class="o"&gt;=&lt;/span&gt;data&lt;span class="p"&gt;,&lt;/span&gt;ntree&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;keep.forest&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;F&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;importance&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;T&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-importance&lt;span class="p"&gt;(&lt;/span&gt;var_imp&lt;span class="p"&gt;,&lt;/span&gt;type&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
-&lt;table&gt;
-&lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;th scope="col"&gt;%IncMSE&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;cyl&lt;/th&gt;&lt;td&gt;16.922854&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;disp&lt;/th&gt;&lt;td&gt;17.879382&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;hp&lt;/th&gt;&lt;td&gt;18.816504&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;drat&lt;/th&gt;&lt;td&gt; 6.384735&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;wt&lt;/th&gt;&lt;td&gt;18.765519&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;qsec&lt;/th&gt;&lt;td&gt; 5.508355&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;vs&lt;/th&gt;&lt;td&gt; 4.892998&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;am&lt;/th&gt;&lt;td&gt; 4.039142&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;gear&lt;/th&gt;&lt;td&gt; 5.668345&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;carb&lt;/th&gt;&lt;td&gt; 9.167617&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [18]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;importance&lt;span class="p"&gt;(&lt;/span&gt;var_imp&lt;span class="p"&gt;,&lt;/span&gt;type&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
-&lt;table&gt;
-&lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;th scope="col"&gt;IncNodePurity&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;cyl&lt;/th&gt;&lt;td&gt;170.19107&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;disp&lt;/th&gt;&lt;td&gt;238.51139&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;hp&lt;/th&gt;&lt;td&gt;185.55090&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;drat&lt;/th&gt;&lt;td&gt; 66.24304&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;wt&lt;/th&gt;&lt;td&gt;247.91840&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;qsec&lt;/th&gt;&lt;td&gt; 32.50575&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;vs&lt;/th&gt;&lt;td&gt; 27.74606&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;am&lt;/th&gt;&lt;td&gt; 11.05718&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;gear&lt;/th&gt;&lt;td&gt; 21.99597&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;carb&lt;/th&gt;&lt;td&gt; 31.53190&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Correlation-Method"&gt;Correlation Method&lt;a class="anchor-link" href="#Correlation-Method"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [27]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;clusterGeneration&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="kn"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;mnormt&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="kn"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;corrplot&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [39]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;n&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;500&lt;/span&gt;
-S&lt;span class="o"&gt;=&lt;/span&gt;genPositiveDefMat&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"eigen"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;dim&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;15&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-S&lt;span class="o"&gt;=&lt;/span&gt;genPositiveDefMat&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"unifcorrmat"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;dim&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;15&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-X&lt;span class="o"&gt;=&lt;/span&gt;rmnorm&lt;span class="p"&gt;(&lt;/span&gt;n&lt;span class="p"&gt;,&lt;/span&gt;varcov&lt;span class="o"&gt;=&lt;/span&gt;S&lt;span class="o"&gt;$&lt;/span&gt;Sigma&lt;span class="p"&gt;)&lt;/span&gt;
-xdf&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kt"&gt;data.frame&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;X&lt;span class="p"&gt;)&lt;/span&gt;
+</div>
+</div>
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<ol class="list-inline">
+<li>32</li>
+<li>11</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>length(data) gives the number of columns</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [16]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>var_imp<span class="o">=</span>randomForest<span class="p">(</span>mpg <span class="o">~</span> <span class="m">.</span><span class="p">,</span>data<span class="o">=</span>data<span class="p">,</span>ntree<span class="o">=</span><span class="m">1000</span><span class="p">,</span>keep.forest<span class="o">=</span><span class="bp">F</span><span class="p">,</span>importance<span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+importance<span class="p">(</span>var_imp<span class="p">,</span>type<span class="o">=</span><span class="m">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th></th><th scope="col">%IncMSE</th></tr></thead>
+<tbody>
+<tr><th scope="row">cyl</th><td>16.922854</td></tr>
+<tr><th scope="row">disp</th><td>17.879382</td></tr>
+<tr><th scope="row">hp</th><td>18.816504</td></tr>
+<tr><th scope="row">drat</th><td> 6.384735</td></tr>
+<tr><th scope="row">wt</th><td>18.765519</td></tr>
+<tr><th scope="row">qsec</th><td> 5.508355</td></tr>
+<tr><th scope="row">vs</th><td> 4.892998</td></tr>
+<tr><th scope="row">am</th><td> 4.039142</td></tr>
+<tr><th scope="row">gear</th><td> 5.668345</td></tr>
+<tr><th scope="row">carb</th><td> 9.167617</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [18]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>importance<span class="p">(</span>var_imp<span class="p">,</span>type<span class="o">=</span><span class="m">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th></th><th scope="col">IncNodePurity</th></tr></thead>
+<tbody>
+<tr><th scope="row">cyl</th><td>170.19107</td></tr>
+<tr><th scope="row">disp</th><td>238.51139</td></tr>
+<tr><th scope="row">hp</th><td>185.55090</td></tr>
+<tr><th scope="row">drat</th><td> 66.24304</td></tr>
+<tr><th scope="row">wt</th><td>247.91840</td></tr>
+<tr><th scope="row">qsec</th><td> 32.50575</td></tr>
+<tr><th scope="row">vs</th><td> 27.74606</td></tr>
+<tr><th scope="row">am</th><td> 11.05718</td></tr>
+<tr><th scope="row">gear</th><td> 21.99597</td></tr>
+<tr><th scope="row">carb</th><td> 31.53190</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Correlation-Method">Correlation Method<a class="anchor-link" href="#Correlation-Method">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [27]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>clusterGeneration<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>mnormt<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>corrplot<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [39]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>n<span class="o">=</span><span class="m">500</span>
+S<span class="o">=</span>genPositiveDefMat<span class="p">(</span><span class="s">"eigen"</span><span class="p">,</span>dim<span class="o">=</span><span class="m">15</span><span class="p">)</span>
+S<span class="o">=</span>genPositiveDefMat<span class="p">(</span><span class="s">"unifcorrmat"</span><span class="p">,</span>dim<span class="o">=</span><span class="m">15</span><span class="p">)</span>
+X<span class="o">=</span>rmnorm<span class="p">(</span>n<span class="p">,</span>varcov<span class="o">=</span>S<span class="o">$</span>Sigma<span class="p">)</span>
+xdf<span class="o">=</span><span class="kt">data.frame</span><span class="p">(</span>X<span class="p">)</span>
 xdf
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
-&lt;table&gt;
-&lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;X1&lt;/th&gt;&lt;th scope="col"&gt;X2&lt;/th&gt;&lt;th scope="col"&gt;X3&lt;/th&gt;&lt;th scope="col"&gt;X4&lt;/th&gt;&lt;th scope="col"&gt;X5&lt;/th&gt;&lt;th scope="col"&gt;X6&lt;/th&gt;&lt;th scope="col"&gt;X7&lt;/th&gt;&lt;th scope="col"&gt;X8&lt;/th&gt;&lt;th scope="col"&gt;X9&lt;/th&gt;&lt;th scope="col"&gt;X10&lt;/th&gt;&lt;th scope="col"&gt;X11&lt;/th&gt;&lt;th scope="col"&gt;X12&lt;/th&gt;&lt;th scope="col"&gt;X13&lt;/th&gt;&lt;th scope="col"&gt;X14&lt;/th&gt;&lt;th scope="col"&gt;X15&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;-0.749733196&lt;/td&gt;&lt;td&gt; 3.0662767  &lt;/td&gt;&lt;td&gt; 1.13923380 &lt;/td&gt;&lt;td&gt; 0.09555797 &lt;/td&gt;&lt;td&gt; 0.33252372 &lt;/td&gt;&lt;td&gt; 1.67678222 &lt;/td&gt;&lt;td&gt;-2.7625046  &lt;/td&gt;&lt;td&gt;-1.72095290 &lt;/td&gt;&lt;td&gt; 1.56121292 &lt;/td&gt;&lt;td&gt; 1.48475731 &lt;/td&gt;&lt;td&gt;-2.78190032 &lt;/td&gt;&lt;td&gt; 4.0262167  &lt;/td&gt;&lt;td&gt; 0.6486311  &lt;/td&gt;&lt;td&gt; 1.07613307 &lt;/td&gt;&lt;td&gt; 2.752605879&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.502330645&lt;/td&gt;&lt;td&gt; 2.7279221  &lt;/td&gt;&lt;td&gt; 3.02309927 &lt;/td&gt;&lt;td&gt;-2.20298749 &lt;/td&gt;&lt;td&gt; 1.58910009 &lt;/td&gt;&lt;td&gt; 2.71597570 &lt;/td&gt;&lt;td&gt; 2.2182048  &lt;/td&gt;&lt;td&gt; 0.46671638 &lt;/td&gt;&lt;td&gt;-1.30532938 &lt;/td&gt;&lt;td&gt; 2.72429911 &lt;/td&gt;&lt;td&gt; 1.72868283 &lt;/td&gt;&lt;td&gt; 1.5010526  &lt;/td&gt;&lt;td&gt; 0.1225014  &lt;/td&gt;&lt;td&gt;-0.81922469 &lt;/td&gt;&lt;td&gt;-1.076263153&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.757726479&lt;/td&gt;&lt;td&gt; 0.9442218  &lt;/td&gt;&lt;td&gt; 1.52816536 &lt;/td&gt;&lt;td&gt;-4.57846021 &lt;/td&gt;&lt;td&gt; 1.79529581 &lt;/td&gt;&lt;td&gt; 2.43805806 &lt;/td&gt;&lt;td&gt; 0.7627754  &lt;/td&gt;&lt;td&gt; 0.51516146 &lt;/td&gt;&lt;td&gt;-3.09853065 &lt;/td&gt;&lt;td&gt; 5.42609723 &lt;/td&gt;&lt;td&gt; 2.60895376 &lt;/td&gt;&lt;td&gt; 2.2655618  &lt;/td&gt;&lt;td&gt; 1.8108073  &lt;/td&gt;&lt;td&gt;-0.12776199 &lt;/td&gt;&lt;td&gt; 1.755617133&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-4.483052963&lt;/td&gt;&lt;td&gt; 2.3597163  &lt;/td&gt;&lt;td&gt; 2.42036429 &lt;/td&gt;&lt;td&gt; 0.98961441 &lt;/td&gt;&lt;td&gt;-0.02188829 &lt;/td&gt;&lt;td&gt;-1.06572012 &lt;/td&gt;&lt;td&gt;-3.9569581  &lt;/td&gt;&lt;td&gt;-1.49402657 &lt;/td&gt;&lt;td&gt;-0.48170260 &lt;/td&gt;&lt;td&gt; 4.10020199 &lt;/td&gt;&lt;td&gt;-1.18821530 &lt;/td&gt;&lt;td&gt; 7.8118119  &lt;/td&gt;&lt;td&gt;-1.2034374  &lt;/td&gt;&lt;td&gt;-0.66259421 &lt;/td&gt;&lt;td&gt;-1.107654998&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-1.404080340&lt;/td&gt;&lt;td&gt;-2.5201979  &lt;/td&gt;&lt;td&gt; 1.07178647 &lt;/td&gt;&lt;td&gt; 0.48129159 &lt;/td&gt;&lt;td&gt; 1.28450056 &lt;/td&gt;&lt;td&gt; 0.80548582 &lt;/td&gt;&lt;td&gt;-2.5835580  &lt;/td&gt;&lt;td&gt;-1.57756118 &lt;/td&gt;&lt;td&gt; 0.49870834 &lt;/td&gt;&lt;td&gt;-0.08538071 &lt;/td&gt;&lt;td&gt; 1.37339175 &lt;/td&gt;&lt;td&gt; 2.8227237  &lt;/td&gt;&lt;td&gt; 0.1536730  &lt;/td&gt;&lt;td&gt;-1.37815216 &lt;/td&gt;&lt;td&gt;-0.587191629&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-1.044183440&lt;/td&gt;&lt;td&gt;-3.9781653  &lt;/td&gt;&lt;td&gt;-0.04908032 &lt;/td&gt;&lt;td&gt; 2.76692736 &lt;/td&gt;&lt;td&gt;-4.28640862 &lt;/td&gt;&lt;td&gt; 0.63326508 &lt;/td&gt;&lt;td&gt;-0.7187964  &lt;/td&gt;&lt;td&gt; 3.15250117 &lt;/td&gt;&lt;td&gt;-0.43202917 &lt;/td&gt;&lt;td&gt;-3.18554469 &lt;/td&gt;&lt;td&gt; 3.57144235 &lt;/td&gt;&lt;td&gt;-4.8188997  &lt;/td&gt;&lt;td&gt; 3.5635561  &lt;/td&gt;&lt;td&gt; 1.13084479 &lt;/td&gt;&lt;td&gt;-0.407568161&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.904310192&lt;/td&gt;&lt;td&gt;-3.9490143  &lt;/td&gt;&lt;td&gt; 0.13604620 &lt;/td&gt;&lt;td&gt; 0.84701272 &lt;/td&gt;&lt;td&gt;-0.20591916 &lt;/td&gt;&lt;td&gt;-2.47976405 &lt;/td&gt;&lt;td&gt;-1.8854448  &lt;/td&gt;&lt;td&gt;-0.30314230 &lt;/td&gt;&lt;td&gt; 0.08128471 &lt;/td&gt;&lt;td&gt;-1.85280481 &lt;/td&gt;&lt;td&gt;-2.07386807 &lt;/td&gt;&lt;td&gt;-3.3871340  &lt;/td&gt;&lt;td&gt; 2.7417896  &lt;/td&gt;&lt;td&gt; 1.29811014 &lt;/td&gt;&lt;td&gt;-3.268353546&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 1.547412233&lt;/td&gt;&lt;td&gt; 3.2520794  &lt;/td&gt;&lt;td&gt;-3.86475438 &lt;/td&gt;&lt;td&gt;-1.19317342 &lt;/td&gt;&lt;td&gt;-3.94410520 &lt;/td&gt;&lt;td&gt;-1.88754659 &lt;/td&gt;&lt;td&gt;-3.8081823  &lt;/td&gt;&lt;td&gt; 1.82126036 &lt;/td&gt;&lt;td&gt; 2.10607639 &lt;/td&gt;&lt;td&gt;-1.18371334 &lt;/td&gt;&lt;td&gt;-1.00183688 &lt;/td&gt;&lt;td&gt;-2.4603128  &lt;/td&gt;&lt;td&gt;-1.6559909  &lt;/td&gt;&lt;td&gt;-0.85913136 &lt;/td&gt;&lt;td&gt; 4.855211500&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 1.181835868&lt;/td&gt;&lt;td&gt; 2.3014732  &lt;/td&gt;&lt;td&gt;-5.54818748 &lt;/td&gt;&lt;td&gt; 4.02598930 &lt;/td&gt;&lt;td&gt; 0.28785376 &lt;/td&gt;&lt;td&gt; 4.12649991 &lt;/td&gt;&lt;td&gt; 4.8405821  &lt;/td&gt;&lt;td&gt;-3.28336174 &lt;/td&gt;&lt;td&gt; 1.75082399 &lt;/td&gt;&lt;td&gt; 6.45091305 &lt;/td&gt;&lt;td&gt;-2.85957817 &lt;/td&gt;&lt;td&gt; 3.1640745  &lt;/td&gt;&lt;td&gt;-3.9085168  &lt;/td&gt;&lt;td&gt;-0.30221994 &lt;/td&gt;&lt;td&gt;-4.072467895&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.223061010&lt;/td&gt;&lt;td&gt;-0.1065444  &lt;/td&gt;&lt;td&gt;-4.21123196 &lt;/td&gt;&lt;td&gt; 2.29599551 &lt;/td&gt;&lt;td&gt;-2.69734489 &lt;/td&gt;&lt;td&gt;-0.04434209 &lt;/td&gt;&lt;td&gt;-1.6717245  &lt;/td&gt;&lt;td&gt; 3.33045952 &lt;/td&gt;&lt;td&gt; 2.52977556 &lt;/td&gt;&lt;td&gt;-7.06946112 &lt;/td&gt;&lt;td&gt;-0.42248018 &lt;/td&gt;&lt;td&gt; 1.0223514  &lt;/td&gt;&lt;td&gt; 1.8591494  &lt;/td&gt;&lt;td&gt; 1.29179269 &lt;/td&gt;&lt;td&gt; 4.447266811&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.670571570&lt;/td&gt;&lt;td&gt; 3.8206618  &lt;/td&gt;&lt;td&gt;-2.71344815 &lt;/td&gt;&lt;td&gt; 0.73861699 &lt;/td&gt;&lt;td&gt;-2.42359672 &lt;/td&gt;&lt;td&gt;-2.76943261 &lt;/td&gt;&lt;td&gt;-1.3274924  &lt;/td&gt;&lt;td&gt; 1.25334556 &lt;/td&gt;&lt;td&gt; 0.51444204 &lt;/td&gt;&lt;td&gt;-0.65601362 &lt;/td&gt;&lt;td&gt;-4.04306126 &lt;/td&gt;&lt;td&gt;-0.2464605  &lt;/td&gt;&lt;td&gt; 0.8285803  &lt;/td&gt;&lt;td&gt; 0.07941728 &lt;/td&gt;&lt;td&gt; 0.878604749&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.436693890&lt;/td&gt;&lt;td&gt;-1.5770467  &lt;/td&gt;&lt;td&gt;-0.79200947 &lt;/td&gt;&lt;td&gt; 1.26875967 &lt;/td&gt;&lt;td&gt;-1.02443357 &lt;/td&gt;&lt;td&gt; 1.56314208 &lt;/td&gt;&lt;td&gt; 0.1872500  &lt;/td&gt;&lt;td&gt;-2.75471779 &lt;/td&gt;&lt;td&gt; 2.31014038 &lt;/td&gt;&lt;td&gt; 3.31188226 &lt;/td&gt;&lt;td&gt;-2.34525864 &lt;/td&gt;&lt;td&gt; 0.3214955  &lt;/td&gt;&lt;td&gt;-0.3199032  &lt;/td&gt;&lt;td&gt; 2.20887341 &lt;/td&gt;&lt;td&gt;-3.273530551&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.467985137&lt;/td&gt;&lt;td&gt;-0.8651780  &lt;/td&gt;&lt;td&gt;-1.55429326 &lt;/td&gt;&lt;td&gt;-3.26569318 &lt;/td&gt;&lt;td&gt; 1.07918572 &lt;/td&gt;&lt;td&gt;-3.78145149 &lt;/td&gt;&lt;td&gt;-1.2126937  &lt;/td&gt;&lt;td&gt; 1.37323826 &lt;/td&gt;&lt;td&gt; 0.30735695 &lt;/td&gt;&lt;td&gt;-4.14050650 &lt;/td&gt;&lt;td&gt; 1.56787101 &lt;/td&gt;&lt;td&gt; 0.6448543  &lt;/td&gt;&lt;td&gt;-0.7867986  &lt;/td&gt;&lt;td&gt; 0.29145966 &lt;/td&gt;&lt;td&gt; 0.054420998&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.851181510&lt;/td&gt;&lt;td&gt;-1.5581415  &lt;/td&gt;&lt;td&gt; 2.84151800 &lt;/td&gt;&lt;td&gt; 0.82178123 &lt;/td&gt;&lt;td&gt; 2.61789944 &lt;/td&gt;&lt;td&gt;-1.73058366 &lt;/td&gt;&lt;td&gt;-0.9637125  &lt;/td&gt;&lt;td&gt;-1.73229624 &lt;/td&gt;&lt;td&gt;-0.38299868 &lt;/td&gt;&lt;td&gt; 1.83005273 &lt;/td&gt;&lt;td&gt;-0.03137974 &lt;/td&gt;&lt;td&gt;-1.7237132  &lt;/td&gt;&lt;td&gt;-1.7366689  &lt;/td&gt;&lt;td&gt; 0.96292886 &lt;/td&gt;&lt;td&gt;-2.127083831&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.005324801&lt;/td&gt;&lt;td&gt;-3.3884244  &lt;/td&gt;&lt;td&gt; 5.59139576 &lt;/td&gt;&lt;td&gt;-0.82119931 &lt;/td&gt;&lt;td&gt; 0.13638671 &lt;/td&gt;&lt;td&gt; 2.73834471 &lt;/td&gt;&lt;td&gt; 2.8723530  &lt;/td&gt;&lt;td&gt; 0.27396510 &lt;/td&gt;&lt;td&gt;-1.11239477 &lt;/td&gt;&lt;td&gt; 2.17628751 &lt;/td&gt;&lt;td&gt; 2.16141400 &lt;/td&gt;&lt;td&gt;-4.4494451  &lt;/td&gt;&lt;td&gt; 5.0585971  &lt;/td&gt;&lt;td&gt; 4.06488936 &lt;/td&gt;&lt;td&gt;-1.843036757&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.732867100&lt;/td&gt;&lt;td&gt;-5.3208270  &lt;/td&gt;&lt;td&gt; 1.30518826 &lt;/td&gt;&lt;td&gt;-1.39932714 &lt;/td&gt;&lt;td&gt;-0.74482308 &lt;/td&gt;&lt;td&gt; 0.49408635 &lt;/td&gt;&lt;td&gt;-1.5348058  &lt;/td&gt;&lt;td&gt; 2.38380715 &lt;/td&gt;&lt;td&gt;-1.19746611 &lt;/td&gt;&lt;td&gt; 0.27988079 &lt;/td&gt;&lt;td&gt;-1.08121685 &lt;/td&gt;&lt;td&gt;-1.9487983  &lt;/td&gt;&lt;td&gt; 0.1864948  &lt;/td&gt;&lt;td&gt; 1.88131698 &lt;/td&gt;&lt;td&gt;-1.068107084&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.358880385&lt;/td&gt;&lt;td&gt;-3.4524037  &lt;/td&gt;&lt;td&gt; 5.49755160 &lt;/td&gt;&lt;td&gt;-1.25831394 &lt;/td&gt;&lt;td&gt; 5.41303810 &lt;/td&gt;&lt;td&gt; 2.15793056 &lt;/td&gt;&lt;td&gt; 3.2146828  &lt;/td&gt;&lt;td&gt;-0.43867444 &lt;/td&gt;&lt;td&gt;-2.55349805 &lt;/td&gt;&lt;td&gt; 0.45105581 &lt;/td&gt;&lt;td&gt; 0.92255420 &lt;/td&gt;&lt;td&gt; 1.4508417  &lt;/td&gt;&lt;td&gt; 3.7287810  &lt;/td&gt;&lt;td&gt; 0.47233672 &lt;/td&gt;&lt;td&gt; 1.246195603&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 2.279913042&lt;/td&gt;&lt;td&gt;-4.5774537  &lt;/td&gt;&lt;td&gt; 6.91989818 &lt;/td&gt;&lt;td&gt;-0.48538463 &lt;/td&gt;&lt;td&gt; 4.06495450 &lt;/td&gt;&lt;td&gt; 2.60601943 &lt;/td&gt;&lt;td&gt; 4.2093918  &lt;/td&gt;&lt;td&gt; 1.41866516 &lt;/td&gt;&lt;td&gt; 0.58667908 &lt;/td&gt;&lt;td&gt;-4.72296868 &lt;/td&gt;&lt;td&gt; 0.12633076 &lt;/td&gt;&lt;td&gt;-4.7015058  &lt;/td&gt;&lt;td&gt; 2.6755323  &lt;/td&gt;&lt;td&gt; 2.06770638 &lt;/td&gt;&lt;td&gt;-5.753092397&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.171151651&lt;/td&gt;&lt;td&gt; 0.2024422  &lt;/td&gt;&lt;td&gt; 1.31572778 &lt;/td&gt;&lt;td&gt;-1.24632108 &lt;/td&gt;&lt;td&gt;-0.04167679 &lt;/td&gt;&lt;td&gt; 0.90618397 &lt;/td&gt;&lt;td&gt;-1.6161927  &lt;/td&gt;&lt;td&gt;-0.55490307 &lt;/td&gt;&lt;td&gt;-0.03133170 &lt;/td&gt;&lt;td&gt; 2.81050728 &lt;/td&gt;&lt;td&gt; 3.99187395 &lt;/td&gt;&lt;td&gt; 0.6909779  &lt;/td&gt;&lt;td&gt;-1.1176735  &lt;/td&gt;&lt;td&gt; 0.85879542 &lt;/td&gt;&lt;td&gt;-0.762797703&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.626367060&lt;/td&gt;&lt;td&gt; 0.2002168  &lt;/td&gt;&lt;td&gt;-2.72735814 &lt;/td&gt;&lt;td&gt;-2.26803794 &lt;/td&gt;&lt;td&gt;-1.22909616 &lt;/td&gt;&lt;td&gt;-0.57246877 &lt;/td&gt;&lt;td&gt; 2.4272878  &lt;/td&gt;&lt;td&gt;-1.43623796 &lt;/td&gt;&lt;td&gt;-0.87363969 &lt;/td&gt;&lt;td&gt; 2.46519055 &lt;/td&gt;&lt;td&gt; 2.04032960 &lt;/td&gt;&lt;td&gt;-3.2256935  &lt;/td&gt;&lt;td&gt;-1.4201899  &lt;/td&gt;&lt;td&gt;-2.90247527 &lt;/td&gt;&lt;td&gt;-1.710520726&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.708802751&lt;/td&gt;&lt;td&gt; 1.5276743  &lt;/td&gt;&lt;td&gt;-3.27368345 &lt;/td&gt;&lt;td&gt; 0.06412852 &lt;/td&gt;&lt;td&gt;-3.99742948 &lt;/td&gt;&lt;td&gt;-3.11395836 &lt;/td&gt;&lt;td&gt;-2.3289951  &lt;/td&gt;&lt;td&gt; 2.58065251 &lt;/td&gt;&lt;td&gt; 0.70018335 &lt;/td&gt;&lt;td&gt;-3.25208224 &lt;/td&gt;&lt;td&gt;-2.12812792 &lt;/td&gt;&lt;td&gt;-3.1612781  &lt;/td&gt;&lt;td&gt; 0.5938580  &lt;/td&gt;&lt;td&gt;-1.33450233 &lt;/td&gt;&lt;td&gt; 2.074552946&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.891170769&lt;/td&gt;&lt;td&gt;-2.5575913  &lt;/td&gt;&lt;td&gt; 6.66750537 &lt;/td&gt;&lt;td&gt;-0.96169305 &lt;/td&gt;&lt;td&gt;-4.45167232 &lt;/td&gt;&lt;td&gt;-1.42475777 &lt;/td&gt;&lt;td&gt;-2.1109296  &lt;/td&gt;&lt;td&gt; 0.95314816 &lt;/td&gt;&lt;td&gt; 0.92271813 &lt;/td&gt;&lt;td&gt;-0.48814847 &lt;/td&gt;&lt;td&gt;-5.53955653 &lt;/td&gt;&lt;td&gt;-5.1245683  &lt;/td&gt;&lt;td&gt; 4.6020999  &lt;/td&gt;&lt;td&gt; 0.70582867 &lt;/td&gt;&lt;td&gt; 1.800928201&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.320744895&lt;/td&gt;&lt;td&gt; 1.4759305  &lt;/td&gt;&lt;td&gt; 1.24881140 &lt;/td&gt;&lt;td&gt;-2.01286264 &lt;/td&gt;&lt;td&gt;-2.39198260 &lt;/td&gt;&lt;td&gt;-0.03326727 &lt;/td&gt;&lt;td&gt;-1.8734694  &lt;/td&gt;&lt;td&gt; 0.06146684 &lt;/td&gt;&lt;td&gt;-0.14762863 &lt;/td&gt;&lt;td&gt; 1.14982688 &lt;/td&gt;&lt;td&gt;-1.65239302 &lt;/td&gt;&lt;td&gt;-1.1335691  &lt;/td&gt;&lt;td&gt; 3.0086392  &lt;/td&gt;&lt;td&gt;-0.38156472 &lt;/td&gt;&lt;td&gt; 1.528748688&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 1.179851255&lt;/td&gt;&lt;td&gt;-2.5869198  &lt;/td&gt;&lt;td&gt; 2.81868738 &lt;/td&gt;&lt;td&gt; 2.09478725 &lt;/td&gt;&lt;td&gt; 6.41985239 &lt;/td&gt;&lt;td&gt; 3.82034070 &lt;/td&gt;&lt;td&gt; 6.4127944  &lt;/td&gt;&lt;td&gt;-3.20151896 &lt;/td&gt;&lt;td&gt;-0.87850515 &lt;/td&gt;&lt;td&gt;-1.32673594 &lt;/td&gt;&lt;td&gt;-0.70031383 &lt;/td&gt;&lt;td&gt;-0.5017313  &lt;/td&gt;&lt;td&gt; 1.4079281  &lt;/td&gt;&lt;td&gt; 0.35124616 &lt;/td&gt;&lt;td&gt;-3.066529625&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.861590223&lt;/td&gt;&lt;td&gt;-2.8211936  &lt;/td&gt;&lt;td&gt;-2.23290355 &lt;/td&gt;&lt;td&gt; 0.28158381 &lt;/td&gt;&lt;td&gt;-1.90268139 &lt;/td&gt;&lt;td&gt; 0.13025781 &lt;/td&gt;&lt;td&gt;-1.9179320  &lt;/td&gt;&lt;td&gt;-0.72249890 &lt;/td&gt;&lt;td&gt; 0.22210451 &lt;/td&gt;&lt;td&gt;-0.02960030 &lt;/td&gt;&lt;td&gt; 0.37609728 &lt;/td&gt;&lt;td&gt;-1.2883359  &lt;/td&gt;&lt;td&gt;-2.1158228  &lt;/td&gt;&lt;td&gt;-1.62972070 &lt;/td&gt;&lt;td&gt; 1.029154015&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.076525373&lt;/td&gt;&lt;td&gt; 4.2040904  &lt;/td&gt;&lt;td&gt;-1.68081586 &lt;/td&gt;&lt;td&gt;-1.11097562 &lt;/td&gt;&lt;td&gt; 0.02540299 &lt;/td&gt;&lt;td&gt;-4.04333599 &lt;/td&gt;&lt;td&gt;-4.1373943  &lt;/td&gt;&lt;td&gt; 1.44253316 &lt;/td&gt;&lt;td&gt; 2.55961444 &lt;/td&gt;&lt;td&gt;-7.93753736 &lt;/td&gt;&lt;td&gt; 1.79221800 &lt;/td&gt;&lt;td&gt; 2.6132646  &lt;/td&gt;&lt;td&gt;-0.9545038  &lt;/td&gt;&lt;td&gt;-0.17260320 &lt;/td&gt;&lt;td&gt; 4.802793297&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.742913822&lt;/td&gt;&lt;td&gt; 4.6308002  &lt;/td&gt;&lt;td&gt; 1.41544614 &lt;/td&gt;&lt;td&gt;-0.31049781 &lt;/td&gt;&lt;td&gt; 3.06290615 &lt;/td&gt;&lt;td&gt;-1.24119159 &lt;/td&gt;&lt;td&gt; 1.5870989  &lt;/td&gt;&lt;td&gt; 0.74732727 &lt;/td&gt;&lt;td&gt;-1.19855202 &lt;/td&gt;&lt;td&gt;-0.98215155 &lt;/td&gt;&lt;td&gt; 2.70209014 &lt;/td&gt;&lt;td&gt; 2.9754421  &lt;/td&gt;&lt;td&gt;-2.1215428  &lt;/td&gt;&lt;td&gt; 0.32699051 &lt;/td&gt;&lt;td&gt; 0.002994025&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.696023297&lt;/td&gt;&lt;td&gt; 2.2913393  &lt;/td&gt;&lt;td&gt;-4.69941163 &lt;/td&gt;&lt;td&gt; 0.64246925 &lt;/td&gt;&lt;td&gt;-1.69930461 &lt;/td&gt;&lt;td&gt; 3.03666166 &lt;/td&gt;&lt;td&gt; 3.7655007  &lt;/td&gt;&lt;td&gt; 3.00025353 &lt;/td&gt;&lt;td&gt;-1.97238508 &lt;/td&gt;&lt;td&gt; 1.73417089 &lt;/td&gt;&lt;td&gt; 3.87905294 &lt;/td&gt;&lt;td&gt;-1.2666156  &lt;/td&gt;&lt;td&gt;-2.0231124  &lt;/td&gt;&lt;td&gt; 0.33382139 &lt;/td&gt;&lt;td&gt;-0.123471799&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.617260998&lt;/td&gt;&lt;td&gt;-2.5866755  &lt;/td&gt;&lt;td&gt; 1.53789680 &lt;/td&gt;&lt;td&gt; 3.82780121 &lt;/td&gt;&lt;td&gt;-1.26679732 &lt;/td&gt;&lt;td&gt;-0.81539137 &lt;/td&gt;&lt;td&gt;-3.7187813  &lt;/td&gt;&lt;td&gt;-0.79666399 &lt;/td&gt;&lt;td&gt; 2.54511676 &lt;/td&gt;&lt;td&gt;-1.80171445 &lt;/td&gt;&lt;td&gt;-3.51110045 &lt;/td&gt;&lt;td&gt;-0.1390133  &lt;/td&gt;&lt;td&gt; 1.9864600  &lt;/td&gt;&lt;td&gt; 2.00728222 &lt;/td&gt;&lt;td&gt; 0.788265584&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 3.367998035&lt;/td&gt;&lt;td&gt;-2.7914200  &lt;/td&gt;&lt;td&gt;-2.22538223 &lt;/td&gt;&lt;td&gt;-4.33461579 &lt;/td&gt;&lt;td&gt; 1.09004636 &lt;/td&gt;&lt;td&gt;-0.16296445 &lt;/td&gt;&lt;td&gt; 1.3767855  &lt;/td&gt;&lt;td&gt; 3.66210042 &lt;/td&gt;&lt;td&gt;-1.92761693 &lt;/td&gt;&lt;td&gt;-3.34983246 &lt;/td&gt;&lt;td&gt; 0.80184810 &lt;/td&gt;&lt;td&gt;-3.0624737  &lt;/td&gt;&lt;td&gt;-2.3957199  &lt;/td&gt;&lt;td&gt;-0.15049405 &lt;/td&gt;&lt;td&gt;-6.178514032&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;⋮&lt;/td&gt;&lt;td&gt;⋮&lt;/td&gt;&lt;td&gt;⋮&lt;/td&gt;&lt;td&gt;⋮&lt;/td&gt;&lt;td&gt;⋮&lt;/td&gt;&lt;td&gt;⋮&lt;/td&gt;&lt;td&gt;⋮&lt;/td&gt;&lt;td&gt;⋮&lt;/td&gt;&lt;td&gt;⋮&lt;/td&gt;&lt;td&gt;⋮&lt;/td&gt;&lt;td&gt;⋮&lt;/td&gt;&lt;td&gt;⋮&lt;/td&gt;&lt;td&gt;⋮&lt;/td&gt;&lt;td&gt;⋮&lt;/td&gt;&lt;td&gt;⋮&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-1.28992555&lt;/td&gt;&lt;td&gt; 2.6802036 &lt;/td&gt;&lt;td&gt; 3.7000388 &lt;/td&gt;&lt;td&gt;-3.2254266 &lt;/td&gt;&lt;td&gt; 2.4154656 &lt;/td&gt;&lt;td&gt; 1.2738116 &lt;/td&gt;&lt;td&gt;-5.78978367&lt;/td&gt;&lt;td&gt;-0.30872571&lt;/td&gt;&lt;td&gt;-0.12418183&lt;/td&gt;&lt;td&gt; 4.11266876&lt;/td&gt;&lt;td&gt; 1.55714202&lt;/td&gt;&lt;td&gt; 4.88639601&lt;/td&gt;&lt;td&gt;-2.5844125 &lt;/td&gt;&lt;td&gt; 1.0941525 &lt;/td&gt;&lt;td&gt; 6.1161843 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 1.06458740&lt;/td&gt;&lt;td&gt;-1.0035388 &lt;/td&gt;&lt;td&gt;-4.5208735 &lt;/td&gt;&lt;td&gt;-0.4661017 &lt;/td&gt;&lt;td&gt;-0.8245712 &lt;/td&gt;&lt;td&gt;-1.1589112 &lt;/td&gt;&lt;td&gt; 0.79139930&lt;/td&gt;&lt;td&gt;-0.73322139&lt;/td&gt;&lt;td&gt; 0.92623185&lt;/td&gt;&lt;td&gt;-2.39885858&lt;/td&gt;&lt;td&gt; 0.65755788&lt;/td&gt;&lt;td&gt;-1.44986998&lt;/td&gt;&lt;td&gt;-0.8214383 &lt;/td&gt;&lt;td&gt; 1.2682260 &lt;/td&gt;&lt;td&gt;-1.5586565 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 2.33554395&lt;/td&gt;&lt;td&gt;-5.2796213 &lt;/td&gt;&lt;td&gt; 3.3542847 &lt;/td&gt;&lt;td&gt;-3.4065442 &lt;/td&gt;&lt;td&gt; 1.2481356 &lt;/td&gt;&lt;td&gt;-1.0997078 &lt;/td&gt;&lt;td&gt;-1.77161034&lt;/td&gt;&lt;td&gt;-2.03511703&lt;/td&gt;&lt;td&gt; 0.50564738&lt;/td&gt;&lt;td&gt;-1.02539517&lt;/td&gt;&lt;td&gt;-3.57143789&lt;/td&gt;&lt;td&gt;-0.66181245&lt;/td&gt;&lt;td&gt; 1.5407534 &lt;/td&gt;&lt;td&gt; 0.8211483 &lt;/td&gt;&lt;td&gt;-0.5367569 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.65284150&lt;/td&gt;&lt;td&gt;-3.4554149 &lt;/td&gt;&lt;td&gt; 2.2975634 &lt;/td&gt;&lt;td&gt;-1.6920715 &lt;/td&gt;&lt;td&gt; 1.2883846 &lt;/td&gt;&lt;td&gt; 0.2004732 &lt;/td&gt;&lt;td&gt; 1.22481678&lt;/td&gt;&lt;td&gt;-1.54352518&lt;/td&gt;&lt;td&gt;-0.77807269&lt;/td&gt;&lt;td&gt; 1.55040927&lt;/td&gt;&lt;td&gt;-2.73025825&lt;/td&gt;&lt;td&gt;-1.97808997&lt;/td&gt;&lt;td&gt; 0.9190554 &lt;/td&gt;&lt;td&gt;-1.3696296 &lt;/td&gt;&lt;td&gt;-2.8850744 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.39991828&lt;/td&gt;&lt;td&gt; 2.2004604 &lt;/td&gt;&lt;td&gt;-5.2350188 &lt;/td&gt;&lt;td&gt; 4.6673482 &lt;/td&gt;&lt;td&gt;-2.7459406 &lt;/td&gt;&lt;td&gt;-0.2629654 &lt;/td&gt;&lt;td&gt; 3.39068203&lt;/td&gt;&lt;td&gt; 1.57466705&lt;/td&gt;&lt;td&gt; 0.26502200&lt;/td&gt;&lt;td&gt;-1.01942705&lt;/td&gt;&lt;td&gt; 1.00777108&lt;/td&gt;&lt;td&gt;-4.43896988&lt;/td&gt;&lt;td&gt;-4.0947537 &lt;/td&gt;&lt;td&gt;-1.3326137 &lt;/td&gt;&lt;td&gt;-0.8968264 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-1.05012819&lt;/td&gt;&lt;td&gt;-4.0133493 &lt;/td&gt;&lt;td&gt;-0.7413312 &lt;/td&gt;&lt;td&gt; 1.7410799 &lt;/td&gt;&lt;td&gt;-0.3459250 &lt;/td&gt;&lt;td&gt; 1.4797717 &lt;/td&gt;&lt;td&gt; 3.35248000&lt;/td&gt;&lt;td&gt;-2.25095679&lt;/td&gt;&lt;td&gt;-1.47986605&lt;/td&gt;&lt;td&gt; 1.49941619&lt;/td&gt;&lt;td&gt; 0.65759226&lt;/td&gt;&lt;td&gt;-0.41087660&lt;/td&gt;&lt;td&gt;-0.7486804 &lt;/td&gt;&lt;td&gt;-2.2613298 &lt;/td&gt;&lt;td&gt;-1.0181521 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.77980245&lt;/td&gt;&lt;td&gt;-0.8792347 &lt;/td&gt;&lt;td&gt;-2.8717170 &lt;/td&gt;&lt;td&gt; 2.7331419 &lt;/td&gt;&lt;td&gt;-4.3791963 &lt;/td&gt;&lt;td&gt;-5.4991017 &lt;/td&gt;&lt;td&gt;-2.74738105&lt;/td&gt;&lt;td&gt;-1.31514782&lt;/td&gt;&lt;td&gt; 2.51374720&lt;/td&gt;&lt;td&gt;-6.27894902&lt;/td&gt;&lt;td&gt;-0.63458408&lt;/td&gt;&lt;td&gt;-1.60474286&lt;/td&gt;&lt;td&gt;-0.4269045 &lt;/td&gt;&lt;td&gt; 0.1420886 &lt;/td&gt;&lt;td&gt;-0.6957064 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 1.22135860&lt;/td&gt;&lt;td&gt;-0.9710523 &lt;/td&gt;&lt;td&gt;-0.1524425 &lt;/td&gt;&lt;td&gt;-0.5527110 &lt;/td&gt;&lt;td&gt; 2.3328956 &lt;/td&gt;&lt;td&gt; 3.6913262 &lt;/td&gt;&lt;td&gt; 1.62237292&lt;/td&gt;&lt;td&gt;-0.52208411&lt;/td&gt;&lt;td&gt;-0.42043116&lt;/td&gt;&lt;td&gt;-0.60442190&lt;/td&gt;&lt;td&gt;-1.28380749&lt;/td&gt;&lt;td&gt; 1.62714781&lt;/td&gt;&lt;td&gt; 1.0607341 &lt;/td&gt;&lt;td&gt; 0.9856461 &lt;/td&gt;&lt;td&gt;-1.6641811 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.88373207&lt;/td&gt;&lt;td&gt; 1.8844382 &lt;/td&gt;&lt;td&gt;-8.3980007 &lt;/td&gt;&lt;td&gt; 1.1246671 &lt;/td&gt;&lt;td&gt;-4.5134460 &lt;/td&gt;&lt;td&gt;-1.0254969 &lt;/td&gt;&lt;td&gt;-0.57084815&lt;/td&gt;&lt;td&gt; 0.51522649&lt;/td&gt;&lt;td&gt; 1.73319450&lt;/td&gt;&lt;td&gt; 0.85359635&lt;/td&gt;&lt;td&gt;-0.34076898&lt;/td&gt;&lt;td&gt;-1.40206812&lt;/td&gt;&lt;td&gt;-3.6269679 &lt;/td&gt;&lt;td&gt;-1.0589858 &lt;/td&gt;&lt;td&gt; 2.7908872 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 1.52205094&lt;/td&gt;&lt;td&gt;-3.2636788 &lt;/td&gt;&lt;td&gt; 4.0050730 &lt;/td&gt;&lt;td&gt; 0.5025328 &lt;/td&gt;&lt;td&gt;-1.8264870 &lt;/td&gt;&lt;td&gt; 1.0480242 &lt;/td&gt;&lt;td&gt; 3.01931780&lt;/td&gt;&lt;td&gt;-0.71589138&lt;/td&gt;&lt;td&gt;-1.72436476&lt;/td&gt;&lt;td&gt; 2.46927400&lt;/td&gt;&lt;td&gt;-1.70414716&lt;/td&gt;&lt;td&gt;-5.84734389&lt;/td&gt;&lt;td&gt; 2.4675809 &lt;/td&gt;&lt;td&gt; 1.7588970 &lt;/td&gt;&lt;td&gt;-4.1959215 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-2.85212117&lt;/td&gt;&lt;td&gt;-0.2864649 &lt;/td&gt;&lt;td&gt; 3.4733533 &lt;/td&gt;&lt;td&gt; 2.0570589 &lt;/td&gt;&lt;td&gt; 3.0612206 &lt;/td&gt;&lt;td&gt; 2.2357200 &lt;/td&gt;&lt;td&gt;-0.03291347&lt;/td&gt;&lt;td&gt;-0.66314278&lt;/td&gt;&lt;td&gt; 0.32235441&lt;/td&gt;&lt;td&gt; 0.29897432&lt;/td&gt;&lt;td&gt; 1.98777798&lt;/td&gt;&lt;td&gt; 1.13211210&lt;/td&gt;&lt;td&gt; 1.9692652 &lt;/td&gt;&lt;td&gt; 0.5109204 &lt;/td&gt;&lt;td&gt; 1.4698233 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.29888691&lt;/td&gt;&lt;td&gt; 3.6163578 &lt;/td&gt;&lt;td&gt;-1.5754255 &lt;/td&gt;&lt;td&gt;-2.2329337 &lt;/td&gt;&lt;td&gt;-0.1557177 &lt;/td&gt;&lt;td&gt; 1.3071929 &lt;/td&gt;&lt;td&gt; 2.32950702&lt;/td&gt;&lt;td&gt;-0.40316041&lt;/td&gt;&lt;td&gt;-0.06682826&lt;/td&gt;&lt;td&gt; 1.19794045&lt;/td&gt;&lt;td&gt; 0.19762524&lt;/td&gt;&lt;td&gt; 2.34840433&lt;/td&gt;&lt;td&gt;-1.5710226 &lt;/td&gt;&lt;td&gt;-2.1163639 &lt;/td&gt;&lt;td&gt;-3.8280426 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 2.38363519&lt;/td&gt;&lt;td&gt;-0.1321273 &lt;/td&gt;&lt;td&gt;-0.6782892 &lt;/td&gt;&lt;td&gt;-0.7073421 &lt;/td&gt;&lt;td&gt; 1.7648625 &lt;/td&gt;&lt;td&gt; 1.1238359 &lt;/td&gt;&lt;td&gt; 2.15671382&lt;/td&gt;&lt;td&gt;-0.75755167&lt;/td&gt;&lt;td&gt;-0.28909610&lt;/td&gt;&lt;td&gt;-0.07283688&lt;/td&gt;&lt;td&gt;-0.22056045&lt;/td&gt;&lt;td&gt;-1.21193933&lt;/td&gt;&lt;td&gt; 1.6943402 &lt;/td&gt;&lt;td&gt;-0.5929918 &lt;/td&gt;&lt;td&gt; 2.5905692 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-3.25286170&lt;/td&gt;&lt;td&gt; 3.6164807 &lt;/td&gt;&lt;td&gt; 3.7820826 &lt;/td&gt;&lt;td&gt; 2.3299831 &lt;/td&gt;&lt;td&gt; 4.6344468 &lt;/td&gt;&lt;td&gt;-0.3748040 &lt;/td&gt;&lt;td&gt;-2.90833007&lt;/td&gt;&lt;td&gt;-2.17276279&lt;/td&gt;&lt;td&gt; 0.51743408&lt;/td&gt;&lt;td&gt; 0.82035401&lt;/td&gt;&lt;td&gt;-1.80684632&lt;/td&gt;&lt;td&gt; 6.91430360&lt;/td&gt;&lt;td&gt;-1.7664630 &lt;/td&gt;&lt;td&gt;-1.2489295 &lt;/td&gt;&lt;td&gt; 6.0536027 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.03346921&lt;/td&gt;&lt;td&gt; 2.2099518 &lt;/td&gt;&lt;td&gt;-1.9652547 &lt;/td&gt;&lt;td&gt; 1.2316496 &lt;/td&gt;&lt;td&gt;-0.5995482 &lt;/td&gt;&lt;td&gt; 6.4599755 &lt;/td&gt;&lt;td&gt; 2.15208561&lt;/td&gt;&lt;td&gt; 4.22105143&lt;/td&gt;&lt;td&gt;-1.68760034&lt;/td&gt;&lt;td&gt; 1.85533584&lt;/td&gt;&lt;td&gt; 4.13226474&lt;/td&gt;&lt;td&gt; 0.62095474&lt;/td&gt;&lt;td&gt; 1.0609751 &lt;/td&gt;&lt;td&gt; 1.7306015 &lt;/td&gt;&lt;td&gt; 7.1084796 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.07669151&lt;/td&gt;&lt;td&gt; 1.5056713 &lt;/td&gt;&lt;td&gt;-3.6937060 &lt;/td&gt;&lt;td&gt; 3.0507988 &lt;/td&gt;&lt;td&gt;-2.9189096 &lt;/td&gt;&lt;td&gt;-0.8555570 &lt;/td&gt;&lt;td&gt; 1.71245859&lt;/td&gt;&lt;td&gt;-0.29259491&lt;/td&gt;&lt;td&gt; 0.55085011&lt;/td&gt;&lt;td&gt;-3.89076122&lt;/td&gt;&lt;td&gt;-0.89600088&lt;/td&gt;&lt;td&gt;-0.05418005&lt;/td&gt;&lt;td&gt; 0.3608365 &lt;/td&gt;&lt;td&gt; 0.7105368 &lt;/td&gt;&lt;td&gt;-0.3207840 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.02216238&lt;/td&gt;&lt;td&gt;-4.7526314 &lt;/td&gt;&lt;td&gt; 0.6468012 &lt;/td&gt;&lt;td&gt;-1.4760435 &lt;/td&gt;&lt;td&gt; 2.0457496 &lt;/td&gt;&lt;td&gt; 4.5565588 &lt;/td&gt;&lt;td&gt; 0.44386025&lt;/td&gt;&lt;td&gt; 1.67688950&lt;/td&gt;&lt;td&gt;-0.14187941&lt;/td&gt;&lt;td&gt; 0.67526798&lt;/td&gt;&lt;td&gt; 5.07483579&lt;/td&gt;&lt;td&gt;-0.49230575&lt;/td&gt;&lt;td&gt;-0.9195815 &lt;/td&gt;&lt;td&gt; 1.2515779 &lt;/td&gt;&lt;td&gt;-1.6775334 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.24949887&lt;/td&gt;&lt;td&gt;-0.9491357 &lt;/td&gt;&lt;td&gt; 1.2592653 &lt;/td&gt;&lt;td&gt; 2.4677293 &lt;/td&gt;&lt;td&gt;-1.1251784 &lt;/td&gt;&lt;td&gt;-0.3339926 &lt;/td&gt;&lt;td&gt;-3.88850998&lt;/td&gt;&lt;td&gt; 1.52643165&lt;/td&gt;&lt;td&gt; 0.51014809&lt;/td&gt;&lt;td&gt; 0.15825416&lt;/td&gt;&lt;td&gt; 0.80831967&lt;/td&gt;&lt;td&gt;-0.51103211&lt;/td&gt;&lt;td&gt; 0.6596399 &lt;/td&gt;&lt;td&gt; 2.6990887 &lt;/td&gt;&lt;td&gt; 6.4474191 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.89981388&lt;/td&gt;&lt;td&gt; 3.8114937 &lt;/td&gt;&lt;td&gt;-1.2733653 &lt;/td&gt;&lt;td&gt; 1.3972480 &lt;/td&gt;&lt;td&gt;-0.5634829 &lt;/td&gt;&lt;td&gt; 1.6183731 &lt;/td&gt;&lt;td&gt; 5.36000494&lt;/td&gt;&lt;td&gt; 0.47908898&lt;/td&gt;&lt;td&gt; 0.07601391&lt;/td&gt;&lt;td&gt;-1.95125870&lt;/td&gt;&lt;td&gt;-0.79284736&lt;/td&gt;&lt;td&gt;-0.90700524&lt;/td&gt;&lt;td&gt; 4.9257855 &lt;/td&gt;&lt;td&gt;-0.2302396 &lt;/td&gt;&lt;td&gt; 1.6377030 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.58762390&lt;/td&gt;&lt;td&gt;-0.4381037 &lt;/td&gt;&lt;td&gt; 1.1812400 &lt;/td&gt;&lt;td&gt;-1.0263101 &lt;/td&gt;&lt;td&gt;-2.5608522 &lt;/td&gt;&lt;td&gt;-6.2687804 &lt;/td&gt;&lt;td&gt;-2.43637081&lt;/td&gt;&lt;td&gt;-0.13610805&lt;/td&gt;&lt;td&gt;-0.68093749&lt;/td&gt;&lt;td&gt;-1.22969889&lt;/td&gt;&lt;td&gt;-0.90077967&lt;/td&gt;&lt;td&gt;-4.00969541&lt;/td&gt;&lt;td&gt;-0.6436171 &lt;/td&gt;&lt;td&gt;-0.3817718 &lt;/td&gt;&lt;td&gt; 1.0878660 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.78534027&lt;/td&gt;&lt;td&gt; 2.5358430 &lt;/td&gt;&lt;td&gt;-2.1441110 &lt;/td&gt;&lt;td&gt;-0.5034089 &lt;/td&gt;&lt;td&gt; 0.9941824 &lt;/td&gt;&lt;td&gt;-2.7036687 &lt;/td&gt;&lt;td&gt;-1.88812393&lt;/td&gt;&lt;td&gt;-3.29652421&lt;/td&gt;&lt;td&gt; 1.33536176&lt;/td&gt;&lt;td&gt; 4.58626077&lt;/td&gt;&lt;td&gt;-1.47860361&lt;/td&gt;&lt;td&gt; 1.33915605&lt;/td&gt;&lt;td&gt;-5.0754578 &lt;/td&gt;&lt;td&gt;-2.6885968 &lt;/td&gt;&lt;td&gt;-0.2578704 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-1.81505653&lt;/td&gt;&lt;td&gt;-2.6737798 &lt;/td&gt;&lt;td&gt;-3.3566516 &lt;/td&gt;&lt;td&gt;-0.9760627 &lt;/td&gt;&lt;td&gt;-1.7366307 &lt;/td&gt;&lt;td&gt;-1.2505239 &lt;/td&gt;&lt;td&gt;-0.52279936&lt;/td&gt;&lt;td&gt;-1.35753188&lt;/td&gt;&lt;td&gt;-1.32426891&lt;/td&gt;&lt;td&gt; 6.99631464&lt;/td&gt;&lt;td&gt; 0.56586803&lt;/td&gt;&lt;td&gt; 1.19861748&lt;/td&gt;&lt;td&gt;-0.1905394 &lt;/td&gt;&lt;td&gt;-1.3588140 &lt;/td&gt;&lt;td&gt;-0.8798825 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-1.63812725&lt;/td&gt;&lt;td&gt; 1.7723024 &lt;/td&gt;&lt;td&gt; 0.8699330 &lt;/td&gt;&lt;td&gt;-2.8340351 &lt;/td&gt;&lt;td&gt; 4.2679778 &lt;/td&gt;&lt;td&gt; 0.7554461 &lt;/td&gt;&lt;td&gt; 0.43642733&lt;/td&gt;&lt;td&gt;-2.57832736&lt;/td&gt;&lt;td&gt;-1.79761950&lt;/td&gt;&lt;td&gt; 3.32560471&lt;/td&gt;&lt;td&gt; 0.06726622&lt;/td&gt;&lt;td&gt; 5.57052607&lt;/td&gt;&lt;td&gt; 0.3424180 &lt;/td&gt;&lt;td&gt;-1.1582221 &lt;/td&gt;&lt;td&gt; 2.2085975 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.02235027&lt;/td&gt;&lt;td&gt;-3.9985062 &lt;/td&gt;&lt;td&gt;-2.8075478 &lt;/td&gt;&lt;td&gt; 3.2857746 &lt;/td&gt;&lt;td&gt;-4.1343145 &lt;/td&gt;&lt;td&gt;-1.3714997 &lt;/td&gt;&lt;td&gt; 4.35313552&lt;/td&gt;&lt;td&gt; 1.89692521&lt;/td&gt;&lt;td&gt;-0.22135534&lt;/td&gt;&lt;td&gt;-8.45925945&lt;/td&gt;&lt;td&gt; 2.05378986&lt;/td&gt;&lt;td&gt;-7.28812166&lt;/td&gt;&lt;td&gt; 4.0558662 &lt;/td&gt;&lt;td&gt; 1.2875878 &lt;/td&gt;&lt;td&gt;-2.6376690 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-1.50475326&lt;/td&gt;&lt;td&gt;-0.1267264 &lt;/td&gt;&lt;td&gt; 4.5673620 &lt;/td&gt;&lt;td&gt; 2.1576956 &lt;/td&gt;&lt;td&gt; 0.7218707 &lt;/td&gt;&lt;td&gt; 0.1051901 &lt;/td&gt;&lt;td&gt;-2.49851535&lt;/td&gt;&lt;td&gt;-1.54934342&lt;/td&gt;&lt;td&gt;-0.24473312&lt;/td&gt;&lt;td&gt; 1.33836023&lt;/td&gt;&lt;td&gt; 1.07115827&lt;/td&gt;&lt;td&gt;-1.97744503&lt;/td&gt;&lt;td&gt; 2.7094805 &lt;/td&gt;&lt;td&gt; 0.9678382 &lt;/td&gt;&lt;td&gt; 5.2405589 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.59115452&lt;/td&gt;&lt;td&gt;-1.4589429 &lt;/td&gt;&lt;td&gt;-0.2333573 &lt;/td&gt;&lt;td&gt;-1.1292050 &lt;/td&gt;&lt;td&gt; 4.0156422 &lt;/td&gt;&lt;td&gt; 2.8354506 &lt;/td&gt;&lt;td&gt; 0.95905603&lt;/td&gt;&lt;td&gt;-2.56795119&lt;/td&gt;&lt;td&gt; 0.13437460&lt;/td&gt;&lt;td&gt; 3.60568542&lt;/td&gt;&lt;td&gt;-0.83915613&lt;/td&gt;&lt;td&gt; 2.49455591&lt;/td&gt;&lt;td&gt;-0.4241240 &lt;/td&gt;&lt;td&gt;-1.5970305 &lt;/td&gt;&lt;td&gt; 0.6498130 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.84980399&lt;/td&gt;&lt;td&gt;-0.6160091 &lt;/td&gt;&lt;td&gt;-2.5819249 &lt;/td&gt;&lt;td&gt;-0.5919065 &lt;/td&gt;&lt;td&gt;-1.1941422 &lt;/td&gt;&lt;td&gt;-2.3260478 &lt;/td&gt;&lt;td&gt; 0.43015702&lt;/td&gt;&lt;td&gt; 0.05104811&lt;/td&gt;&lt;td&gt; 1.02121169&lt;/td&gt;&lt;td&gt;-0.24161298&lt;/td&gt;&lt;td&gt;-0.06250853&lt;/td&gt;&lt;td&gt;-1.49104535&lt;/td&gt;&lt;td&gt;-2.8163880 &lt;/td&gt;&lt;td&gt;-0.3412329 &lt;/td&gt;&lt;td&gt;-3.6867591 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 1.91366438&lt;/td&gt;&lt;td&gt;-4.6110634 &lt;/td&gt;&lt;td&gt; 1.5999701 &lt;/td&gt;&lt;td&gt;-2.2903661 &lt;/td&gt;&lt;td&gt; 0.3840820 &lt;/td&gt;&lt;td&gt; 5.1427410 &lt;/td&gt;&lt;td&gt;-1.41001459&lt;/td&gt;&lt;td&gt; 3.68945130&lt;/td&gt;&lt;td&gt;-0.89915892&lt;/td&gt;&lt;td&gt;-1.29722228&lt;/td&gt;&lt;td&gt;-0.51322443&lt;/td&gt;&lt;td&gt;-0.30341254&lt;/td&gt;&lt;td&gt; 3.4612901 &lt;/td&gt;&lt;td&gt; 2.9368611 &lt;/td&gt;&lt;td&gt; 2.6007268 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 1.53855803&lt;/td&gt;&lt;td&gt;-5.6012345 &lt;/td&gt;&lt;td&gt; 5.3808363 &lt;/td&gt;&lt;td&gt;-4.1334936 &lt;/td&gt;&lt;td&gt; 6.2855654 &lt;/td&gt;&lt;td&gt; 1.3891481 &lt;/td&gt;&lt;td&gt; 1.44094919&lt;/td&gt;&lt;td&gt;-2.65288245&lt;/td&gt;&lt;td&gt;-1.65996784&lt;/td&gt;&lt;td&gt;-0.34648643&lt;/td&gt;&lt;td&gt;-1.60747151&lt;/td&gt;&lt;td&gt; 1.18227981&lt;/td&gt;&lt;td&gt; 4.6096480 &lt;/td&gt;&lt;td&gt;-0.8490841 &lt;/td&gt;&lt;td&gt; 1.4753425 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.23042676&lt;/td&gt;&lt;td&gt; 6.1660653 &lt;/td&gt;&lt;td&gt;-1.9105629 &lt;/td&gt;&lt;td&gt;-1.8528567 &lt;/td&gt;&lt;td&gt; 0.2577268 &lt;/td&gt;&lt;td&gt;-1.1321162 &lt;/td&gt;&lt;td&gt;-4.06203808&lt;/td&gt;&lt;td&gt; 4.23278287&lt;/td&gt;&lt;td&gt; 0.63943543&lt;/td&gt;&lt;td&gt;-0.44222158&lt;/td&gt;&lt;td&gt;-0.11374308&lt;/td&gt;&lt;td&gt; 4.82970492&lt;/td&gt;&lt;td&gt;-6.0131447 &lt;/td&gt;&lt;td&gt;-0.3599599 &lt;/td&gt;&lt;td&gt; 5.0788149 &lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [40]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;corrplot&lt;span class="p"&gt;(&lt;/span&gt;cor&lt;span class="p"&gt;(&lt;/span&gt;X&lt;span class="p"&gt;),&lt;/span&gt;order&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"hclust"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_png output_subarea "&gt;
-&lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAIAAAByhViMAAAACXBIWXMAABJ0AAASdAHeZh94
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope="col">X1</th><th scope="col">X2</th><th scope="col">X3</th><th scope="col">X4</th><th scope="col">X5</th><th scope="col">X6</th><th scope="col">X7</th><th scope="col">X8</th><th scope="col">X9</th><th scope="col">X10</th><th scope="col">X11</th><th scope="col">X12</th><th scope="col">X13</th><th scope="col">X14</th><th scope="col">X15</th></tr></thead>
+<tbody>
+<tr><td>-0.749733196</td><td> 3.0662767  </td><td> 1.13923380 </td><td> 0.09555797 </td><td> 0.33252372 </td><td> 1.67678222 </td><td>-2.7625046  </td><td>-1.72095290 </td><td> 1.56121292 </td><td> 1.48475731 </td><td>-2.78190032 </td><td> 4.0262167  </td><td> 0.6486311  </td><td> 1.07613307 </td><td> 2.752605879</td></tr>
+<tr><td>-0.502330645</td><td> 2.7279221  </td><td> 3.02309927 </td><td>-2.20298749 </td><td> 1.58910009 </td><td> 2.71597570 </td><td> 2.2182048  </td><td> 0.46671638 </td><td>-1.30532938 </td><td> 2.72429911 </td><td> 1.72868283 </td><td> 1.5010526  </td><td> 0.1225014  </td><td>-0.81922469 </td><td>-1.076263153</td></tr>
+<tr><td>-0.757726479</td><td> 0.9442218  </td><td> 1.52816536 </td><td>-4.57846021 </td><td> 1.79529581 </td><td> 2.43805806 </td><td> 0.7627754  </td><td> 0.51516146 </td><td>-3.09853065 </td><td> 5.42609723 </td><td> 2.60895376 </td><td> 2.2655618  </td><td> 1.8108073  </td><td>-0.12776199 </td><td> 1.755617133</td></tr>
+<tr><td>-4.483052963</td><td> 2.3597163  </td><td> 2.42036429 </td><td> 0.98961441 </td><td>-0.02188829 </td><td>-1.06572012 </td><td>-3.9569581  </td><td>-1.49402657 </td><td>-0.48170260 </td><td> 4.10020199 </td><td>-1.18821530 </td><td> 7.8118119  </td><td>-1.2034374  </td><td>-0.66259421 </td><td>-1.107654998</td></tr>
+<tr><td>-1.404080340</td><td>-2.5201979  </td><td> 1.07178647 </td><td> 0.48129159 </td><td> 1.28450056 </td><td> 0.80548582 </td><td>-2.5835580  </td><td>-1.57756118 </td><td> 0.49870834 </td><td>-0.08538071 </td><td> 1.37339175 </td><td> 2.8227237  </td><td> 0.1536730  </td><td>-1.37815216 </td><td>-0.587191629</td></tr>
+<tr><td>-1.044183440</td><td>-3.9781653  </td><td>-0.04908032 </td><td> 2.76692736 </td><td>-4.28640862 </td><td> 0.63326508 </td><td>-0.7187964  </td><td> 3.15250117 </td><td>-0.43202917 </td><td>-3.18554469 </td><td> 3.57144235 </td><td>-4.8188997  </td><td> 3.5635561  </td><td> 1.13084479 </td><td>-0.407568161</td></tr>
+<tr><td> 0.904310192</td><td>-3.9490143  </td><td> 0.13604620 </td><td> 0.84701272 </td><td>-0.20591916 </td><td>-2.47976405 </td><td>-1.8854448  </td><td>-0.30314230 </td><td> 0.08128471 </td><td>-1.85280481 </td><td>-2.07386807 </td><td>-3.3871340  </td><td> 2.7417896  </td><td> 1.29811014 </td><td>-3.268353546</td></tr>
+<tr><td> 1.547412233</td><td> 3.2520794  </td><td>-3.86475438 </td><td>-1.19317342 </td><td>-3.94410520 </td><td>-1.88754659 </td><td>-3.8081823  </td><td> 1.82126036 </td><td> 2.10607639 </td><td>-1.18371334 </td><td>-1.00183688 </td><td>-2.4603128  </td><td>-1.6559909  </td><td>-0.85913136 </td><td> 4.855211500</td></tr>
+<tr><td> 1.181835868</td><td> 2.3014732  </td><td>-5.54818748 </td><td> 4.02598930 </td><td> 0.28785376 </td><td> 4.12649991 </td><td> 4.8405821  </td><td>-3.28336174 </td><td> 1.75082399 </td><td> 6.45091305 </td><td>-2.85957817 </td><td> 3.1640745  </td><td>-3.9085168  </td><td>-0.30221994 </td><td>-4.072467895</td></tr>
+<tr><td>-0.223061010</td><td>-0.1065444  </td><td>-4.21123196 </td><td> 2.29599551 </td><td>-2.69734489 </td><td>-0.04434209 </td><td>-1.6717245  </td><td> 3.33045952 </td><td> 2.52977556 </td><td>-7.06946112 </td><td>-0.42248018 </td><td> 1.0223514  </td><td> 1.8591494  </td><td> 1.29179269 </td><td> 4.447266811</td></tr>
+<tr><td> 0.670571570</td><td> 3.8206618  </td><td>-2.71344815 </td><td> 0.73861699 </td><td>-2.42359672 </td><td>-2.76943261 </td><td>-1.3274924  </td><td> 1.25334556 </td><td> 0.51444204 </td><td>-0.65601362 </td><td>-4.04306126 </td><td>-0.2464605  </td><td> 0.8285803  </td><td> 0.07941728 </td><td> 0.878604749</td></tr>
+<tr><td> 0.436693890</td><td>-1.5770467  </td><td>-0.79200947 </td><td> 1.26875967 </td><td>-1.02443357 </td><td> 1.56314208 </td><td> 0.1872500  </td><td>-2.75471779 </td><td> 2.31014038 </td><td> 3.31188226 </td><td>-2.34525864 </td><td> 0.3214955  </td><td>-0.3199032  </td><td> 2.20887341 </td><td>-3.273530551</td></tr>
+<tr><td> 0.467985137</td><td>-0.8651780  </td><td>-1.55429326 </td><td>-3.26569318 </td><td> 1.07918572 </td><td>-3.78145149 </td><td>-1.2126937  </td><td> 1.37323826 </td><td> 0.30735695 </td><td>-4.14050650 </td><td> 1.56787101 </td><td> 0.6448543  </td><td>-0.7867986  </td><td> 0.29145966 </td><td> 0.054420998</td></tr>
+<tr><td>-0.851181510</td><td>-1.5581415  </td><td> 2.84151800 </td><td> 0.82178123 </td><td> 2.61789944 </td><td>-1.73058366 </td><td>-0.9637125  </td><td>-1.73229624 </td><td>-0.38299868 </td><td> 1.83005273 </td><td>-0.03137974 </td><td>-1.7237132  </td><td>-1.7366689  </td><td> 0.96292886 </td><td>-2.127083831</td></tr>
+<tr><td> 0.005324801</td><td>-3.3884244  </td><td> 5.59139576 </td><td>-0.82119931 </td><td> 0.13638671 </td><td> 2.73834471 </td><td> 2.8723530  </td><td> 0.27396510 </td><td>-1.11239477 </td><td> 2.17628751 </td><td> 2.16141400 </td><td>-4.4494451  </td><td> 5.0585971  </td><td> 4.06488936 </td><td>-1.843036757</td></tr>
+<tr><td> 0.732867100</td><td>-5.3208270  </td><td> 1.30518826 </td><td>-1.39932714 </td><td>-0.74482308 </td><td> 0.49408635 </td><td>-1.5348058  </td><td> 2.38380715 </td><td>-1.19746611 </td><td> 0.27988079 </td><td>-1.08121685 </td><td>-1.9487983  </td><td> 0.1864948  </td><td> 1.88131698 </td><td>-1.068107084</td></tr>
+<tr><td>-0.358880385</td><td>-3.4524037  </td><td> 5.49755160 </td><td>-1.25831394 </td><td> 5.41303810 </td><td> 2.15793056 </td><td> 3.2146828  </td><td>-0.43867444 </td><td>-2.55349805 </td><td> 0.45105581 </td><td> 0.92255420 </td><td> 1.4508417  </td><td> 3.7287810  </td><td> 0.47233672 </td><td> 1.246195603</td></tr>
+<tr><td> 2.279913042</td><td>-4.5774537  </td><td> 6.91989818 </td><td>-0.48538463 </td><td> 4.06495450 </td><td> 2.60601943 </td><td> 4.2093918  </td><td> 1.41866516 </td><td> 0.58667908 </td><td>-4.72296868 </td><td> 0.12633076 </td><td>-4.7015058  </td><td> 2.6755323  </td><td> 2.06770638 </td><td>-5.753092397</td></tr>
+<tr><td>-0.171151651</td><td> 0.2024422  </td><td> 1.31572778 </td><td>-1.24632108 </td><td>-0.04167679 </td><td> 0.90618397 </td><td>-1.6161927  </td><td>-0.55490307 </td><td>-0.03133170 </td><td> 2.81050728 </td><td> 3.99187395 </td><td> 0.6909779  </td><td>-1.1176735  </td><td> 0.85879542 </td><td>-0.762797703</td></tr>
+<tr><td> 0.626367060</td><td> 0.2002168  </td><td>-2.72735814 </td><td>-2.26803794 </td><td>-1.22909616 </td><td>-0.57246877 </td><td> 2.4272878  </td><td>-1.43623796 </td><td>-0.87363969 </td><td> 2.46519055 </td><td> 2.04032960 </td><td>-3.2256935  </td><td>-1.4201899  </td><td>-2.90247527 </td><td>-1.710520726</td></tr>
+<tr><td> 0.708802751</td><td> 1.5276743  </td><td>-3.27368345 </td><td> 0.06412852 </td><td>-3.99742948 </td><td>-3.11395836 </td><td>-2.3289951  </td><td> 2.58065251 </td><td> 0.70018335 </td><td>-3.25208224 </td><td>-2.12812792 </td><td>-3.1612781  </td><td> 0.5938580  </td><td>-1.33450233 </td><td> 2.074552946</td></tr>
+<tr><td> 0.891170769</td><td>-2.5575913  </td><td> 6.66750537 </td><td>-0.96169305 </td><td>-4.45167232 </td><td>-1.42475777 </td><td>-2.1109296  </td><td> 0.95314816 </td><td> 0.92271813 </td><td>-0.48814847 </td><td>-5.53955653 </td><td>-5.1245683  </td><td> 4.6020999  </td><td> 0.70582867 </td><td> 1.800928201</td></tr>
+<tr><td>-0.320744895</td><td> 1.4759305  </td><td> 1.24881140 </td><td>-2.01286264 </td><td>-2.39198260 </td><td>-0.03326727 </td><td>-1.8734694  </td><td> 0.06146684 </td><td>-0.14762863 </td><td> 1.14982688 </td><td>-1.65239302 </td><td>-1.1335691  </td><td> 3.0086392  </td><td>-0.38156472 </td><td> 1.528748688</td></tr>
+<tr><td> 1.179851255</td><td>-2.5869198  </td><td> 2.81868738 </td><td> 2.09478725 </td><td> 6.41985239 </td><td> 3.82034070 </td><td> 6.4127944  </td><td>-3.20151896 </td><td>-0.87850515 </td><td>-1.32673594 </td><td>-0.70031383 </td><td>-0.5017313  </td><td> 1.4079281  </td><td> 0.35124616 </td><td>-3.066529625</td></tr>
+<tr><td> 0.861590223</td><td>-2.8211936  </td><td>-2.23290355 </td><td> 0.28158381 </td><td>-1.90268139 </td><td> 0.13025781 </td><td>-1.9179320  </td><td>-0.72249890 </td><td> 0.22210451 </td><td>-0.02960030 </td><td> 0.37609728 </td><td>-1.2883359  </td><td>-2.1158228  </td><td>-1.62972070 </td><td> 1.029154015</td></tr>
+<tr><td> 0.076525373</td><td> 4.2040904  </td><td>-1.68081586 </td><td>-1.11097562 </td><td> 0.02540299 </td><td>-4.04333599 </td><td>-4.1373943  </td><td> 1.44253316 </td><td> 2.55961444 </td><td>-7.93753736 </td><td> 1.79221800 </td><td> 2.6132646  </td><td>-0.9545038  </td><td>-0.17260320 </td><td> 4.802793297</td></tr>
+<tr><td>-0.742913822</td><td> 4.6308002  </td><td> 1.41544614 </td><td>-0.31049781 </td><td> 3.06290615 </td><td>-1.24119159 </td><td> 1.5870989  </td><td> 0.74732727 </td><td>-1.19855202 </td><td>-0.98215155 </td><td> 2.70209014 </td><td> 2.9754421  </td><td>-2.1215428  </td><td> 0.32699051 </td><td> 0.002994025</td></tr>
+<tr><td> 0.696023297</td><td> 2.2913393  </td><td>-4.69941163 </td><td> 0.64246925 </td><td>-1.69930461 </td><td> 3.03666166 </td><td> 3.7655007  </td><td> 3.00025353 </td><td>-1.97238508 </td><td> 1.73417089 </td><td> 3.87905294 </td><td>-1.2666156  </td><td>-2.0231124  </td><td> 0.33382139 </td><td>-0.123471799</td></tr>
+<tr><td>-0.617260998</td><td>-2.5866755  </td><td> 1.53789680 </td><td> 3.82780121 </td><td>-1.26679732 </td><td>-0.81539137 </td><td>-3.7187813  </td><td>-0.79666399 </td><td> 2.54511676 </td><td>-1.80171445 </td><td>-3.51110045 </td><td>-0.1390133  </td><td> 1.9864600  </td><td> 2.00728222 </td><td> 0.788265584</td></tr>
+<tr><td> 3.367998035</td><td>-2.7914200  </td><td>-2.22538223 </td><td>-4.33461579 </td><td> 1.09004636 </td><td>-0.16296445 </td><td> 1.3767855  </td><td> 3.66210042 </td><td>-1.92761693 </td><td>-3.34983246 </td><td> 0.80184810 </td><td>-3.0624737  </td><td>-2.3957199  </td><td>-0.15049405 </td><td>-6.178514032</td></tr>
+<tr><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td></tr>
+<tr><td>-1.28992555</td><td> 2.6802036 </td><td> 3.7000388 </td><td>-3.2254266 </td><td> 2.4154656 </td><td> 1.2738116 </td><td>-5.78978367</td><td>-0.30872571</td><td>-0.12418183</td><td> 4.11266876</td><td> 1.55714202</td><td> 4.88639601</td><td>-2.5844125 </td><td> 1.0941525 </td><td> 6.1161843 </td></tr>
+<tr><td> 1.06458740</td><td>-1.0035388 </td><td>-4.5208735 </td><td>-0.4661017 </td><td>-0.8245712 </td><td>-1.1589112 </td><td> 0.79139930</td><td>-0.73322139</td><td> 0.92623185</td><td>-2.39885858</td><td> 0.65755788</td><td>-1.44986998</td><td>-0.8214383 </td><td> 1.2682260 </td><td>-1.5586565 </td></tr>
+<tr><td> 2.33554395</td><td>-5.2796213 </td><td> 3.3542847 </td><td>-3.4065442 </td><td> 1.2481356 </td><td>-1.0997078 </td><td>-1.77161034</td><td>-2.03511703</td><td> 0.50564738</td><td>-1.02539517</td><td>-3.57143789</td><td>-0.66181245</td><td> 1.5407534 </td><td> 0.8211483 </td><td>-0.5367569 </td></tr>
+<tr><td> 0.65284150</td><td>-3.4554149 </td><td> 2.2975634 </td><td>-1.6920715 </td><td> 1.2883846 </td><td> 0.2004732 </td><td> 1.22481678</td><td>-1.54352518</td><td>-0.77807269</td><td> 1.55040927</td><td>-2.73025825</td><td>-1.97808997</td><td> 0.9190554 </td><td>-1.3696296 </td><td>-2.8850744 </td></tr>
+<tr><td>-0.39991828</td><td> 2.2004604 </td><td>-5.2350188 </td><td> 4.6673482 </td><td>-2.7459406 </td><td>-0.2629654 </td><td> 3.39068203</td><td> 1.57466705</td><td> 0.26502200</td><td>-1.01942705</td><td> 1.00777108</td><td>-4.43896988</td><td>-4.0947537 </td><td>-1.3326137 </td><td>-0.8968264 </td></tr>
+<tr><td>-1.05012819</td><td>-4.0133493 </td><td>-0.7413312 </td><td> 1.7410799 </td><td>-0.3459250 </td><td> 1.4797717 </td><td> 3.35248000</td><td>-2.25095679</td><td>-1.47986605</td><td> 1.49941619</td><td> 0.65759226</td><td>-0.41087660</td><td>-0.7486804 </td><td>-2.2613298 </td><td>-1.0181521 </td></tr>
+<tr><td>-0.77980245</td><td>-0.8792347 </td><td>-2.8717170 </td><td> 2.7331419 </td><td>-4.3791963 </td><td>-5.4991017 </td><td>-2.74738105</td><td>-1.31514782</td><td> 2.51374720</td><td>-6.27894902</td><td>-0.63458408</td><td>-1.60474286</td><td>-0.4269045 </td><td> 0.1420886 </td><td>-0.6957064 </td></tr>
+<tr><td> 1.22135860</td><td>-0.9710523 </td><td>-0.1524425 </td><td>-0.5527110 </td><td> 2.3328956 </td><td> 3.6913262 </td><td> 1.62237292</td><td>-0.52208411</td><td>-0.42043116</td><td>-0.60442190</td><td>-1.28380749</td><td> 1.62714781</td><td> 1.0607341 </td><td> 0.9856461 </td><td>-1.6641811 </td></tr>
+<tr><td> 0.88373207</td><td> 1.8844382 </td><td>-8.3980007 </td><td> 1.1246671 </td><td>-4.5134460 </td><td>-1.0254969 </td><td>-0.57084815</td><td> 0.51522649</td><td> 1.73319450</td><td> 0.85359635</td><td>-0.34076898</td><td>-1.40206812</td><td>-3.6269679 </td><td>-1.0589858 </td><td> 2.7908872 </td></tr>
+<tr><td> 1.52205094</td><td>-3.2636788 </td><td> 4.0050730 </td><td> 0.5025328 </td><td>-1.8264870 </td><td> 1.0480242 </td><td> 3.01931780</td><td>-0.71589138</td><td>-1.72436476</td><td> 2.46927400</td><td>-1.70414716</td><td>-5.84734389</td><td> 2.4675809 </td><td> 1.7588970 </td><td>-4.1959215 </td></tr>
+<tr><td>-2.85212117</td><td>-0.2864649 </td><td> 3.4733533 </td><td> 2.0570589 </td><td> 3.0612206 </td><td> 2.2357200 </td><td>-0.03291347</td><td>-0.66314278</td><td> 0.32235441</td><td> 0.29897432</td><td> 1.98777798</td><td> 1.13211210</td><td> 1.9692652 </td><td> 0.5109204 </td><td> 1.4698233 </td></tr>
+<tr><td> 0.29888691</td><td> 3.6163578 </td><td>-1.5754255 </td><td>-2.2329337 </td><td>-0.1557177 </td><td> 1.3071929 </td><td> 2.32950702</td><td>-0.40316041</td><td>-0.06682826</td><td> 1.19794045</td><td> 0.19762524</td><td> 2.34840433</td><td>-1.5710226 </td><td>-2.1163639 </td><td>-3.8280426 </td></tr>
+<tr><td> 2.38363519</td><td>-0.1321273 </td><td>-0.6782892 </td><td>-0.7073421 </td><td> 1.7648625 </td><td> 1.1238359 </td><td> 2.15671382</td><td>-0.75755167</td><td>-0.28909610</td><td>-0.07283688</td><td>-0.22056045</td><td>-1.21193933</td><td> 1.6943402 </td><td>-0.5929918 </td><td> 2.5905692 </td></tr>
+<tr><td>-3.25286170</td><td> 3.6164807 </td><td> 3.7820826 </td><td> 2.3299831 </td><td> 4.6344468 </td><td>-0.3748040 </td><td>-2.90833007</td><td>-2.17276279</td><td> 0.51743408</td><td> 0.82035401</td><td>-1.80684632</td><td> 6.91430360</td><td>-1.7664630 </td><td>-1.2489295 </td><td> 6.0536027 </td></tr>
+<tr><td> 0.03346921</td><td> 2.2099518 </td><td>-1.9652547 </td><td> 1.2316496 </td><td>-0.5995482 </td><td> 6.4599755 </td><td> 2.15208561</td><td> 4.22105143</td><td>-1.68760034</td><td> 1.85533584</td><td> 4.13226474</td><td> 0.62095474</td><td> 1.0609751 </td><td> 1.7306015 </td><td> 7.1084796 </td></tr>
+<tr><td> 0.07669151</td><td> 1.5056713 </td><td>-3.6937060 </td><td> 3.0507988 </td><td>-2.9189096 </td><td>-0.8555570 </td><td> 1.71245859</td><td>-0.29259491</td><td> 0.55085011</td><td>-3.89076122</td><td>-0.89600088</td><td>-0.05418005</td><td> 0.3608365 </td><td> 0.7105368 </td><td>-0.3207840 </td></tr>
+<tr><td>-0.02216238</td><td>-4.7526314 </td><td> 0.6468012 </td><td>-1.4760435 </td><td> 2.0457496 </td><td> 4.5565588 </td><td> 0.44386025</td><td> 1.67688950</td><td>-0.14187941</td><td> 0.67526798</td><td> 5.07483579</td><td>-0.49230575</td><td>-0.9195815 </td><td> 1.2515779 </td><td>-1.6775334 </td></tr>
+<tr><td>-0.24949887</td><td>-0.9491357 </td><td> 1.2592653 </td><td> 2.4677293 </td><td>-1.1251784 </td><td>-0.3339926 </td><td>-3.88850998</td><td> 1.52643165</td><td> 0.51014809</td><td> 0.15825416</td><td> 0.80831967</td><td>-0.51103211</td><td> 0.6596399 </td><td> 2.6990887 </td><td> 6.4474191 </td></tr>
+<tr><td>-0.89981388</td><td> 3.8114937 </td><td>-1.2733653 </td><td> 1.3972480 </td><td>-0.5634829 </td><td> 1.6183731 </td><td> 5.36000494</td><td> 0.47908898</td><td> 0.07601391</td><td>-1.95125870</td><td>-0.79284736</td><td>-0.90700524</td><td> 4.9257855 </td><td>-0.2302396 </td><td> 1.6377030 </td></tr>
+<tr><td>-0.58762390</td><td>-0.4381037 </td><td> 1.1812400 </td><td>-1.0263101 </td><td>-2.5608522 </td><td>-6.2687804 </td><td>-2.43637081</td><td>-0.13610805</td><td>-0.68093749</td><td>-1.22969889</td><td>-0.90077967</td><td>-4.00969541</td><td>-0.6436171 </td><td>-0.3817718 </td><td> 1.0878660 </td></tr>
+<tr><td>-0.78534027</td><td> 2.5358430 </td><td>-2.1441110 </td><td>-0.5034089 </td><td> 0.9941824 </td><td>-2.7036687 </td><td>-1.88812393</td><td>-3.29652421</td><td> 1.33536176</td><td> 4.58626077</td><td>-1.47860361</td><td> 1.33915605</td><td>-5.0754578 </td><td>-2.6885968 </td><td>-0.2578704 </td></tr>
+<tr><td>-1.81505653</td><td>-2.6737798 </td><td>-3.3566516 </td><td>-0.9760627 </td><td>-1.7366307 </td><td>-1.2505239 </td><td>-0.52279936</td><td>-1.35753188</td><td>-1.32426891</td><td> 6.99631464</td><td> 0.56586803</td><td> 1.19861748</td><td>-0.1905394 </td><td>-1.3588140 </td><td>-0.8798825 </td></tr>
+<tr><td>-1.63812725</td><td> 1.7723024 </td><td> 0.8699330 </td><td>-2.8340351 </td><td> 4.2679778 </td><td> 0.7554461 </td><td> 0.43642733</td><td>-2.57832736</td><td>-1.79761950</td><td> 3.32560471</td><td> 0.06726622</td><td> 5.57052607</td><td> 0.3424180 </td><td>-1.1582221 </td><td> 2.2085975 </td></tr>
+<tr><td> 0.02235027</td><td>-3.9985062 </td><td>-2.8075478 </td><td> 3.2857746 </td><td>-4.1343145 </td><td>-1.3714997 </td><td> 4.35313552</td><td> 1.89692521</td><td>-0.22135534</td><td>-8.45925945</td><td> 2.05378986</td><td>-7.28812166</td><td> 4.0558662 </td><td> 1.2875878 </td><td>-2.6376690 </td></tr>
+<tr><td>-1.50475326</td><td>-0.1267264 </td><td> 4.5673620 </td><td> 2.1576956 </td><td> 0.7218707 </td><td> 0.1051901 </td><td>-2.49851535</td><td>-1.54934342</td><td>-0.24473312</td><td> 1.33836023</td><td> 1.07115827</td><td>-1.97744503</td><td> 2.7094805 </td><td> 0.9678382 </td><td> 5.2405589 </td></tr>
+<tr><td> 0.59115452</td><td>-1.4589429 </td><td>-0.2333573 </td><td>-1.1292050 </td><td> 4.0156422 </td><td> 2.8354506 </td><td> 0.95905603</td><td>-2.56795119</td><td> 0.13437460</td><td> 3.60568542</td><td>-0.83915613</td><td> 2.49455591</td><td>-0.4241240 </td><td>-1.5970305 </td><td> 0.6498130 </td></tr>
+<tr><td> 0.84980399</td><td>-0.6160091 </td><td>-2.5819249 </td><td>-0.5919065 </td><td>-1.1941422 </td><td>-2.3260478 </td><td> 0.43015702</td><td> 0.05104811</td><td> 1.02121169</td><td>-0.24161298</td><td>-0.06250853</td><td>-1.49104535</td><td>-2.8163880 </td><td>-0.3412329 </td><td>-3.6867591 </td></tr>
+<tr><td> 1.91366438</td><td>-4.6110634 </td><td> 1.5999701 </td><td>-2.2903661 </td><td> 0.3840820 </td><td> 5.1427410 </td><td>-1.41001459</td><td> 3.68945130</td><td>-0.89915892</td><td>-1.29722228</td><td>-0.51322443</td><td>-0.30341254</td><td> 3.4612901 </td><td> 2.9368611 </td><td> 2.6007268 </td></tr>
+<tr><td> 1.53855803</td><td>-5.6012345 </td><td> 5.3808363 </td><td>-4.1334936 </td><td> 6.2855654 </td><td> 1.3891481 </td><td> 1.44094919</td><td>-2.65288245</td><td>-1.65996784</td><td>-0.34648643</td><td>-1.60747151</td><td> 1.18227981</td><td> 4.6096480 </td><td>-0.8490841 </td><td> 1.4753425 </td></tr>
+<tr><td>-0.23042676</td><td> 6.1660653 </td><td>-1.9105629 </td><td>-1.8528567 </td><td> 0.2577268 </td><td>-1.1321162 </td><td>-4.06203808</td><td> 4.23278287</td><td> 0.63943543</td><td>-0.44222158</td><td>-0.11374308</td><td> 4.82970492</td><td>-6.0131447 </td><td>-0.3599599 </td><td> 5.0788149 </td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [40]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>corrplot<span class="p">(</span>cor<span class="p">(</span>X<span class="p">),</span>order<span class="o">=</span><span class="s">"hclust"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAIAAAByhViMAAAACXBIWXMAABJ0AAASdAHeZh94
 AAAgAElEQVR4nOzdeZgU1bkw8PdUVVfv07MvDAzMMAwMDLKJIIqC61XBFXfjihqXmMRorppo
 romJ3nwuucYoipKrJlHRK2rcDUIQZAdlhwFmYfa99+7azvdHjzDM0tPdVdUb7++Zx0e6q069
 vVW9dVZCKQWEEEIIIZT6mEQHgBBCCCGEtIGJHUIIIYRQmsDEDiGEEEIoTWBihxBCCCGUJjCx
@@ -3535,104 +3569,104 @@ CQzsEEIIIYSKBAZ2CCGEEEJFAgM7hBBCCKEigYEdQgghhFCRwMAOIYQQQqhIYGCHEEIIIVQk
 MLBDCCGEECoSGNghhBBCCBUJDOwQQgghhIoEBnYIIYQQQkUCAzuEEEIIoSKBgR1CCCGEUJHA
 wA4hhBBCqEhgYIcQQgghVCQwsEMIIYQQKhIY2CGEEEIIFQkM7BBCCCGEigQGdgghhBBCRQID
 O4QQQgihIoGBHUIIIYRQkcDADiGEEEKoSGBghxBCCCFUJDCwQwghhBAqEv8fKw767CtvMvgA
-AAAASUVORK5CYII="&gt;
-&lt;/img&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [41]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cor&lt;span class="p"&gt;(&lt;/span&gt;X&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
-&lt;table&gt;
-&lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt;-0.23854046 &lt;/td&gt;&lt;td&gt;-0.17704416 &lt;/td&gt;&lt;td&gt;-0.26731596 &lt;/td&gt;&lt;td&gt;-0.011979343&lt;/td&gt;&lt;td&gt; 0.20242488 &lt;/td&gt;&lt;td&gt; 0.23572040 &lt;/td&gt;&lt;td&gt; 0.28155567 &lt;/td&gt;&lt;td&gt; 0.05948347 &lt;/td&gt;&lt;td&gt;-0.14817609 &lt;/td&gt;&lt;td&gt;-0.11906753 &lt;/td&gt;&lt;td&gt;-0.44082508 &lt;/td&gt;&lt;td&gt; 0.043155894&lt;/td&gt;&lt;td&gt; 0.11451608 &lt;/td&gt;&lt;td&gt;-0.29348628 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.23854046 &lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt;-0.37240688 &lt;/td&gt;&lt;td&gt; 0.06050313 &lt;/td&gt;&lt;td&gt;-0.147697165&lt;/td&gt;&lt;td&gt;-0.24217736 &lt;/td&gt;&lt;td&gt;-0.09621314 &lt;/td&gt;&lt;td&gt; 0.05786073 &lt;/td&gt;&lt;td&gt; 0.23024049 &lt;/td&gt;&lt;td&gt; 0.12068339 &lt;/td&gt;&lt;td&gt; 0.07969070 &lt;/td&gt;&lt;td&gt; 0.47154064 &lt;/td&gt;&lt;td&gt;-0.493347746&lt;/td&gt;&lt;td&gt;-0.12379145 &lt;/td&gt;&lt;td&gt; 0.27628373 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.17704416 &lt;/td&gt;&lt;td&gt;-0.37240688 &lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt;-0.32125659 &lt;/td&gt;&lt;td&gt; 0.518534723&lt;/td&gt;&lt;td&gt; 0.08387196 &lt;/td&gt;&lt;td&gt;-0.11027778 &lt;/td&gt;&lt;td&gt;-0.13592602 &lt;/td&gt;&lt;td&gt;-0.32406933 &lt;/td&gt;&lt;td&gt;-0.02163296 &lt;/td&gt;&lt;td&gt;-0.04491709 &lt;/td&gt;&lt;td&gt; 0.07404819 &lt;/td&gt;&lt;td&gt; 0.474454466&lt;/td&gt;&lt;td&gt; 0.25313891 &lt;/td&gt;&lt;td&gt;-0.08046042 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.26731596 &lt;/td&gt;&lt;td&gt; 0.06050313 &lt;/td&gt;&lt;td&gt;-0.32125659 &lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt;-0.341498846&lt;/td&gt;&lt;td&gt; 0.11346161 &lt;/td&gt;&lt;td&gt; 0.28706042 &lt;/td&gt;&lt;td&gt;-0.03819774 &lt;/td&gt;&lt;td&gt; 0.30515890 &lt;/td&gt;&lt;td&gt;-0.15571402 &lt;/td&gt;&lt;td&gt;-0.03905133 &lt;/td&gt;&lt;td&gt;-0.24228705 &lt;/td&gt;&lt;td&gt; 0.073753276&lt;/td&gt;&lt;td&gt; 0.18911072 &lt;/td&gt;&lt;td&gt; 0.05387552 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.01197934 &lt;/td&gt;&lt;td&gt;-0.14769716 &lt;/td&gt;&lt;td&gt; 0.51853472 &lt;/td&gt;&lt;td&gt;-0.34149885 &lt;/td&gt;&lt;td&gt; 1.000000000&lt;/td&gt;&lt;td&gt; 0.24767584 &lt;/td&gt;&lt;td&gt; 0.13147216 &lt;/td&gt;&lt;td&gt;-0.24134480 &lt;/td&gt;&lt;td&gt;-0.34235425 &lt;/td&gt;&lt;td&gt;-0.03171523 &lt;/td&gt;&lt;td&gt; 0.09871287 &lt;/td&gt;&lt;td&gt; 0.41951823 &lt;/td&gt;&lt;td&gt;-0.001507793&lt;/td&gt;&lt;td&gt;-0.12242138 &lt;/td&gt;&lt;td&gt;-0.03058071 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.20242488 &lt;/td&gt;&lt;td&gt;-0.24217736 &lt;/td&gt;&lt;td&gt; 0.08387196 &lt;/td&gt;&lt;td&gt; 0.11346161 &lt;/td&gt;&lt;td&gt; 0.247675837&lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt; 0.45173759 &lt;/td&gt;&lt;td&gt; 0.07007639 &lt;/td&gt;&lt;td&gt;-0.30001437 &lt;/td&gt;&lt;td&gt; 0.32561879 &lt;/td&gt;&lt;td&gt; 0.28960198 &lt;/td&gt;&lt;td&gt;-0.05157062 &lt;/td&gt;&lt;td&gt; 0.147646137&lt;/td&gt;&lt;td&gt; 0.24974098 &lt;/td&gt;&lt;td&gt;-0.17637762 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.23572040 &lt;/td&gt;&lt;td&gt;-0.09621314 &lt;/td&gt;&lt;td&gt;-0.11027778 &lt;/td&gt;&lt;td&gt; 0.28706042 &lt;/td&gt;&lt;td&gt; 0.131472158&lt;/td&gt;&lt;td&gt; 0.45173759 &lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt;-0.07279786 &lt;/td&gt;&lt;td&gt;-0.40801081 &lt;/td&gt;&lt;td&gt; 0.01421319 &lt;/td&gt;&lt;td&gt; 0.07519535 &lt;/td&gt;&lt;td&gt;-0.33012562 &lt;/td&gt;&lt;td&gt; 0.220267698&lt;/td&gt;&lt;td&gt;-0.15262173 &lt;/td&gt;&lt;td&gt;-0.52266120 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.28155567 &lt;/td&gt;&lt;td&gt; 0.05786073 &lt;/td&gt;&lt;td&gt;-0.13592602 &lt;/td&gt;&lt;td&gt;-0.03819774 &lt;/td&gt;&lt;td&gt;-0.241344796&lt;/td&gt;&lt;td&gt; 0.07007639 &lt;/td&gt;&lt;td&gt;-0.07279786 &lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt; 0.03834636 &lt;/td&gt;&lt;td&gt;-0.44809898 &lt;/td&gt;&lt;td&gt; 0.35209266 &lt;/td&gt;&lt;td&gt;-0.31758939 &lt;/td&gt;&lt;td&gt; 0.059585199&lt;/td&gt;&lt;td&gt; 0.35558577 &lt;/td&gt;&lt;td&gt; 0.11671755 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.05948347 &lt;/td&gt;&lt;td&gt; 0.23024049 &lt;/td&gt;&lt;td&gt;-0.32406933 &lt;/td&gt;&lt;td&gt; 0.30515890 &lt;/td&gt;&lt;td&gt;-0.342354248&lt;/td&gt;&lt;td&gt;-0.30001437 &lt;/td&gt;&lt;td&gt;-0.40801081 &lt;/td&gt;&lt;td&gt; 0.03834636 &lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt;-0.37054053 &lt;/td&gt;&lt;td&gt;-0.16739017 &lt;/td&gt;&lt;td&gt; 0.03989227 &lt;/td&gt;&lt;td&gt;-0.106647245&lt;/td&gt;&lt;td&gt; 0.28857173 &lt;/td&gt;&lt;td&gt; 0.20790331 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.14817609 &lt;/td&gt;&lt;td&gt; 0.12068339 &lt;/td&gt;&lt;td&gt;-0.02163296 &lt;/td&gt;&lt;td&gt;-0.15571402 &lt;/td&gt;&lt;td&gt;-0.031715230&lt;/td&gt;&lt;td&gt; 0.32561879 &lt;/td&gt;&lt;td&gt; 0.01421319 &lt;/td&gt;&lt;td&gt;-0.44809898 &lt;/td&gt;&lt;td&gt;-0.37054053 &lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt;-0.04844280 &lt;/td&gt;&lt;td&gt; 0.27622111 &lt;/td&gt;&lt;td&gt;-0.358855744&lt;/td&gt;&lt;td&gt;-0.16608205 &lt;/td&gt;&lt;td&gt;-0.10478631 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.11906753 &lt;/td&gt;&lt;td&gt; 0.07969070 &lt;/td&gt;&lt;td&gt;-0.04491709 &lt;/td&gt;&lt;td&gt;-0.03905133 &lt;/td&gt;&lt;td&gt; 0.098712874&lt;/td&gt;&lt;td&gt; 0.28960198 &lt;/td&gt;&lt;td&gt; 0.07519535 &lt;/td&gt;&lt;td&gt; 0.35209266 &lt;/td&gt;&lt;td&gt;-0.16739017 &lt;/td&gt;&lt;td&gt;-0.04844280 &lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt;-0.08734957 &lt;/td&gt;&lt;td&gt;-0.238834523&lt;/td&gt;&lt;td&gt; 0.17285964 &lt;/td&gt;&lt;td&gt;-0.01405455 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.44082508 &lt;/td&gt;&lt;td&gt; 0.47154064 &lt;/td&gt;&lt;td&gt; 0.07404819 &lt;/td&gt;&lt;td&gt;-0.24228705 &lt;/td&gt;&lt;td&gt; 0.419518229&lt;/td&gt;&lt;td&gt;-0.05157062 &lt;/td&gt;&lt;td&gt;-0.33012562 &lt;/td&gt;&lt;td&gt;-0.31758939 &lt;/td&gt;&lt;td&gt; 0.03989227 &lt;/td&gt;&lt;td&gt; 0.27622111 &lt;/td&gt;&lt;td&gt;-0.08734957 &lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt;-0.330075615&lt;/td&gt;&lt;td&gt;-0.16565971 &lt;/td&gt;&lt;td&gt; 0.26777476 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.04315589 &lt;/td&gt;&lt;td&gt;-0.49334775 &lt;/td&gt;&lt;td&gt; 0.47445447 &lt;/td&gt;&lt;td&gt; 0.07375328 &lt;/td&gt;&lt;td&gt;-0.001507793&lt;/td&gt;&lt;td&gt; 0.14764614 &lt;/td&gt;&lt;td&gt; 0.22026770 &lt;/td&gt;&lt;td&gt; 0.05958520 &lt;/td&gt;&lt;td&gt;-0.10664724 &lt;/td&gt;&lt;td&gt;-0.35885574 &lt;/td&gt;&lt;td&gt;-0.23883452 &lt;/td&gt;&lt;td&gt;-0.33007562 &lt;/td&gt;&lt;td&gt; 1.000000000&lt;/td&gt;&lt;td&gt; 0.31687940 &lt;/td&gt;&lt;td&gt;-0.09505792 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.11451608 &lt;/td&gt;&lt;td&gt;-0.12379145 &lt;/td&gt;&lt;td&gt; 0.25313891 &lt;/td&gt;&lt;td&gt; 0.18911072 &lt;/td&gt;&lt;td&gt;-0.122421375&lt;/td&gt;&lt;td&gt; 0.24974098 &lt;/td&gt;&lt;td&gt;-0.15262173 &lt;/td&gt;&lt;td&gt; 0.35558577 &lt;/td&gt;&lt;td&gt; 0.28857173 &lt;/td&gt;&lt;td&gt;-0.16608205 &lt;/td&gt;&lt;td&gt; 0.17285964 &lt;/td&gt;&lt;td&gt;-0.16565971 &lt;/td&gt;&lt;td&gt; 0.316879404&lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt;-0.01986642 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.29348628 &lt;/td&gt;&lt;td&gt; 0.27628373 &lt;/td&gt;&lt;td&gt;-0.08046042 &lt;/td&gt;&lt;td&gt; 0.05387552 &lt;/td&gt;&lt;td&gt;-0.030580710&lt;/td&gt;&lt;td&gt;-0.17637762 &lt;/td&gt;&lt;td&gt;-0.52266120 &lt;/td&gt;&lt;td&gt; 0.11671755 &lt;/td&gt;&lt;td&gt; 0.20790331 &lt;/td&gt;&lt;td&gt;-0.10478631 &lt;/td&gt;&lt;td&gt;-0.01405455 &lt;/td&gt;&lt;td&gt; 0.26777476 &lt;/td&gt;&lt;td&gt;-0.095057916&lt;/td&gt;&lt;td&gt;-0.01986642 &lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Corrplot"&gt;Corrplot&lt;a class="anchor-link" href="#Corrplot"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Order&lt;ol&gt;
-&lt;li&gt;"original"&lt;/li&gt;
-&lt;li&gt;"AOE"&lt;/li&gt;
-&lt;li&gt;"FPC"&lt;/li&gt;
-&lt;li&gt;"hclust"&lt;/li&gt;
-&lt;li&gt;"alphabet"&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;Method&lt;ol&gt;
-&lt;li&gt;"circle"&lt;/li&gt;
-&lt;li&gt;"square"&lt;/li&gt;
-&lt;li&gt;"ellipse"&lt;/li&gt;
-&lt;li&gt;"number"&lt;/li&gt;
-&lt;li&gt;"shade"&lt;/li&gt;
-&lt;li&gt;"color"&lt;/li&gt;
-&lt;li&gt;"pie"&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;Type&lt;ol&gt;
-&lt;li&gt;"full"&lt;/li&gt;
-&lt;li&gt;"upper"&lt;/li&gt;
-&lt;li&gt;"lower"&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [69]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;corrplot&lt;span class="p"&gt;(&lt;/span&gt;cor&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="p"&gt;),&lt;/span&gt;order&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"hclust"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;method&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"pie"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;type&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"lower"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-corrplot&lt;span class="p"&gt;(&lt;/span&gt;cor&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="p"&gt;),&lt;/span&gt;add&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;T&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;order&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"hclust"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;method&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"number"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;type&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"upper"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="kt"&gt;c&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_png output_subarea "&gt;
-&lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAIAAAByhViMAAAACXBIWXMAABJ0AAASdAHeZh94
+AAAASUVORK5CYII=">
+</img></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [41]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>cor<span class="p">(</span>X<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<table>
+<tbody>
+<tr><td> 1.00000000 </td><td>-0.23854046 </td><td>-0.17704416 </td><td>-0.26731596 </td><td>-0.011979343</td><td> 0.20242488 </td><td> 0.23572040 </td><td> 0.28155567 </td><td> 0.05948347 </td><td>-0.14817609 </td><td>-0.11906753 </td><td>-0.44082508 </td><td> 0.043155894</td><td> 0.11451608 </td><td>-0.29348628 </td></tr>
+<tr><td>-0.23854046 </td><td> 1.00000000 </td><td>-0.37240688 </td><td> 0.06050313 </td><td>-0.147697165</td><td>-0.24217736 </td><td>-0.09621314 </td><td> 0.05786073 </td><td> 0.23024049 </td><td> 0.12068339 </td><td> 0.07969070 </td><td> 0.47154064 </td><td>-0.493347746</td><td>-0.12379145 </td><td> 0.27628373 </td></tr>
+<tr><td>-0.17704416 </td><td>-0.37240688 </td><td> 1.00000000 </td><td>-0.32125659 </td><td> 0.518534723</td><td> 0.08387196 </td><td>-0.11027778 </td><td>-0.13592602 </td><td>-0.32406933 </td><td>-0.02163296 </td><td>-0.04491709 </td><td> 0.07404819 </td><td> 0.474454466</td><td> 0.25313891 </td><td>-0.08046042 </td></tr>
+<tr><td>-0.26731596 </td><td> 0.06050313 </td><td>-0.32125659 </td><td> 1.00000000 </td><td>-0.341498846</td><td> 0.11346161 </td><td> 0.28706042 </td><td>-0.03819774 </td><td> 0.30515890 </td><td>-0.15571402 </td><td>-0.03905133 </td><td>-0.24228705 </td><td> 0.073753276</td><td> 0.18911072 </td><td> 0.05387552 </td></tr>
+<tr><td>-0.01197934 </td><td>-0.14769716 </td><td> 0.51853472 </td><td>-0.34149885 </td><td> 1.000000000</td><td> 0.24767584 </td><td> 0.13147216 </td><td>-0.24134480 </td><td>-0.34235425 </td><td>-0.03171523 </td><td> 0.09871287 </td><td> 0.41951823 </td><td>-0.001507793</td><td>-0.12242138 </td><td>-0.03058071 </td></tr>
+<tr><td> 0.20242488 </td><td>-0.24217736 </td><td> 0.08387196 </td><td> 0.11346161 </td><td> 0.247675837</td><td> 1.00000000 </td><td> 0.45173759 </td><td> 0.07007639 </td><td>-0.30001437 </td><td> 0.32561879 </td><td> 0.28960198 </td><td>-0.05157062 </td><td> 0.147646137</td><td> 0.24974098 </td><td>-0.17637762 </td></tr>
+<tr><td> 0.23572040 </td><td>-0.09621314 </td><td>-0.11027778 </td><td> 0.28706042 </td><td> 0.131472158</td><td> 0.45173759 </td><td> 1.00000000 </td><td>-0.07279786 </td><td>-0.40801081 </td><td> 0.01421319 </td><td> 0.07519535 </td><td>-0.33012562 </td><td> 0.220267698</td><td>-0.15262173 </td><td>-0.52266120 </td></tr>
+<tr><td> 0.28155567 </td><td> 0.05786073 </td><td>-0.13592602 </td><td>-0.03819774 </td><td>-0.241344796</td><td> 0.07007639 </td><td>-0.07279786 </td><td> 1.00000000 </td><td> 0.03834636 </td><td>-0.44809898 </td><td> 0.35209266 </td><td>-0.31758939 </td><td> 0.059585199</td><td> 0.35558577 </td><td> 0.11671755 </td></tr>
+<tr><td> 0.05948347 </td><td> 0.23024049 </td><td>-0.32406933 </td><td> 0.30515890 </td><td>-0.342354248</td><td>-0.30001437 </td><td>-0.40801081 </td><td> 0.03834636 </td><td> 1.00000000 </td><td>-0.37054053 </td><td>-0.16739017 </td><td> 0.03989227 </td><td>-0.106647245</td><td> 0.28857173 </td><td> 0.20790331 </td></tr>
+<tr><td>-0.14817609 </td><td> 0.12068339 </td><td>-0.02163296 </td><td>-0.15571402 </td><td>-0.031715230</td><td> 0.32561879 </td><td> 0.01421319 </td><td>-0.44809898 </td><td>-0.37054053 </td><td> 1.00000000 </td><td>-0.04844280 </td><td> 0.27622111 </td><td>-0.358855744</td><td>-0.16608205 </td><td>-0.10478631 </td></tr>
+<tr><td>-0.11906753 </td><td> 0.07969070 </td><td>-0.04491709 </td><td>-0.03905133 </td><td> 0.098712874</td><td> 0.28960198 </td><td> 0.07519535 </td><td> 0.35209266 </td><td>-0.16739017 </td><td>-0.04844280 </td><td> 1.00000000 </td><td>-0.08734957 </td><td>-0.238834523</td><td> 0.17285964 </td><td>-0.01405455 </td></tr>
+<tr><td>-0.44082508 </td><td> 0.47154064 </td><td> 0.07404819 </td><td>-0.24228705 </td><td> 0.419518229</td><td>-0.05157062 </td><td>-0.33012562 </td><td>-0.31758939 </td><td> 0.03989227 </td><td> 0.27622111 </td><td>-0.08734957 </td><td> 1.00000000 </td><td>-0.330075615</td><td>-0.16565971 </td><td> 0.26777476 </td></tr>
+<tr><td> 0.04315589 </td><td>-0.49334775 </td><td> 0.47445447 </td><td> 0.07375328 </td><td>-0.001507793</td><td> 0.14764614 </td><td> 0.22026770 </td><td> 0.05958520 </td><td>-0.10664724 </td><td>-0.35885574 </td><td>-0.23883452 </td><td>-0.33007562 </td><td> 1.000000000</td><td> 0.31687940 </td><td>-0.09505792 </td></tr>
+<tr><td> 0.11451608 </td><td>-0.12379145 </td><td> 0.25313891 </td><td> 0.18911072 </td><td>-0.122421375</td><td> 0.24974098 </td><td>-0.15262173 </td><td> 0.35558577 </td><td> 0.28857173 </td><td>-0.16608205 </td><td> 0.17285964 </td><td>-0.16565971 </td><td> 0.316879404</td><td> 1.00000000 </td><td>-0.01986642 </td></tr>
+<tr><td>-0.29348628 </td><td> 0.27628373 </td><td>-0.08046042 </td><td> 0.05387552 </td><td>-0.030580710</td><td>-0.17637762 </td><td>-0.52266120 </td><td> 0.11671755 </td><td> 0.20790331 </td><td>-0.10478631 </td><td>-0.01405455 </td><td> 0.26777476 </td><td>-0.095057916</td><td>-0.01986642 </td><td> 1.00000000 </td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Corrplot">Corrplot<a class="anchor-link" href="#Corrplot">¶</a></h3><ul>
+<li>Order<ol>
+<li>"original"</li>
+<li>"AOE"</li>
+<li>"FPC"</li>
+<li>"hclust"</li>
+<li>"alphabet"</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>Method<ol>
+<li>"circle"</li>
+<li>"square"</li>
+<li>"ellipse"</li>
+<li>"number"</li>
+<li>"shade"</li>
+<li>"color"</li>
+<li>"pie"</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>Type<ol>
+<li>"full"</li>
+<li>"upper"</li>
+<li>"lower"</li>
+</ol>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [69]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>corrplot<span class="p">(</span>cor<span class="p">(</span>data<span class="p">),</span>order<span class="o">=</span><span class="s">"hclust"</span><span class="p">,</span>method<span class="o">=</span><span class="s">"pie"</span><span class="p">,</span>type<span class="o">=</span><span class="s">"lower"</span><span class="p">)</span>
+corrplot<span class="p">(</span>cor<span class="p">(</span>data<span class="p">),</span>add<span class="o">=</span><span class="bp">T</span><span class="p">,</span>order<span class="o">=</span><span class="s">"hclust"</span><span class="p">,</span>method<span class="o">=</span><span class="s">"number"</span><span class="p">,</span>type<span class="o">=</span><span class="s">"upper"</span><span class="p">)</span><span class="kt">c</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAIAAAByhViMAAAACXBIWXMAABJ0AAASdAHeZh94
 AAAgAElEQVR4nOzdd3hb1fkH8O+92rZlWx7xjp29J4EkZE8SIGQHKAQCLaOlJWWUQn6lUEZp
 SyGsQiFQaNOyAkkgIayQPckeznISxyPeU3tc3fP748qSbMv7xpLM+3ny8EhX90qvxdXVq3Pe
 cw7HGAMhhBBCCAl/fLADIIQQQggh8qDEjhBCCCGki6DEjhBCCCGki6DEjhBCCCGki6DEjhDy
@@ -7387,62 +7421,62 @@ zjler3fOnDkvv/zyEAV7YkV2J2c4758yTtijJ598suA5gZaWliEMuxjH6trwV34rpcw2nFE4
 rI2gnc6xjMR8oIeun7wRQgghhJCRbhT9KpYQQgghpLxRYkcIIYQQUiYosSOEEEIIKROU2BFC
 CCGElAlK7AghhBBCygQldoQQQgghZYISO0IIIYSQMkGJHSGEEEJImaDEjhBCCCGkTFBiRwgh
 hBBSJiixI4QQQggpE5TYEUIIIYSUCUrsCCGEEELKBCV2hBBCCCFlghI7QgghhJAyQYkdIYQQ
-QkiZoMSOEEIIIaRMUGJHCCGEEFImKLEjhBBCCCkT/x9aWjpafWQoFQAAAABJRU5ErkJggg=="&gt;
-&lt;/img&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [44]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cor&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
-&lt;table&gt;
-&lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;th scope="col"&gt;mpg&lt;/th&gt;&lt;th scope="col"&gt;cyl&lt;/th&gt;&lt;th scope="col"&gt;disp&lt;/th&gt;&lt;th scope="col"&gt;hp&lt;/th&gt;&lt;th scope="col"&gt;drat&lt;/th&gt;&lt;th scope="col"&gt;wt&lt;/th&gt;&lt;th scope="col"&gt;qsec&lt;/th&gt;&lt;th scope="col"&gt;vs&lt;/th&gt;&lt;th scope="col"&gt;am&lt;/th&gt;&lt;th scope="col"&gt;gear&lt;/th&gt;&lt;th scope="col"&gt;carb&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;mpg&lt;/th&gt;&lt;td&gt; 1.0000000 &lt;/td&gt;&lt;td&gt;-0.8521620 &lt;/td&gt;&lt;td&gt;-0.8475514 &lt;/td&gt;&lt;td&gt;-0.7761684 &lt;/td&gt;&lt;td&gt; 0.68117191&lt;/td&gt;&lt;td&gt;-0.8676594 &lt;/td&gt;&lt;td&gt; 0.41868403&lt;/td&gt;&lt;td&gt; 0.6640389 &lt;/td&gt;&lt;td&gt; 0.59983243&lt;/td&gt;&lt;td&gt; 0.4802848 &lt;/td&gt;&lt;td&gt;-0.55092507&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;cyl&lt;/th&gt;&lt;td&gt;-0.8521620 &lt;/td&gt;&lt;td&gt; 1.0000000 &lt;/td&gt;&lt;td&gt; 0.9020329 &lt;/td&gt;&lt;td&gt; 0.8324475 &lt;/td&gt;&lt;td&gt;-0.69993811&lt;/td&gt;&lt;td&gt; 0.7824958 &lt;/td&gt;&lt;td&gt;-0.59124207&lt;/td&gt;&lt;td&gt;-0.8108118 &lt;/td&gt;&lt;td&gt;-0.52260705&lt;/td&gt;&lt;td&gt;-0.4926866 &lt;/td&gt;&lt;td&gt; 0.52698829&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;disp&lt;/th&gt;&lt;td&gt;-0.8475514 &lt;/td&gt;&lt;td&gt; 0.9020329 &lt;/td&gt;&lt;td&gt; 1.0000000 &lt;/td&gt;&lt;td&gt; 0.7909486 &lt;/td&gt;&lt;td&gt;-0.71021393&lt;/td&gt;&lt;td&gt; 0.8879799 &lt;/td&gt;&lt;td&gt;-0.43369788&lt;/td&gt;&lt;td&gt;-0.7104159 &lt;/td&gt;&lt;td&gt;-0.59122704&lt;/td&gt;&lt;td&gt;-0.5555692 &lt;/td&gt;&lt;td&gt; 0.39497686&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;hp&lt;/th&gt;&lt;td&gt;-0.7761684 &lt;/td&gt;&lt;td&gt; 0.8324475 &lt;/td&gt;&lt;td&gt; 0.7909486 &lt;/td&gt;&lt;td&gt; 1.0000000 &lt;/td&gt;&lt;td&gt;-0.44875912&lt;/td&gt;&lt;td&gt; 0.6587479 &lt;/td&gt;&lt;td&gt;-0.70822339&lt;/td&gt;&lt;td&gt;-0.7230967 &lt;/td&gt;&lt;td&gt;-0.24320426&lt;/td&gt;&lt;td&gt;-0.1257043 &lt;/td&gt;&lt;td&gt; 0.74981247&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;drat&lt;/th&gt;&lt;td&gt; 0.6811719 &lt;/td&gt;&lt;td&gt;-0.6999381 &lt;/td&gt;&lt;td&gt;-0.7102139 &lt;/td&gt;&lt;td&gt;-0.4487591 &lt;/td&gt;&lt;td&gt; 1.00000000&lt;/td&gt;&lt;td&gt;-0.7124406 &lt;/td&gt;&lt;td&gt; 0.09120476&lt;/td&gt;&lt;td&gt; 0.4402785 &lt;/td&gt;&lt;td&gt; 0.71271113&lt;/td&gt;&lt;td&gt; 0.6996101 &lt;/td&gt;&lt;td&gt;-0.09078980&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;wt&lt;/th&gt;&lt;td&gt;-0.8676594 &lt;/td&gt;&lt;td&gt; 0.7824958 &lt;/td&gt;&lt;td&gt; 0.8879799 &lt;/td&gt;&lt;td&gt; 0.6587479 &lt;/td&gt;&lt;td&gt;-0.71244065&lt;/td&gt;&lt;td&gt; 1.0000000 &lt;/td&gt;&lt;td&gt;-0.17471588&lt;/td&gt;&lt;td&gt;-0.5549157 &lt;/td&gt;&lt;td&gt;-0.69249526&lt;/td&gt;&lt;td&gt;-0.5832870 &lt;/td&gt;&lt;td&gt; 0.42760594&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;qsec&lt;/th&gt;&lt;td&gt; 0.4186840 &lt;/td&gt;&lt;td&gt;-0.5912421 &lt;/td&gt;&lt;td&gt;-0.4336979 &lt;/td&gt;&lt;td&gt;-0.7082234 &lt;/td&gt;&lt;td&gt; 0.09120476&lt;/td&gt;&lt;td&gt;-0.1747159 &lt;/td&gt;&lt;td&gt; 1.00000000&lt;/td&gt;&lt;td&gt; 0.7445354 &lt;/td&gt;&lt;td&gt;-0.22986086&lt;/td&gt;&lt;td&gt;-0.2126822 &lt;/td&gt;&lt;td&gt;-0.65624923&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;vs&lt;/th&gt;&lt;td&gt; 0.6640389 &lt;/td&gt;&lt;td&gt;-0.8108118 &lt;/td&gt;&lt;td&gt;-0.7104159 &lt;/td&gt;&lt;td&gt;-0.7230967 &lt;/td&gt;&lt;td&gt; 0.44027846&lt;/td&gt;&lt;td&gt;-0.5549157 &lt;/td&gt;&lt;td&gt; 0.74453544&lt;/td&gt;&lt;td&gt; 1.0000000 &lt;/td&gt;&lt;td&gt; 0.16834512&lt;/td&gt;&lt;td&gt; 0.2060233 &lt;/td&gt;&lt;td&gt;-0.56960714&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;am&lt;/th&gt;&lt;td&gt; 0.5998324 &lt;/td&gt;&lt;td&gt;-0.5226070 &lt;/td&gt;&lt;td&gt;-0.5912270 &lt;/td&gt;&lt;td&gt;-0.2432043 &lt;/td&gt;&lt;td&gt; 0.71271113&lt;/td&gt;&lt;td&gt;-0.6924953 &lt;/td&gt;&lt;td&gt;-0.22986086&lt;/td&gt;&lt;td&gt; 0.1683451 &lt;/td&gt;&lt;td&gt; 1.00000000&lt;/td&gt;&lt;td&gt; 0.7940588 &lt;/td&gt;&lt;td&gt; 0.05753435&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;gear&lt;/th&gt;&lt;td&gt; 0.4802848 &lt;/td&gt;&lt;td&gt;-0.4926866 &lt;/td&gt;&lt;td&gt;-0.5555692 &lt;/td&gt;&lt;td&gt;-0.1257043 &lt;/td&gt;&lt;td&gt; 0.69961013&lt;/td&gt;&lt;td&gt;-0.5832870 &lt;/td&gt;&lt;td&gt;-0.21268223&lt;/td&gt;&lt;td&gt; 0.2060233 &lt;/td&gt;&lt;td&gt; 0.79405876&lt;/td&gt;&lt;td&gt; 1.0000000 &lt;/td&gt;&lt;td&gt; 0.27407284&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;carb&lt;/th&gt;&lt;td&gt;-0.5509251 &lt;/td&gt;&lt;td&gt; 0.5269883 &lt;/td&gt;&lt;td&gt; 0.3949769 &lt;/td&gt;&lt;td&gt; 0.7498125 &lt;/td&gt;&lt;td&gt;-0.09078980&lt;/td&gt;&lt;td&gt; 0.4276059 &lt;/td&gt;&lt;td&gt;-0.65624923&lt;/td&gt;&lt;td&gt;-0.5696071 &lt;/td&gt;&lt;td&gt; 0.05753435&lt;/td&gt;&lt;td&gt; 0.2740728 &lt;/td&gt;&lt;td&gt; 1.00000000&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [73]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;corrplot.mixed&lt;span class="p"&gt;(&lt;/span&gt;cor&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="p"&gt;),&lt;/span&gt;lower&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"pie"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;upper&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"number"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_png output_subarea "&gt;
-&lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAIAAAByhViMAAAACXBIWXMAABJ0AAASdAHeZh94
+QkiZoMSOEEIIIaRMUGJHCCGEEFImKLEjhBBCCCkT/x9aWjpafWQoFQAAAABJRU5ErkJggg==">
+</img></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [44]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>cor<span class="p">(</span>data<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th></th><th scope="col">mpg</th><th scope="col">cyl</th><th scope="col">disp</th><th scope="col">hp</th><th scope="col">drat</th><th scope="col">wt</th><th scope="col">qsec</th><th scope="col">vs</th><th scope="col">am</th><th scope="col">gear</th><th scope="col">carb</th></tr></thead>
+<tbody>
+<tr><th scope="row">mpg</th><td> 1.0000000 </td><td>-0.8521620 </td><td>-0.8475514 </td><td>-0.7761684 </td><td> 0.68117191</td><td>-0.8676594 </td><td> 0.41868403</td><td> 0.6640389 </td><td> 0.59983243</td><td> 0.4802848 </td><td>-0.55092507</td></tr>
+<tr><th scope="row">cyl</th><td>-0.8521620 </td><td> 1.0000000 </td><td> 0.9020329 </td><td> 0.8324475 </td><td>-0.69993811</td><td> 0.7824958 </td><td>-0.59124207</td><td>-0.8108118 </td><td>-0.52260705</td><td>-0.4926866 </td><td> 0.52698829</td></tr>
+<tr><th scope="row">disp</th><td>-0.8475514 </td><td> 0.9020329 </td><td> 1.0000000 </td><td> 0.7909486 </td><td>-0.71021393</td><td> 0.8879799 </td><td>-0.43369788</td><td>-0.7104159 </td><td>-0.59122704</td><td>-0.5555692 </td><td> 0.39497686</td></tr>
+<tr><th scope="row">hp</th><td>-0.7761684 </td><td> 0.8324475 </td><td> 0.7909486 </td><td> 1.0000000 </td><td>-0.44875912</td><td> 0.6587479 </td><td>-0.70822339</td><td>-0.7230967 </td><td>-0.24320426</td><td>-0.1257043 </td><td> 0.74981247</td></tr>
+<tr><th scope="row">drat</th><td> 0.6811719 </td><td>-0.6999381 </td><td>-0.7102139 </td><td>-0.4487591 </td><td> 1.00000000</td><td>-0.7124406 </td><td> 0.09120476</td><td> 0.4402785 </td><td> 0.71271113</td><td> 0.6996101 </td><td>-0.09078980</td></tr>
+<tr><th scope="row">wt</th><td>-0.8676594 </td><td> 0.7824958 </td><td> 0.8879799 </td><td> 0.6587479 </td><td>-0.71244065</td><td> 1.0000000 </td><td>-0.17471588</td><td>-0.5549157 </td><td>-0.69249526</td><td>-0.5832870 </td><td> 0.42760594</td></tr>
+<tr><th scope="row">qsec</th><td> 0.4186840 </td><td>-0.5912421 </td><td>-0.4336979 </td><td>-0.7082234 </td><td> 0.09120476</td><td>-0.1747159 </td><td> 1.00000000</td><td> 0.7445354 </td><td>-0.22986086</td><td>-0.2126822 </td><td>-0.65624923</td></tr>
+<tr><th scope="row">vs</th><td> 0.6640389 </td><td>-0.8108118 </td><td>-0.7104159 </td><td>-0.7230967 </td><td> 0.44027846</td><td>-0.5549157 </td><td> 0.74453544</td><td> 1.0000000 </td><td> 0.16834512</td><td> 0.2060233 </td><td>-0.56960714</td></tr>
+<tr><th scope="row">am</th><td> 0.5998324 </td><td>-0.5226070 </td><td>-0.5912270 </td><td>-0.2432043 </td><td> 0.71271113</td><td>-0.6924953 </td><td>-0.22986086</td><td> 0.1683451 </td><td> 1.00000000</td><td> 0.7940588 </td><td> 0.05753435</td></tr>
+<tr><th scope="row">gear</th><td> 0.4802848 </td><td>-0.4926866 </td><td>-0.5555692 </td><td>-0.1257043 </td><td> 0.69961013</td><td>-0.5832870 </td><td>-0.21268223</td><td> 0.2060233 </td><td> 0.79405876</td><td> 1.0000000 </td><td> 0.27407284</td></tr>
+<tr><th scope="row">carb</th><td>-0.5509251 </td><td> 0.5269883 </td><td> 0.3949769 </td><td> 0.7498125 </td><td>-0.09078980</td><td> 0.4276059 </td><td>-0.65624923</td><td>-0.5696071 </td><td> 0.05753435</td><td> 0.2740728 </td><td> 1.00000000</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [73]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>corrplot.mixed<span class="p">(</span>cor<span class="p">(</span>data<span class="p">),</span>lower<span class="o">=</span><span class="s">"pie"</span><span class="p">,</span>upper<span class="o">=</span><span class="s">"number"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAIAAAByhViMAAAACXBIWXMAABJ0AAASdAHeZh94
 AAAgAElEQVR4nOzdd3hT9foA8Pdkp03adO/SltJSKC2lZcnegmxUULwORARUUMCr13lV1J9e
 B24EJyCIyh6yN0ihFCi0dO+RNHvv5PfHSdPQpgXpSUvj+3n68CQnZ7wnfNvznu86hN1uB4QQ
 Qggh1P3RujoAhBBCCCFEDUzsEEIIIYS8BCZ2CCGEEEJeAhM7hBBCCCEvgYkdQgghhJCXwMQO
@@ -10408,553 +10442,553 @@ AAAAADSBYgcAAABAEyh2AAAAADSBYgcAAABAEyh2AAAAADSBYgcAAABAEyh2AAAAADSBYgcA
 AABAEyh2AAAAADSBYgcAAABAEyh2AAAAADSBYgcAAABAEyh2AAAAADSBYgcAAABAEyh2AAAA
 ADSBYgcAAABAEyh2AAAAADSBYgcAAABAEyh2AAAAADSBYgcAAABAEyh2AAAAADSBYgcAAABA
 Eyh2AAAAADSBYgcAAABAEyh2AAAAADSBYgcAAABAEyh2AAAAADSBYgcAAABAE/8PPhbzVBmp
-te4AAAAASUVORK5CYII="&gt;
-&lt;/img&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Normalization"&gt;Normalization&lt;a class="anchor-link" href="#Normalization"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;ul&gt;
-&lt;li&gt;Normalization&lt;ul&gt;
-&lt;li&gt;All variables range from 0 to 1.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+te4AAAAASUVORK5CYII=">
+</img></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Normalization">Normalization<a class="anchor-link" href="#Normalization">¶</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Normalization<ul>
+<li>All variables range from 0 to 1.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 $$
 Value_{new} = \frac{Value - min}{max - min}
 $$
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [94]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;data&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kt"&gt;data.frame&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="o"&gt;=&lt;/span&gt;rnorm&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;0.2&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;y&lt;span class="o"&gt;=&lt;/span&gt;runif&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [95]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;head&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
-&lt;table&gt;
-&lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;x&lt;/th&gt;&lt;th scope="col"&gt;y&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;29.82372&lt;/td&gt;&lt;td&gt;3.282047&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;30.00413&lt;/td&gt;&lt;td&gt;4.132773&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;30.02414&lt;/td&gt;&lt;td&gt;3.316013&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;30.16500&lt;/td&gt;&lt;td&gt;4.188708&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;30.23814&lt;/td&gt;&lt;td&gt;3.629509&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;29.88781&lt;/td&gt;&lt;td&gt;4.270380&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [96]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;dim&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
-&lt;ol class="list-inline"&gt;
-&lt;li&gt;10&lt;/li&gt;
-&lt;li&gt;2&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [97]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;data&lt;span class="o"&gt;$&lt;/span&gt;x
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
-&lt;ol class="list-inline"&gt;
-&lt;li&gt;29.823722250368&lt;/li&gt;
-&lt;li&gt;30.0041334328511&lt;/li&gt;
-&lt;li&gt;30.0241395971071&lt;/li&gt;
-&lt;li&gt;30.1650045208037&lt;/li&gt;
-&lt;li&gt;30.2381426132173&lt;/li&gt;
-&lt;li&gt;29.8878148492044&lt;/li&gt;
-&lt;li&gt;30.0680919541794&lt;/li&gt;
-&lt;li&gt;29.8388659071737&lt;/li&gt;
-&lt;li&gt;29.9669005590277&lt;/li&gt;
-&lt;li&gt;29.8282264037742&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [98]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;data&lt;span class="o"&gt;$&lt;/span&gt;x&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="o"&gt;$&lt;/span&gt;x &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="kp"&gt;min&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="o"&gt;$&lt;/span&gt;x&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kp"&gt;max&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="o"&gt;$&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="kp"&gt;min&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="o"&gt;$&lt;/span&gt;x&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [99]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;data&lt;span class="o"&gt;$&lt;/span&gt;x
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
-&lt;ol class="list-inline"&gt;
-&lt;li&gt;0&lt;/li&gt;
-&lt;li&gt;0.435333778588184&lt;/li&gt;
-&lt;li&gt;0.483608829839292&lt;/li&gt;
-&lt;li&gt;0.823517136294365&lt;/li&gt;
-&lt;li&gt;1&lt;/li&gt;
-&lt;li&gt;0.154656007720595&lt;/li&gt;
-&lt;li&gt;0.589666256096225&lt;/li&gt;
-&lt;li&gt;0.0365417777775227&lt;/li&gt;
-&lt;li&gt;0.3454905248267&lt;/li&gt;
-&lt;li&gt;0.0108685619963327&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [82]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;clusterSim&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_subarea output_stream output_stderr output_text"&gt;
-&lt;pre&gt;Loading required package: cluster
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [94]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>data<span class="o">=</span><span class="kt">data.frame</span><span class="p">(</span>x<span class="o">=</span>rnorm<span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="m">30</span><span class="p">,</span><span class="m">0.2</span><span class="p">),</span>y<span class="o">=</span>runif<span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [95]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">head</span><span class="p">(</span>data<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope="col">x</th><th scope="col">y</th></tr></thead>
+<tbody>
+<tr><td>29.82372</td><td>3.282047</td></tr>
+<tr><td>30.00413</td><td>4.132773</td></tr>
+<tr><td>30.02414</td><td>3.316013</td></tr>
+<tr><td>30.16500</td><td>4.188708</td></tr>
+<tr><td>30.23814</td><td>3.629509</td></tr>
+<tr><td>29.88781</td><td>4.270380</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [96]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">dim</span><span class="p">(</span>data<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<ol class="list-inline">
+<li>10</li>
+<li>2</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [97]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>data<span class="o">$</span>x
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<ol class="list-inline">
+<li>29.823722250368</li>
+<li>30.0041334328511</li>
+<li>30.0241395971071</li>
+<li>30.1650045208037</li>
+<li>30.2381426132173</li>
+<li>29.8878148492044</li>
+<li>30.0680919541794</li>
+<li>29.8388659071737</li>
+<li>29.9669005590277</li>
+<li>29.8282264037742</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [98]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>data<span class="o">$</span>x<span class="o">=</span><span class="p">(</span>data<span class="o">$</span>x <span class="o">-</span> <span class="kp">min</span><span class="p">(</span>data<span class="o">$</span>x<span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="kp">max</span><span class="p">(</span>data<span class="o">$</span>x<span class="p">)</span><span class="o">-</span><span class="kp">min</span><span class="p">(</span>data<span class="o">$</span>x<span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [99]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>data<span class="o">$</span>x
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<ol class="list-inline">
+<li>0</li>
+<li>0.435333778588184</li>
+<li>0.483608829839292</li>
+<li>0.823517136294365</li>
+<li>1</li>
+<li>0.154656007720595</li>
+<li>0.589666256096225</li>
+<li>0.0365417777775227</li>
+<li>0.3454905248267</li>
+<li>0.0108685619963327</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [82]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>clusterSim<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Loading required package: cluster
 
 This is package 'modeest' written by P. PONCET.
 For a complete list of functions, use 'library(help = "modeest")' or 'help.start()'.
 
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [110]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;data&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kt"&gt;data.frame&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="o"&gt;=&lt;/span&gt;rnorm&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;0.2&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;y&lt;span class="o"&gt;=&lt;/span&gt;runif&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [111]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;data
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
-&lt;table&gt;
-&lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;x&lt;/th&gt;&lt;th scope="col"&gt;y&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;29.95600&lt;/td&gt;&lt;td&gt;4.683057&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;30.18016&lt;/td&gt;&lt;td&gt;4.622524&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;29.86710&lt;/td&gt;&lt;td&gt;4.779981&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;29.92886&lt;/td&gt;&lt;td&gt;3.408211&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;29.86782&lt;/td&gt;&lt;td&gt;4.823225&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;30.20487&lt;/td&gt;&lt;td&gt;4.576212&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;29.98566&lt;/td&gt;&lt;td&gt;4.142142&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;30.01135&lt;/td&gt;&lt;td&gt;4.356854&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;29.83114&lt;/td&gt;&lt;td&gt;4.982935&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;29.64777&lt;/td&gt;&lt;td&gt;4.124947&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [112]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;norm_data&lt;span class="o"&gt;=&lt;/span&gt;data.Normalization&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="p"&gt;,&lt;/span&gt;type&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"n4"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;normalization&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"column"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [113]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;norm_data
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
-&lt;table&gt;
-&lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;x&lt;/th&gt;&lt;th scope="col"&gt;y&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;0.5532774&lt;/td&gt;&lt;td&gt;0.8095682&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;0.9556332&lt;/td&gt;&lt;td&gt;0.7711274&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;0.3936988&lt;/td&gt;&lt;td&gt;0.8711178&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;0.5045487&lt;/td&gt;&lt;td&gt;0.0000000&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;0.3949907&lt;/td&gt;&lt;td&gt;0.8985794&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;1.0000000&lt;/td&gt;&lt;td&gt;0.7417179&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;0.6065045&lt;/td&gt;&lt;td&gt;0.4660696&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;0.6526197&lt;/td&gt;&lt;td&gt;0.6024182&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;0.3291493&lt;/td&gt;&lt;td&gt;1.0000000&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;0.0000000&lt;/td&gt;&lt;td&gt;0.4551500&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Standardization"&gt;Standardization&lt;a class="anchor-link" href="#Standardization"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;ul&gt;
-&lt;li&gt;Standardization&lt;ul&gt;
-&lt;li&gt;Variables have mean = 0 and std = 1.&lt;/li&gt;
-&lt;li&gt;Data should be normally distributed&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [110]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>data<span class="o">=</span><span class="kt">data.frame</span><span class="p">(</span>x<span class="o">=</span>rnorm<span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="m">30</span><span class="p">,</span><span class="m">0.2</span><span class="p">),</span>y<span class="o">=</span>runif<span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [111]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>data
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope="col">x</th><th scope="col">y</th></tr></thead>
+<tbody>
+<tr><td>29.95600</td><td>4.683057</td></tr>
+<tr><td>30.18016</td><td>4.622524</td></tr>
+<tr><td>29.86710</td><td>4.779981</td></tr>
+<tr><td>29.92886</td><td>3.408211</td></tr>
+<tr><td>29.86782</td><td>4.823225</td></tr>
+<tr><td>30.20487</td><td>4.576212</td></tr>
+<tr><td>29.98566</td><td>4.142142</td></tr>
+<tr><td>30.01135</td><td>4.356854</td></tr>
+<tr><td>29.83114</td><td>4.982935</td></tr>
+<tr><td>29.64777</td><td>4.124947</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [112]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>norm_data<span class="o">=</span>data.Normalization<span class="p">(</span>data<span class="p">,</span>type<span class="o">=</span><span class="s">"n4"</span><span class="p">,</span>normalization<span class="o">=</span><span class="s">"column"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [113]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>norm_data
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope="col">x</th><th scope="col">y</th></tr></thead>
+<tbody>
+<tr><td>0.5532774</td><td>0.8095682</td></tr>
+<tr><td>0.9556332</td><td>0.7711274</td></tr>
+<tr><td>0.3936988</td><td>0.8711178</td></tr>
+<tr><td>0.5045487</td><td>0.0000000</td></tr>
+<tr><td>0.3949907</td><td>0.8985794</td></tr>
+<tr><td>1.0000000</td><td>0.7417179</td></tr>
+<tr><td>0.6065045</td><td>0.4660696</td></tr>
+<tr><td>0.6526197</td><td>0.6024182</td></tr>
+<tr><td>0.3291493</td><td>1.0000000</td></tr>
+<tr><td>0.0000000</td><td>0.4551500</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Standardization">Standardization<a class="anchor-link" href="#Standardization">¶</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Standardization<ul>
+<li>Variables have mean = 0 and std = 1.</li>
+<li>Data should be normally distributed</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 $$
 z=\frac{x-\mu}{\sigma}
 $$
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [106]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;data&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kt"&gt;data.frame&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="o"&gt;=&lt;/span&gt;rnorm&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;0.2&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;y&lt;span class="o"&gt;=&lt;/span&gt;runif&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [107]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;data
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
-&lt;table&gt;
-&lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;x&lt;/th&gt;&lt;th scope="col"&gt;y&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;29.83280&lt;/td&gt;&lt;td&gt;3.573008&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;30.22825&lt;/td&gt;&lt;td&gt;3.683147&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;30.04045&lt;/td&gt;&lt;td&gt;4.141860&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;30.22861&lt;/td&gt;&lt;td&gt;3.432631&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;29.88759&lt;/td&gt;&lt;td&gt;3.130022&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;29.55894&lt;/td&gt;&lt;td&gt;4.804292&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;30.24696&lt;/td&gt;&lt;td&gt;4.771834&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;29.80721&lt;/td&gt;&lt;td&gt;3.419672&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;29.93601&lt;/td&gt;&lt;td&gt;3.398181&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;29.67083&lt;/td&gt;&lt;td&gt;4.628966&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [108]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;stand_data&lt;span class="o"&gt;=&lt;/span&gt;data.Normalization&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="p"&gt;,&lt;/span&gt;type&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"n1"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;normalization&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"column"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [109]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;stand_data
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
-&lt;table&gt;
-&lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;x&lt;/th&gt;&lt;th scope="col"&gt;y&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;-0.46158399&lt;/td&gt;&lt;td&gt;-0.5133257 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 1.18341603&lt;/td&gt;&lt;td&gt;-0.3395543 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 0.40220010&lt;/td&gt;&lt;td&gt; 0.3841805 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 1.18489615&lt;/td&gt;&lt;td&gt;-0.7348060 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.23368717&lt;/td&gt;&lt;td&gt;-1.2122471 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-1.60082586&lt;/td&gt;&lt;td&gt; 1.4293318 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 1.26123507&lt;/td&gt;&lt;td&gt; 1.3781205 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.56805467&lt;/td&gt;&lt;td&gt;-0.7552508 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.03224097&lt;/td&gt;&lt;td&gt;-0.7891592 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-1.13535469&lt;/td&gt;&lt;td&gt; 1.1527103 &lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;data&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kt"&gt;data.frame&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="o"&gt;=&lt;/span&gt;rnorm&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;0.2&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;y&lt;span class="o"&gt;=&lt;/span&gt;runif&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [6]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;data
-&lt;span class="kp"&gt;mean&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="o"&gt;$&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
-&lt;table&gt;
-&lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;x&lt;/th&gt;&lt;th scope="col"&gt;y&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;29.63284&lt;/td&gt;&lt;td&gt;4.770764&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;30.13587&lt;/td&gt;&lt;td&gt;4.926423&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;30.21890&lt;/td&gt;&lt;td&gt;4.535380&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;29.52308&lt;/td&gt;&lt;td&gt;4.771846&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;29.81607&lt;/td&gt;&lt;td&gt;4.461099&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;29.73255&lt;/td&gt;&lt;td&gt;3.398851&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;30.11310&lt;/td&gt;&lt;td&gt;4.918362&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;29.67477&lt;/td&gt;&lt;td&gt;4.360776&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;29.77034&lt;/td&gt;&lt;td&gt;3.559169&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;29.79197&lt;/td&gt;&lt;td&gt;3.832940&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [106]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>data<span class="o">=</span><span class="kt">data.frame</span><span class="p">(</span>x<span class="o">=</span>rnorm<span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="m">30</span><span class="p">,</span><span class="m">0.2</span><span class="p">),</span>y<span class="o">=</span>runif<span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [107]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>data
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope="col">x</th><th scope="col">y</th></tr></thead>
+<tbody>
+<tr><td>29.83280</td><td>3.573008</td></tr>
+<tr><td>30.22825</td><td>3.683147</td></tr>
+<tr><td>30.04045</td><td>4.141860</td></tr>
+<tr><td>30.22861</td><td>3.432631</td></tr>
+<tr><td>29.88759</td><td>3.130022</td></tr>
+<tr><td>29.55894</td><td>4.804292</td></tr>
+<tr><td>30.24696</td><td>4.771834</td></tr>
+<tr><td>29.80721</td><td>3.419672</td></tr>
+<tr><td>29.93601</td><td>3.398181</td></tr>
+<tr><td>29.67083</td><td>4.628966</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [108]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>stand_data<span class="o">=</span>data.Normalization<span class="p">(</span>data<span class="p">,</span>type<span class="o">=</span><span class="s">"n1"</span><span class="p">,</span>normalization<span class="o">=</span><span class="s">"column"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [109]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>stand_data
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope="col">x</th><th scope="col">y</th></tr></thead>
+<tbody>
+<tr><td>-0.46158399</td><td>-0.5133257 </td></tr>
+<tr><td> 1.18341603</td><td>-0.3395543 </td></tr>
+<tr><td> 0.40220010</td><td> 0.3841805 </td></tr>
+<tr><td> 1.18489615</td><td>-0.7348060 </td></tr>
+<tr><td>-0.23368717</td><td>-1.2122471 </td></tr>
+<tr><td>-1.60082586</td><td> 1.4293318 </td></tr>
+<tr><td> 1.26123507</td><td> 1.3781205 </td></tr>
+<tr><td>-0.56805467</td><td>-0.7552508 </td></tr>
+<tr><td>-0.03224097</td><td>-0.7891592 </td></tr>
+<tr><td>-1.13535469</td><td> 1.1527103 </td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>data<span class="o">=</span><span class="kt">data.frame</span><span class="p">(</span>x<span class="o">=</span>rnorm<span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="m">30</span><span class="p">,</span><span class="m">0.2</span><span class="p">),</span>y<span class="o">=</span>runif<span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>data
+<span class="kp">mean</span><span class="p">(</span>data<span class="o">$</span>x<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope="col">x</th><th scope="col">y</th></tr></thead>
+<tbody>
+<tr><td>29.63284</td><td>4.770764</td></tr>
+<tr><td>30.13587</td><td>4.926423</td></tr>
+<tr><td>30.21890</td><td>4.535380</td></tr>
+<tr><td>29.52308</td><td>4.771846</td></tr>
+<tr><td>29.81607</td><td>4.461099</td></tr>
+<tr><td>29.73255</td><td>3.398851</td></tr>
+<tr><td>30.11310</td><td>4.918362</td></tr>
+<tr><td>29.67477</td><td>4.360776</td></tr>
+<tr><td>29.77034</td><td>3.559169</td></tr>
+<tr><td>29.79197</td><td>3.832940</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
 29.8409486274715
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [7]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;scaled&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kp"&gt;scale&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="p"&gt;)&lt;/span&gt;
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>scaled<span class="o">=</span><span class="kp">scale</span><span class="p">(</span>data<span class="p">)</span>
 scaled
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
-&lt;table&gt;
-&lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;x&lt;/th&gt;&lt;th scope="col"&gt;y&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;-0.8868410 &lt;/td&gt;&lt;td&gt; 0.74081203&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 1.2567691 &lt;/td&gt;&lt;td&gt; 1.01720990&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 1.6105949 &lt;/td&gt;&lt;td&gt; 0.32284884&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-1.3545556 &lt;/td&gt;&lt;td&gt; 0.74273297&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.1060161 &lt;/td&gt;&lt;td&gt; 0.19095103&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.4619216 &lt;/td&gt;&lt;td&gt;-1.69524290&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt; 1.1597427 &lt;/td&gt;&lt;td&gt; 1.00289758&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.7081661 &lt;/td&gt;&lt;td&gt; 0.01281109&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.3008739 &lt;/td&gt;&lt;td&gt;-1.41057303&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;-0.2087324 &lt;/td&gt;&lt;td&gt;-0.92444749&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [8]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;scaled2&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="o"&gt;$&lt;/span&gt;x&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="kp"&gt;mean&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="o"&gt;$&lt;/span&gt;x&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;sd&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="o"&gt;$&lt;/span&gt;x&lt;span class="p"&gt;))&lt;/span&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope="col">x</th><th scope="col">y</th></tr></thead>
+<tbody>
+<tr><td>-0.8868410 </td><td> 0.74081203</td></tr>
+<tr><td> 1.2567691 </td><td> 1.01720990</td></tr>
+<tr><td> 1.6105949 </td><td> 0.32284884</td></tr>
+<tr><td>-1.3545556 </td><td> 0.74273297</td></tr>
+<tr><td>-0.1060161 </td><td> 0.19095103</td></tr>
+<tr><td>-0.4619216 </td><td>-1.69524290</td></tr>
+<tr><td> 1.1597427 </td><td> 1.00289758</td></tr>
+<tr><td>-0.7081661 </td><td> 0.01281109</td></tr>
+<tr><td>-0.3008739 </td><td>-1.41057303</td></tr>
+<tr><td>-0.2087324 </td><td>-0.92444749</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>scaled2<span class="o">=</span><span class="p">(</span>data<span class="o">$</span>x<span class="o">-</span><span class="kp">mean</span><span class="p">(</span>data<span class="o">$</span>x<span class="p">))</span><span class="o">/</span><span class="p">(</span>sd<span class="p">(</span>data<span class="o">$</span>x<span class="p">))</span>
 scaled2
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
-&lt;ol class="list-inline"&gt;
-&lt;li&gt;-0.886841043962801&lt;/li&gt;
-&lt;li&gt;1.25676911997691&lt;/li&gt;
-&lt;li&gt;1.61059486127796&lt;/li&gt;
-&lt;li&gt;-1.35455559229298&lt;/li&gt;
-&lt;li&gt;-0.106016128936466&lt;/li&gt;
-&lt;li&gt;-0.46192157149056&lt;/li&gt;
-&lt;li&gt;1.15974272723633&lt;/li&gt;
-&lt;li&gt;-0.70816610305969&lt;/li&gt;
-&lt;li&gt;-0.300873877536269&lt;/li&gt;
-&lt;li&gt;-0.208732391212495&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<ol class="list-inline">
+<li>-0.886841043962801</li>
+<li>1.25676911997691</li>
+<li>1.61059486127796</li>
+<li>-1.35455559229298</li>
+<li>-0.106016128936466</li>
+<li>-0.46192157149056</li>
+<li>1.15974272723633</li>
+<li>-0.70816610305969</li>
+<li>-0.300873877536269</li>
+<li>-0.208732391212495</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
@@ -10980,5 +11014,37 @@ scaled2
         "}); ";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;
-</summary><category term="data"></category></entry><entry><title>Sample Blog post</title><link href="/sample-blog-post.html" rel="alternate"></link><published>2016-12-09T17:12:00+05:30</published><author><name>Hamza Mohd Zubair</name></author><id>tag:,2016-12-09:sample-blog-post.html</id><summary type="html">&lt;p&gt;Welcome to the first post of this bloooog!&lt;/p&gt;</summary></entry></feed>
+</script>
+                </article>
+            </aside><!-- /#featured -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

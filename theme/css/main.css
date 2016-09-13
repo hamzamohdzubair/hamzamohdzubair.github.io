@@ -55,7 +55,7 @@ hr {
     }
 }
 
-@media screen and (min-width: 1580px) {
+@media screen and (min-width: 980px) {
     .article-page {
         background-position-x: 8rem;
     }

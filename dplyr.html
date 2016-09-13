@@ -1,101 +1,79 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>DPLYR Package / Hamza Mohd Zubair</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+<!doctype html>
+<html lang="en" itemscope itemtype="http://schema.org/Person">
+<head>
+  <meta charset="utf-8">
+  <!-- Site Meta Data -->
+  <title>DPLYR Package</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Hamza Mohd Zubair">
 
-        <link rel="shortcut icon" href="/theme/favicon.ico" />
-        <link rel="apple-touch-icon" href="/theme/apple-touch-icon-iphone.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="/theme/apple-touch-icon-ipad.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="/theme/apple-touch-icon-iphone4.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="/theme/apple-touch-icon-ipad3.png" />
+  <link rel="shortcut icon" href="">
 
-        <link rel="stylesheet" href="/theme/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/theme/css/bootstrap-responsive.min.css">
-        <link rel="stylesheet" href="/theme/css/font-awesome.min.css">
-        <link rel="stylesheet" href="/theme/css/colorbox.css">
+  <!-- schema.org -->
+  <meta itemprop="name" content="Hamza Mohd Zubair">
+  <meta itemprop="image" content="">
+  <meta itemprop="description" content="">
 
-        <link rel="stylesheet" href="/theme/css/main.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+  <!-- Style Meta Data -->
+  <link rel="stylesheet" href="/theme/css/style.css" type="text/css" />
+  <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css" />
 
-        <script src="/theme/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    </head>
-    <body>
+  <!-- Feed Meta Data -->
+    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Hamza Mohd Zubair ATOM Feed" />
 
-        <div class="container">
-            <div class="row">
-                <div class="span9">
-                    <div class="row">
-                        <div class="span2"> <!-- logo -->
-                            <div id="logo">
-                                <a href="">
-                                    <img alt="Hamza Mohd Zubair" src="/./images/cutmypic2.png" />
-                                </a>
-                            </div> <!-- logo -->
-                        </div> <!-- logo span -->
+  <!-- Twitter Feed -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:image" content="">
 
-                        <div class="span7"> <!-- header -->
-                            <!--[if lt IE 9]>
-                                <p class="chromeframe alert alert-warning">You are using an <strong>outdated</strong> browser, and this site might not look best in it. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-                            <![endif]-->
-                            <header id="site-header">
-                                <div id="site-header-content">
-                                    <h1>
-                                        <a href="">Hamza Mohd Zubair</a>
-                                        <small>
-                                            <span class="divider">/</span> Data Scientist
-                                        </small>
-                                    </h1>
-                                    <p>
-                                        
-                                    </p>
-                                </div>
-                            </header>
-                        </div> <!-- header span -->
-                    </div> <!-- header row -->
+<meta name="twitter:creator" content="">
+<meta name="twitter:url" content="/dplyr.html">
+<meta name="twitter:title" content="Hamza Mohd Zubair ~ DPLYR Package">
+<meta name="twitter:description" content="DPLYR Package¶ Important Functions¶ Select() Filter() Arrange() Rename() Mutate() Group_by() %&gt;%">
 
-                    <div class="row"> <!-- content -->
-                        <div class="content">
-<div class="article-page">
-    <div class="span7 offset2">
-        <header class="article">
-            <h2><a href="/dplyr.html" rel="bookmark">DPLYR Package</a></h2>
-            <time datetime="2016-09-12T19:00:00+05:30">
-                Sep 12, 2016
-            </time>
-        </header>
-    </div>
+<!-- Facebook Meta Data -->
+<meta property="og:title" content="Hamza Mohd Zubair ~ DPLYR Package" />
+<meta property="og:description" content="DPLYR Package¶ Important Functions¶ Select() Filter() Arrange() Rename() Mutate() Group_by() %&gt;%" />
+<meta property="og:image" content="" />
+</head>
 
-    <div class="span2">
-    <div class="article-meta article-meta-border">
-        <dl class="dl-horizontal">
-            <dt><i class="icon-file"></i></dt>
-            <dd>
-                <a href="/category/ds.html">
-                    DS
-                </a>
-            </dd>
+<body>
+  <!-- Sidebar -->
+  <aside>
+    <!--<center><a href=""><img id="avatar" src=""></a></center>-->
+    <h1>Hamza Mohd Zubair</h1>
+    <br>
 
-            <dt><i class="icon-tags"></i></dt>
-            <dd>
-                    <a href="/tag/dplyr.html">dplyr</a>
-            </dd>
-        </dl>
 
-        <b class="border-notch notch"></b>
-        <b class="notch"></b>
-    </div>
-    </div>
+    <nav class="nav">
+      <ul class="list-bare">
+      
+         
+          <li><a class="nav__link" href="/pages/about.html">About</a></li>
+        
+      </ul>
+    </nav>
 
-    <div class="span7">
-        <section>
-            <article class="entry">
-    <style type="text/css">/*!
+    <p class="social">
+      <a href="/feeds/all.atom.xml" rel="alternate">
+        <img src="/theme/images/icons/rss.png"></a>
+    </p>
+
+    <h2>Categories</h2>
+    <ul class="navbar">
+      <li class="active"><a href="/category/ds.html">DS</a></li>
+    </ul> 
+  </aside>
+
+  <!-- Content -->
+  <article>
+<section id="content">
+    <article>
+        <h2 class="post_title post_detail"><a href="/dplyr.html" rel="bookmark" title="Permalink to DPLYR Package">DPLYR Package</a></h2>
+        <div class="entry-content blog-post">
+            <style type="text/css">/*!
 *
 * IPython notebook
 *
@@ -2854,124 +2832,42 @@ IgEABUAkAKAAiAQAFACRAIAC/wdqesknVK491gAAAABJRU5ErkJggg==">
 }
 </script>
 
+        </div>
+        <div class="post_list">
+            <span>By </span>
+            <a href="/author/hamza-mohd-zubair.html">@Hamza Mohd Zubair</a>
+            <span> in </span>
+            <span class="post_category"><a href="/category/ds.html" rel="bookmark" title="Permalink to DS">[ DS ]</a></span>
+            <span class="post_date">Mon 12 September 2016</span>
+            <div><span>Tags : </span>
+                <span><a href="/tag/dplyr.html">#dplyr, </a></span>
+            </div>
 
-            </article>
-        </section>
-    </div> <!-- span -->
-</div>                        </div>
-                    </div> <!-- content row -->
+            <div class="entry-social">
+                <span class="twitter"><a target="_blank" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;" title="Twitter" href="https://twitter.com/share?url=/dplyr.html&text=DPLYR Package&via="><img src="/theme/images/icons/twitter-s.png"></a></span>
 
-                    <div class="row"> <!-- footer -->
-                        <div class="span7 offset2">
-                            <footer id="site-footer">
-                                <p>
-                                    <a href="" target="_blank">
-                                        
-                                    </a> Hamza Mohd Zubair /
-                                    <a href="/">Archives</a>
-                                </p>
-                                <p>
-                                    Powered by
-                                    <a href="https://github.com/getpelican/pelican" target="_blank">
-                                        Pelican
-                                    </a>
-                                    /
-                                    Source code on
-                                    <a href="http://github.com/siovene/iovene.com" target="blank">
-                                        GitHub
-                                    </a>
-                                    /
-                                    Theme <code>Lannisport</code>, also on
-                                    <a href="http://github.com/siovene/lannisport" target="_blank">
-                                        GitHub
-                                    </a>
-                                </p>
-                            </footer>
-                        </div> <!-- footer span -->
-                    </div> <!-- footer row -->
-                </div> <!-- header+content+footer span -->
+                <span class="gplus"><a target="_blank" title="Google +" href="https://plus.google.com/share?url=/dplyr.html&hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img src="/theme/images/icons/google-s.png"></a></span>
 
-                <div class="span3">
-                    <aside class="affix">
-                        <div id="sidebar">
-                            <div id="social-icons">
-                                    <span class="social-icon">
-                                        <a href="https://github.com/hamzamohdzubair" target="_blank" title="GitHub">
-                                            <i class="icon-github-alt"></i>
-                                        </a>
-                                    </span>
-                                    <span class="social-icon">
-                                        <a href="https://in.linkedin.com/in/hamza-zubair-095022128" target="_blank" title="LinkedIn">
-                                            <i class="icon-linkedin"></i>
-                                        </a>
-                                    </span>
-                                    <span class="social-icon">
-                                        <a href="http://facebook.com/thelionphoenix" target="_blank" title="Facebook">
-                                            <i class="icon-facebook"></i>
-                                        </a>
-                                    </span>
-                            </div>
+                <span class="facebook"><a target="_blank" title="Facebook" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;" href="https://www.facebook.com/sharer.php?u=/dplyr.html&t=DPLYR Package"><img src="/theme/images/icons/facebook-s.png"></a></span>
 
-                            <div id="navigation">
-<nav>
-	<h2>Pages</h2>
-	<ul>
-		<li>
-			<ul>
-				<li>
-					<a href="">Blog</a>
-				</li>
+                <a  target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=/dplyr.html&title=DPLYR Package" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img src="/theme/images/icons/linkedin-s.png"></a>
 
-					<li>
-						<a href="/pages/about.html">About</a>
-					</li>
-			</ul>
-		</li>
-	</ul>
-</nav>
+                <span class="mail"><a href="mailto:?subject=DPLYR Package&amp;body=Viens découvrir un article à propos de [DPLYR Package] sur le site de Hamza Mohd Zubair. /dplyr.html" title="Share by Email" target="_blank"><img src="/theme/images/icons/mail-s.png"></a></span>
+            </div>
+        </div>
+    </article>
+</section>
+  </article>
 
-<nav>
-	<h2>Categories</h2>
-	<ul>
-		<li>
-			<ul>
-					<li>
-						<a href="/category/ds.html">DS</a>
-					</li>
-			</ul>
-		</li>
-	</ul>
-</nav>                            </div>
-                        </div> <!-- sidebar -->
+  <!-- Footer -->
+  <footer>
+    <p>
+      Blog powered by <a href="http://getpelican.com/">Pelican</a>, 
+      which takes great advantage of <a href="http://python.org">Python</a>.
+      Theme <a href="https://github.com/parbhat/pelican-blue">Pelican-Blue</a> by <a href="https://parbhatpuri.com/">@parbhat</a>.
+    </p>
+  </footer>
 
-                        <p id="back-to-top">
-                            <a href="#">
-                                <i class="icon-double-angle-up"></i> Back to top
-                            </a>
-                        </p>
 
-                    </aside>
-                </div> <!-- logo+navigation span -->
-            </div> <!-- row -->
-
-        </div> <!-- /container -->
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/theme/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-
-        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
-        <script>$('body').popover || document.write('<script src="/theme/js/vendor/bootstrap.min.js"><\/script>')</script>
-
-        <script src="/theme/js/jquery.captions.js"></script>
-        <script src="/theme/js/vendor/jquery.colorbox-min.js"></script>
-
-        <script src="/theme/js/main.js"></script>
-
-        <script>
-            var _gaq=[['_setAccount',''],['_trackPageview'],['_trackPageLoadTime'],['_gat._anonymizeIp']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-    </body>
+</body>
 </html>

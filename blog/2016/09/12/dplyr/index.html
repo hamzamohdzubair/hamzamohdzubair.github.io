@@ -1,97 +1,80 @@
+
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/BlogPosting"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/BlogPosting"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/BlogPosting"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" class="no-js" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/BlogPosting"> <!--<![endif]-->
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>DPLYR Package</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="A detailed">
-<link rel="shortcut icon" href="/" type="">
-<meta name="author" content="Hamza Mohd Zubair">
-<meta name="copyright" content="Hamza Mohd Zubair">
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@" />
-<meta property="og:site_name" content="Rationality Cubed" />
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
-<meta property="og:title" content="Dplyr package" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="/blog/2016/09/12/dplyr/" />
-<meta name="twitter:title" content="Dplyr package" />
-<meta name="twitter:url" content="/blog/2016/09/12/dplyr/" />
-<meta itemprop="url" content="/blog/2016/09/12/dplyr/" />
-<meta property="og:description" content="A detailed" />
-<meta name="twitter:description" content="A detailed" />
-<meta property="og:article:published_time" content="2016-09-12" />
-<meta property="og:article:author" content="Hamza Mohd Zubair" >
-<meta property="og:article:tag" content="dplyr">
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
 
-<link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rationality Cubed ATOM Feed"/>
-<link href='//fonts.googleapis.com/css?family=Open+Sans:800italic' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.23.0/css/uikit.min.css">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.23.0/css/components/search.min.css">
-<link rel="stylesheet" href="/theme/css/tipuesearch.css">
-<link rel="stylesheet" href="/theme/css/solarized.css">
-<link rel="stylesheet" href="/theme/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/font-awesome.min.css">
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+
+    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rationality Cubed Atom">
+
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+
+<meta name="author" content="Hamza Mohd Zubair" />
+<meta name="description" content="A detailed" />
+<meta name="keywords" content="dplyr">
+<meta property="og:site_name" content="Rationality Cubed"/>
+<meta property="og:title" content="DPLYR Package"/>
+<meta property="og:description" content="A detailed"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="/blog/2016/09/12/dplyr/"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2016-09-12 19:00:00+05:30"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="/author/hamza-mohd-zubair.html">
+<meta property="article:section" content="DS"/>
+<meta property="article:tag" content="dplyr"/>
+<meta property="og:image" content="">
+
+  <title>Rationality Cubed &ndash; DPLYR Package</title>
 </head>
 <body>
-<!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+  <aside>
+    <div>
+      <a href="">
+        <img src="/theme/img/profile.png" alt="" title="">
+      </a>
+      <h1><a href=""></a></h1>
 
-<header class=" mg-header uk-navbar uk-navbar-attached">
+<p>Rationality -> Data Science -> Common Sense</p>
+      <nav>
+        <ul class="list">
+          <li><a href="/pages/about.html#about">About</a></li>
 
-    <div class="uk-container uk-container-center">
-
-        <a class="mg-brand uk-navbar-brand uk-hidden-small" href="">Rationality Cubed</a>
-        <div class="mg-tagline uk-navbar-content uk-hidden-small">Rationality -> Data Science -> Common Sense</div>
-        <a class="uk-navbar-toggle uk-visible-small" href="#mg-offcanvas" data-uk-offcanvas></a>
-        <a class="mg-brand uk-navbar-brand uk-navbar-center uk-visible-small" href="">Rationality Cubed</a>
-
-    </div>
-</header>
-
-<main class="mg-main">
-
-<div class="uk-container uk-container-center">
-
-    <div class="uk-grid" data-uk-grid-margin>
-
-<div class="mg-container-social uk-width-medium-1-10 uk-hidden-small">
-
-    <div class="uk-panel" id="mg-panel-social">
-        <ul class="uk-nav uk-nav-side">
-            <li>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=/blog/2016/09/12/dplyr/" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" taget="_blank" class="uk-button"><i class="uk-icon-facebook-square"></i> Share</a>
-            </li>
-            <li>
-            <a href="https://twitter.com/intent/tweet?text=DPLYR%20Package&url=/blog/2016/09/12/dplyr/&via=" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="uk-button" target="_blank"><i class="uk-icon-twitter"></i> Tweet</a>
-            </li>
-            <li>
-            <a href="https://plus.google.com/share?url=/blog/2016/09/12/dplyr/" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" target="_blank" class="uk-button"><i class="uk-icon-google-plus-square"></i> Share</a>
-            </li>
         </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-linkedin" href="https://in.linkedin.com/in/hamza-zubair-095022128" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/hamzamohdzubair" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-envelope" href="mailto:hamzamohdzubair@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+      </ul>
     </div>
+  </aside>
+  <main>
 
-</div>
+<article>
+  <header>
+    <h1 id="dplyr">DPLYR Package</h1>
+    <p>
+          Posted on September 12, 2016 in <a href="/category/ds.html">DS</a>
 
-<div class="uk-width-medium-7-10">
 
-    <article class="uk-article">
-        <h1 class="uk-heading-large uk-article-title" itemprop="name">DPLYR Package</h1>
-        <p class="uk-article-meta"><time datetime="2016-09-12" itemprop="datePublished">September 12, 2016</time> in <a href="/category/ds.html">DS</a></p>
-
-        <a href="https://www.facebook.com/sharer/sharer.php?u=/blog/2016/09/12/dplyr/" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" taget="_blank" class="uk-button uk-visible-small"><i class="uk-icon-facebook-square"></i> Share</a>
-        <a href="https://twitter.com/intent/tweet?text=DPLYR%20Package&url=/blog/2016/09/12/dplyr/&via=" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="uk-button uk-visible-small" target="_blank"><i class="uk-icon-twitter"></i> Tweet</a>
-        <a href="https://plus.google.com/share?url=/blog/2016/09/12/dplyr/" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" target="_blank" class="uk-button uk-visible-small"><i class="uk-icon-google-plus-square"></i> Share</a>
-
-        <p class="uk-article-lead" itemprop="description">A detailed</p>
-        <section itemprop="articleBody"><style type="text/css">/*!
+    </p>
+  </header>
+  <div>
+    <style type="text/css">/*!
 *
 * IPython notebook
 *
@@ -2849,120 +2832,37 @@ IgEABUAkAKAAiAQAFACRAIAC/wdqesknVK491gAAAABJRU5ErkJggg==">
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 </script>
-</section>
-        <hr class="uk-article-divider">
-    </article>
 
-
-</div>
-
-        <div class="uk-width-medium-1-5 uk-hidden-small">
-
-            <div class="uk-panel uk-panel-box">
-                <form class="uk-search" action="search.html" data-uk-search>
-                    <input class="uk-search-field tipue_search" type="search" name="q" id="tipue_search_input" autocomplete="off" placeholder="Search...">
-                </form>
-            </div>
-
-            <div class="uk-panel uk-panel-box">
-                <ul class="uk-nav uk-nav-side">
-                    <li class="uk-nav-header">Categories</li>
-                    <li class="uk-active"><a href="/category/ds.html">DS</a></li>
-                    <li class="uk-nav-header">Pages</li>
-
-                    <li >
-                        <a href="/pages/about.html">About</a>
-                    </li>
-
-
-                    <li class="uk-nav-divider"></li>
-                    <li ><a href="/archives.html">Archives</a></li>
-                </ul>
-            </div>
-
-            <div class="uk-panel uk-panel-box">
-                <h3 class="uk-panel-title">Receive Updates</h3>
-                <a rel="alternate" type="application/atom+xml" href="/feeds/all.atom.xml" class="mg-feed"><i class="uk-icon-rss uk-icon-medium"></i> ATOM</a>
-            </div>
-
-            <div class="uk-panel uk-panel-box">
-                <h3 class="uk-panel-title">Contacts</h3>
-                <a class="mg-icon-link" href="https://in.linkedin.com/in/hamza-zubair-095022128">
-                    <i class="uk-icon-linkedin uk-icon-medium"></i>
-                </a>
-                <a class="mg-icon-link" href="https://github.com/hamzamohdzubair">
-                    <i class="uk-icon-github uk-icon-medium"></i>
-                </a>
-                <a class="mg-icon-link" href="mailto:hamzamohdzubair@gmail.com">
-                    <i class="uk-icon-envelope uk-icon-medium"></i>
-                </a>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-</main>
-
-<footer class="mg-footer">
-    <div class="uk-container uk-container-center uk-text-center">
-
-        <div class="mg-icons-small uk-subnav uk-visible-small">
-            <li><a rel="alternate" type="application/atom+xml" href="/feeds/all.atom.xml" class="uk-icon-button uk-icon-rss"></a></li>
-            <li>
-                <a href="https://in.linkedin.com/in/hamza-zubair-095022128" class="uk-icon-button uk-icon-linkedin"></a>
-            </li>
-            <li>
-                <a href="https://github.com/hamzamohdzubair" class="uk-icon-button uk-icon-github"></a>
-            </li>
-            <li>
-                <a href="mailto:hamzamohdzubair@gmail.com" class="uk-icon-button uk-icon-envelope"></a>
-            </li>
-        </div>
-
-        <div class="mg-author uk-panel">
-            <p>&copy; 2016 Hamza Mohd Zubair. All rights reserved.<br>Code snippets in the pages are released under <a href="http://opensource.org/licenses/MIT" target="_blank">The MIT License</a>, unless otherwise specified.</p>
-
-            <p>Powered by <a href="http://blog.getpelican.com">Pelican</a>.<br class="uk-visible-small"> Theme <a href="https://github.com/lucachr/pelican-mg">mg</a> by <a href="https://github.com/lucachr">Luca Chiricozzi</a>.</p>
-        </div>
-    </div>
-</footer>
-
-<div id="mg-offcanvas" class="uk-offcanvas">
-    <div class="uk-offcanvas-bar">
-
-        <form class="uk-search" action="search.html" data-uk-search>
-            <input class="uk-search-field" type="search" name="q" id="tipue_search_input" autocomplete="off" placeholder="Search...">
-        </form>
-
-        <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
-            <li class="uk-nav-header">Categories</li>
-            <li class="uk-active"><a href="/category/ds.html">DS</a></li>
-            <li class="uk-nav-header">Pages</li>
-            <li >
-                <a href="/pages/about.html">About</a>
-            </li>
-
-
-            <li class="uk-nav-divider"></li>
-            <li><a href="/">Archives</a></li>
-        </ul>
-    </div>
-</div>
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.23.0/js/uikit.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.23.0/js/components/search.min.js"></script>
-<script src="/theme/js/tipuesearch_set.js"></script>
-<script src="/theme/js/tipuesearch.js"></script>
-<script src="/theme/js/jquery.sticky-kit.js"></script>
-<script src="/theme/js/plugins.js"></script>
-<script src="/theme/js/main-search.js"></script>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="/tag/dplyr.html">dplyr</a>
+    </p>
+  </div>
 
 
 
+</article>
+
+    <footer>
+<p>&copy; Hamza Mohd Zubair </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rationality Cubed ",
+  "url" : "",
+  "image": "",
+  "description": ""
+}
+</script>
 </body>
 </html>

@@ -80,7 +80,7 @@
           Posted on September 12, 2016 in <a href="https://hamzamohdzubair.github.io/category/data-analysis.html">Data Analysis</a>
 
 
-        &#8226; 19 min read
+        &#8226; 21 min read
     </p>
   </header>
   <div>
@@ -11077,7 +11077,7 @@ scaled2
 <li>Simple</li>
 <li>Systematic</li>
 <li>Stratified</li>
-<li>Multi-stage Cluster</li>
+<li>Cluster</li>
 </ol>
 </li>
 <li>Non-random Sampling<ol>
@@ -11088,6 +11088,105 @@ scaled2
 </ol>
 </li>
 </ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Simple-Random-Sampling">Simple Random Sampling<a class="anchor-link" href="#Simple-Random-Sampling">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This type of sampling is completely random. Each individual unit in this type of sampling has an equal chance of being selected. This can be considered as the most unbiased form of sampling. This can have some problems sometimes. For example, in cases involving huge data sets, sometimes a mathematical or statistical model requires the data to have a subset of each type of data. Every category needs to be represented for the model to function correctly. This is impossible to enforce using simple random sampling.</p>
+<p>The next type of random sampling methods overcome this exact limitation as we will see.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Systematic-Random-Sampling">Systematic Random Sampling<a class="anchor-link" href="#Systematic-Random-Sampling">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Also known as $K^{th}$ name selection technique</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$
+K = \frac{\text{Population Size}}{\text{Sample Size}}
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>After the selection of the first random element $r$, the remaining elements are selected using the formula $r+K$, $r+2K$, ... $r+(n-1)K$, $r+nK$</p>
+<p>In simple words, the first element is selected randomly but the remaining elements are $K^{th}$  next elements. As you can see there is some systematicity to this method, it isn't entirely random, however one thing this does that simple random sampling fails to achieve is that in this method it's impossible to miss an entire category or subgroup of the population.</p>
+<p>Obviously, this method isn't foolproof either, in some cases this method can infact be dangerous, if there are hidden patterns in the data (which isn't that rare in practice), and the sampling technique happens to pick up those special cases only.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Stratified-Random-Sampling">Stratified Random Sampling<a class="anchor-link" href="#Stratified-Random-Sampling">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is the next logical step in improving your sampling method. The only reason random sampling might fail was it might overestimate or underestimate some specific group or subcategory, to overcome that we developed Systematic Random Sampling, but instead of systematic jumps across data, why not just divide your data into the categories you are worried you might over or underestimate. Use simple random sampling to select random data from each of those groups and simply combine them in the end.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Cluster-Sampling">Cluster Sampling<a class="anchor-link" href="#Cluster-Sampling">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It is also called Multi-stage Cluster Sampling, (you will see why "mult-stage" in a minute). The only problem that this method solves is economic. Basically, if you are out of budget and are unable to do extensive random surveys, this might solve your problem.</p>
+<p>For example, you want to say something about the current health scenario of your city, and unfortunate for you, you happen to live in a big city. Say your city has about 500 hospitals (Delhi has more than that according to <a href="http://www.delhi.gov.in/wps/wcm/connect/b9900a804020417ea2e5feb8bfd93f2e/LIST+OF+REGISTERED+PVT.+HOSPITALS.pdf?MOD=AJPERES&amp;CACHEID=b9900a804020417ea2e5feb8bfd93f2e">this document</a>). And say you would be happy if you sampled 100 patients. Ideally you should select 100 random hospitals out of the total and interview single patient in each hospital. And you have your data.</p>
+<p>Yes, the problem is you cannot physically travel to 100 hospitals (unless you are a PhD student and have two years to waste only on the first part of your research and your guide is paying for travel). Therefore you cluster sample. You randomly select five hospitals and randomly interview twenty patients in each hospital.</p>
+<p>Again, nothing about this method is ideal, as you can already see, there are a ton of problems, several biases, overrepresentation of the areas you visited, neglection of areas you did not visit, etc. And the only reason you might cluster sample rather than other random sampling methods as I already mentioned is economic.</p>
+<p>Why is it called multi-stage? Well, when you randomly selected the hospitals that was tier 1, when you went deeper and randomly selected patients within a hospital, that was tier 2. Sometimes it is sufficient to stop at tier 1 itself.</p>
 </div>
 </div>
 </div>

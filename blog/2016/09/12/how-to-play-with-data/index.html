@@ -50,6 +50,7 @@
       <nav>
         <ul class="list">
           <li><a href="https://hamzamohdzubair.github.io/misc/about.html#about">About</a></li>
+          <li><a href="https://hamzamohdzubair.github.io/misc/contact.html#contact">Contact</a></li>
 
         </ul>
       </nav>
@@ -80,7 +81,7 @@
           Posted on September 12, 2016 in <a href="https://hamzamohdzubair.github.io/category/data-analysis.html">Data Analysis</a>
 
 
-        &#8226; 22 min read
+        &#8226; 18 min read
     </p>
   </header>
   <div>
@@ -11043,171 +11044,6 @@ scaled2
 <li>-0.208732391212495</li>
 </ol>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Sampling">Sampling<a class="anchor-link" href="#Sampling">¶</a></h1><p>Sampling can reduce the burden on processing machinery, by reducing the data-set to a manageable amount. The processing can therefore take less computation time and computation memory. Sampling is essentially extracting a subset of the entire data set that you have got.</p>
-<p>The sample should have the same characteristics as that of the population for the analysis to be valid. There are different types of sampling techniques each with its own advantages and disadvantages. Surprisingly, sometimes non-random sampling is more useful than random sampling. We'll discuss that in detail later. Some of the sampling types are listed below</p>
-<ol>
-<li>Random Sampling<ol>
-<li>Simple</li>
-<li>Systematic</li>
-<li>Stratified</li>
-<li>Cluster</li>
-</ol>
-</li>
-<li>Non-random Sampling<ol>
-<li>Convenience</li>
-<li>Snowball</li>
-<li>Quota</li>
-<li>Theoretical</li>
-</ol>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Simple-Random-Sampling">Simple Random Sampling<a class="anchor-link" href="#Simple-Random-Sampling">¶</a></h2><p>This type of sampling is completely random. Each individual unit in this type of sampling has an equal chance of being selected. This can be considered as the most unbiased form of sampling. This can have some problems sometimes. For example, in cases involving huge data sets, sometimes a mathematical or statistical model requires the data to have a subset of each type of data. Every category needs to be represented for the model to function correctly. This is impossible to enforce using simple random sampling.</p>
-<p>The next type of random sampling methods overcome this exact limitation as we will see.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Systematic-Random-Sampling">Systematic Random Sampling<a class="anchor-link" href="#Systematic-Random-Sampling">¶</a></h2><p>Also known as $K^{th}$ name selection technique</p>
-$$
-K = \frac{\text{Population Size}}{\text{Sample Size}}
-$$<p>After the selection of the first random element $r$, the remaining elements are selected using the formula $r+K$, $r+2K$, ... $r+(n-1)K$, $r+nK$</p>
-<p>In simple words, the first element is selected randomly but the remaining elements are $K^{th}$  next elements. As you can see there is some systematicity to this method, it isn't entirely random, however one thing this does that simple random sampling fails to achieve is that in this method it's impossible to miss an entire category or subgroup of the population.</p>
-<p>Obviously, this method isn't foolproof either, in some cases this method can infact be dangerous, if there are hidden patterns in the data (which isn't that rare in practice), and the sampling technique happens to pick up those special cases only.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Stratified-Random-Sampling">Stratified Random Sampling<a class="anchor-link" href="#Stratified-Random-Sampling">¶</a></h2><p>This is the next logical step in improving your sampling method. The only reason random sampling might fail was it might overestimate or underestimate some specific group or subcategory, to overcome that we developed Systematic Random Sampling, but instead of systematic jumps across data, why not just divide your data into the categories you are worried you might over or underestimate. Use simple random sampling to select random data from each of those groups and simply combine them in the end.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Cluster-Sampling">Cluster Sampling<a class="anchor-link" href="#Cluster-Sampling">¶</a></h2><p>It is also called Multi-stage Cluster Sampling, (you will see why "mult-stage" in a minute). The only problem that this method solves is economic. Basically, if you are out of budget and are unable to do extensive random surveys, this might solve your problem.</p>
-<p>For example, you want to say something about the current health scenario of your city, and unfortunate for you, you happen to live in a big city. Say your city has about 500 hospitals (Delhi has more than that according to <a href="http://www.delhi.gov.in/wps/wcm/connect/b9900a804020417ea2e5feb8bfd93f2e/LIST+OF+REGISTERED+PVT.+HOSPITALS.pdf?MOD=AJPERES&amp;CACHEID=b9900a804020417ea2e5feb8bfd93f2e">this document</a>). And say you would be happy if you sampled 100 patients. Ideally you should select 100 random hospitals out of the total and interview single patient in each hospital. And you have your data.</p>
-<p>Yes, the problem is you cannot physically travel to 100 hospitals (unless you are a PhD student and have two years to waste only on the first part of your research and your guide is paying for travel). Therefore you cluster sample. You randomly select five hospitals and randomly interview twenty patients in each hospital.</p>
-<p>Again, nothing about this method is ideal, as you can already see, there are a ton of problems, several biases, overrepresentation of the areas you visited, neglection of areas you did not visit, etc. And the only reason you might cluster sample rather than other random sampling methods as I already mentioned is economic.</p>
-<p>Why is it called multi-stage? Well, when you randomly selected the hospitals that was tier 1, when you went deeper and randomly selected patients within a hospital, that was tier 2. Sometimes it is sufficient to stop at tier 1 itself.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [3]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>robustbase<span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [4]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>data<span class="o">=</span>pension
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [8]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="kp">dim</span><span class="p">(</span>data<span class="p">)</span>
-<span class="kp">head</span><span class="p">(</span>data<span class="p">)</span>
-str<span class="p">(</span>data<span class="p">)</span>
-<span class="kp">summary</span><span class="p">(</span>data<span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<ol class="list-inline">
-<li>18</li>
-<li>2</li>
-</ol>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<table>
-<thead><tr><th scope="col">Income</th><th scope="col">Reserves</th></tr></thead>
-<tbody>
-<tr><td>10.4 </td><td>272.2</td></tr>
-<tr><td>15.6 </td><td>212.9</td></tr>
-<tr><td>16.2 </td><td>120.7</td></tr>
-<tr><td>17.9 </td><td>163.6</td></tr>
-<tr><td>37.8 </td><td>226.1</td></tr>
-<tr><td>46.9 </td><td>622.9</td></tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>'data.frame':	18 obs. of  2 variables:
- $ Income  : num  10.4 15.6 16.2 17.9 37.8 46.9 52.4 52.9 71 73.9 ...
- $ Reserves: num  272 213 121 164 226 ...
-</pre>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_text output_subarea ">
-<pre>     Income           Reserves     
- Min.   :  10.40   Min.   : 120.7  
- 1st Qu.:  40.08   1st Qu.: 280.9  
- Median :  72.45   Median : 787.3  
- Mean   : 179.39   Mean   :1515.7  
- 3rd Qu.: 146.57   3rd Qu.:1917.5  
- Max.   :1406.30   Max.   :6802.7  </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>data_sample<span class="o">=</span> data<span class="p">[</span><span class="kp">sample</span><span class="p">(</span><span class="kp">nrow</span><span class="p">(</span>data<span class="p">),</span><span class="m">10</span><span class="p">,</span>replace<span class="o">=</span> <span class="bp">F</span><span class="p">)]</span>
-</pre></div>
 </div>
 </div>
 </div>

@@ -29,3 +29,7 @@ div.prompt{
 	display:none;
 }
 
+div.inner_cell {
+	overflow-x:auto;
+}
+

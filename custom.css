@@ -1,4 +1,25 @@
 aside {
-	color: #fff;
-	background-color: #e0e0e0;
+	color: #333;
+	background-color: #fff;
+}
+
+main article {
+	margin: 0 2% 1%;
+}
+
+div.input_prompt {
+	display:none;
+}
+
+div.inner_cell {
+	box_shadow: 0 0 2px rgba(0,0,0,.12), 0 2px 2px rgba(0,0,0,.2);
+}
+
+div.output_subarea {
+	max_width:100%;
+	box_shadow: 0 2px 6px -3px black;
+}
+
+div.input {
+	flex-direction: column;
 }

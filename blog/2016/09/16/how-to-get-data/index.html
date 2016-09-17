@@ -81,7 +81,7 @@
           Posted on September 16, 2016 in <a href="https://hamzamohdzubair.github.io/category/data-analysis-life-cycle.html">Data Analysis Life Cycle</a>
 
 
-        &#8226; 15 min read
+        &#8226; 16 min read
     </p>
   </header>
   <div>
@@ -1110,7 +1110,7 @@ h6:hover .anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We need to load the package robustbase. If you don't have it installed do</p>
-<div class="highlight"><pre><span></span>install.packages<span class="p">(</span><span class="s">'robustbase'</span><span class="p">)</span>
+<div class="highlight"><pre><span></span>install.packages<span class="p">(</span><span class="s">"robustbase"</span><span class="p">)</span>
 </pre></div>
 <p>If you like you can read more about the package in the official document of <a href="https://cran.r-project.org/web/packages/robustbase/robustbase.pdf">robustbase</a></p>
 </div>
@@ -1518,6 +1518,67 @@ $$<p>After the selection of the first random element $r$, the remaining elements
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>sampling<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>if you don't have it installed and get an error called <em>there is no package called 'sampling'</em> do</p>
+<pre><code>install.packages("sampling")</code></pre>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This time we will create our own data.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [10]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>data1<span class="o">=</span> <span class="kp">rbind</span><span class="p">(</span><span class="kt">matrix</span><span class="p">(</span><span class="kp">rep</span><span class="p">(</span><span class="s">"nc"</span><span class="p">,</span><span class="m">165</span><span class="p">),</span><span class="m">165</span><span class="p">,</span><span class="m">1</span><span class="p">,</span>byrow<span class="o">=</span><span class="bp">T</span><span class="p">),</span><span class="kt">matrix</span><span class="p">(</span><span class="kp">rep</span><span class="p">(</span><span class="s">"sc"</span><span class="p">,</span><span class="m">70</span><span class="p">),</span><span class="m">70</span><span class="p">,</span><span class="m">1</span><span class="p">,</span>byrow<span class="o">=</span><span class="bp">T</span><span class="p">))</span>
+data2<span class="o">=</span> <span class="kp">cbind.data.frame</span><span class="p">(</span>da<span class="s">"</span><span class="err">)ta,c(rep(1,100),rep(2,50),rep(3,15),rep(1,30),rep(2,40)),1000*runif(235))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre>
+Error in as.data.frame.default(x[[i]], optional = TRUE): cannot coerce class ""function"" to a data.frame
+Traceback:
+
+1. cbind.data.frame(data, c(rep(1, 100), rep(2, 50), rep(3, 15), 
+ .     rep(1, 30), rep(2, 40)), 1000 * runif(235))
+2. data.frame(..., check.names = FALSE)
+3. as.data.frame(x[[i]], optional = TRUE)
+4. as.data.frame.default(x[[i]], optional = TRUE)
+5. stop(gettextf("cannot coerce class \"%s\" to a data.frame", deparse(class(x))), 
+ .     domain = NA)</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1536,7 +1597,18 @@ $$<p>After the selection of the first random element $r$, the remaining elements
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I would like to acknowledge the people at Edwisor for providing the training and materials for this post. For more information and detailed and engaging live sessions, please check out <a href="http://edwisor.com">Edwisor.com</a></p>
+<h6 id="I-would-like-to-acknowledge-the-people-at-Edwisor-for-providing-the-training-and-materials-for-this-post.-For-more-information-and-detailed-and-engaging-live-sessions,-please-check-out-Edwisor.com">I would like to acknowledge the people at Edwisor for providing the training and materials for this post. For more information and detailed and engaging live sessions, please check out <a href="http://edwisor.com">Edwisor.com</a><a class="anchor-link" href="#I-would-like-to-acknowledge-the-people-at-Edwisor-for-providing-the-training-and-materials-for-this-post.-For-more-information-and-detailed-and-engaging-live-sessions,-please-check-out-Edwisor.com">¶</a></h6>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>

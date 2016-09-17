@@ -1,4 +1,4 @@
-aside {
+aside, aside a {
 	color: #333;
 	background-color: #fff;
 }
@@ -13,12 +13,12 @@ div.input_prompt {
 
 
 div.output_subarea {
-	max-width:100%;
+	max-width: 100%;
 	box-shadow: 0 2px 6px -3px black;
 }
 
 div.input {
-	flex-direction: column;
+	flex-direction:column;
 }
 
 div.inner_cell {

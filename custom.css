@@ -3,6 +3,10 @@ aside, aside a {
 	background-color: #fff;
 }
 
+a {
+	color: #d96666;
+}
+
 main article {
 	margin: 0 2% 1%;
 }

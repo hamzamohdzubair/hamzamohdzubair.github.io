@@ -11,7 +11,7 @@ a {
 	color: #f2ae72;
 }
 
-a.btn {
+a.btn, .tag-cloud a  {
 	background-color: #588c7e;
 }
 
@@ -19,7 +19,7 @@ a:hover{
 	color: #f2e394;
 }
 
-a.btn:hover{
+a.btn:hover, .tag-cloud a:hover{
 	background-color: #8c4646;
 }
 

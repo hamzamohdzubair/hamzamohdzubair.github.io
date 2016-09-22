@@ -7,6 +7,18 @@ a {
 	color: #d96666;
 }
 
+a.btn {
+	background-color: #d96666;
+}
+
+a:hover{
+	color: #d91111;
+}
+
+a.btn:hover{
+	background-color: #d91111;
+}
+
 main article {
 	margin: 0 2% 1%;
 }

@@ -1,14 +1,14 @@
 aside, aside a {
-	color: #d96666;
+	color: #d96459;
 	background-color: #fff;
 }
 
 aside a:hover{
-	color:
+	color: #f2ae72
 }
 
 a {
-	color: #d96666;
+	color: #f2ae72;
 }
 
 a.btn {
@@ -16,7 +16,7 @@ a.btn {
 }
 
 a:hover{
-	color: #d91111;
+	color: #f2e394;
 }
 
 a.btn:hover{

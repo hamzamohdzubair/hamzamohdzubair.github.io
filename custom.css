@@ -40,6 +40,10 @@ div.output {
 	background-color:#fff
 }
 
+div.input_area{
+	background:#eee;
+}
+
 div.output_subarea {
 	max-width: 100% !important;
 	border: 1px inset #fff;

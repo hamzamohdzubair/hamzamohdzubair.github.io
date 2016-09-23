@@ -5,42 +5,42 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://hamzamohdzubair.github.io/</loc>
-<lastmod>2016-09-23T00:11:05-00:00</lastmod>
+<lastmod>2016-09-23T11:29:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://hamzamohdzubair.github.io/archives.html</loc>
-<lastmod>2016-09-23T00:11:05-00:00</lastmod>
+<lastmod>2016-09-23T11:29:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://hamzamohdzubair.github.io/tags.html</loc>
-<lastmod>2016-09-23T00:11:05-00:00</lastmod>
+<lastmod>2016-09-23T11:29:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://hamzamohdzubair.github.io/categories.html</loc>
-<lastmod>2016-09-23T00:11:05-00:00</lastmod>
+<lastmod>2016-09-23T11:29:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://hamzamohdzubair.github.io/misc/contact.html</loc>
-<lastmod>2016-09-23T00:11:05-00:00</lastmod>
+<lastmod>2016-09-23T11:29:06-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://hamzamohdzubair.github.io/misc/about.html</loc>
-<lastmod>2016-09-23T00:11:05-00:00</lastmod>
+<lastmod>2016-09-23T11:29:06-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -95,8 +95,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://hamzamohdzubair.github.io/tag/data-analysis.html</loc>
-<lastmod>2016-09-16T11:00:00+05:53</lastmod>
+<loc>https://hamzamohdzubair.github.io/tag/edwisor.html</loc>
+<lastmod>2016-09-18T11:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -109,8 +109,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://hamzamohdzubair.github.io/tag/edwisor.html</loc>
-<lastmod>2016-09-18T11:00:00+05:53</lastmod>
+<loc>https://hamzamohdzubair.github.io/tag/data-analysis.html</loc>
+<lastmod>2016-09-16T11:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>

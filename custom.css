@@ -14,6 +14,10 @@ a {
 	color: #f2ae72;
 }
 
+aside div img {
+    border-radius: 100%;
+}
+
 a.btn, .tag-cloud a  {
 	background-color: #588c7e;
 }

@@ -133,22 +133,22 @@ table td {
 
 
 
-dl {
-    margin: 20px auto;
-    overflow: hidden;
-    position: relative;
-}
-dt {
-    float: left;
-    width: 33%;
-    clear: both;
-    padding: 3px 2% 15px 0;
-    position: relative;
-}
-dd {
-    float: right;
-    width: 62%;
-    padding: 3px 0 15px 3%;
+dl { border-bottom: 1px solid #999; }
+
+dl dt {
+	clear: left;
+	float: left;
+	width: 220px;
+	margin: 0;
+	padding: 5px;
+	border-top: 1px solid #999;
+	font-weight: bold;
 }
 
+dl dd {
+	margin-left: 230px;
+	padding: 5px;
+}
+
+dl dd{ border-top: 1px solid #999; }
 

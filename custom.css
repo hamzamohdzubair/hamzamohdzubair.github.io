@@ -48,12 +48,11 @@ div.output {
 	background-color:#fff
 }
 
-pre{font-family:none;}
+pre{font-family:monospace;}
 
 div.input_area{
 	background: rgb(253,246,227) !important;
-	font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
-	font-size: 13px;
+	font-size: 14px;
 }
 
 div.output_subarea {

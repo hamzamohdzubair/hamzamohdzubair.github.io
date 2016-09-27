@@ -82,39 +82,16 @@ ol.list-inline li {
 	display: -webkit-inline-box;
 }
 
-td, th { border: 1px solid #CCC; }
-
-table {table-layout: auto;}
 
 
-
-dl {
-	margin: 2em 0;
-	padding: 0;
-	font-family: georgia, times, serif;
-}
-
-dt {
-	position: relative;
-	left: 0;
-	top: 1.1em;
-	width: 10em;
-	font-weight: bold;
-}
-
-dd {
-	border-left: 1px solid #000;
-	margin: 0 0 0 11em;
-	padding: 0 0 .5em .5em;
-}
 
 table {
+	table-layout:auto;	
 	font-family:Arial, Helvetica, sans-serif;
 	color:#666;
 	font-size:12px;
 	text-shadow: 1px 1px 0px #fff;
 	background:#eaebec;
-	margin:20px;
 	border:#ccc 1px solid;
 
 	-moz-border-radius:3px;
@@ -150,3 +127,47 @@ table td {
 	background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
 	background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
 }
+
+
+
+
+
+
+dl {
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+}
+dt {
+    float: left;
+    width: 33%;
+    clear: both;
+    padding: 3px 2% 15px 0;
+    position: relative;
+}
+dd {
+    float: right;
+    width: 62%;
+    padding: 3px 0 15px 3%;
+}
+
+dt:before {
+    content: "";
+    width: 30px;
+    position: absolute;
+    border-top: 1px solid #999;
+    top: -5px;
+    right: -15px;
+}
+dt:after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background: #333;
+    border: 1px solid #999;
+    position: absolute;
+    border-radius: 6px;
+    top: -8px;
+    right: -4px;
+}
+

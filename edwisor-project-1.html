@@ -4777,13 +4777,45 @@ Traceback:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In [65]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>nb<span class="o">=</span><span class="m">10</span>
 cutpoints<span class="o">=</span>quantile<span class="p">(</span>imdb3<span class="o">$</span>imdbVotes<span class="p">,(</span><span class="m">0</span><span class="o">:</span>nb<span class="p">)</span><span class="o">/</span>nb<span class="p">,</span>na.rm<span class="o">=</span><span class="bp">T</span><span class="p">)</span>
 cutpoints
 </pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<dl class="dl-horizontal">
+<dt>0%</dt>
+<dd>5</dd>
+<dt>10%</dt>
+<dd>1337.4</dd>
+<dt>20%</dt>
+<dd>1798</dd>
+<dt>30%</dt>
+<dd>2173.3</dd>
+<dt>40%</dt>
+<dd>2592</dd>
+<dt>50%</dt>
+<dd>2718</dd>
+<dt>60%</dt>
+<dd>2718</dd>
+<dt>70%</dt>
+<dd>2718</dd>
+<dt>80%</dt>
+<dd>2718</dd>
+<dt>90%</dt>
+<dd>2718</dd>
+<dt>100%</dt>
+<dd>157992</dd>
+</dl>
+</div>
 </div>
 </div>
 </div>
@@ -4799,11 +4831,31 @@ cutpoints
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In [66]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">as.factor</span><span class="p">(</span>trimws<span class="p">(</span><span class="kp">as.character</span><span class="p">(</span><span class="kp">head</span><span class="p">(</span>imdb2<span class="o">$</span>Language<span class="p">,</span><span class="m">10</span><span class="p">))))</span>
 </pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<ol class="list-inline">
+<li>English</li>
+<li>English</li>
+<li>English</li>
+<li>English</li>
+<li>English</li>
+<li>English</li>
+<li>English</li>
+<li>English</li>
+<li>English</li>
+<li>English</li>
+</ol>
+</div>
 </div>
 </div>
 </div>
@@ -4819,13 +4871,37 @@ cutpoints
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In [67]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>imdbtel<span class="o">=</span>imdb3<span class="p">[</span>imdb3<span class="o">$</span>Language<span class="o">==</span><span class="s">"Telugu"</span><span class="p">,]</span>
 <span class="kp">nrow</span><span class="p">(</span>imdbtel<span class="p">)</span>
 <span class="kp">head</span><span class="p">(</span>imdbtel<span class="p">[,</span><span class="m">-1</span><span class="p">])</span>
 </pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+188
+</div>
+</div>
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th></th><th scope="col">Title</th><th scope="col">imdbVotes</th><th scope="col">Poster</th><th scope="col">imdbRating</th><th scope="col">Genre</th><th scope="col">imdbID</th><th scope="col">Year</th><th scope="col">Language</th><th scope="col"><span class="caps">VB</span></th><th scope="col"><span class="caps">VB1</span></th></tr></thead>
+<tbody>
+<tr><th scope="row">3203</th><td><span style="white-space:pre-wrap">100 Love              </span> </td><td>1135                                                                                                                                    </td><td><span style="white-space:pre-wrap">N/A                                                                                             </span></td><td>6.9                                                                                                                                     </td><td><span style="white-space:pre-wrap">Comedy, Drama, Romance       </span> </td><td>tt1869226                                                                                                                               </td><td>2011                                                                                                                                    </td><td>Telugu                                                                                                                                  </td><td>(0,1e+04]                                                                                                                               </td><td>x &lt; 2302                                                                                                                             </td></tr>
+<tr><th scope="row">3204</th><td>A Belly Full of Dreams                                                                                                                  </td><td><span style="white-space:pre-wrap">  16</span> </td><td><span style="white-space:pre-wrap">N/A                                                                                             </span></td><td>6.9                                                                                                                                     </td><td><span style="white-space:pre-wrap">Fantasy                      </span> </td><td>tt0810364                                                                                                                               </td><td>2006                                                                                                                                    </td><td>Telugu                                                                                                                                  </td><td>(0,1e+04]                                                                                                                               </td><td>x &lt; 2302                                                                                                                             </td></tr>
+<tr><th scope="row">3205</th><td>A Film by Aravind                                                                               </td><td> <span class="caps">NA</span> </td><td>N/A                                                                                             </td><td>7.0                                                                                             </td><td>Mystery                                                                                         </td><td>tt3319248                                                                                       </td><td>2008                                                                                            </td><td>Telugu                                                                                          </td><td><span class="caps">NA</span> </td><td><span class="caps">NA</span> </td></tr>
+<tr><th scope="row">3206</th><td><span style="white-space:pre-wrap">Aagadu                </span> </td><td>1750                                                                                            </td><td>http://ia.media-imdb.com/images/M/MV5BMTQ5NDQ3NTkyNl5BMl5BanBnXkFtZTgwOTU0NjE0NDE@._V1_SX300.jpg</td><td>6.0                                                                                             </td><td>Action, Comedy, Drama, Family                                                                   </td><td>tt2988020                                                                                       </td><td>2014                                                                                            </td><td>Telugu                                                                                          </td><td>(0,1e+04]                                                                                       </td><td>x &lt; 2302                                                                                     </td></tr>
+<tr><th scope="row">3207</th><td><span style="white-space:pre-wrap">Aaj Ke Sholey         </span> </td><td><span style="white-space:pre-wrap">  27</span> </td><td><span style="white-space:pre-wrap">N/A                                                                                             </span></td><td>5.1                                                                                                                                     </td><td><span style="white-space:pre-wrap">Adventure                    </span> </td><td>tt0450548                                                                                                                               </td><td>1985                                                                                                                                    </td><td>Telugu                                                                                                                                  </td><td>(0,1e+04]                                                                                                                               </td><td>x &lt; 2302                                                                                                                             </td></tr>
+<tr><th scope="row">3208</th><td>Aakasamantha                                                                                    </td><td> <span class="caps">NA</span> </td><td>N/A                                                                                             </td><td>7.2                                                                                             </td><td>Comedy, Drama, Family                                                                           </td><td>tt1601797                                                                                       </td><td>2009                                                                                            </td><td>Telugu                                                                                          </td><td><span class="caps">NA</span> </td><td><span class="caps">NA</span> </td></tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -4841,7 +4917,7 @@ cutpoints
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In [68]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>imdbhindi<span class="o">=</span>imdb3
@@ -4853,11 +4929,30 @@ imdbhindi<span class="o">$</span>Language<span class="o">=</span><span class="kp
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In [69]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">head</span><span class="p">(</span>imdbhindi<span class="p">[,</span><span class="m">-1</span><span class="p">])</span>
 </pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th></th><th scope="col">Title</th><th scope="col">imdbVotes</th><th scope="col">Poster</th><th scope="col">imdbRating</th><th scope="col">Genre</th><th scope="col">imdbID</th><th scope="col">Year</th><th scope="col">Language</th><th scope="col"><span class="caps">VB</span></th><th scope="col"><span class="caps">VB1</span></th></tr></thead>
+<tbody>
+<tr><th scope="row">1</th><td><span style="white-space:pre-wrap">The Dark Knight Rises          </span> </td><td>2679                                                                                            </td><td>http://ia.media-imdb.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_SX300.jpg</td><td>75                                                                                              </td><td><span style="white-space:pre-wrap">Action, Thriller      </span> </td><td>tt1345836                                                                                       </td><td>2012                                                                                            </td><td>Hindi                                                                                           </td><td>(0,1e+04]                                                                                       </td><td>2302 &lt; x &lt; 2718                                                                           </td></tr>
+<tr><th scope="row">3</th><td>The Perks of Being a Wallflower                                                                 </td><td>1270                                                                                            </td><td>http://ia.media-imdb.com/images/M/MV5BMzIxOTQyODU1OV5BMl5BanBnXkFtZTcwMDQ4Mjg4Nw@@._V1_SX300.jpg</td><td>71                                                                                              </td><td><span style="white-space:pre-wrap">Drama, Romance        </span> </td><td>tt1659337                                                                                       </td><td>2012                                                                                            </td><td>Hindi                                                                                           </td><td>(0,1e+04]                                                                                       </td><td><span style="white-space:pre-wrap">x &lt; 2302       </span> </td></tr>
+<tr><th scope="row">4</th><td><span style="white-space:pre-wrap">Magic Mike                     </span> </td><td>2580                                                                                            </td><td>http://ia.media-imdb.com/images/M/MV5BMTQzMDMzOTA5M15BMl5BanBnXkFtZTcwMjc4MTg4Nw@@._V1_SX300.jpg</td><td>51                                                                                              </td><td><span style="white-space:pre-wrap">Comedy, Drama         </span> </td><td>tt1915581                                                                                       </td><td>2012                                                                                            </td><td>Hindi                                                                                           </td><td>(0,1e+04]                                                                                       </td><td>2302 &lt; x &lt; 2718                                                                           </td></tr>
+<tr><th scope="row">5</th><td><span style="white-space:pre-wrap">Skyfall                        </span> </td><td>1807                                                                                            </td><td>http://ia.media-imdb.com/images/M/MV5BMjAyODkzNDgzMF5BMl5BanBnXkFtZTcwMDMxMDI4Nw@@._V1_SX300.jpg</td><td>68                                                                                              </td><td><span style="white-space:pre-wrap">Action, Thriller      </span> </td><td>tt1074638                                                                                       </td><td>2012                                                                                            </td><td>Hindi                                                                                           </td><td>(0,1e+04]                                                                                       </td><td><span style="white-space:pre-wrap">x &lt; 2302       </span> </td></tr>
+<tr><th scope="row">6</th><td><span style="white-space:pre-wrap">Silver Linings Playbook        </span> </td><td>1828                                                                                            </td><td>http://ia.media-imdb.com/images/M/MV5BMTM2MTI5NzA3MF5BMl5BanBnXkFtZTcwODExNTc0OA@@._V1_SX300.jpg</td><td>68                                                                                              </td><td>Comedy, Drama, Romance                                                                          </td><td>tt1045658                                                                                       </td><td>2012                                                                                            </td><td>Hindi                                                                                           </td><td>(0,1e+04]                                                                                       </td><td><span style="white-space:pre-wrap">x &lt; 2302       </span> </td></tr>
+<tr><th scope="row">7</th><td><span style="white-space:pre-wrap">The First Time                 </span> </td><td>1538                                                                                            </td><td>http://ia.media-imdb.com/images/M/MV5BMjMxNDI1OTY5NF5BMl5BanBnXkFtZTcwMDExOTY1OA@@._V1_SX300.jpg</td><td>60                                                                                              </td><td>Comedy, Drama, Romance                                                                          </td><td>tt1763303                                                                                       </td><td>2012                                                                                            </td><td>Hindi                                                                                           </td><td>(0,1e+04]                                                                                       </td><td><span style="white-space:pre-wrap">x &lt; 2302       </span> </td></tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -4873,12 +4968,82 @@ imdbhindi<span class="o">$</span>Language<span class="o">=</span><span class="kp
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In [70]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>repvec<span class="o">=</span><span class="kp">rep</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">6</span><span class="p">),</span> <span class="kt">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="m">20</span><span class="p">,</span><span class="m">30</span><span class="p">))</span>
 repvec
 </pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<ol class="list-inline">
+<li>4</li>
+<li>4</li>
+<li>4</li>
+<li>4</li>
+<li>4</li>
+<li>4</li>
+<li>4</li>
+<li>4</li>
+<li>4</li>
+<li>4</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+</ol>
+</div>
 </div>
 </div>
 </div>
@@ -4894,7 +5059,7 @@ repvec
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In [71]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">length</span><span class="p">(</span>repvec<span class="p">)</span>
@@ -4902,6 +5067,93 @@ repvec<span class="p">[</span><span class="m">1</span><span class="o">:</span><s
 repvec<span class="p">[</span><span class="m">11</span><span class="o">:</span><span class="m">30</span><span class="p">]</span>
 repvec<span class="p">[</span><span class="m">31</span><span class="o">:</span><span class="m">60</span><span class="p">]</span>
 </pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+60
+</div>
+</div>
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<ol class="list-inline">
+<li>4</li>
+<li>4</li>
+<li>4</li>
+<li>4</li>
+<li>4</li>
+<li>4</li>
+<li>4</li>
+<li>4</li>
+<li>4</li>
+<li>4</li>
+</ol>
+</div>
+</div>
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<ol class="list-inline">
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+<li>5</li>
+</ol>
+</div>
+</div>
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<ol class="list-inline">
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+<li>6</li>
+</ol>
+</div>
 </div>
 </div>
 </div>
@@ -4918,7 +5170,6 @@ repvec<span class="p">[</span><span class="m">31</span><span class="o">:</span><
 <li><p>Also check out this useful resource on binning by the blog rcreditscoring.com: <a href="http://www.rcreditscoring.com/binning-continuous-variables-in-r-the-basics/">Binning continuous variables in R - the basics</a></p>
 </li>
 </ul>
-<h6 id="Was-the-article-useful?-If-you-found-the-article-useful-please-comment,-If-you-found-the-article-useless-definitely-comment.">Was the article useful? If you found the article useful please comment, If you found the article useless definitely comment.<a class="anchor-link" href="#Was-the-article-useful?-If-you-found-the-article-useful-please-comment,-If-you-found-the-article-useless-definitely-comment.">¶</a></h6>
 </div>
 </div>
 </div>
@@ -4975,7 +5226,7 @@ repvec<span class="p">[</span><span class="m">31</span><span class="o">:</span><
 </section>
 
             <section>
-<p id="comment-message">So what do you think? Was it good?, bad? Please leave your comment below: </p>
+<p id="comment-message">So what do you think? Please leave your comment below: </p>
 <div class="accordion" id="accordion2">
     <div class="accordion-group">
         <div class="accordion-heading">

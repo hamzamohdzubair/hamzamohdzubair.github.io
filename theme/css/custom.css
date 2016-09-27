@@ -82,6 +82,10 @@ ol.list-inline li {
 	display: -webkit-inline-box;
 }
 
+td, th { border: 1px solid #CCC; }
+
+
+
 /*
 
 dl {

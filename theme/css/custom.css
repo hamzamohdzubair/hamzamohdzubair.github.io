@@ -146,9 +146,10 @@ dl dt {
 }
 
 dl dd {
-	margin-left: 280px;
+	margin-left: 230px;
 	padding: 5px;
-	border-left: 1px solid #000;
+	
 }
 
+dd {border-left: 1px solid #000;}
 

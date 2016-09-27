@@ -3,9 +3,12 @@ aside, aside a {
 	background-color: #fbfbfb;
 }
 
+/*
 body{
 	background-color:#fbfbfb;
 }
+*/
+
 aside a:hover{
 	color: #f2ae72
 }
@@ -58,10 +61,12 @@ div.input {
 	flex-direction:column !important;
 }
 
+/*
 div.inner_cell {
 	box-shadow: 0 0 2px rgba(0,0,0,.12), 0 2px 2px rgba(0,0,0,.2);
 	background-color:#fff;
 }
+*/
 
 div.prompt{
 	display:none;

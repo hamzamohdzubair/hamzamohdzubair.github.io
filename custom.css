@@ -48,7 +48,7 @@ div.output {
 	background-color:#fff
 }
 
-pre{font-family:monospace;}
+main article pre {font-family:monospace;}
 
 div.input_area{
 	background: rgb(253,246,227) !important;

@@ -48,6 +48,8 @@ div.output {
 	background-color:#fff
 }
 
+pre{font-family:none;}
+
 div.input_area{
 	background: rgb(253,246,227) !important;
 	font-family: Monaco,Menlo,Consolas,"Courier New",monospace;

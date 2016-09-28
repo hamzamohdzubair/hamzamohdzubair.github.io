@@ -1,4 +1,7 @@
-.jumbotron{background-color:#fff;}
+.jumbotron {
+	background-color:#fff;
+	border-bottom:dotted #000;
+}
 
 
 a {

@@ -21,7 +21,7 @@ a{color:#cc8d66;}
 
 a:hover{color: #588c7e;}
 
-.sidebarnav h4{color: #588c7e;}
+h4.sidebarnav {color: #588c7e;}
 
 
 div.input_prompt {

@@ -3,10 +3,6 @@ a {
 	color: #f2ae72;
 }
 
-aside div img {
-	border-radius: 100%;
-	box-shadow: 0 2px 8px black;
-}
 
 a:hover{
 	color: #f2e394;

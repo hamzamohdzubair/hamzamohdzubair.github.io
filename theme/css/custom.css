@@ -1,9 +1,9 @@
 .jumbotron {
 	background-color:#fff;
-	border-bottom:1px solid #999;
+	border-bottom:1px solid #ccc;
 }
 
-
+/*
 a {
 	color: #f2ae72;
 }
@@ -16,6 +16,8 @@ a:hover{
 main article {
 	margin: 0 2% 1%;
 }
+
+*/
 
 div.input_prompt {
 	display:none;

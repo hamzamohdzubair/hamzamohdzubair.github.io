@@ -22,10 +22,6 @@ aside div img {
 	box-shadow: 0 2px 8px black;
 }
 
-a.btn, .tag-cloud a  {
-	background-color: #588c7e;
-}
-
 a:hover{
 	color: #f2e394;
 }

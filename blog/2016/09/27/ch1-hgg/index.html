@@ -1073,7 +1073,16 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h6 id="This-post-is-a-part-of-a-series-of-posts-on-Chapters-from-the-book-The-Hitchhiker's-guide-to-ggplot2-in-R.-The-books-is-available-for-free-on-Leanpub.com.-The-data-sets-used-in-this-series-can-be-downloaded-from-here.">This post is a part of a <a href="">series</a> of posts on Chapters from the book <a href="https://leanpub.com/hitchhikers_ggplot2"><em>The Hitchhiker's guide to ggplot2 in R</em></a>. The books is available for free on <a href="https://leanpub.com/">Leanpub.com</a>. The data sets used in this series can be downloaded from <a href="https://github.com/lefterisAdam/hitchhikers_ggplot2">here</a>.<a class="anchor-link" href="#This-post-is-a-part-of-a-series-of-posts-on-Chapters-from-the-book-The-Hitchhiker's-guide-to-ggplot2-in-R.-The-books-is-available-for-free-on-Leanpub.com.-The-data-sets-used-in-this-series-can-be-downloaded-from-here.">¶</a></h6>
+<h5 id="This-post-is-a-part-of-a-series-of-posts-on-Chapters-from-the-book-The-Hitchhiker's-guide-to-ggplot2-in-R.-The-books-is-available-for-free-on-Leanpub.com.-The-data-sets-used-in-this-series-can-be-downloaded-from-here.">This post is a part of a <a href="">series</a> of posts on Chapters from the book <a href="https://leanpub.com/hitchhikers_ggplot2"><em>The Hitchhiker's guide to ggplot2 in R</em></a>. The books is available for free on <a href="https://leanpub.com/">Leanpub.com</a>. The data sets used in this series can be downloaded from <a href="https://github.com/lefterisAdam/hitchhikers_ggplot2">here</a>.<a class="anchor-link" href="#This-post-is-a-part-of-a-series-of-posts-on-Chapters-from-the-book-The-Hitchhiker's-guide-to-ggplot2-in-R.-The-books-is-available-for-free-on-Leanpub.com.-The-data-sets-used-in-this-series-can-be-downloaded-from-here.">¶</a></h5>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="http://ggplot2.org/">ggplot2</a> is an R package developed by <a href="http://hadley.nz/">Hadley Wickham</a>. The package is based on an earlier work done by <a href="https://en.wikipedia.org/wiki/Leland_Wilkinson">Leland Wilkinson</a> who is a professor of Computer Science. Wilkinson developed something known as the <a href="http://www.amazon.in/Grammar-Graphics-Statistics-Computing/dp/0387245448"><em>Grammar of Graphics</em></a>, which is an extensive set of rules and definitions for data visualizaiton. Wilkinson's grammar was further developed, enhanced and implemented in this package by Wickham. A must read paper by Wickham on the implementation of Grammar of Graphics is available online: <a href="https://pdfs.semanticscholar.org/d779/6f85dabccd18673f382c100fc06f55e8b501.pdf">A Layered Grammar of Graphics</a>. To understand the intricacies of the package and to master it's nuances I would recommend reading his book: <a href="https://www.amazon.com/ggplot2-Elegant-Graphics-Data-Analysis/dp/331924275X/ref=mt_paperback?_encoding=UTF8&amp;me=">ggplot2 Elegant Graphics Data Analysis</a>.</p>
 </div>
 </div>
 </div>
@@ -1088,7 +1097,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [7]:</div>
+<div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>ggplot2<span class="p">)</span>
@@ -1111,11 +1120,195 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [9]:</div>
+<div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>data<span class="o">=</span>read.csv<span class="p">(</span><span class="s">"copper-data-for-book.csv"</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's look at our data</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">head</span><span class="p">(</span>data<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope="col">product</th><th scope="col">year</th><th scope="col">export</th><th scope="col">percentage</th><th scope="col">sum</th></tr></thead>
+<tbody>
+<tr><td>copper</td><td>2006  </td><td> 4176 </td><td>79    </td><td> 5255 </td></tr>
+<tr><td>copper</td><td>2007  </td><td> 8560 </td><td>81    </td><td>10505 </td></tr>
+<tr><td>copper</td><td>2008  </td><td> 6473 </td><td>76    </td><td> 8519 </td></tr>
+<tr><td>copper</td><td>2009  </td><td>10465 </td><td>80    </td><td>13027 </td></tr>
+<tr><td>copper</td><td>2010  </td><td>14977 </td><td>86    </td><td>17325 </td></tr>
+<tr><td>copper</td><td>2011  </td><td>15421 </td><td>83    </td><td>18629 </td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">dim</span><span class="p">(</span>data<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<ol class="list-inline">
+<li>18</li>
+<li>5</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It's a small data set with 18 rows and 5 columns. Let's have another look at it one last time</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>str<span class="p">(</span>data<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>'data.frame':	18 obs. of  5 variables:
+ $ product   : Factor w/ 2 levels "copper","others": 1 1 1 1 1 1 1 1 1 2 ...
+ $ year      : int  2006 2007 2008 2009 2010 2011 2012 2013 2014 2006 ...
+ $ export    : int  4176 8560 6473 10465 14977 15421 14805 15183 14012 1079 ...
+ $ percentage: int  79 81 76 80 86 83 82 80 76 21 ...
+ $ sum       : int  5255 10505 8519 13027 17325 18629 18079 19088 18437 5255 ...
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We are learning how to make line plots with this data. We will use the year on the x-axis and export on the y-axis.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>p1<span class="o">=</span>ggplot<span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>p1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+</div>
+<div class="output_area"><div class="prompt"></div>
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAMAAADKOT/pAAAADFBMVEXr6+vu7u7w8PD///8r
+t4uEAAAACXBIWXMAABJ0AAASdAHeZh94AAAJLUlEQVR4nO3TsQ2AMADAsBb+/5mRpUshEhKy
+L8iScQKvja8D4A+MBAEjQcBIEDASBIwEASNBwEgQuEc6JrBnMdIcwB4jQcBIEDASBIwEASNB
+wEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEj
+QcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQB
+I0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwE
+ASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSM
+BAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIE
+jAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDAS
+BIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAw
+EgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQ
+MBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBI
+EDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HA
+SBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNB
+wEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEj
+QcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQB
+I0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwE
+ASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSM
+BAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIE
+jAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDAS
+BIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAw
+EgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQ
+MBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBI
+EDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HA
+SBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNB
+wEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEj
+QcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQB
+I0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwE
+ASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSM
+BAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIE
+jAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDAS
+BIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAw
+EgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQ
+MBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBI
+EDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HA
+SBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNB
+wEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEj
+QcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQB
+I0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwE
+ASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSM
+BAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIE
+jAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDAS
+BIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAw
+EgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQ
+MBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEgcVIwGNGgoCRIGAkCBgJAkaCgJEgYCQIGAkC
+FyZiZRA8VrxfAAAAAElFTkSuQmCC">
+</img></div>
 </div>
 </div>
 </div>
@@ -1238,23 +1431,23 @@ h6:hover .anchor-link {
     </a>
 </span>
 <span class="tag-4">
-    <a href="../../../../../tag/text-mining.html">
-        <i class="fa fa-tag fa-fw fa-lg"></i>text mining
-    </a>
-</span>
-<span class="tag-4">
-    <a href="../../../../../tag/dplyr.html">
-        <i class="fa fa-tag fa-fw fa-lg"></i>dplyr
-    </a>
-</span>
-<span class="tag-4">
     <a href="../../../../../tag/movies.html">
         <i class="fa fa-tag fa-fw fa-lg"></i>movies
     </a>
 </span>
 <span class="tag-4">
+    <a href="../../../../../tag/text-mining.html">
+        <i class="fa fa-tag fa-fw fa-lg"></i>text mining
+    </a>
+</span>
+<span class="tag-4">
     <a href="../../../../../tag/binning.html">
         <i class="fa fa-tag fa-fw fa-lg"></i>binning
+    </a>
+</span>
+<span class="tag-4">
+    <a href="../../../../../tag/dplyr.html">
+        <i class="fa fa-tag fa-fw fa-lg"></i>dplyr
     </a>
 </span>
 </p>

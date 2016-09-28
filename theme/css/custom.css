@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC|Open+Sans';
+@import 'https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC|Open+Sans|Monsieur+La+Doulaise';
 
 
 body{font-family: 'Open Sans', sans-serif;
@@ -21,8 +21,9 @@ a{color:#cc8d66;}
 
 a:hover{color: #588c7e;}
 
-.sidebar-nav h4, .lead {color: #588c7e;}
+.sidebar-nav h4 {color: #588c7e;}
 
+.lead{font-family: 'Monsieur La Doulaise', cursive;color: #588c7e;}
 
 div.input_prompt {
 	display:none;

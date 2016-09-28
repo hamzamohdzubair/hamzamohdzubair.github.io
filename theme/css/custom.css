@@ -1,14 +1,15 @@
+
 .jumbotron {
 	background-color:#fff;
 	border-bottom:1px solid #ccc;
 }
 
-/*
+
 a {
-	color: #f2ae72;
+	text-decoration: none;
 }
 
-
+/*
 a:hover{
 	color: #f2e394;
 }

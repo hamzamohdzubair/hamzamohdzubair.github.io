@@ -33,7 +33,7 @@ div.output {
 main article pre {font-family:monospace;}
 
 div.input_area{
-	background: rgb(253,246,227);
+	background: rgb(253,246,227) !important;
 	font-size: 14px;
 }
 

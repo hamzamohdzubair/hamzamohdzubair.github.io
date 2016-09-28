@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://hamzamohdzubair.github.io/</loc>
-<lastmod>2016-09-28T18:55:07-00:00</lastmod>
+<lastmod>2016-09-28T19:01:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://hamzamohdzubair.github.io/archives.html</loc>
-<lastmod>2016-09-28T18:55:07-00:00</lastmod>
+<lastmod>2016-09-28T19:01:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://hamzamohdzubair.github.io/tags.html</loc>
-<lastmod>2016-09-28T18:55:07-00:00</lastmod>
+<lastmod>2016-09-28T19:01:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://hamzamohdzubair.github.io/categories.html</loc>
-<lastmod>2016-09-28T18:55:07-00:00</lastmod>
+<lastmod>2016-09-28T19:01:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -95,13 +95,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://hamzamohdzubair.github.io/tag/text-mining.html</loc>
-<lastmod>2016-09-25T15:00:00+05:53</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
 <loc>https://hamzamohdzubair.github.io/tag/edwisor.html</loc>
 <lastmod>2016-09-25T15:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
@@ -110,6 +103,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://hamzamohdzubair.github.io/tag/binning.html</loc>
+<lastmod>2016-09-25T15:00:00+05:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://hamzamohdzubair.github.io/tag/text-mining.html</loc>
 <lastmod>2016-09-25T15:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>

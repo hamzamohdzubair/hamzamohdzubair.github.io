@@ -1,0 +1,153 @@
+aside, aside a {
+	color: #8c4646;
+	background-color:#fff;
+}
+
+/*
+body{
+	background-color:#fbfbfb;
+}
+*/
+
+aside a:hover{
+	color: #f2ae72
+}
+
+a {
+	color: #f2ae72;
+}
+
+aside div img {
+	border-radius: 100%;
+	box-shadow: 0 2px 8px black;
+}
+
+a.btn, .tag-cloud a  {
+	background-color: #588c7e;
+}
+
+a:hover{
+	color: #f2e394;
+}
+
+a.btn:hover, .tag-cloud a:hover{
+	background-color: #8c4646;
+}
+
+main article {
+	margin: 0 2% 1%;
+}
+
+div.input_prompt {
+	display:none;
+}
+
+
+div.output {
+	box-shadow: inset 0 2px 8px rgba(0,0,0,0.8);
+	background-color:#fff
+}
+
+main article pre {font-family:monospace;}
+
+div.input_area{
+	background: rgb(253,246,227) !important;
+	font-size: 14px;
+}
+
+div.output_subarea {
+	max-width: 100% !important;
+	border: 1px inset #fff;
+}
+
+div.input {
+	flex-direction:column !important;
+}
+
+/*
+div.inner_cell {
+	box-shadow: 0 0 2px rgba(0,0,0,.12), 0 2px 2px rgba(0,0,0,.2);
+	background-color:#fff;
+}
+*/
+
+div.prompt{
+	display:none;
+}
+
+div.inner_cell {
+	overflow-x:auto;
+}
+
+ol.list-inline li {
+	display: -webkit-inline-box;
+}
+
+dl {
+	margin: 2em 0;
+	padding: 0;
+	font-family: georgia, times, serif;
+}
+
+dt {
+	position: relative;
+	left: 0;
+	top: 1.1em;
+	width: 5em;
+	font-weight: bold;
+}
+
+dd {
+	border-left: 1px solid #000;
+	margin: 0 0 0 6em;
+	padding: 0 0 .5em .5em;
+}
+
+
+
+
+
+
+
+table {
+	table-layout:auto;	
+	font-family:Arial, Helvetica, sans-serif;
+	color:#666;
+	font-size:12px;
+	text-shadow: 1px 1px 0px #fff;
+	background:#eaebec;
+	border:#ccc 1px solid;
+
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+
+	-moz-box-shadow: 0 1px 2px #d1d1d1;
+	-webkit-box-shadow: 0 1px 2px #d1d1d1;
+	box-shadow: 0 1px 2px #d1d1d1;
+}
+table th {
+	padding:21px 25px 22px 25px;
+	border-top:1px solid #fafafa;
+	border-bottom:1px solid #e0e0e0;
+
+	background: #ededed;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
+	background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
+}
+
+table tr {
+	text-align: center;
+	padding-left:20px;
+}
+
+table td {
+	padding:18px;
+	border-top: 1px solid #ffffff;
+	border-bottom:1px solid #e0e0e0;
+	border-left: 1px solid #e0e0e0;
+
+	background: #fafafa;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+	background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
+}

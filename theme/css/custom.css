@@ -1,10 +1,10 @@
-@import 'https://fonts.googleapis.com/css?family=Indie+Flower|Josefin+Slab';
+@import 'https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC|Open+Sans';
 
 
-body{font-family: 'Indie Flower', cursive;
+body{font-family: 'Open Sans', sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6 {font-family:  'Josefin Slab', serif;}
+h1,h2,h3,h4,h5,h6 {font-family:'IM Fell DW Pica SC', serif;}
 
 .jumbotron {
 	background-color:#fff;
@@ -16,18 +16,11 @@ h1,h2,h3,h4,h5,h6 {font-family:  'Josefin Slab', serif;}
 	text-decoration: none !important;
 }
 
-a{color:#533118;}
+a{color:#593a0e;}
 
-/*
-a:hover{
-	color: #f2e394;
-}
 
-main article {
-	margin: 0 2% 1%;
-}
+a:hover{color: #72601b;}
 
-*/
 
 div.input_prompt {
 	display:none;

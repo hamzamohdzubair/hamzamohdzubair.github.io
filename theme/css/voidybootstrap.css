@@ -87,8 +87,6 @@ p.standfirst {
  * My preference for code blocks is no line wraps and horizontal scrolling.
  */
 #content pre {
-    overflow-x: auto;
-    padding-left: 20px;
     word-break: normal;
     word-wrap: normal;
     white-space: pre;

@@ -8,7 +8,7 @@
     <meta name="author" content="Hamza Zubair" />
     <meta name="generator" content="Pelican (VoidyBootstrap theme)" />
 
-    <title>How to get data? - Hamza Zubair</title>
+    <title>2. Line Plots - Hamza Zubair</title>
 
    
         <link rel="stylesheet"
@@ -18,15 +18,15 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
 
 
-      <link rel="stylesheet" href="../../../../../theme/css/pygment.css" />
-      <link rel="stylesheet" href="../../../../../theme/css/custom.css" />
+      <link rel="stylesheet" href="./theme/css/pygment.css" />
+      <link rel="stylesheet" href="./theme/css/custom.css" />
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <link rel="shortcut icon" href="../../../../..//images/favicon.ico" />
+    <link rel="shortcut icon" href=".//images/favicon.ico" />
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -51,7 +51,7 @@
 		  <span class="icon-bar"></span>
 		  <span class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" href="../../../../../" rel="home">
+		<a class="navbar-brand" href="./" rel="home">
           <i class="fa fa-home fa-fw fa-lg"> </i> </a>
        </div>
 
@@ -59,7 +59,7 @@
         <ul class="nav navbar-nav">
             <li class="divider"></li>
             <li class="">
-              <a href="../../../../../archives.html">Archives</a>
+              <a href="./archives.html">Archives</a>
             </li>
           <li class="divider"></li>
         </ul> <!-- /nav -->
@@ -69,7 +69,7 @@
 
 	<div class="jumbotron" id="overview">
 	  <div class="container">
-		<h1><a href="../../../../../">Hamza Zubair</a></h1>
+		<h1><a href="./">Hamza Zubair</a></h1>
 		<p class="lead">Hitchhiking through Data Science</p>
 	  </div>
 	</div>
@@ -80,18 +80,18 @@
 <article itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
   <header class="article-header">
 <abbr class="article-header-date">
-  Sep 16, 2016
+  Sep 27, 2016
 </abbr> <h1>
-  <a href="../../../../../blog/2016/09/16/how-to-get-data/" rel="bookmark"
-     title="Permalink to How to get data?">
-    How to get data?
+  <a href="./ch1-hgg.html" rel="bookmark"
+     title="Permalink to 2. Line Plots">
+    2. Line Plots
   </a>
 </h1><div class="article-header-info">
   <p>
-      Posted by <a href="../../../../../author/hamza-mohd-zubair.html">Hamza Mohd Zubair</a>
+      Posted by <a href="./author/hamza-zubair.html">Hamza Zubair</a>
     in 
-    <a href="../../../../../category/data-analysis-life-cycle.html">
-      Data Analysis Life Cycle</a>
+    <a href="./category/hitchhikers-guide-to-ggplot2.html">
+      Hitchhikers Guide to ggplot2</a>
     &nbsp;&nbsp;
   </p>
 </div> <!-- /.article-header-info -->  </header>
@@ -1073,7 +1073,7 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="I-would-like-to-acknowledge-the-people-at-Edwisor-for-providing-the-training-and-materials-for-this-post.-For-more-information-and-detailed-and-engaging-live-sessions,-please-check-out-Edwisor.com">I would like to acknowledge the people at Edwisor for providing the training and materials for this post. For more information and detailed and engaging live sessions, please check out <a href="http://edwisor.com">Edwisor.com</a><a class="anchor-link" href="#I-would-like-to-acknowledge-the-people-at-Edwisor-for-providing-the-training-and-materials-for-this-post.-For-more-information-and-detailed-and-engaging-live-sessions,-please-check-out-Edwisor.com">¶</a></h5>
+<h5 id="This-post-is-a-part-of-a-series-of-posts-on-Chapters-from-the-book-The-Hitchhiker's-guide-to-ggplot2-in-R.-The-book-is-available-for-free-on-Leanpub.com.-The-data-sets-used-in-this-post-can-be-downloaded-from-here.">This post is a part of a <a href="http://www.hamzazubair.com/category/hitchhikers-guide-to-ggplot2.html">series of posts</a> on Chapters from the book <a href="https://leanpub.com/hitchhikers_ggplot2"><em>The Hitchhiker's guide to ggplot2 in R</em></a>. The book is available for free on <a href="https://leanpub.com/">Leanpub.com</a>. The data sets used in this post can be downloaded from <a href="https://github.com/lefterisAdam/hitchhikers_ggplot2">here</a>.<a class="anchor-link" href="#This-post-is-a-part-of-a-series-of-posts-on-Chapters-from-the-book-The-Hitchhiker's-guide-to-ggplot2-in-R.-The-book-is-available-for-free-on-Leanpub.com.-The-data-sets-used-in-this-post-can-be-downloaded-from-here.">¶</a></h5>
 </div>
 </div>
 </div>
@@ -1082,34 +1082,7 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Sampling">Sampling<a class="anchor-link" href="#Sampling">¶</a></h1><p>Sampling can reduce the burden on processing machinery, by reducing the data-set to a manageable amount. The processing can therefore take less computation time and computation memory. Sampling is essentially extracting a subset of the entire data set that you have got.</p>
-<p>The sample should have the same characteristics as that of the population for the analysis to be valid. There are different types of sampling techniques each with its own advantages and disadvantages. Surprisingly, sometimes non-random sampling is more useful than random sampling. We'll discuss that in detail later. Some of the sampling types are listed below</p>
-<ol>
-<li>Random Sampling<ol>
-<li>Simple</li>
-<li>Systematic</li>
-<li>Stratified</li>
-<li>Cluster</li>
-</ol>
-</li>
-<li>Non-random Sampling<ol>
-<li>Convenience</li>
-<li>Snowball</li>
-<li>Quota</li>
-<li>Theoretical</li>
-</ol>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Simple-Random-Sampling">Simple Random Sampling<a class="anchor-link" href="#Simple-Random-Sampling">¶</a></h2><p>This type of sampling is completely random. Each individual unit in this type of sampling has an equal chance of being selected. This can be considered as the most unbiased form of sampling. This can have some problems sometimes. For example, in cases involving huge data sets, sometimes a mathematical or statistical model requires the data to have a subset of each type of data. Every category needs to be represented for the model to function correctly. This is impossible to enforce using simple random sampling.</p>
-<p>The next type of random sampling methods overcome this exact limitation as we will see. But before we go to the next one let's see how we can implement this in R.</p>
+<p>Let's first load the data and the libraries</p>
 </div>
 </div>
 </div>
@@ -1118,19 +1091,21 @@ h6:hover .anchor-link {
 <div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>robustbase<span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>ggplot2<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>ggthemes<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>extrafont<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Registering fonts with R
+</pre>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We need to load the package robustbase. If you don't have it installed do<code>install.packages("robustbase")</code></p>
-<p>If you like you can read more about the package in the official document of <a href="https://cran.r-project.org/web/packages/robustbase/robustbase.pdf">robustbase</a></p>
 </div>
 </div>
 </div>
@@ -1139,7 +1114,7 @@ h6:hover .anchor-link {
 <div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>data<span class="o">=</span>pension
+<div class=" highlight hl-r"><pre><span></span>data<span class="o">=</span>read.csv<span class="p">(</span><span class="s">"copper-data-for-book.csv"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1150,16 +1125,7 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We will use pension data set that comes with the package robustbase.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Let's first see what the pension data looks like. These are the basic descriptive commands that tell a little aobut the data.</p>
+<p>Let's look at our data</p>
 </div>
 </div>
 </div>
@@ -1168,10 +1134,7 @@ h6:hover .anchor-link {
 <div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="kp">dim</span><span class="p">(</span>data<span class="p">)</span>
-<span class="kp">head</span><span class="p">(</span>data<span class="p">)</span>
-str<span class="p">(</span>data<span class="p">)</span>
-<span class="kp">summary</span><span class="p">(</span>data<span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="kp">head</span><span class="p">(</span>data<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1180,44 +1143,17 @@ str<span class="p">(</span>data<span class="p">)</span>
 <div class="output">
 <div class="output_area"><div class="prompt"></div>
 <div class="output_html rendered_html output_subarea ">
-<ol class="list-inline">
-<li>18</li>
-<li>2</li>
-</ol>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
 <table>
-<thead><tr><th scope="col">Income</th><th scope="col">Reserves</th></tr></thead>
+<thead><tr><th scope="col">product</th><th scope="col">year</th><th scope="col">export</th><th scope="col">percentage</th><th scope="col">sum</th></tr></thead>
 <tbody>
-<tr><td>10.4 </td><td>272.2</td></tr>
-<tr><td>15.6 </td><td>212.9</td></tr>
-<tr><td>16.2 </td><td>120.7</td></tr>
-<tr><td>17.9 </td><td>163.6</td></tr>
-<tr><td>37.8 </td><td>226.1</td></tr>
-<tr><td>46.9 </td><td>622.9</td></tr>
+<tr><td>copper</td><td>2006  </td><td> 4176 </td><td>79    </td><td> 5255 </td></tr>
+<tr><td>copper</td><td>2007  </td><td> 8560 </td><td>81    </td><td>10505 </td></tr>
+<tr><td>copper</td><td>2008  </td><td> 6473 </td><td>76    </td><td> 8519 </td></tr>
+<tr><td>copper</td><td>2009  </td><td>10465 </td><td>80    </td><td>13027 </td></tr>
+<tr><td>copper</td><td>2010  </td><td>14977 </td><td>86    </td><td>17325 </td></tr>
+<tr><td>copper</td><td>2011  </td><td>15421 </td><td>83    </td><td>18629 </td></tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>'data.frame':	18 obs. of  2 variables:
- $ Income  : num  10.4 15.6 16.2 17.9 37.8 46.9 52.4 52.9 71 73.9 ...
- $ Reserves: num  272 213 121 164 226 ...
-</pre>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_text output_subarea ">
-<pre>     Income           Reserves     
- Min.   :  10.40   Min.   : 120.7  
- 1st Qu.:  40.08   1st Qu.: 280.9  
- Median :  72.45   Median : 787.3  
- Mean   : 179.39   Mean   :1515.7  
- 3rd Qu.: 146.57   3rd Qu.:1917.5  
- Max.   :1406.30   Max.   :6802.7  </pre>
 </div>
 </div>
 </div>
@@ -1228,9 +1164,7 @@ str<span class="p">(</span>data<span class="p">)</span>
 <div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>data_sample<span class="o">=</span>data<span class="p">[</span><span class="kp">sample</span><span class="p">(</span><span class="kp">nrow</span><span class="p">(</span>data<span class="p">),</span><span class="m">10</span><span class="p">,</span>replace<span class="o">=</span><span class="bp">F</span><span class="p">),]</span>
-<span class="kp">dim</span><span class="p">(</span>data_sample<span class="p">)</span>
-data_sample
+<div class=" highlight hl-r"><pre><span></span><span class="kp">dim</span><span class="p">(</span>data<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1240,28 +1174,9 @@ data_sample
 <div class="output_area"><div class="prompt"></div>
 <div class="output_html rendered_html output_subarea ">
 <ol class="list-inline">
-<li>10</li>
-<li>2</li>
+<li>18</li>
+<li>5</li>
 </ol>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<table>
-<thead><tr><th></th><th scope="col">Income</th><th scope="col">Reserves</th></tr></thead>
-<tbody>
-<tr><th scope="row">9</th><td> 71.0 </td><td> 951.7</td></tr>
-<tr><th scope="row">13</th><td>131.2 </td><td>1157.3</td></tr>
-<tr><th scope="row">11</th><td> 76.3 </td><td> 588.4</td></tr>
-<tr><th scope="row">1</th><td> 10.4 </td><td> 272.2</td></tr>
-<tr><th scope="row">17</th><td>470.8 </td><td>4095.3</td></tr>
-<tr><th scope="row">15</th><td>206.1 </td><td>3581.4</td></tr>
-<tr><th scope="row">3</th><td> 16.2 </td><td> 120.7</td></tr>
-<tr><th scope="row">4</th><td> 17.9 </td><td> 163.6</td></tr>
-<tr><th scope="row">5</th><td> 37.8 </td><td> 226.1</td></tr>
-<tr><th scope="row">16</th><td>314.7 </td><td>3404.7</td></tr>
-</tbody>
-</table>
 </div>
 </div>
 </div>
@@ -1272,8 +1187,7 @@ data_sample
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As you can see this is one of the simplest methods of sampling a data from a population. we are using the simple method of subsetting. <code>subset = completedata[rows , columns]</code>
-The comma at the end serves this purpose meaning we are not selecting any specific columns. Leaving it blank selects all the columns. replace=F means no repetitions.</p>
+<p>It's a small data set with 18 rows and 5 columns. Let's have another look at it one last time</p>
 </div>
 </div>
 </div>
@@ -1282,7 +1196,7 @@ The comma at the end serves this purpose meaning we are not selecting any specif
 <div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="kp">sample</span><span class="p">(</span><span class="kp">nrow</span><span class="p">(</span>data<span class="p">),</span><span class="m">10</span><span class="p">,</span>replace<span class="o">=</span><span class="bp">F</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span>str<span class="p">(</span>data<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1290,19 +1204,14 @@ The comma at the end serves this purpose meaning we are not selecting any specif
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<ol class="list-inline">
-<li>8</li>
-<li>15</li>
-<li>2</li>
-<li>12</li>
-<li>1</li>
-<li>5</li>
-<li>3</li>
-<li>18</li>
-<li>7</li>
-<li>10</li>
-</ol>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>'data.frame':	18 obs. of  5 variables:
+ $ product   : Factor w/ 2 levels "copper","others": 1 1 1 1 1 1 1 1 1 2 ...
+ $ year      : int  2006 2007 2008 2009 2010 2011 2012 2013 2014 2006 ...
+ $ export    : int  4176 8560 6473 10465 14977 15421 14805 15183 14012 1079 ...
+ $ percentage: int  79 81 76 80 86 83 82 80 76 21 ...
+ $ sum       : int  5255 10505 8519 13027 17325 18629 18079 19088 18437 5255 ...
+</pre>
 </div>
 </div>
 </div>
@@ -1313,25 +1222,18 @@ The comma at the end serves this purpose meaning we are not selecting any specif
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The function <code>sample(total no. of data, no. of data samples)</code> just outputs the  . Therefore this function needs to be put inside [ ] which selects the subset of a data.</p>
+<p>We are learning how to make line plots with this data. We will use the year on the x-axis and export on the y-axis.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Many a times in our analysis we need to train models using our sample data. The most common method is to use a portion of the data to train the model and then another portion to test it whether the model is good enough to predict the outcomes. Below is a simple of dividing the data into training and testing set.</p>
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>p1<span class="o">=</span>ggplot<span class="p">()</span>
+</pre></div>
 </div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Let's take another data set called iris which is a part of the base R package.</p>
 </div>
 </div>
 </div>
@@ -1340,30 +1242,7 @@ The comma at the end serves this purpose meaning we are not selecting any specif
 <div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>data<span class="o">=</span>iris
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Let's see the basic descriptives.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [8]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="kp">dim</span><span class="p">(</span>data<span class="p">)</span>
-str<span class="p">(</span>data<span class="p">)</span>
-<span class="kp">head</span><span class="p">(</span>data<span class="p">)</span>
-<span class="kp">summary</span><span class="p">(</span>data<span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span>p1
 </pre></div>
 </div>
 </div>
@@ -1371,248 +1250,57 @@ str<span class="p">(</span>data<span class="p">)</span>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<ol class="list-inline">
-<li>150</li>
-<li>5</li>
-</ol>
-</div>
 </div>
 <div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>'data.frame':	150 obs. of  5 variables:
- $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
- $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
- $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
- $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
- $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...
-</pre>
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAMAAADKOT/pAAAADFBMVEXr6+vu7u7w8PD///8r
+t4uEAAAACXBIWXMAABJ0AAASdAHeZh94AAAJLUlEQVR4nO3TsQ2AMADAsBb+/5mRpUshEhKy
+L8iScQKvja8D4A+MBAEjQcBIEDASBIwEASNBwEgQuEc6JrBnMdIcwB4jQcBIEDASBIwEASNB
+wEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEj
+QcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQB
+I0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwE
+ASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSM
+BAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIE
+jAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDAS
+BIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAw
+EgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQ
+MBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBI
+EDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HA
+SBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNB
+wEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEj
+QcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQB
+I0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwE
+ASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSM
+BAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIE
+jAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDAS
+BIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAw
+EgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQ
+MBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBI
+EDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HA
+SBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNB
+wEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEj
+QcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQB
+I0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwE
+ASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSM
+BAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIE
+jAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDAS
+BIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAw
+EgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQ
+MBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBI
+EDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HA
+SBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNB
+wEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEj
+QcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQB
+I0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwE
+ASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSM
+BAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIE
+jAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDAS
+BIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAw
+EgSMBAEjQcBIEDASBIwEASNBwEgQMBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEASNBwEgQ
+MBIEjAQBI0HASBAwEgSMBAEjQcBIEDASBIwEgcVIwGNGgoCRIGAkCBgJAkaCgJEgYCQIGAkC
+FyZiZRA8VrxfAAAAAElFTkSuQmCC">
+</img></div>
 </div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<table>
-<thead><tr><th scope="col">Sepal.Length</th><th scope="col">Sepal.Width</th><th scope="col">Petal.Length</th><th scope="col">Petal.Width</th><th scope="col">Species</th></tr></thead>
-<tbody>
-<tr><td>5.1   </td><td>3.5   </td><td>1.4   </td><td>0.2   </td><td>setosa</td></tr>
-<tr><td>4.9   </td><td>3.0   </td><td>1.4   </td><td>0.2   </td><td>setosa</td></tr>
-<tr><td>4.7   </td><td>3.2   </td><td>1.3   </td><td>0.2   </td><td>setosa</td></tr>
-<tr><td>4.6   </td><td>3.1   </td><td>1.5   </td><td>0.2   </td><td>setosa</td></tr>
-<tr><td>5.0   </td><td>3.6   </td><td>1.4   </td><td>0.2   </td><td>setosa</td></tr>
-<tr><td>5.4   </td><td>3.9   </td><td>1.7   </td><td>0.4   </td><td>setosa</td></tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_text output_subarea ">
-<pre>  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   
- Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  
- 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  
- Median :5.800   Median :3.000   Median :4.350   Median :1.300  
- Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  
- 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  
- Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  
-       Species  
- setosa    :50  
- versicolor:50  
- virginica :50  
-                
-                
-                </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [16]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>tr_ind<span class="o">=</span><span class="kp">sample</span><span class="p">(</span><span class="kp">nrow</span><span class="p">(</span>data<span class="p">),</span><span class="m">120</span><span class="p">,</span>replace<span class="o">=</span><span class="bp">F</span><span class="p">)</span>
-trainset<span class="o">=</span>data<span class="p">[</span>tr_ind<span class="p">,]</span>
-testset<span class="o">=</span>data<span class="p">[</span><span class="o">!</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="kp">nrow</span><span class="p">(</span>data<span class="p">))</span> <span class="o">%in%</span> tr_ind<span class="p">,]</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [18]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="kp">dim</span><span class="p">(</span>trainset<span class="p">)</span>
-<span class="kp">head</span><span class="p">(</span>trainset<span class="p">)</span>
-<span class="kp">dim</span><span class="p">(</span>testset<span class="p">)</span>
-<span class="kp">head</span><span class="p">(</span>testset<span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<ol class="list-inline">
-<li>120</li>
-<li>5</li>
-</ol>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<table>
-<thead><tr><th></th><th scope="col">Sepal.Length</th><th scope="col">Sepal.Width</th><th scope="col">Petal.Length</th><th scope="col">Petal.Width</th><th scope="col">Species</th></tr></thead>
-<tbody>
-<tr><th scope="row">92</th><td>6.1       </td><td>3.0       </td><td>4.6       </td><td>1.4       </td><td>versicolor</td></tr>
-<tr><th scope="row">50</th><td>5.0       </td><td>3.3       </td><td>1.4       </td><td>0.2       </td><td>setosa    </td></tr>
-<tr><th scope="row">37</th><td>5.5       </td><td>3.5       </td><td>1.3       </td><td>0.2       </td><td>setosa    </td></tr>
-<tr><th scope="row">108</th><td>7.3       </td><td>2.9       </td><td>6.3       </td><td>1.8       </td><td>virginica </td></tr>
-<tr><th scope="row">135</th><td>6.1       </td><td>2.6       </td><td>5.6       </td><td>1.4       </td><td>virginica </td></tr>
-<tr><th scope="row">145</th><td>6.7       </td><td>3.3       </td><td>5.7       </td><td>2.5       </td><td>virginica </td></tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<ol class="list-inline">
-<li>30</li>
-<li>5</li>
-</ol>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<table>
-<thead><tr><th></th><th scope="col">Sepal.Length</th><th scope="col">Sepal.Width</th><th scope="col">Petal.Length</th><th scope="col">Petal.Width</th><th scope="col">Species</th></tr></thead>
-<tbody>
-<tr><th scope="row">5</th><td>5.0   </td><td>3.6   </td><td>1.4   </td><td>0.2   </td><td>setosa</td></tr>
-<tr><th scope="row">9</th><td>4.4   </td><td>2.9   </td><td>1.4   </td><td>0.2   </td><td>setosa</td></tr>
-<tr><th scope="row">10</th><td>4.9   </td><td>3.1   </td><td>1.5   </td><td>0.1   </td><td>setosa</td></tr>
-<tr><th scope="row">17</th><td>5.4   </td><td>3.9   </td><td>1.3   </td><td>0.4   </td><td>setosa</td></tr>
-<tr><th scope="row">20</th><td>5.1   </td><td>3.8   </td><td>1.5   </td><td>0.3   </td><td>setosa</td></tr>
-<tr><th scope="row">28</th><td>5.2   </td><td>3.5   </td><td>1.5   </td><td>0.2   </td><td>setosa</td></tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>What happened here is that <em>trainset</em> training set was created using the same method as used before, but the test test was created using the not <em>!</em> operator.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Systematic-Random-Sampling">Systematic Random Sampling<a class="anchor-link" href="#Systematic-Random-Sampling">¶</a></h2><p>Also known as $K^{th}$ name selection technique</p>
-$$
-K = \frac{\text{Population Size}}{\text{Sample Size}}
-$$<p>After the selection of the first random element $r$, the remaining elements are selected using the formula $r+K$, $r+2K$, ... $r+(n-1)K$, $r+nK$</p>
-<p>In simple words, the first element is selected randomly but the remaining elements are $K^{th}$  next elements. As you can see there is some systematicity to this method, it isn't entirely random, however one thing this does that simple random sampling fails to achieve is that in this method it's impossible to miss an entire category or subgroup of the population.</p>
-<p>Obviously, this method isn't foolproof either, in some cases this method can infact be dangerous, if there are hidden patterns in the data (which isn't that rare in practice), and the sampling technique happens to pick up those special cases only.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Stratified-Random-Sampling">Stratified Random Sampling<a class="anchor-link" href="#Stratified-Random-Sampling">¶</a></h2><p>This is the next logical step in improving your sampling method. The only reason random sampling might fail was it might overestimate or underestimate some specific group or subcategory, to overcome that we developed Systematic Random Sampling, but instead of systematic jumps across data, why not just divide your data into the categories you are worried you might over or underestimate. Use simple random sampling to select random data from each of those groups and simply combine them in the end.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [4]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>sampling<span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>if you don't have it installed and get an error called <em>there is no package called 'sampling'</em> do <code>install.packages("sampling")</code></p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This time we will create our own data.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [1]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>data1<span class="o">=</span> <span class="kp">rbind</span><span class="p">(</span><span class="kt">matrix</span><span class="p">(</span><span class="kp">rep</span><span class="p">(</span><span class="s">"nc"</span><span class="p">,</span><span class="m">165</span><span class="p">),</span><span class="m">165</span><span class="p">,</span><span class="m">1</span><span class="p">,</span>byrow<span class="o">=</span><span class="bp">T</span><span class="p">),</span><span class="kt">matrix</span><span class="p">(</span><span class="kp">rep</span><span class="p">(</span><span class="s">"sc"</span><span class="p">,</span><span class="m">70</span><span class="p">),</span><span class="m">70</span><span class="p">,</span><span class="m">1</span><span class="p">,</span>byrow<span class="o">=</span><span class="bp">T</span><span class="p">))</span>
-data2<span class="o">=</span> <span class="kp">cbind.data.frame</span><span class="p">(</span>data<span class="p">,</span><span class="kt">c</span><span class="p">(</span><span class="kp">rep</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">100</span><span class="p">),</span><span class="kp">rep</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">50</span><span class="p">),</span><span class="kp">rep</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">15</span><span class="p">),</span><span class="kp">rep</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">30</span><span class="p">),</span><span class="kp">rep</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">40</span><span class="p">)),</span><span class="m">1000</span><span class="o">*</span>runif<span class="p">(</span><span class="m">235</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-Error in as.data.frame.default(x[[i]], optional = TRUE): cannot coerce class ""function"" to a data.frame
-Traceback:
-
-1. cbind.data.frame(data, c(rep(1, 100), rep(2, 50), rep(3, 15), 
- .     rep(1, 30), rep(2, 40)), 1000 * runif(235))
-2. data.frame(..., check.names = FALSE)
-3. as.data.frame(x[[i]], optional = TRUE)
-4. as.data.frame.default(x[[i]], optional = TRUE)
-5. stop(gettextf("cannot coerce class \"%s\" to a data.frame", deparse(class(x))), 
- .     domain = NA)</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Cluster-Sampling">Cluster Sampling<a class="anchor-link" href="#Cluster-Sampling">¶</a></h2><p>It is also called Multi-stage Cluster Sampling, (you will see why "mult-stage" in a minute). The only problem that this method solves is economic. Basically, if you are out of budget and are unable to do extensive random surveys, this might solve your problem.</p>
-<p>For example, you want to say something about the current health scenario of your city, and unfortunate for you, you happen to live in a big city. Say your city has about 500 hospitals (Delhi has more than that according to <a href="http://www.delhi.gov.in/wps/wcm/connect/b9900a804020417ea2e5feb8bfd93f2e/LIST+OF+REGISTERED+PVT.+HOSPITALS.pdf?MOD=AJPERES&amp;CACHEID=b9900a804020417ea2e5feb8bfd93f2e">this document</a>). And say you would be happy if you sampled 100 patients. Ideally you should select 100 random hospitals out of the total and interview single patient in each hospital. And you have your data.</p>
-<p>Yes, the problem is you cannot physically travel to 100 hospitals (unless you are a PhD student and have two years to waste only on the first part of your research and your guide is paying for travel). Therefore you cluster sample. You randomly select five hospitals and randomly interview twenty patients in each hospital.</p>
-<p>Again, nothing about this method is ideal, as you can already see, there are a ton of problems, several biases, overrepresentation of the areas you visited, neglection of areas you did not visit, etc. And the only reason you might cluster sample rather than other random sampling methods as I already mentioned is economic.</p>
-<p>Why is it called multi-stage? Well, when you randomly selected the hospitals that was tier 1, when you went deeper and randomly selected patients within a hospital, that was tier 2. Sometimes it is sufficient to stop at tier 1 itself.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h6 id="I-would-like-to-acknowledge-the-people-at-Edwisor-for-providing-the-training-and-materials-for-this-post.-For-more-information-and-detailed-and-engaging-live-sessions,-please-check-out-Edwisor.com">I would like to acknowledge the people at Edwisor for providing the training and materials for this post. For more information and detailed and engaging live sessions, please check out <a href="http://edwisor.com">Edwisor.com</a><a class="anchor-link" href="#I-would-like-to-acknowledge-the-people-at-Edwisor-for-providing-the-training-and-materials-for-this-post.-For-more-information-and-detailed-and-engaging-live-sessions,-please-check-out-Edwisor.com">¶</a></h6>
 </div>
 </div>
 </div>
@@ -1659,7 +1347,11 @@ Traceback:
   
 <div class="article-tag-list">
 <span class="label label-default">Tags</span>
-	<a href="../../../../../tag/edwisor.html"><i class="fa fa-tag"></i>edwisor</a>&nbsp;
+	<a href="./tag/ggplot2.html"><i class="fa fa-tag"></i>ggplot2</a>&nbsp;
+	<a href="./tag/hitchhiker.html"><i class="fa fa-tag"></i>hitchhiker</a>&nbsp;
+	<a href="./tag/guide.html"><i class="fa fa-tag"></i>guide</a>&nbsp;
+	<a href="./tag/line-plots.html"><i class="fa fa-tag"></i>line plots</a>&nbsp;
+	<a href="./tag/grammar-of-graphics.html"><i class="fa fa-tag"></i>grammar of graphics</a>&nbsp;
 </div>  <hr />
   <div class="well well-sm">  <!-- Social media sharing buttons -->
 
@@ -1670,7 +1362,7 @@ Traceback:
 
     <!-- Facebook -->
     <div class="fb-like" 
-        data-href="../../../../../blog/2016/09/16/how-to-get-data/" 
+        data-href="./ch1-hgg.html" 
         data-layout="button_count" 
         data-action="like" data-show-faces="true" 
         data-share="true">
@@ -1714,13 +1406,13 @@ Traceback:
 <div class="col-xs-6 col-md-12">
 <h4><i class="fa fa-folder fa-fw fa-lg"></i> Categories</h4>
 <ul class="list-unstyled category-links">
-  <li><a href="../../../../../category/data-analysis.html" >
+  <li><a href="./category/data-analysis.html" >
     <i class="fa fa-folder-open-o fa-fw fa-lg"></i> Data Analysis</a></li>
-  <li><a href="../../../../../category/data-analysis-life-cycle.html" >
+  <li><a href="./category/data-analysis-life-cycle.html" >
     <i class="fa fa-folder-open-o fa-fw fa-lg"></i> Data Analysis Life Cycle</a></li>
-  <li><a href="../../../../../category/hitchhikers-guide-to-ggplot2.html" >
+  <li><a href="./category/hitchhikers-guide-to-ggplot2.html" >
     <i class="fa fa-folder-open-o fa-fw fa-lg"></i> Hitchhikers Guide to ggplot2</a></li>
-  <li><a href="../../../../../category/projects.html" >
+  <li><a href="./category/projects.html" >
     <i class="fa fa-folder-open-o fa-fw fa-lg"></i> Projects</a></li>
 </ul>
 </div>
@@ -1731,28 +1423,63 @@ Traceback:
 <h4><i class="fa fa-tags fa-fw fa-lg"></i> Tags</h4>
 <p class="tag-cloud">
 <span class="tag-1">
-    <a href="../../../../../tag/edwisor.html">
+    <a href="./tag/edwisor.html">
         <i class="fa fa-tag fa-fw fa-lg"></i>edwisor
     </a>
 </span>
-<span class="tag-4">
-    <a href="../../../../../tag/binning.html">
-        <i class="fa fa-tag fa-fw fa-lg"></i>binning
+<span class="tag-2">
+    <a href="./tag/guide.html">
+        <i class="fa fa-tag fa-fw fa-lg"></i>guide
+    </a>
+</span>
+<span class="tag-2">
+    <a href="./tag/grammar-of-graphics.html">
+        <i class="fa fa-tag fa-fw fa-lg"></i>grammar of graphics
+    </a>
+</span>
+<span class="tag-2">
+    <a href="./tag/hitchhiker.html">
+        <i class="fa fa-tag fa-fw fa-lg"></i>hitchhiker
+    </a>
+</span>
+<span class="tag-2">
+    <a href="./tag/ggplot2.html">
+        <i class="fa fa-tag fa-fw fa-lg"></i>ggplot2
     </a>
 </span>
 <span class="tag-4">
-    <a href="../../../../../tag/text-mining.html">
+    <a href="./tag/dplyr.html">
+        <i class="fa fa-tag fa-fw fa-lg"></i>dplyr
+    </a>
+</span>
+<span class="tag-4">
+    <a href="./tag/text-mining.html">
         <i class="fa fa-tag fa-fw fa-lg"></i>text mining
     </a>
 </span>
 <span class="tag-4">
-    <a href="../../../../../tag/movies.html">
+    <a href="./tag/wickham.html">
+        <i class="fa fa-tag fa-fw fa-lg"></i>Wickham
+    </a>
+</span>
+<span class="tag-4">
+    <a href="./tag/wilkinson.html">
+        <i class="fa fa-tag fa-fw fa-lg"></i>Wilkinson
+    </a>
+</span>
+<span class="tag-4">
+    <a href="./tag/movies.html">
         <i class="fa fa-tag fa-fw fa-lg"></i>movies
     </a>
 </span>
 <span class="tag-4">
-    <a href="../../../../../tag/dplyr.html">
-        <i class="fa fa-tag fa-fw fa-lg"></i>dplyr
+    <a href="./tag/line-plots.html">
+        <i class="fa fa-tag fa-fw fa-lg"></i>line plots
+    </a>
+</span>
+<span class="tag-4">
+    <a href="./tag/binning.html">
+        <i class="fa fa-tag fa-fw fa-lg"></i>binning
     </a>
 </span>
 </p>

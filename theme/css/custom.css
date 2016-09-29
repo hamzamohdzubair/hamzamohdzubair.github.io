@@ -5,7 +5,7 @@ img {
 	border: 1px solid #587;
 }
 
-@media (min-width:500px) { 
+@media (min-width:500px) and (orientation:landscape) { 
 img {    
     width: 60%;
     margin-left: auto;

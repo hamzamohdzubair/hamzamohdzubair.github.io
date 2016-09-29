@@ -1,5 +1,10 @@
 @import 'https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC|Open+Sans|Monsieur+La+Doulaise';
 
+img {
+	width:100%;
+	border: 1px solid #587;
+}
+
 @media (min-width:641px) { 
 img {    
     width: 60%;

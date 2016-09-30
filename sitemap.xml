@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://hamzamohdzubair.github.io/</loc>
-<lastmod>2016-09-30T15:09:27-00:00</lastmod>
+<lastmod>2016-09-30T15:18:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://hamzamohdzubair.github.io/archives.html</loc>
-<lastmod>2016-09-30T15:09:27-00:00</lastmod>
+<lastmod>2016-09-30T15:18:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://hamzamohdzubair.github.io/tags.html</loc>
-<lastmod>2016-09-30T15:09:27-00:00</lastmod>
+<lastmod>2016-09-30T15:18:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://hamzamohdzubair.github.io/categories.html</loc>
-<lastmod>2016-09-30T15:09:27-00:00</lastmod>
+<lastmod>2016-09-30T15:18:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -102,13 +102,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://hamzamohdzubair.github.io/tag/hitchhiker.html</loc>
-<lastmod>2016-09-27T22:00:00+05:53</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
 <loc>https://hamzamohdzubair.github.io/tag/movies.html</loc>
 <lastmod>2016-09-25T15:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
@@ -116,8 +109,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://hamzamohdzubair.github.io/tag/wilkinson.html</loc>
-<lastmod>2016-09-27T08:00:00+05:53</lastmod>
+<loc>https://hamzamohdzubair.github.io/tag/ggplot2.html</loc>
+<lastmod>2016-09-27T22:00:00+05:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://hamzamohdzubair.github.io/tag/hitchhiker.html</loc>
+<lastmod>2016-09-27T22:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -130,7 +130,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://hamzamohdzubair.github.io/tag/text-mining.html</loc>
+<loc>https://hamzamohdzubair.github.io/tag/binning.html</loc>
 <lastmod>2016-09-25T15:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
@@ -144,14 +144,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://hamzamohdzubair.github.io/tag/line-plots.html</loc>
-<lastmod>2016-09-27T22:00:00+05:53</lastmod>
+<loc>https://hamzamohdzubair.github.io/tag/wilkinson.html</loc>
+<lastmod>2016-09-27T08:00:00+05:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://hamzamohdzubair.github.io/tag/wickham.html</loc>
+<lastmod>2016-09-27T08:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://hamzamohdzubair.github.io/tag/guide.html</loc>
+<lastmod>2016-09-27T22:00:00+05:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://hamzamohdzubair.github.io/tag/line-plots.html</loc>
 <lastmod>2016-09-27T22:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
@@ -165,22 +179,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://hamzamohdzubair.github.io/tag/binning.html</loc>
+<loc>https://hamzamohdzubair.github.io/tag/text-mining.html</loc>
 <lastmod>2016-09-25T15:00:00+05:53</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://hamzamohdzubair.github.io/tag/wickham.html</loc>
-<lastmod>2016-09-27T08:00:00+05:53</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://hamzamohdzubair.github.io/tag/ggplot2.html</loc>
-<lastmod>2016-09-27T22:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>

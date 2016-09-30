@@ -1082,7 +1082,7 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="http://ggplot2.org/">ggplot2</a> is an R package developed by <a href="http://hadley.nz/">Hadley Wickham</a>. The package is based on an earlier work done by <a href="https://en.wikipedia.org/wiki/Leland_Wilkinson">Leland Wilkinson</a> who is a professor of Computer Science. Wilkinson developed something known as the <a href="http://www.amazon.in/Grammar-Graphics-Statistics-Computing/dp/0387245448"><em>Grammar of Graphics</em></a>, which is an extensive set of rules and definitions for data visualizaiton. Wilkinson's grammar was further developed, enhanced and implemented in this package by Wickham. A must read paper by Wickham on the implementation of Grammar of Graphics is available online: <a href="https://pdfs.semanticscholar.org/d779/6f85dabccd18673f382c100fc06f55e8b501.pdf">A Layered Grammar of Graphics</a>. To understand the intricacies of the package and to master it's nuances I would recommend reading his book: <a href="https://www.amazon.com/ggplot2-Elegant-Graphics-Data-Analysis/dp/331924275X/ref=mt_paperback?_encoding=UTF8&amp;me=">ggplot2: Elegant Graphics Data Analysis</a>.</p>
+<p><a href="http://ggplot2.org/">ggplot2</a> is an R package developed by <a href="http://hadley.nz/">Hadley Wickham</a>. The package is based on an earlier work by <a href="https://en.wikipedia.org/wiki/Leland_Wilkinson">Leland Wilkinson</a> who is a professor of Computer Science at University of Illinois. Wilkinson developed something known as the <a href="http://www.amazon.in/Grammar-Graphics-Statistics-Computing/dp/0387245448"><em>Grammar of Graphics</em></a>, which is an extensive set of rules and definitions for data visualizaiton. Wilkinson's grammar was further developed, enhanced and implemented in this package by Wickham. A must read paper by Wickham on the implementation of Grammar of Graphics is available online: <a href="https://pdfs.semanticscholar.org/d779/6f85dabccd18673f382c100fc06f55e8b501.pdf">A Layered Grammar of Graphics</a>. To understand the intricacies of the package and to master it's nuances I would recommend reading his book: <a href="https://www.amazon.com/ggplot2-Elegant-Graphics-Data-Analysis/dp/331924275X/ref=mt_paperback?_encoding=UTF8&amp;me=">ggplot2: Elegant Graphics Data Analysis</a>.</p>
 </div>
 </div>
 </div>
@@ -1100,13 +1100,21 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>According to the grammar, every plot in ggplot2 has three key components:</p>
+<p>According to the grammar, every plot in ggplot2 has the following components:</p>
 <ol>
-<li>data</li>
-<li>aes</li>
-<li>geom</li>
+<li>Layers<ol>
+<li>Data</li>
+<li>Aesthetic Mapping</li>
+<li>Geometries</li>
+<li>Stat</li>
+<li>Position</li>
 </ol>
-<p><strong>data</strong> you know, <strong>geom</strong> (geometries) is the visual elements of a plot, things that we see on a plot, like points, lines, ribbons, area, text, etc; <strong>aes</strong> (aesthetic mapping) is how the data connects to or maps on to the geoms, like axes, shapes, colors, sizes, etc. So, basically data is what you don't see, and geom is what you do see, and aes is how we connect the two. I cannot make it simpler than that.</p>
+</li>
+<li>Scales</li>
+<li>Coordinates</li>
+<li>Facets</li>
+<li>Themes</li>
+</ol>
 </div>
 </div>
 </div>
@@ -1115,7 +1123,25 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now, we will see how to use these three: <em>data</em>, <em>aes</em> and <em>geom</em> to create beautiful and meaningful plots. Let's load the package first. If you don't have ggplot2 installed you have to <code>install.packages('ggplot2')</code></p>
+<p>Of the primary five components: Layers, Scales, Coordinates, Facets and Theme, Layers is the most important. Theme is just the beautification part. Facets is an advanced function, when you want to create not one, but several plots at once, using the same data dividing it into categories. We'll see how it's done in the future. Coordinates, for the most part need not be changed from Cartesian which is the default, so we can leave that discussion for some other time. Scaling is pretty much automatically handled, which rarely requires fiddling with, it's examples are continuous scaling or descrete scaling, etc. Topic for the future. So let's talk about the most important part of the plot, Layers.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Layers as you can see is again made up of five components: Data, Aesthetic Mapping, Geometries, Stat and Position. Of these stat and position are somewhat advanced, which are by default set to "identity", we'll discuss about them later. So finally and eventually we are left with the most basic and the most important components of a plot: Data, Aes (short for Aesthetic mapping), and Geom (short for Geometries). <strong>data</strong> you know what it is, preferably in the form of table, dataframe or just variables with values in them. <strong>geoms</strong> (geometries) are the visual elements of a plot, things that we see on a plot, like points, lines, curves, boxes, etc; <strong>aes</strong> (aesthetic mapping) are components that connect data with geoms. Examples of aes are the x-axis, the y-axis, shape, color, size, etc. So, basically <em>data</em> is what you don't see on a plot, and <em>geom</em> is what you do see on a plot, and <em>aes</em> is how we connect the two. I cannot make it simpler than that.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now, we will see how to use <em>data</em>, <em>aes</em> and <em>geom</em> to create beautiful and meaningful plots. Let's load the package first...</p>
 </div>
 </div>
 </div>
@@ -1127,6 +1153,16 @@ h6:hover .anchor-link {
 <div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>ggplot2<span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If you don't have ggplot2 installed, you have to <code>install.packages('ggplot2')</code>.</p>
+<p>The most basic command of the plot is...</p>
 </div>
 </div>
 </div>
@@ -1202,7 +1238,16 @@ FyZiZRA8VrxfAAAAAElFTkSuQmCC">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This is what <code>ggplot()</code> does. Just creates an empty space where we can draw our plot. Now let's add some data. The data we will use is the <code>mtcars</code> dataset that comes pre-loaded with R.</p>
+<p>This is what the function <code>ggplot()</code> does. Just creates an empty space where we can draw our plot.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now let's add some data. The data we will use is the <code>mtcars</code> dataset that comes pre-loaded with R.</p>
 </div>
 </div>
 </div>
@@ -2897,9 +2942,9 @@ AABJRU5ErkJggg==">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now, that you understand the basics of ggplot2 grammar, you can look at the following articles to learn how to make actual plots:</p>
+<p>Now, that you understand the basics of ggplot2 grammar, you can look at the following articles to learn how to make beautiful plots:</p>
 <ol>
-<li><a href="">Line Plots in ggplot2</a></li>
+<li><a href="http://www.hamzazubair.com/line-plots-in-ggplot2.html">Line Plots in ggplot2</a></li>
 <li><a href="">Area Plots in ggplot2</a></li>
 <li><a href="">Bar Plots in ggplot2</a></li>
 <li><a href="">Stacked Bar Plots in ggplot2</a></li>
@@ -3046,38 +3091,13 @@ AABJRU5ErkJggg==">
     </a>
 </span>
 <span class="tag-2">
-    <a href="./tag/grammar-of-graphics.html">
-        <i class="fa fa-tag fa-fw fa-lg"></i>grammar of graphics
-    </a>
-</span>
-<span class="tag-2">
     <a href="./tag/hitchhiker.html">
         <i class="fa fa-tag fa-fw fa-lg"></i>hitchhiker
     </a>
 </span>
-<span class="tag-4">
-    <a href="./tag/text-mining.html">
-        <i class="fa fa-tag fa-fw fa-lg"></i>text mining
-    </a>
-</span>
-<span class="tag-4">
-    <a href="./tag/binning.html">
-        <i class="fa fa-tag fa-fw fa-lg"></i>binning
-    </a>
-</span>
-<span class="tag-4">
-    <a href="./tag/movies.html">
-        <i class="fa fa-tag fa-fw fa-lg"></i>movies
-    </a>
-</span>
-<span class="tag-4">
-    <a href="./tag/line-plots.html">
-        <i class="fa fa-tag fa-fw fa-lg"></i>line plots
-    </a>
-</span>
-<span class="tag-4">
-    <a href="./tag/wilkinson.html">
-        <i class="fa fa-tag fa-fw fa-lg"></i>wilkinson
+<span class="tag-2">
+    <a href="./tag/grammar-of-graphics.html">
+        <i class="fa fa-tag fa-fw fa-lg"></i>grammar of graphics
     </a>
 </span>
 <span class="tag-4">
@@ -3086,8 +3106,38 @@ AABJRU5ErkJggg==">
     </a>
 </span>
 <span class="tag-4">
+    <a href="./tag/text-mining.html">
+        <i class="fa fa-tag fa-fw fa-lg"></i>text mining
+    </a>
+</span>
+<span class="tag-4">
+    <a href="./tag/movies.html">
+        <i class="fa fa-tag fa-fw fa-lg"></i>movies
+    </a>
+</span>
+<span class="tag-4">
+    <a href="./tag/imdb.html">
+        <i class="fa fa-tag fa-fw fa-lg"></i>imdb
+    </a>
+</span>
+<span class="tag-4">
     <a href="./tag/dplyr.html">
         <i class="fa fa-tag fa-fw fa-lg"></i>dplyr
+    </a>
+</span>
+<span class="tag-4">
+    <a href="./tag/wilkinson.html">
+        <i class="fa fa-tag fa-fw fa-lg"></i>wilkinson
+    </a>
+</span>
+<span class="tag-4">
+    <a href="./tag/binning.html">
+        <i class="fa fa-tag fa-fw fa-lg"></i>binning
+    </a>
+</span>
+<span class="tag-4">
+    <a href="./tag/line-plots.html">
+        <i class="fa fa-tag fa-fw fa-lg"></i>line plots
     </a>
 </span>
 </p>

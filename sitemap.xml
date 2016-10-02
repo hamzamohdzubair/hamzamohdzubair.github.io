@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://hamzamohdzubair.github.io/</loc>
-<lastmod>2016-10-02T13:16:40-00:00</lastmod>
+<lastmod>2016-10-02T17:04:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://hamzamohdzubair.github.io/archives.html</loc>
-<lastmod>2016-10-02T13:16:40-00:00</lastmod>
+<lastmod>2016-10-02T17:04:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://hamzamohdzubair.github.io/tags.html</loc>
-<lastmod>2016-10-02T13:16:40-00:00</lastmod>
+<lastmod>2016-10-02T17:04:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://hamzamohdzubair.github.io/categories.html</loc>
-<lastmod>2016-10-02T13:16:40-00:00</lastmod>
+<lastmod>2016-10-02T17:04:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -46,15 +46,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://hamzamohdzubair.github.io/tag/grammar-of-graphics.html</loc>
-<lastmod>2016-10-01T00:00:00+05:53</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://hamzamohdzubair.github.io/tag/housing.html</loc>
-<lastmod>2016-10-01T00:00:00+05:53</lastmod>
+<loc>https://hamzamohdzubair.github.io/tag/text-mining.html</loc>
+<lastmod>2016-09-18T00:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -67,6 +60,20 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://hamzamohdzubair.github.io/tag/wilkinson.html</loc>
+<lastmod>2016-10-01T00:00:00+05:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://hamzamohdzubair.github.io/tag/imdb.html</loc>
+<lastmod>2016-09-18T00:00:00+05:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
 <loc>https://hamzamohdzubair.github.io/tag/edwisor.html</loc>
 <lastmod>2016-09-18T00:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
@@ -74,14 +81,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://hamzamohdzubair.github.io/tag/binning.html</loc>
-<lastmod>2016-09-18T00:00:00+05:53</lastmod>
+<loc>https://hamzamohdzubair.github.io/tag/guide.html</loc>
+<lastmod>2016-10-01T00:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://hamzamohdzubair.github.io/tag/wickham.html</loc>
+<loc>https://hamzamohdzubair.github.io/tag/grammar-of-graphics.html</loc>
 <lastmod>2016-10-01T00:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
@@ -95,29 +102,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://hamzamohdzubair.github.io/tag/guide.html</loc>
-<lastmod>2016-10-01T00:00:00+05:53</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://hamzamohdzubair.github.io/tag/text-mining.html</loc>
+<loc>https://hamzamohdzubair.github.io/tag/binning.html</loc>
 <lastmod>2016-09-18T00:00:00+05:53</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://hamzamohdzubair.github.io/tag/movies.html</loc>
-<lastmod>2016-09-18T00:00:00+05:53</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://hamzamohdzubair.github.io/tag/wilkinson.html</loc>
-<lastmod>2016-10-01T00:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -130,8 +116,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://hamzamohdzubair.github.io/tag/imdb.html</loc>
+<loc>https://hamzamohdzubair.github.io/tag/movies.html</loc>
 <lastmod>2016-09-18T00:00:00+05:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://hamzamohdzubair.github.io/tag/housing.html</loc>
+<lastmod>2016-10-01T00:00:00+05:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://hamzamohdzubair.github.io/tag/wickham.html</loc>
+<lastmod>2016-10-01T00:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>

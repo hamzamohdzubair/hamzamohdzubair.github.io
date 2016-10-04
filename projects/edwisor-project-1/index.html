@@ -1103,7 +1103,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [1]:</div>
+<div class="prompt input_prompt">In [79]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>imdb1<span class="o">=</span>read.csv<span class="p">(</span><span class="s">"IMDB_data.csv"</span><span class="p">,</span>fileEncoding<span class="o">=</span><span class="s">"UTF-8-BOM"</span><span class="p">)</span>
@@ -1114,7 +1114,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [2]:</div>
+<div class="prompt input_prompt">In [80]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>imdb2<span class="o">=</span>imdb1<span class="p">[</span><span class="m">-2</span><span class="p">,]</span>
@@ -1134,7 +1134,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [3]:</div>
+<div class="prompt input_prompt">In [81]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">head</span><span class="p">(</span>imdb2<span class="p">)</span>
@@ -1174,7 +1174,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [4]:</div>
+<div class="prompt input_prompt">In [82]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">head</span><span class="p">(</span>imdb2<span class="o">$</span>Genre<span class="p">)</span>
@@ -1210,7 +1210,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [5]:</div>
+<div class="prompt input_prompt">In [83]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">unique</span><span class="p">(</span>imdb2<span class="o">$</span>Genre<span class="p">)</span>
@@ -1489,7 +1489,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [6]:</div>
+<div class="prompt input_prompt">In [84]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>data.table<span class="p">)</span>
@@ -1513,43 +1513,13 @@ uniqueN<span class="p">(</span>imdb2<span class="o">$</span>Genre<span class="p"
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This is wrong because the first unique genre is</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [7]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="kp">unique</span><span class="p">(</span>imdb2<span class="o">$</span>Genre<span class="p">)[</span><span class="m">1</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-Action, Thriller
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>When in fact it should have been either just Action or just Thriller. One of the ways we can solve this problem is by doing the following</p>
 <h3 id="Method-1:-Using-paste">Method 1: Using paste<a class="anchor-link" href="#Method-1:-Using-paste">¶</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [8]:</div>
+<div class="prompt input_prompt">In [85]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>gen<span class="o">=</span>imdb2<span class="o">$</span>Genre
@@ -1560,7 +1530,7 @@ Action, Thriller
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [9]:</div>
+<div class="prompt input_prompt">In [86]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>gen.str<span class="o">=</span><span class="kp">paste</span><span class="p">(</span>gen<span class="p">,</span>collapse<span class="o">=</span><span class="s">','</span><span class="p">)</span>
@@ -1571,7 +1541,7 @@ Action, Thriller
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [10]:</div>
+<div class="prompt input_prompt">In [87]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>gen.vec<span class="o">=</span><span class="kp">strsplit</span><span class="p">(</span>gen.str<span class="p">,</span><span class="s">","</span><span class="p">)[[</span><span class="m">1</span><span class="p">]]</span>
@@ -1582,7 +1552,7 @@ Action, Thriller
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [11]:</div>
+<div class="prompt input_prompt">In [88]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>gen.vec.clean<span class="o">=</span><span class="kp">gsub</span><span class="p">(</span><span class="s">" "</span><span class="p">,</span><span class="s">""</span><span class="p">,</span>gen.vec<span class="p">)</span>
@@ -1602,7 +1572,7 @@ Action, Thriller
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [12]:</div>
+<div class="prompt input_prompt">In [89]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">length</span><span class="p">(</span>gen.vec.clean<span class="p">)</span>
@@ -1631,7 +1601,7 @@ Action, Thriller
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [13]:</div>
+<div class="prompt input_prompt">In [90]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">head</span><span class="p">(</span>gen.vec.clean<span class="p">)</span>
@@ -1668,7 +1638,7 @@ Action, Thriller
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [14]:</div>
+<div class="prompt input_prompt">In [91]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">table</span><span class="p">(</span>gen.vec.clean<span class="p">)</span>
@@ -1694,7 +1664,7 @@ Action, Thriller
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [15]:</div>
+<div class="prompt input_prompt">In [92]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>plot<span class="p">(</span><span class="kp">table</span><span class="p">(</span>gen.vec.clean<span class="p">),</span>las<span class="o">=</span><span class="m">2</span><span class="p">,</span>xlab<span class="o">=</span><span class="s">''</span><span class="p">)</span>
@@ -1991,7 +1961,7 @@ KwAAAABJRU5ErkJggg==">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [16]:</div>
+<div class="prompt input_prompt">In [93]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>genlist<span class="o">=</span><span class="kp">unique</span><span class="p">(</span>gen.vec.clean<span class="p">)</span>
@@ -2002,7 +1972,7 @@ KwAAAABJRU5ErkJggg==">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [17]:</div>
+<div class="prompt input_prompt">In [94]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>genlist
@@ -2052,7 +2022,7 @@ KwAAAABJRU5ErkJggg==">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [18]:</div>
+<div class="prompt input_prompt">In [95]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>anim<span class="o">=</span><span class="kp">grep</span><span class="p">(</span><span class="s">'Animation'</span><span class="p">,</span>gen<span class="p">)</span>
@@ -2063,7 +2033,7 @@ KwAAAABJRU5ErkJggg==">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [19]:</div>
+<div class="prompt input_prompt">In [96]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>anim
@@ -2106,7 +2076,7 @@ KwAAAABJRU5ErkJggg==">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [20]:</div>
+<div class="prompt input_prompt">In [97]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span>imdb2<span class="p">[</span>anim<span class="p">,</span><span class="m">2</span><span class="p">])</span>
@@ -2149,7 +2119,7 @@ KwAAAABJRU5ErkJggg==">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [21]:</div>
+<div class="prompt input_prompt">In [98]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>mlist<span class="o">=</span><span class="kt">list</span><span class="p">()</span>
@@ -2173,7 +2143,7 @@ KwAAAABJRU5ErkJggg==">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [22]:</div>
+<div class="prompt input_prompt">In [99]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>mlist<span class="o">$</span>War
@@ -2234,7 +2204,7 @@ KwAAAABJRU5ErkJggg==">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [23]:</div>
+<div class="prompt input_prompt">In [100]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span>imdb2<span class="p">[</span>mlist<span class="o">$</span>War<span class="p">,</span><span class="m">2</span><span class="p">])</span>
@@ -2280,7 +2250,7 @@ KwAAAABJRU5ErkJggg==">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [24]:</div>
+<div class="prompt input_prompt">In [101]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>x<span class="o">=</span><span class="kp">gsub</span><span class="p">(</span><span class="s">" "</span><span class="p">,</span><span class="s">""</span><span class="p">,</span>imdb2<span class="o">$</span>Genre<span class="p">)</span>
@@ -2291,7 +2261,7 @@ KwAAAABJRU5ErkJggg==">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [25]:</div>
+<div class="prompt input_prompt">In [102]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">head</span><span class="p">(</span>x<span class="p">)</span>
@@ -2318,7 +2288,7 @@ KwAAAABJRU5ErkJggg==">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [26]:</div>
+<div class="prompt input_prompt">In [103]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>write.table<span class="p">(</span>x<span class="p">,</span><span class="s">"datafile.csv"</span><span class="p">,</span>sep<span class="o">=</span><span class="s">","</span><span class="p">,</span>row.names<span class="o">=</span><span class="bp">F</span><span class="p">,</span>quote<span class="o">=</span><span class="bp">F</span><span class="p">)</span>
@@ -2329,7 +2299,7 @@ KwAAAABJRU5ErkJggg==">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [27]:</div>
+<div class="prompt input_prompt">In [104]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>y<span class="o">=</span><span class="kp">scan</span><span class="p">(</span><span class="s">"datafile.csv"</span><span class="p">,</span>what<span class="o">=</span><span class="s">'character'</span><span class="p">,</span>sep<span class="o">=</span><span class="s">','</span><span class="p">,</span> quote<span class="o">=</span><span class="kc">NULL</span><span class="p">,</span>skip<span class="o">=</span><span class="m">1</span><span class="p">)</span>
@@ -2340,7 +2310,7 @@ KwAAAABJRU5ErkJggg==">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [28]:</div>
+<div class="prompt input_prompt">In [105]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">unique</span><span class="p">(</span>y<span class="p">)</span>
@@ -2381,7 +2351,7 @@ KwAAAABJRU5ErkJggg==">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [29]:</div>
+<div class="prompt input_prompt">In [106]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>uniqueN<span class="p">(</span>y<span class="p">)</span>
@@ -2401,7 +2371,7 @@ KwAAAABJRU5ErkJggg==">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [30]:</div>
+<div class="prompt input_prompt">In [107]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">table</span><span class="p">(</span>y<span class="p">)</span>
@@ -2436,7 +2406,7 @@ KwAAAABJRU5ErkJggg==">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [31]:</div>
+<div class="prompt input_prompt">In [108]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>unigen<span class="o">=</span><span class="kp">lapply</span><span class="p">(</span>gen.str<span class="p">,</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="kp">unique</span><span class="p">(</span>trimws<span class="p">(</span><span class="kp">unlist</span><span class="p">(</span><span class="kp">strsplit</span><span class="p">(</span>x<span class="p">,</span> <span class="s">","</span><span class="p">)))))</span>
@@ -2447,7 +2417,7 @@ KwAAAABJRU5ErkJggg==">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [32]:</div>
+<div class="prompt input_prompt">In [109]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>unigen
@@ -2500,7 +2470,7 @@ KwAAAABJRU5ErkJggg==">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [33]:</div>
+<div class="prompt input_prompt">In [110]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>str<span class="p">(</span>imdb2<span class="p">)</span>
@@ -2540,7 +2510,7 @@ KwAAAABJRU5ErkJggg==">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [34]:</div>
+<div class="prompt input_prompt">In [111]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">sapply</span><span class="p">(</span>imdb2<span class="p">,</span> <span class="kp">class</span><span class="p">)</span>
@@ -2590,7 +2560,7 @@ KwAAAABJRU5ErkJggg==">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [35]:</div>
+<div class="prompt input_prompt">In [112]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>imdb3<span class="o">=</span>imdb2
@@ -2610,7 +2580,7 @@ KwAAAABJRU5ErkJggg==">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [36]:</div>
+<div class="prompt input_prompt">In [113]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>lubridate<span class="p">)</span>
@@ -2618,30 +2588,10 @@ KwAAAABJRU5ErkJggg==">
 </div>
 </div>
 </div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>
-Attaching package: ‘lubridate’
-
-The following objects are masked from ‘package:data.table’:
-
-    hour, mday, month, quarter, wday, week, yday, year
-
-The following object is masked from ‘package:base’:
-
-    date
-
-</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [37]:</div>
+<div class="prompt input_prompt">In [114]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>imdb3<span class="o">$</span>Plot<span class="o">=</span><span class="kp">as.character</span><span class="p">(</span>imdb2<span class="o">$</span>Plot<span class="p">)</span>
@@ -2683,7 +2633,7 @@ imdb3<span class="o">$</span>Language<span class="o">=</span><span class="kp">as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [38]:</div>
+<div class="prompt input_prompt">In [115]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">head</span><span class="p">(</span>imdb2<span class="o">$</span>Year<span class="p">,</span><span class="m">300</span><span class="p">)</span>
@@ -3013,7 +2963,7 @@ imdb3<span class="o">$</span>Language<span class="o">=</span><span class="kp">as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [39]:</div>
+<div class="prompt input_prompt">In [116]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">nlevels</span><span class="p">(</span>imdb2<span class="o">$</span>Year<span class="p">)</span>
@@ -3130,7 +3080,7 @@ imdb3<span class="o">$</span>Language<span class="o">=</span><span class="kp">as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [40]:</div>
+<div class="prompt input_prompt">In [117]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>str<span class="p">(</span>imdb2<span class="o">$</span>Year<span class="p">)</span>
@@ -3160,7 +3110,7 @@ imdb3<span class="o">$</span>Language<span class="o">=</span><span class="kp">as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [41]:</div>
+<div class="prompt input_prompt">In [118]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>imdb2<span class="o">$</span>Year<span class="p">[</span><span class="m">129</span><span class="p">]</span>
@@ -3180,7 +3130,7 @@ imdb3<span class="o">$</span>Language<span class="o">=</span><span class="kp">as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [42]:</div>
+<div class="prompt input_prompt">In [119]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">as.numeric</span><span class="p">(</span><span class="kp">as.character</span><span class="p">(</span>imdb2<span class="o">$</span>Year<span class="p">[</span><span class="m">129</span><span class="p">]))</span>
@@ -3215,7 +3165,7 @@ imdb3<span class="o">$</span>Language<span class="o">=</span><span class="kp">as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [43]:</div>
+<div class="prompt input_prompt">In [120]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>year<span class="p">(</span><span class="kp">as.Date</span><span class="p">(</span>imdb2<span class="o">$</span>Year<span class="p">[</span><span class="m">129</span><span class="p">],</span>format<span class="o">=</span><span class="s">'%Y'</span><span class="p">))</span>
@@ -3245,7 +3195,7 @@ imdb3<span class="o">$</span>Language<span class="o">=</span><span class="kp">as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [44]:</div>
+<div class="prompt input_prompt">In [121]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">nlevels</span><span class="p">(</span>imdb2<span class="o">$</span>Year<span class="p">)</span>
@@ -3455,7 +3405,7 @@ imdb3<span class="o">$</span>Language<span class="o">=</span><span class="kp">as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [45]:</div>
+<div class="prompt input_prompt">In [122]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">nlevels</span><span class="p">(</span>imdb2<span class="o">$</span>Language<span class="p">)</span>
@@ -3497,7 +3447,7 @@ imdb3<span class="o">$</span>Language<span class="o">=</span><span class="kp">as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [46]:</div>
+<div class="prompt input_prompt">In [123]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">head</span><span class="p">(</span>imdb2<span class="o">$</span>Language<span class="p">,</span><span class="m">10</span><span class="p">)</span>
@@ -3537,7 +3487,7 @@ imdb3<span class="o">$</span>Language<span class="o">=</span><span class="kp">as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [47]:</div>
+<div class="prompt input_prompt">In [124]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">as.factor</span><span class="p">(</span>trimws<span class="p">(</span><span class="kp">as.character</span><span class="p">(</span><span class="kp">head</span><span class="p">(</span>imdb2<span class="o">$</span>Language<span class="p">,</span><span class="m">10</span><span class="p">))))</span>
@@ -3568,7 +3518,7 @@ imdb3<span class="o">$</span>Language<span class="o">=</span><span class="kp">as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [48]:</div>
+<div class="prompt input_prompt">In [125]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">nlevels</span><span class="p">(</span>imdb2<span class="o">$</span>Language<span class="p">)</span>
@@ -3621,16 +3571,16 @@ imdb3<span class="o">$</span>Language<span class="o">=</span><span class="kp">as
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Neat and Clean, as it is supposed to be.</p>
 <p>Now lets deal with the earlier warnings. Those were concerning the variables <em>imdbVotes</em> and <em>imdbRating</em>.</p>
-<h2 id="4.-Sort-the-genre-by-its-name">4. Sort the genre by its name<a class="anchor-link" href="#4.-Sort-the-genre-by-its-name">¶</a></h2><p>We stored the list of genres in <em>genlist</em>. We can sort it like below:</p>
+<h2 id="4.-Sort-the-genre-by-its-name">4. Sort the genre by its name<a class="anchor-link" href="#4.-Sort-the-genre-by-its-name">¶</a></h2><p>We can sort the imdb database according to genre alphabetically like this...</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [49]:</div>
+<div class="prompt input_prompt">In [126]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="kp">sort</span><span class="p">(</span>genlist<span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="kp">head</span><span class="p">(</span>imdb3<span class="p">[</span><span class="kp">order</span><span class="p">(</span>imdb3<span class="o">$</span>Genre<span class="p">),</span><span class="m">-1</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -3639,28 +3589,17 @@ imdb3<span class="o">$</span>Language<span class="o">=</span><span class="kp">as
 <div class="output">
 <div class="output_area"><div class="prompt"></div>
 <div class="output_html rendered_html output_subarea ">
-<ol class="list-inline">
-<li>'Action'</li>
-<li>'Adventure'</li>
-<li>'Animation'</li>
-<li>'Biography'</li>
-<li>'Comedy'</li>
-<li>'Crime'</li>
-<li>'Drama'</li>
-<li>'Family'</li>
-<li>'Fantasy'</li>
-<li>'History'</li>
-<li>'Horror'</li>
-<li>'Music'</li>
-<li>'Musical'</li>
-<li>'Mystery'</li>
-<li>'Romance'</li>
-<li>'Sci-Fi'</li>
-<li>'Sport'</li>
-<li>'Thriller'</li>
-<li>'War'</li>
-<li>'Western'</li>
-</ol>
+<table>
+<thead><tr><th></th><th scope="col">Title</th><th scope="col">imdbVotes</th><th scope="col">Poster</th><th scope="col">imdbRating</th><th scope="col">Genre</th><th scope="col">imdbID</th><th scope="col">Year</th><th scope="col">Language</th></tr></thead>
+<tbody>
+<tr><th scope="row">135</th><td>Six Gun Women                                                                                   </td><td>2718                                                                                            </td><td>N/A                                                                                             </td><td>87                                                                                              </td><td>Action                                                                                          </td><td>tt4020052                                                                                       </td><td>2012                                                                                            </td><td>English                                                                                         </td></tr>
+<tr><th scope="row">229</th><td>2056 Escape from Zombie Island                                                                  </td><td>2592                                                                                            </td><td>N/A                                                                                             </td><td>53                                                                                              </td><td>Action                                                                                          </td><td>tt2545870                                                                                       </td><td>2012                                                                                            </td><td>English                                                                                         </td></tr>
+<tr><th scope="row">243</th><td>The Search for Agent Z                                                                          </td><td>2718                                                                                            </td><td>N/A                                                                                             </td><td>87                                                                                              </td><td>Action                                                                                          </td><td>tt2267664                                                                                       </td><td>2012                                                                                            </td><td>English                                                                                         </td></tr>
+<tr><th scope="row">300</th><td>The Lackey                                                                                      </td><td>2672                                                                                            </td><td>http://ia.media-imdb.com/images/M/MV5BMjAwODIxNjg4Ml5BMl5BanBnXkFtZTgwNjgzODIxMDE@._V1_SX300.jpg</td><td>71                                                                                              </td><td>Action                                                                                          </td><td>tt2197884                                                                                       </td><td>2012                                                                                            </td><td>English                                                                                         </td></tr>
+<tr><th scope="row">329</th><td>Sacred Assassin                                                                                 </td><td>2718                                                                                            </td><td>N/A                                                                                             </td><td>87                                                                                              </td><td>Action                                                                                          </td><td>tt2508246                                                                                       </td><td>2012                                                                                            </td><td>English                                                                                         </td></tr>
+<tr><th scope="row">370</th><td>Lethal Commission                                                                               </td><td>1084                                                                                            </td><td>http://ia.media-imdb.com/images/M/MV5BODUyNDI1NjYwOV5BMl5BanBnXkFtZTcwNDgzMzM2Nw@@._V1_SX300.jpg</td><td>64                                                                                              </td><td>Action                                                                                          </td><td>tt2319919                                                                                       </td><td>2012                                                                                            </td><td>English                                                                                         </td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -3677,7 +3616,7 @@ imdb3<span class="o">$</span>Language<span class="o">=</span><span class="kp">as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [50]:</div>
+<div class="prompt input_prompt">In [127]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>imdb4<span class="o">=</span>imdb3
@@ -3718,43 +3657,11 @@ imdb4<span class="o">$</span>SDVR<span class="o">=</span> <span class="kp">with<
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [51]:</div>
+<div class="prompt input_prompt">In [128]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>dplyr<span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>------------------------------------------------------------------------------
-data.table + dplyr code now lives in dtplyr.
-Please library(dtplyr)!
-------------------------------------------------------------------------------
-
-Attaching package: ‘dplyr’
-
-The following objects are masked from ‘package:lubridate’:
-
-    intersect, setdiff, union
-
-The following objects are masked from ‘package:data.table’:
-
-    between, last
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
-</pre>
-</div>
 </div>
 </div>
 </div>
@@ -3770,7 +3677,7 @@ The following objects are masked from ‘package:base’:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [52]:</div>
+<div class="prompt input_prompt">In [129]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>imdb5<span class="o">=</span>mutate<span class="p">(</span>imdb3<span class="p">,</span>SDVR<span class="o">=</span><span class="p">(</span>imdbVotes<span class="o">-</span>imdbRating<span class="p">)</span><span class="o">^</span><span class="m">2</span><span class="p">)</span>
@@ -3825,7 +3732,7 @@ The following objects are masked from ‘package:base’:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [53]:</div>
+<div class="prompt input_prompt">In [130]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">length</span><span class="p">(</span>imdb3<span class="o">$</span>imdbVotes<span class="p">)</span>
@@ -3854,7 +3761,7 @@ The following objects are masked from ‘package:base’:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [54]:</div>
+<div class="prompt input_prompt">In [131]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>cutpoints<span class="o">=</span><span class="kp">pretty</span><span class="p">(</span>imdb3<span class="o">$</span>imdbVotes<span class="p">,</span>na.rm<span class="o">=</span><span class="bp">T</span><span class="p">,</span>n<span class="o">=</span><span class="m">10</span><span class="p">)</span>
@@ -3909,7 +3816,7 @@ imdb3<span class="o">$</span>VB<span class="o">=</span><span class="kp">cut</spa
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [55]:</div>
+<div class="prompt input_prompt">In [132]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>hist<span class="p">(</span>imdb3<span class="o">$</span>imdbVotes<span class="p">,</span>breaks<span class="o">=</span><span class="m">10</span><span class="p">)</span>
@@ -4140,7 +4047,7 @@ CAlQQEiAAkICFBASoICQAAWEBCggJEDB/wHAiD76kFtNUAAAAABJRU5ErkJggg==">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [56]:</div>
+<div class="prompt input_prompt">In [133]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>cutpoints<span class="o">=</span><span class="kp">pretty</span><span class="p">(</span>imdb3<span class="o">$</span>imdbVotes<span class="p">,</span>na.rm<span class="o">=</span><span class="bp">T</span><span class="p">,</span>n<span class="o">=</span><span class="m">20</span><span class="p">)</span>
@@ -4206,7 +4113,7 @@ imdb3<span class="o">$</span>VB<span class="o">=</span><span class="kp">cut</spa
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [57]:</div>
+<div class="prompt input_prompt">In [134]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>hist<span class="p">(</span>imdb3<span class="o">$</span>imdbVotes<span class="p">,</span>breaks<span class="o">=</span><span class="m">100</span><span class="p">)</span>
@@ -4435,7 +4342,7 @@ QAEhAQr+H7DBOIMXuWU/AAAAAElFTkSuQmCC">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [58]:</div>
+<div class="prompt input_prompt">In [135]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="m">3389</span><span class="o">/</span><span class="m">3</span>
@@ -4464,7 +4371,7 @@ QAEhAQr+H7DBOIMXuWU/AAAAAElFTkSuQmCC">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [59]:</div>
+<div class="prompt input_prompt">In [136]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>nb<span class="o">=</span><span class="m">3</span>
@@ -4495,7 +4402,7 @@ cutpoints
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [60]:</div>
+<div class="prompt input_prompt">In [137]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>imdb3<span class="o">$</span>VB1<span class="o">=</span><span class="kp">cut</span><span class="p">(</span>imdb3<span class="o">$</span>imdbVotes<span class="p">,</span>cutpoints<span class="p">,</span>labels<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">'x &lt; 2302'</span><span class="p">,</span><span class="s">'2302 &lt; x &lt; 2718'</span><span class="p">,</span><span class="s">'2718 &lt; x &lt; 157992'</span><span class="p">))</span>
@@ -4506,7 +4413,7 @@ cutpoints
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [61]:</div>
+<div class="prompt input_prompt">In [138]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">summary</span><span class="p">(</span>imdb3<span class="o">$</span>VB1<span class="p">)</span>
@@ -4535,7 +4442,7 @@ cutpoints
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [62]:</div>
+<div class="prompt input_prompt">In [139]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>plot<span class="p">(</span>imdb3<span class="o">$</span>VB1<span class="p">)</span>
@@ -4709,7 +4616,7 @@ JCjg/wNe5lmDW41lNgAAAABJRU5ErkJggg==">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [63]:</div>
+<div class="prompt input_prompt">In [140]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>nb<span class="o">=</span><span class="m">4</span>
@@ -4742,7 +4649,7 @@ cutpoints
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [64]:</div>
+<div class="prompt input_prompt">In [141]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>imdb3<span class="o">$</span>VB1<span class="o">=</span><span class="kp">cut</span><span class="p">(</span>imdb3<span class="o">$</span>imdbVotes<span class="p">,</span>cutpoints<span class="p">)</span>
@@ -4777,7 +4684,7 @@ Traceback:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [65]:</div>
+<div class="prompt input_prompt">In [142]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>nb<span class="o">=</span><span class="m">10</span>
@@ -4831,7 +4738,7 @@ cutpoints
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [66]:</div>
+<div class="prompt input_prompt">In [143]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">as.factor</span><span class="p">(</span>trimws<span class="p">(</span><span class="kp">as.character</span><span class="p">(</span><span class="kp">head</span><span class="p">(</span>imdb2<span class="o">$</span>Language<span class="p">,</span><span class="m">10</span><span class="p">))))</span>
@@ -4871,7 +4778,7 @@ cutpoints
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [67]:</div>
+<div class="prompt input_prompt">In [144]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>imdbtel<span class="o">=</span>imdb3<span class="p">[</span>imdb3<span class="o">$</span>Language<span class="o">==</span><span class="s">"Telugu"</span><span class="p">,]</span>
@@ -4917,7 +4824,7 @@ cutpoints
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [68]:</div>
+<div class="prompt input_prompt">In [145]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>imdbhindi<span class="o">=</span>imdb3
@@ -4929,7 +4836,7 @@ imdbhindi<span class="o">$</span>Language<span class="o">=</span><span class="kp
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [69]:</div>
+<div class="prompt input_prompt">In [146]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">head</span><span class="p">(</span>imdbhindi<span class="p">[,</span><span class="m">-1</span><span class="p">])</span>
@@ -4968,7 +4875,7 @@ imdbhindi<span class="o">$</span>Language<span class="o">=</span><span class="kp
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [70]:</div>
+<div class="prompt input_prompt">In [147]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>repvec<span class="o">=</span><span class="kp">rep</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">6</span><span class="p">),</span> <span class="kt">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="m">20</span><span class="p">,</span><span class="m">30</span><span class="p">))</span>
@@ -5059,7 +4966,7 @@ repvec
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [71]:</div>
+<div class="prompt input_prompt">In [148]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">length</span><span class="p">(</span>repvec<span class="p">)</span>
@@ -5299,134 +5206,134 @@ repvec<span class="p">[</span><span class="m">31</span><span class="o">:</span><
 
 <h4><i class="fa fa-tags fa-fw fa-lg"></i> Tags</h4>
 <p class="tag-cloud">
-<span class="tag-2">
-    <a href="http://www.hamzazubair.com/tag/hitchhiker">
-        <i class="fa fa-tag fa-fw fa-lg"></i>hitchhiker
-    </a>
-</span>
-<span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/chicago">
-        <i class="fa fa-tag fa-fw fa-lg"></i>chicago
-    </a>
-</span>
-<span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/edwisor">
-        <i class="fa fa-tag fa-fw fa-lg"></i>edwisor
-    </a>
-</span>
-<span class="tag-2">
-    <a href="http://www.hamzazubair.com/tag/guide">
-        <i class="fa fa-tag fa-fw fa-lg"></i>guide
-    </a>
-</span>
-<span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/texas">
-        <i class="fa fa-tag fa-fw fa-lg"></i>texas
-    </a>
-</span>
-<span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/pipeline">
-        <i class="fa fa-tag fa-fw fa-lg"></i>pipeline
-    </a>
-</span>
 <span class="tag-4">
     <a href="http://www.hamzazubair.com/tag/wickham">
-        <i class="fa fa-tag fa-fw fa-lg"></i>wickham
-    </a>
-</span>
-<span class="tag-2">
-    <a href="http://www.hamzazubair.com/tag/ggplot2">
-        <i class="fa fa-tag fa-fw fa-lg"></i>ggplot2
-    </a>
-</span>
-<span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/group-by">
-        <i class="fa fa-tag fa-fw fa-lg"></i>group by
-    </a>
-</span>
-<span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/beautiful">
-        <i class="fa fa-tag fa-fw fa-lg"></i>beautiful
+        wickham
     </a>
 </span>
 <span class="tag-4">
     <a href="http://www.hamzazubair.com/tag/dplyr">
-        <i class="fa fa-tag fa-fw fa-lg"></i>dplyr
-    </a>
-</span>
-<span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/line-plots">
-        <i class="fa fa-tag fa-fw fa-lg"></i>line plots
-    </a>
-</span>
-<span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/arrange">
-        <i class="fa fa-tag fa-fw fa-lg"></i>arrange
-    </a>
-</span>
-<span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/rename">
-        <i class="fa fa-tag fa-fw fa-lg"></i>rename
-    </a>
-</span>
-<span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/temperature">
-        <i class="fa fa-tag fa-fw fa-lg"></i>temperature
-    </a>
-</span>
-<span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/binning">
-        <i class="fa fa-tag fa-fw fa-lg"></i>binning
+        dplyr
     </a>
 </span>
 <span class="tag-4">
     <a href="http://www.hamzazubair.com/tag/mutate">
-        <i class="fa fa-tag fa-fw fa-lg"></i>mutate
+        mutate
     </a>
 </span>
 <span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/text-mining">
-        <i class="fa fa-tag fa-fw fa-lg"></i>text mining
+    <a href="http://www.hamzazubair.com/tag/beautiful">
+        beautiful
     </a>
 </span>
 <span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/select">
-        <i class="fa fa-tag fa-fw fa-lg"></i>select
+    <a href="http://www.hamzazubair.com/tag/pipeline">
+        pipeline
     </a>
 </span>
 <span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/movies">
-        <i class="fa fa-tag fa-fw fa-lg"></i>movies
+    <a href="http://www.hamzazubair.com/tag/chicago">
+        chicago
+    </a>
+</span>
+<span class="tag-2">
+    <a href="http://www.hamzazubair.com/tag/ggplot2">
+        ggplot2
+    </a>
+</span>
+<span class="tag-2">
+    <a href="http://www.hamzazubair.com/tag/guide">
+        guide
+    </a>
+</span>
+<span class="tag-2">
+    <a href="http://www.hamzazubair.com/tag/hitchhiker">
+        hitchhiker
     </a>
 </span>
 <span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/imdb">
-        <i class="fa fa-tag fa-fw fa-lg"></i>imdb
+    <a href="http://www.hamzazubair.com/tag/texas">
+        texas
     </a>
 </span>
 <span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/wilkinson">
-        <i class="fa fa-tag fa-fw fa-lg"></i>wilkinson
+    <a href="http://www.hamzazubair.com/tag/temperature">
+        temperature
     </a>
 </span>
 <span class="tag-4">
     <a href="http://www.hamzazubair.com/tag/housing">
-        <i class="fa fa-tag fa-fw fa-lg"></i>housing
+        housing
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/movies">
+        movies
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/arrange">
+        arrange
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/select">
+        select
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/wilkinson">
+        wilkinson
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/group-by">
+        group by
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/text-mining">
+        text mining
     </a>
 </span>
 <span class="tag-1">
     <a href="http://www.hamzazubair.com/tag/r">
-        <i class="fa fa-tag fa-fw fa-lg"></i>r
-    </a>
-</span>
-<span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/filter">
-        <i class="fa fa-tag fa-fw fa-lg"></i>filter
+        r
     </a>
 </span>
 <span class="tag-2">
     <a href="http://www.hamzazubair.com/tag/grammar-of-graphics">
-        <i class="fa fa-tag fa-fw fa-lg"></i>grammar of graphics
+        grammar of graphics
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/filter">
+        filter
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/rename">
+        rename
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/edwisor">
+        edwisor
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/imdb">
+        imdb
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/line-plots">
+        line plots
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/binning">
+        binning
     </a>
 </span>
 </p>

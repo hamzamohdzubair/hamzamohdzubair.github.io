@@ -1003,7 +1003,7 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [79]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;imdb1&lt;span class="o"&gt;=&lt;/span&gt;read.csv&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"IMDB_data.csv"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;fileEncoding&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"UTF-8-BOM"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1014,7 +1014,7 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [2]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [80]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;imdb2&lt;span class="o"&gt;=&lt;/span&gt;imdb1&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;-2&lt;/span&gt;&lt;span class="p"&gt;,]&lt;/span&gt;
@@ -1034,7 +1034,7 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [3]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [81]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;head&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb2&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1074,7 +1074,7 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [4]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [82]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;head&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb2&lt;span class="o"&gt;$&lt;/span&gt;Genre&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1110,7 +1110,7 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [5]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [83]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;unique&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb2&lt;span class="o"&gt;$&lt;/span&gt;Genre&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1389,7 +1389,7 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [6]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [84]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data.table&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1413,43 +1413,13 @@ uniqueN&lt;span class="p"&gt;(&lt;/span&gt;imdb2&lt;span class="o"&gt;$&lt;/span
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;This is wrong because the first unique genre is&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [7]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;unique&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb2&lt;span class="o"&gt;$&lt;/span&gt;Genre&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
-Action, Thriller
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;When in fact it should have been either just Action or just Thriller. One of the ways we can solve this problem is by doing the following&lt;/p&gt;
 &lt;h3 id="Method-1:-Using-paste"&gt;Method 1: Using paste&lt;a class="anchor-link" href="#Method-1:-Using-paste"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [8]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [85]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gen&lt;span class="o"&gt;=&lt;/span&gt;imdb2&lt;span class="o"&gt;$&lt;/span&gt;Genre
@@ -1460,7 +1430,7 @@ Action, Thriller
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [9]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [86]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gen.str&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kp"&gt;paste&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;gen&lt;span class="p"&gt;,&lt;/span&gt;collapse&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;','&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1471,7 +1441,7 @@ Action, Thriller
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [10]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [87]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gen.vec&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kp"&gt;strsplit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;gen.str&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;","&lt;/span&gt;&lt;span class="p"&gt;)[[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
@@ -1482,7 +1452,7 @@ Action, Thriller
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [11]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [88]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gen.vec.clean&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kp"&gt;gsub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;" "&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;gen.vec&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1502,7 +1472,7 @@ Action, Thriller
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [12]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [89]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;length&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;gen.vec.clean&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1531,7 +1501,7 @@ Action, Thriller
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [13]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [90]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;head&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;gen.vec.clean&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1568,7 +1538,7 @@ Action, Thriller
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [14]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [91]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;table&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;gen.vec.clean&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1594,7 +1564,7 @@ Action, Thriller
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [15]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [92]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;plot&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kp"&gt;table&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;gen.vec.clean&lt;span class="p"&gt;),&lt;/span&gt;las&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;xlab&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;''&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1891,7 +1861,7 @@ KwAAAABJRU5ErkJggg=="&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [16]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [93]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;genlist&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kp"&gt;unique&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;gen.vec.clean&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1902,7 +1872,7 @@ KwAAAABJRU5ErkJggg=="&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [17]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [94]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;genlist
@@ -1952,7 +1922,7 @@ KwAAAABJRU5ErkJggg=="&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [18]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [95]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;anim&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kp"&gt;grep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'Animation'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;gen&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1963,7 +1933,7 @@ KwAAAABJRU5ErkJggg=="&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [19]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [96]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;anim
@@ -2006,7 +1976,7 @@ KwAAAABJRU5ErkJggg=="&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [20]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [97]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb2&lt;span class="p"&gt;[&lt;/span&gt;anim&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
@@ -2049,7 +2019,7 @@ KwAAAABJRU5ErkJggg=="&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [21]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [98]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mlist&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kt"&gt;list&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -2073,7 +2043,7 @@ KwAAAABJRU5ErkJggg=="&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [22]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [99]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mlist&lt;span class="o"&gt;$&lt;/span&gt;War
@@ -2134,7 +2104,7 @@ KwAAAABJRU5ErkJggg=="&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [23]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [100]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb2&lt;span class="p"&gt;[&lt;/span&gt;mlist&lt;span class="o"&gt;$&lt;/span&gt;War&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
@@ -2180,7 +2150,7 @@ KwAAAABJRU5ErkJggg=="&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [24]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [101]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;x&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kp"&gt;gsub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;" "&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;imdb2&lt;span class="o"&gt;$&lt;/span&gt;Genre&lt;span class="p"&gt;)&lt;/span&gt;
@@ -2191,7 +2161,7 @@ KwAAAABJRU5ErkJggg=="&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [25]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [102]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;head&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt;
@@ -2218,7 +2188,7 @@ KwAAAABJRU5ErkJggg=="&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [26]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [103]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;write.table&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;"datafile.csv"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;sep&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;","&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;row.names&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;F&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;quote&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;F&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -2229,7 +2199,7 @@ KwAAAABJRU5ErkJggg=="&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [27]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [104]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;y&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kp"&gt;scan&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"datafile.csv"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;what&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;'character'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;sep&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;','&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; quote&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;skip&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -2240,7 +2210,7 @@ KwAAAABJRU5ErkJggg=="&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [28]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [105]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;unique&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;y&lt;span class="p"&gt;)&lt;/span&gt;
@@ -2281,7 +2251,7 @@ KwAAAABJRU5ErkJggg=="&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [29]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [106]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;uniqueN&lt;span class="p"&gt;(&lt;/span&gt;y&lt;span class="p"&gt;)&lt;/span&gt;
@@ -2301,7 +2271,7 @@ KwAAAABJRU5ErkJggg=="&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [30]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [107]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;table&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;y&lt;span class="p"&gt;)&lt;/span&gt;
@@ -2336,7 +2306,7 @@ KwAAAABJRU5ErkJggg=="&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [31]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [108]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;unigen&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kp"&gt;lapply&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;gen.str&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="kp"&gt;unique&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;trimws&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kp"&gt;unlist&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kp"&gt;strsplit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;","&lt;/span&gt;&lt;span class="p"&gt;)))))&lt;/span&gt;
@@ -2347,7 +2317,7 @@ KwAAAABJRU5ErkJggg=="&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [32]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [109]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;unigen
@@ -2400,7 +2370,7 @@ KwAAAABJRU5ErkJggg=="&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [33]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [110]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;str&lt;span class="p"&gt;(&lt;/span&gt;imdb2&lt;span class="p"&gt;)&lt;/span&gt;
@@ -2440,7 +2410,7 @@ KwAAAABJRU5ErkJggg=="&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [34]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [111]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;sapply&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb2&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kp"&gt;class&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -2490,7 +2460,7 @@ KwAAAABJRU5ErkJggg=="&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [35]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [112]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;imdb3&lt;span class="o"&gt;=&lt;/span&gt;imdb2
@@ -2510,7 +2480,7 @@ KwAAAABJRU5ErkJggg=="&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [36]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [113]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;lubridate&lt;span class="p"&gt;)&lt;/span&gt;
@@ -2518,30 +2488,10 @@ KwAAAABJRU5ErkJggg=="&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_subarea output_stream output_stderr output_text"&gt;
-&lt;pre&gt;
-Attaching package: ‘lubridate’
-
-The following objects are masked from ‘package:data.table’:
-
-    hour, mday, month, quarter, wday, week, yday, year
-
-The following object is masked from ‘package:base’:
-
-    date
-
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [37]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [114]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;imdb3&lt;span class="o"&gt;$&lt;/span&gt;Plot&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kp"&gt;as.character&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb2&lt;span class="o"&gt;$&lt;/span&gt;Plot&lt;span class="p"&gt;)&lt;/span&gt;
@@ -2583,7 +2533,7 @@ imdb3&lt;span class="o"&gt;$&lt;/span&gt;Language&lt;span class="o"&gt;=&lt;/spa
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [38]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [115]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;head&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb2&lt;span class="o"&gt;$&lt;/span&gt;Year&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;300&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -2913,7 +2863,7 @@ imdb3&lt;span class="o"&gt;$&lt;/span&gt;Language&lt;span class="o"&gt;=&lt;/spa
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [39]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [116]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;nlevels&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb2&lt;span class="o"&gt;$&lt;/span&gt;Year&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3030,7 +2980,7 @@ imdb3&lt;span class="o"&gt;$&lt;/span&gt;Language&lt;span class="o"&gt;=&lt;/spa
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [40]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [117]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;str&lt;span class="p"&gt;(&lt;/span&gt;imdb2&lt;span class="o"&gt;$&lt;/span&gt;Year&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3060,7 +3010,7 @@ imdb3&lt;span class="o"&gt;$&lt;/span&gt;Language&lt;span class="o"&gt;=&lt;/spa
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [41]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [118]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;imdb2&lt;span class="o"&gt;$&lt;/span&gt;Year&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;129&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
@@ -3080,7 +3030,7 @@ imdb3&lt;span class="o"&gt;$&lt;/span&gt;Language&lt;span class="o"&gt;=&lt;/spa
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [42]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [119]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;as.numeric&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kp"&gt;as.character&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb2&lt;span class="o"&gt;$&lt;/span&gt;Year&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;129&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
@@ -3115,7 +3065,7 @@ imdb3&lt;span class="o"&gt;$&lt;/span&gt;Language&lt;span class="o"&gt;=&lt;/spa
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [43]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [120]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;year&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kp"&gt;as.Date&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb2&lt;span class="o"&gt;$&lt;/span&gt;Year&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;129&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;format&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;'%Y'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
@@ -3145,7 +3095,7 @@ imdb3&lt;span class="o"&gt;$&lt;/span&gt;Language&lt;span class="o"&gt;=&lt;/spa
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [44]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [121]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;nlevels&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb2&lt;span class="o"&gt;$&lt;/span&gt;Year&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3355,7 +3305,7 @@ imdb3&lt;span class="o"&gt;$&lt;/span&gt;Language&lt;span class="o"&gt;=&lt;/spa
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [45]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [122]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;nlevels&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb2&lt;span class="o"&gt;$&lt;/span&gt;Language&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3397,7 +3347,7 @@ imdb3&lt;span class="o"&gt;$&lt;/span&gt;Language&lt;span class="o"&gt;=&lt;/spa
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [46]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [123]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;head&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb2&lt;span class="o"&gt;$&lt;/span&gt;Language&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3437,7 +3387,7 @@ imdb3&lt;span class="o"&gt;$&lt;/span&gt;Language&lt;span class="o"&gt;=&lt;/spa
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [47]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [124]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;as.factor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;trimws&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kp"&gt;as.character&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kp"&gt;head&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb2&lt;span class="o"&gt;$&lt;/span&gt;Language&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;))))&lt;/span&gt;
@@ -3468,7 +3418,7 @@ imdb3&lt;span class="o"&gt;$&lt;/span&gt;Language&lt;span class="o"&gt;=&lt;/spa
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [48]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [125]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;nlevels&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb2&lt;span class="o"&gt;$&lt;/span&gt;Language&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3521,16 +3471,16 @@ imdb3&lt;span class="o"&gt;$&lt;/span&gt;Language&lt;span class="o"&gt;=&lt;/spa
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Neat and Clean, as it is supposed to be.&lt;/p&gt;
 &lt;p&gt;Now lets deal with the earlier warnings. Those were concerning the variables &lt;em&gt;imdbVotes&lt;/em&gt; and &lt;em&gt;imdbRating&lt;/em&gt;.&lt;/p&gt;
-&lt;h2 id="4.-Sort-the-genre-by-its-name"&gt;4. Sort the genre by its name&lt;a class="anchor-link" href="#4.-Sort-the-genre-by-its-name"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;We stored the list of genres in &lt;em&gt;genlist&lt;/em&gt;. We can sort it like below:&lt;/p&gt;
+&lt;h2 id="4.-Sort-the-genre-by-its-name"&gt;4. Sort the genre by its name&lt;a class="anchor-link" href="#4.-Sort-the-genre-by-its-name"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;We can sort the imdb database according to genre alphabetically like this...&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [49]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [126]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;sort&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;genlist&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;head&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb3&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="kp"&gt;order&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb3&lt;span class="o"&gt;$&lt;/span&gt;Genre&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="m"&gt;-1&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -3539,28 +3489,17 @@ imdb3&lt;span class="o"&gt;$&lt;/span&gt;Language&lt;span class="o"&gt;=&lt;/spa
 &lt;div class="output"&gt;
 &lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="output_html rendered_html output_subarea "&gt;
-&lt;ol class="list-inline"&gt;
-&lt;li&gt;'Action'&lt;/li&gt;
-&lt;li&gt;'Adventure'&lt;/li&gt;
-&lt;li&gt;'Animation'&lt;/li&gt;
-&lt;li&gt;'Biography'&lt;/li&gt;
-&lt;li&gt;'Comedy'&lt;/li&gt;
-&lt;li&gt;'Crime'&lt;/li&gt;
-&lt;li&gt;'Drama'&lt;/li&gt;
-&lt;li&gt;'Family'&lt;/li&gt;
-&lt;li&gt;'Fantasy'&lt;/li&gt;
-&lt;li&gt;'History'&lt;/li&gt;
-&lt;li&gt;'Horror'&lt;/li&gt;
-&lt;li&gt;'Music'&lt;/li&gt;
-&lt;li&gt;'Musical'&lt;/li&gt;
-&lt;li&gt;'Mystery'&lt;/li&gt;
-&lt;li&gt;'Romance'&lt;/li&gt;
-&lt;li&gt;'Sci-Fi'&lt;/li&gt;
-&lt;li&gt;'Sport'&lt;/li&gt;
-&lt;li&gt;'Thriller'&lt;/li&gt;
-&lt;li&gt;'War'&lt;/li&gt;
-&lt;li&gt;'Western'&lt;/li&gt;
-&lt;/ol&gt;
+&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;th scope="col"&gt;Title&lt;/th&gt;&lt;th scope="col"&gt;imdbVotes&lt;/th&gt;&lt;th scope="col"&gt;Poster&lt;/th&gt;&lt;th scope="col"&gt;imdbRating&lt;/th&gt;&lt;th scope="col"&gt;Genre&lt;/th&gt;&lt;th scope="col"&gt;imdbID&lt;/th&gt;&lt;th scope="col"&gt;Year&lt;/th&gt;&lt;th scope="col"&gt;Language&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;th scope="row"&gt;135&lt;/th&gt;&lt;td&gt;Six Gun Women                                                                                   &lt;/td&gt;&lt;td&gt;2718                                                                                            &lt;/td&gt;&lt;td&gt;N/A                                                                                             &lt;/td&gt;&lt;td&gt;87                                                                                              &lt;/td&gt;&lt;td&gt;Action                                                                                          &lt;/td&gt;&lt;td&gt;tt4020052                                                                                       &lt;/td&gt;&lt;td&gt;2012                                                                                            &lt;/td&gt;&lt;td&gt;English                                                                                         &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope="row"&gt;229&lt;/th&gt;&lt;td&gt;2056 Escape from Zombie Island                                                                  &lt;/td&gt;&lt;td&gt;2592                                                                                            &lt;/td&gt;&lt;td&gt;N/A                                                                                             &lt;/td&gt;&lt;td&gt;53                                                                                              &lt;/td&gt;&lt;td&gt;Action                                                                                          &lt;/td&gt;&lt;td&gt;tt2545870                                                                                       &lt;/td&gt;&lt;td&gt;2012                                                                                            &lt;/td&gt;&lt;td&gt;English                                                                                         &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope="row"&gt;243&lt;/th&gt;&lt;td&gt;The Search for Agent Z                                                                          &lt;/td&gt;&lt;td&gt;2718                                                                                            &lt;/td&gt;&lt;td&gt;N/A                                                                                             &lt;/td&gt;&lt;td&gt;87                                                                                              &lt;/td&gt;&lt;td&gt;Action                                                                                          &lt;/td&gt;&lt;td&gt;tt2267664                                                                                       &lt;/td&gt;&lt;td&gt;2012                                                                                            &lt;/td&gt;&lt;td&gt;English                                                                                         &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope="row"&gt;300&lt;/th&gt;&lt;td&gt;The Lackey                                                                                      &lt;/td&gt;&lt;td&gt;2672                                                                                            &lt;/td&gt;&lt;td&gt;http://ia.media-imdb.com/images/M/MV5BMjAwODIxNjg4Ml5BMl5BanBnXkFtZTgwNjgzODIxMDE@._V1_SX300.jpg&lt;/td&gt;&lt;td&gt;71                                                                                              &lt;/td&gt;&lt;td&gt;Action                                                                                          &lt;/td&gt;&lt;td&gt;tt2197884                                                                                       &lt;/td&gt;&lt;td&gt;2012                                                                                            &lt;/td&gt;&lt;td&gt;English                                                                                         &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope="row"&gt;329&lt;/th&gt;&lt;td&gt;Sacred Assassin                                                                                 &lt;/td&gt;&lt;td&gt;2718                                                                                            &lt;/td&gt;&lt;td&gt;N/A                                                                                             &lt;/td&gt;&lt;td&gt;87                                                                                              &lt;/td&gt;&lt;td&gt;Action                                                                                          &lt;/td&gt;&lt;td&gt;tt2508246                                                                                       &lt;/td&gt;&lt;td&gt;2012                                                                                            &lt;/td&gt;&lt;td&gt;English                                                                                         &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope="row"&gt;370&lt;/th&gt;&lt;td&gt;Lethal Commission                                                                               &lt;/td&gt;&lt;td&gt;1084                                                                                            &lt;/td&gt;&lt;td&gt;http://ia.media-imdb.com/images/M/MV5BODUyNDI1NjYwOV5BMl5BanBnXkFtZTcwNDgzMzM2Nw@@._V1_SX300.jpg&lt;/td&gt;&lt;td&gt;64                                                                                              &lt;/td&gt;&lt;td&gt;Action                                                                                          &lt;/td&gt;&lt;td&gt;tt2319919                                                                                       &lt;/td&gt;&lt;td&gt;2012                                                                                            &lt;/td&gt;&lt;td&gt;English                                                                                         &lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -3577,7 +3516,7 @@ imdb3&lt;span class="o"&gt;$&lt;/span&gt;Language&lt;span class="o"&gt;=&lt;/spa
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [50]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [127]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;imdb4&lt;span class="o"&gt;=&lt;/span&gt;imdb3
@@ -3618,43 +3557,11 @@ imdb4&lt;span class="o"&gt;$&lt;/span&gt;SDVR&lt;span class="o"&gt;=&lt;/span&gt
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [51]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [128]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;dplyr&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_subarea output_stream output_stderr output_text"&gt;
-&lt;pre&gt;------------------------------------------------------------------------------
-data.table + dplyr code now lives in dtplyr.
-Please library(dtplyr)!
-------------------------------------------------------------------------------
-
-Attaching package: ‘dplyr’
-
-The following objects are masked from ‘package:lubridate’:
-
-    intersect, setdiff, union
-
-The following objects are masked from ‘package:data.table’:
-
-    between, last
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
-&lt;/pre&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -3670,7 +3577,7 @@ The following objects are masked from ‘package:base’:
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [52]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [129]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;imdb5&lt;span class="o"&gt;=&lt;/span&gt;mutate&lt;span class="p"&gt;(&lt;/span&gt;imdb3&lt;span class="p"&gt;,&lt;/span&gt;SDVR&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdbVotes&lt;span class="o"&gt;-&lt;/span&gt;imdbRating&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;^&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3725,7 +3632,7 @@ The following objects are masked from ‘package:base’:
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [53]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [130]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;length&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb3&lt;span class="o"&gt;$&lt;/span&gt;imdbVotes&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3754,7 +3661,7 @@ The following objects are masked from ‘package:base’:
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [54]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [131]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cutpoints&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kp"&gt;pretty&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb3&lt;span class="o"&gt;$&lt;/span&gt;imdbVotes&lt;span class="p"&gt;,&lt;/span&gt;na.rm&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;T&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;n&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3809,7 +3716,7 @@ imdb3&lt;span class="o"&gt;$&lt;/span&gt;VB&lt;span class="o"&gt;=&lt;/span&gt;&
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [55]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [132]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;hist&lt;span class="p"&gt;(&lt;/span&gt;imdb3&lt;span class="o"&gt;$&lt;/span&gt;imdbVotes&lt;span class="p"&gt;,&lt;/span&gt;breaks&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -4040,7 +3947,7 @@ CAlQQEiAAkICFBASoICQAAWEBCggJEDB/wHAiD76kFtNUAAAAABJRU5ErkJggg=="&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [56]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [133]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cutpoints&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kp"&gt;pretty&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb3&lt;span class="o"&gt;$&lt;/span&gt;imdbVotes&lt;span class="p"&gt;,&lt;/span&gt;na.rm&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;T&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;n&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;20&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -4106,7 +4013,7 @@ imdb3&lt;span class="o"&gt;$&lt;/span&gt;VB&lt;span class="o"&gt;=&lt;/span&gt;&
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [57]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [134]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;hist&lt;span class="p"&gt;(&lt;/span&gt;imdb3&lt;span class="o"&gt;$&lt;/span&gt;imdbVotes&lt;span class="p"&gt;,&lt;/span&gt;breaks&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -4335,7 +4242,7 @@ QAEhAQr+H7DBOIMXuWU/AAAAAElFTkSuQmCC"&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [58]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [135]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="m"&gt;3389&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;
@@ -4364,7 +4271,7 @@ QAEhAQr+H7DBOIMXuWU/AAAAAElFTkSuQmCC"&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [59]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [136]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;nb&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;
@@ -4395,7 +4302,7 @@ cutpoints
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [60]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [137]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;imdb3&lt;span class="o"&gt;$&lt;/span&gt;VB1&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kp"&gt;cut&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb3&lt;span class="o"&gt;$&lt;/span&gt;imdbVotes&lt;span class="p"&gt;,&lt;/span&gt;cutpoints&lt;span class="p"&gt;,&lt;/span&gt;labels&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'x &amp;lt; 2302'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;'2302 &amp;lt; x &amp;lt; 2718'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;'2718 &amp;lt; x &amp;lt; 157992'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
@@ -4406,7 +4313,7 @@ cutpoints
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [61]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [138]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;summary&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb3&lt;span class="o"&gt;$&lt;/span&gt;VB1&lt;span class="p"&gt;)&lt;/span&gt;
@@ -4435,7 +4342,7 @@ cutpoints
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [62]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [139]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;plot&lt;span class="p"&gt;(&lt;/span&gt;imdb3&lt;span class="o"&gt;$&lt;/span&gt;VB1&lt;span class="p"&gt;)&lt;/span&gt;
@@ -4609,7 +4516,7 @@ JCjg/wNe5lmDW41lNgAAAABJRU5ErkJggg=="&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [63]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [140]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;nb&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;4&lt;/span&gt;
@@ -4642,7 +4549,7 @@ cutpoints
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [64]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [141]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;imdb3&lt;span class="o"&gt;$&lt;/span&gt;VB1&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kp"&gt;cut&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb3&lt;span class="o"&gt;$&lt;/span&gt;imdbVotes&lt;span class="p"&gt;,&lt;/span&gt;cutpoints&lt;span class="p"&gt;)&lt;/span&gt;
@@ -4677,7 +4584,7 @@ Traceback:
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [65]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [142]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;nb&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;
@@ -4731,7 +4638,7 @@ cutpoints
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [66]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [143]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;as.factor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;trimws&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kp"&gt;as.character&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kp"&gt;head&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdb2&lt;span class="o"&gt;$&lt;/span&gt;Language&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;))))&lt;/span&gt;
@@ -4771,7 +4678,7 @@ cutpoints
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [67]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [144]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;imdbtel&lt;span class="o"&gt;=&lt;/span&gt;imdb3&lt;span class="p"&gt;[&lt;/span&gt;imdb3&lt;span class="o"&gt;$&lt;/span&gt;Language&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s"&gt;"Telugu"&lt;/span&gt;&lt;span class="p"&gt;,]&lt;/span&gt;
@@ -4817,7 +4724,7 @@ cutpoints
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [68]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [145]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;imdbhindi&lt;span class="o"&gt;=&lt;/span&gt;imdb3
@@ -4829,7 +4736,7 @@ imdbhindi&lt;span class="o"&gt;$&lt;/span&gt;Language&lt;span class="o"&gt;=&lt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [69]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [146]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;head&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;imdbhindi&lt;span class="p"&gt;[,&lt;/span&gt;&lt;span class="m"&gt;-1&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
@@ -4868,7 +4775,7 @@ imdbhindi&lt;span class="o"&gt;$&lt;/span&gt;Language&lt;span class="o"&gt;=&lt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [70]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [147]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;repvec&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kp"&gt;rep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;6&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;30&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
@@ -4959,7 +4866,7 @@ repvec
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [71]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [148]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;length&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;repvec&lt;span class="p"&gt;)&lt;/span&gt;

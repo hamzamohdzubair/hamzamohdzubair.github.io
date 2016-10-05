@@ -53,6 +53,7 @@ main article pre {font-family:monospace;}
 div.input_area{
 	background: rgb(253,246,227) !important;
 	font-size: 14px;
+	border-radius:0px;
 }
 
 div.output_subarea {

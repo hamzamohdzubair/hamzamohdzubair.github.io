@@ -2339,4 +2339,4 @@ summarize&lt;span class="p"&gt;(&lt;/span&gt;meanT&lt;span class="o"&gt;=&lt;/sp
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</summary><category term="dplyr"></category><category term="r"></category><category term="select"></category><category term="filter"></category><category term="arrange"></category><category term="rename"></category><category term="mutate"></category><category term="group by"></category><category term="pipeline"></category><category term="chicago"></category><category term="temperature"></category></entry></feed>
+</summary><category term="dplyr"></category><category term="r"></category></entry></feed>

@@ -13026,12 +13026,12 @@ YII="&gt;
 &lt;p&gt;Now, that you understand the basics of ggplot2 grammar, you can look at the following articles to learn how to make beautiful plots:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://www.hamzazubair.com/hitchhikers-guide-to-ggplot2/how-to-make-impressive-line-plots-with-ggplot2"&gt;Line Plots in ggplot2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=""&gt;Area Plots in ggplot2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=""&gt;Bar Plots in ggplot2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=""&gt;Stacked Bar Plots in ggplot2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=""&gt;Scatterplots in ggplot2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=""&gt;Weighted Scatterplots in ggplot2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=""&gt;Histograms in ggplot2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Area Plots in ggplot2&lt;/li&gt;
+&lt;li&gt;Bar Plots in ggplot2&lt;/li&gt;
+&lt;li&gt;Stacked Bar Plots in ggplot2&lt;/li&gt;
+&lt;li&gt;Scatterplots in ggplot2&lt;/li&gt;
+&lt;li&gt;Weighted Scatterplots in ggplot2&lt;/li&gt;
+&lt;li&gt;Histograms in ggplot2&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -13074,4 +13074,4 @@ YII="&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</summary><category term="ggplot2"></category><category term="hitchhiker"></category><category term="guide"></category><category term="grammar of graphics"></category><category term="wilkinson"></category><category term="wickham"></category><category term="texas"></category><category term="housing"></category><category term="r"></category></entry></feed>
+</summary><category term="ggplot2"></category><category term="texas"></category><category term="housing"></category><category term="r"></category></entry></feed>

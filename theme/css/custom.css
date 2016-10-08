@@ -115,7 +115,7 @@ table td {
 
 
 .card {
-	display:block
+	display:block;
 	border-radius:7px;
 	padding:4px;
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);

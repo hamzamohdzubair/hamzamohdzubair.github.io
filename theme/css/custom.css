@@ -115,6 +115,9 @@ table td {
 
 .card {
 	display:block;
+	background:gray;
+	border-radius:7px;
+	padding:4px;
 	
 }
 

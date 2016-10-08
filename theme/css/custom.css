@@ -104,7 +104,7 @@ table td {
 }
 
 .tag-cloud span {
-    border: 1px solid;
+    border: 1px solid #587;
     display: inline-block;
     margin: 1px;
     margin-top:2px;

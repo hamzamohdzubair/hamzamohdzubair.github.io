@@ -976,7 +976,7 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h4 id="I-would-like-to-acknowledge-the-people-at-Edwisor-for-providing-the-training-and-materials-for-this-post.-For-more-information-and-detailed-and-engaging-live-sessions,-please-check-out-Edwisor.com"&gt;I would like to acknowledge the people at Edwisor for providing the training and materials for this post. For more information and detailed and engaging live sessions, please check out &lt;a href="http://edwisor.com"&gt;Edwisor.com&lt;/a&gt;&lt;a class="anchor-link" href="#I-would-like-to-acknowledge-the-people-at-Edwisor-for-providing-the-training-and-materials-for-this-post.-For-more-information-and-detailed-and-engaging-live-sessions,-please-check-out-Edwisor.com"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;h5 id="I-would-like-to-acknowledge-the-people-at-Edwisor-for-providing-the-training-and-materials-for-this-post.-For-more-information-and-detailed-and-engaging-live-sessions,-please-check-out-Edwisor.com"&gt;I would like to acknowledge the people at Edwisor for providing the training and materials for this post. For more information and detailed and engaging live sessions, please check out &lt;a href="http://edwisor.com"&gt;Edwisor.com&lt;/a&gt;&lt;a class="anchor-link" href="#I-would-like-to-acknowledge-the-people-at-Edwisor-for-providing-the-training-and-materials-for-this-post.-For-more-information-and-detailed-and-engaging-live-sessions,-please-check-out-Edwisor.com"&gt;¶&lt;/a&gt;&lt;/h5&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -2464,15 +2464,6 @@ data2 &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kp"&gt;cbind.data.fra
 &lt;p&gt;Yes, the problem is you cannot physically travel to 100 hospitals (unless you are a PhD student and have two years to waste only on the first part of your research and your guide is paying for travel). Therefore you cluster sample. You randomly select five hospitals and randomly interview twenty patients in each hospital.&lt;/p&gt;
 &lt;p&gt;Again, nothing about this method is ideal, as you can already see, there are a ton of problems, several biases, overrepresentation of the areas you visited, neglection of areas you did not visit, etc. And the only reason you might cluster sample rather than other random sampling methods as I already mentioned is economic.&lt;/p&gt;
 &lt;p&gt;Why is it called multi-stage? Well, when you randomly selected the hospitals that was tier 1, when you went deeper and randomly selected patients within a hospital, that was tier 2. Sometimes it is sufficient to stop at tier 1 itself.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h6 id="I-would-like-to-acknowledge-the-people-at-Edwisor-for-providing-the-training-and-materials-for-this-post.-For-more-information-and-detailed-and-engaging-live-sessions,-please-check-out-Edwisor.com"&gt;I would like to acknowledge the people at Edwisor for providing the training and materials for this post. For more information and detailed and engaging live sessions, please check out &lt;a href="http://edwisor.com"&gt;Edwisor.com&lt;/a&gt;&lt;a class="anchor-link" href="#I-would-like-to-acknowledge-the-people-at-Edwisor-for-providing-the-training-and-materials-for-this-post.-For-more-information-and-detailed-and-engaging-live-sessions,-please-check-out-Edwisor.com"&gt;¶&lt;/a&gt;&lt;/h6&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;

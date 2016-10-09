@@ -1,0 +1,2083 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="generator" content="Pelican (VoidyBootstrap theme)" />
+    <meta name="twitter:card" content="summary"> 
+    <meta name="twitter:title" content="Quick Numerical Summeries in R">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:site" content="@hamzamohdzubair">
+    <meta name="twitter:creator" content="@hamzamohdzubair">
+    <meta name="twitter:domain" content="http://www.hamzazubair.com">
+
+    <title>Quick Numerical Summeries in R - Hamza Zubair</title>
+
+   
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+              crossorigin="anonymous" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+
+
+      <link rel="stylesheet" href="http://www.hamzazubair.com/theme/css/pygment.css" />
+      <link rel="stylesheet" href="http://www.hamzazubair.com/theme/css/custom.css" />
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="http://www.hamzazubair.com//images/favicon.ico" />
+        <link href="http://www.hamzazubair.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Hamza Zubair Atom Feed" />
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-84156617-1', '');
+  ga('send', 'pageview');
+
+</script>
+  </head>
+
+  <body>
+   
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+	   <div class="navbar-header">
+		<button type="button" class="navbar-toggle" 
+				data-toggle="collapse" data-target="#main-navbar-collapse">
+		  <span class="sr-only">Toggle navigation</span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="http://www.hamzazubair.com/" rel="home">
+          <i class="fa fa-home fa-fw fa-lg"> </i> </a>
+       </div>
+
+      <div class="collapse navbar-collapse" id="main-navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="divider"></li>
+            <li class="">
+              <a href="http://www.hamzazubair.com/archives.html">Archives</a>
+            </li>
+          <li class="divider"></li>
+            <li><a href="http://www.hamzazubair.com/feeds/all.atom.xml" 
+                   type="application/atom+xml" rel="alternate">
+                <i class="fa fa-rss fa-fw fa-lg"></i> </a></li>
+        </ul> <!-- /nav -->
+      </div> <!-- /navbar-collapse -->
+	  </div> <!-- /container -->
+    </nav> <!-- /navbar -->
+
+	<div class="jumbotron" id="overview">
+	  <div class="container">
+		<h1><a href="http://www.hamzazubair.com/">Hamza Zubair</a></h1>
+		<p class="lead">Hitchhiking through Data Science</p>
+	  </div>
+	</div>
+<hr />
+
+    <div class="container" id="main-container">
+      <div class="row">
+        <div class="col-md-9" id="content">
+<article itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+  <header class="article-header">
+<a class="card" href="http://www.hamzazubair.com/first-looks-at-data/quick-numerical-summeries-in-r" rel="bookmark"
+     title="Permalink to Quick Numerical Summeries in R">
+<abbr class="article-header-date">
+  Oct 08, 2016
+</abbr> <h3>
+    Quick Numerical Summeries in R
+</h3><div class="article-header-info">
+  <p>
+    in 
+    <!-- <a href="http://www.hamzazubair.com/first-looks-at-data"> -->
+      First Looks at Data<!-- </a> -->
+    &nbsp;&nbsp;
+  </p>
+</div> <!-- /.article-header-info --></a>
+  </header>
+  <div class="content-body" itemprop="text articleBody">
+	<style type="text/css">/*!
+*
+* IPython notebook
+*
+*/
+/* CSS font colors for translated ANSI colors. */
+.ansibold {
+  font-weight: bold;
+}
+/* use dark versions for foreground, to improve visibility */
+.ansiblack {
+  color: black;
+}
+.ansired {
+  color: darkred;
+}
+.ansigreen {
+  color: darkgreen;
+}
+.ansiyellow {
+  color: #c4a000;
+}
+.ansiblue {
+  color: darkblue;
+}
+.ansipurple {
+  color: darkviolet;
+}
+.ansicyan {
+  color: steelblue;
+}
+.ansigray {
+  color: gray;
+}
+/* and light for background, for the same reason */
+.ansibgblack {
+  background-color: black;
+}
+.ansibgred {
+  background-color: red;
+}
+.ansibggreen {
+  background-color: green;
+}
+.ansibgyellow {
+  background-color: yellow;
+}
+.ansibgblue {
+  background-color: blue;
+}
+.ansibgpurple {
+  background-color: magenta;
+}
+.ansibgcyan {
+  background-color: cyan;
+}
+.ansibggray {
+  background-color: gray;
+}
+div.cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  width: 100%;
+  padding: 5px;
+  /* This acts as a spacer between cells, that is outside the border */
+  margin: 0px;
+  outline: none;
+  border-left-width: 1px;
+  padding-left: 5px;
+  background: linear-gradient(to right, transparent -40px, transparent 1px, transparent 1px, transparent 100%);
+}
+div.cell.jupyter-soft-selected {
+  border-left-color: #90CAF9;
+  border-left-color: #E3F2FD;
+  border-left-width: 1px;
+  padding-left: 5px;
+  border-right-color: #E3F2FD;
+  border-right-width: 1px;
+  background: #E3F2FD;
+}
+@media print {
+  div.cell.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected {
+  border-color: #ababab;
+  border-left-width: 0px;
+  padding-left: 6px;
+  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 5px, transparent 5px, transparent 100%);
+}
+@media print {
+  div.cell.selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected.jupyter-soft-selected {
+  border-left-width: 0;
+  padding-left: 6px;
+  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 7px, #E3F2FD 7px, #E3F2FD 100%);
+}
+.edit_mode div.cell.selected {
+  border-color: #66BB6A;
+  border-left-width: 0px;
+  padding-left: 6px;
+  background: linear-gradient(to right, #66BB6A -40px, #66BB6A 5px, transparent 5px, transparent 100%);
+}
+@media print {
+  .edit_mode div.cell.selected {
+    border-color: transparent;
+  }
+}
+.prompt {
+  /* This needs to be wide enough for 3 digit prompt numbers: In[100]: */
+  min-width: 14ex;
+  /* This padding is tuned to match the padding on the CodeMirror editor. */
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace;
+  text-align: right;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+  /* Don't highlight prompt number selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Use default cursor */
+  cursor: default;
+}
+@media (max-width: 540px) {
+  .prompt {
+    text-align: left;
+  }
+}
+div.inner_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+}
+@-moz-document url-prefix() {
+  div.inner_cell {
+    overflow-x: hidden;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_area {
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  background: #f7f7f7;
+  line-height: 1.21429em;
+}
+/* This is needed so that empty prompt areas can collapse to zero height when there
+   is no content in the output_subarea and the prompt. The main purpose of this is
+   to make sure that empty JavaScript output_subareas have no height. */
+div.prompt:empty {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.unrecognized_cell {
+  padding: 5px 5px 5px 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.unrecognized_cell .inner_cell {
+  border-radius: 2px;
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+  border: 1px solid #cfcfcf;
+  background: #eaeaea;
+}
+div.unrecognized_cell .inner_cell a {
+  color: inherit;
+  text-decoration: none;
+}
+div.unrecognized_cell .inner_cell a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 540px) {
+  div.unrecognized_cell > div.prompt {
+    display: none;
+  }
+}
+div.code_cell {
+  /* avoid page breaking on code cells when printing */
+}
+@media print {
+  div.code_cell {
+    page-break-inside: avoid;
+  }
+}
+/* any special styling for code cells that are currently running goes here */
+div.input {
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.input {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_prompt {
+  color: #303F9F;
+  border-top: 1px solid transparent;
+}
+div.input_area > div.highlight {
+  margin: 0.4em;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+div.input_area > div.highlight > pre {
+  margin: 0px;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+/* The following gets added to the <head> if it is detected that the user has a
+ * monospace font with inconsistent normal/bold/italic height.  See
+ * notebookmain.js.  Such fonts will have keywords vertically offset with
+ * respect to the rest of the text.  The user should select a better font.
+ * See: https://github.com/ipython/ipython/issues/1503
+ *
+ * .CodeMirror span {
+ *      vertical-align: bottom;
+ * }
+ */
+.CodeMirror {
+  line-height: 1.21429em;
+  /* Changed from 1em to our global default */
+  font-size: 14px;
+  height: auto;
+  /* Changed to auto to autogrow */
+  background: none;
+  /* Changed from white to allow our bg to show through */
+}
+.CodeMirror-scroll {
+  /*  The CodeMirror docs are a bit fuzzy on if overflow-y should be hidden or visible.*/
+  /*  We have found that if it is visible, vertical scrollbars appear with font size changes.*/
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.CodeMirror-lines {
+  /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
+  /* we have set a different line-height and want this to scale with that. */
+  padding: 0.4em;
+}
+.CodeMirror-linenumber {
+  padding: 0 8px 0 4px;
+}
+.CodeMirror-gutters {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.CodeMirror pre {
+  /* In CM3 this went to 4px from 0 in CM2. We need the 0 value because of how we size */
+  /* .CodeMirror-lines */
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+}
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+Adapted from GitHub theme
+
+*/
+.highlight-base {
+  color: #000;
+}
+.highlight-variable {
+  color: #000;
+}
+.highlight-variable-2 {
+  color: #1a1a1a;
+}
+.highlight-variable-3 {
+  color: #333333;
+}
+.highlight-string {
+  color: #BA2121;
+}
+.highlight-comment {
+  color: #408080;
+  font-style: italic;
+}
+.highlight-number {
+  color: #080;
+}
+.highlight-atom {
+  color: #88F;
+}
+.highlight-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.highlight-builtin {
+  color: #008000;
+}
+.highlight-error {
+  color: #f00;
+}
+.highlight-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.highlight-meta {
+  color: #AA22FF;
+}
+/* previously not defined, copying from default codemirror */
+.highlight-def {
+  color: #00f;
+}
+.highlight-string-2 {
+  color: #f50;
+}
+.highlight-qualifier {
+  color: #555;
+}
+.highlight-bracket {
+  color: #997;
+}
+.highlight-tag {
+  color: #170;
+}
+.highlight-attribute {
+  color: #00c;
+}
+.highlight-header {
+  color: blue;
+}
+.highlight-quote {
+  color: #090;
+}
+.highlight-link {
+  color: #00c;
+}
+/* apply the same style to codemirror */
+.cm-s-ipython span.cm-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-atom {
+  color: #88F;
+}
+.cm-s-ipython span.cm-number {
+  color: #080;
+}
+.cm-s-ipython span.cm-def {
+  color: #00f;
+}
+.cm-s-ipython span.cm-variable {
+  color: #000;
+}
+.cm-s-ipython span.cm-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-variable-2 {
+  color: #1a1a1a;
+}
+.cm-s-ipython span.cm-variable-3 {
+  color: #333333;
+}
+.cm-s-ipython span.cm-comment {
+  color: #408080;
+  font-style: italic;
+}
+.cm-s-ipython span.cm-string {
+  color: #BA2121;
+}
+.cm-s-ipython span.cm-string-2 {
+  color: #f50;
+}
+.cm-s-ipython span.cm-meta {
+  color: #AA22FF;
+}
+.cm-s-ipython span.cm-qualifier {
+  color: #555;
+}
+.cm-s-ipython span.cm-builtin {
+  color: #008000;
+}
+.cm-s-ipython span.cm-bracket {
+  color: #997;
+}
+.cm-s-ipython span.cm-tag {
+  color: #170;
+}
+.cm-s-ipython span.cm-attribute {
+  color: #00c;
+}
+.cm-s-ipython span.cm-header {
+  color: blue;
+}
+.cm-s-ipython span.cm-quote {
+  color: #090;
+}
+.cm-s-ipython span.cm-link {
+  color: #00c;
+}
+.cm-s-ipython span.cm-error {
+  color: #f00;
+}
+.cm-s-ipython span.cm-tab {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+div.output_wrapper {
+  /* this position must be relative to enable descendents to be absolute within it */
+  position: relative;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 1;
+}
+/* class for the output area when it should be height-limited */
+div.output_scroll {
+  /* ideally, this would be max-height, but FF barfs all over that */
+  height: 24em;
+  /* FF needs this *and the wrapper* to specify full width, or it will shrinkwrap */
+  width: 100%;
+  overflow: auto;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+/* output div while it is collapsed */
+div.output_collapsed {
+  margin: 0px;
+  padding: 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+div.out_prompt_overlay {
+  height: 100%;
+  padding: 0px 0.4em;
+  position: absolute;
+  border-radius: 2px;
+}
+div.out_prompt_overlay:hover {
+  /* use inner shadow to get border that is computed the same on WebKit/FF */
+  -webkit-box-shadow: inset 0 0 1px #000;
+  box-shadow: inset 0 0 1px #000;
+  background: rgba(240, 240, 240, 0.5);
+}
+div.output_prompt {
+  color: #D84315;
+}
+/* This class is the outer container of all output sections. */
+div.output_area {
+  padding: 0px;
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.output_area .MathJax_Display {
+  text-align: left !important;
+}
+div.output_area 
+div.output_area 
+div.output_area img,
+div.output_area svg {
+  max-width: 100%;
+  height: auto;
+}
+div.output_area img.unconfined,
+div.output_area svg.unconfined {
+  max-width: none;
+}
+/* This is needed to protect the pre formating from global settings such
+   as that of bootstrap */
+.output {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.output_area {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+div.output_area pre {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  color: black;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* This class is for the output subarea inside the output_area and after
+   the prompt div. */
+div.output_subarea {
+  overflow-x: auto;
+  padding: 0.4em;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+  max-width: calc(100% - 14ex);
+}
+div.output_scroll div.output_subarea {
+  overflow-x: visible;
+}
+/* The rest of the output_* classes are for special styling of the different
+   output types */
+/* all text output has this class: */
+div.output_text {
+  text-align: left;
+  color: #000;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+}
+/* stdout/stderr are 'text' as well as 'stream', but execute_result/error are *not* streams */
+div.output_stderr {
+  background: #fdd;
+  /* very light red background for stderr */
+}
+div.output_latex {
+  text-align: left;
+}
+/* Empty output_javascript divs should have no height */
+div.output_javascript:empty {
+  padding: 0;
+}
+.js-error {
+  color: darkred;
+}
+/* raw_input styles */
+div.raw_input_container {
+  line-height: 1.21429em;
+  padding-top: 5px;
+}
+pre.raw_input_prompt {
+  /* nothing needed here. */
+}
+input.raw_input {
+  font-family: monospace;
+  font-size: inherit;
+  color: inherit;
+  width: auto;
+  /* make sure input baseline aligns with prompt */
+  vertical-align: baseline;
+  /* padding + margin = 0.5em between prompt and cursor */
+  padding: 0em 0.25em;
+  margin: 0em 0.25em;
+}
+input.raw_input:focus {
+  box-shadow: none;
+}
+p.p-space {
+  margin-bottom: 10px;
+}
+div.output_unrecognized {
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+}
+div.output_unrecognized a {
+  color: inherit;
+  text-decoration: none;
+}
+div.output_unrecognized a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.rendered_html {
+  color: #000;
+  /* any extras will just be numbers: */
+}
+
+
+
+.rendered_html :link {
+  text-decoration: underline;
+}
+.rendered_html :visited {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+.rendered_html h1:first-child {
+  margin-top: 0.538em;
+}
+.rendered_html h2:first-child {
+  margin-top: 0.636em;
+}
+.rendered_html h3:first-child {
+  margin-top: 0.777em;
+}
+.rendered_html h4:first-child {
+  margin-top: 1em;
+}
+.rendered_html h5:first-child {
+  margin-top: 1em;
+}
+.rendered_html h6:first-child {
+  margin-top: 1em;
+}
+
+
+
+
+
+
+
+
+.rendered_html * + ul {
+  margin-top: 1em;
+}
+.rendered_html * + ol {
+  margin-top: 1em;
+}
+
+
+.rendered_html pre,
+
+
+
+.rendered_html tr,
+.rendered_html th,
+
+.rendered_html td,
+
+
+.rendered_html * + table {
+  margin-top: 1em;
+}
+
+.rendered_html * + p {
+  margin-top: 1em;
+}
+
+.rendered_html * + img {
+  margin-top: 1em;
+}
+.rendered_html img,
+
+.rendered_html img.unconfined,
+
+div.text_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.text_cell > div.prompt {
+    display: none;
+  }
+}
+div.text_cell_render {
+  /*font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+  outline: none;
+  resize: none;
+  width: inherit;
+  border-style: none;
+  padding: 0.5em 0.5em 0.5em 0.4em;
+  color: #000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a.anchor-link:link {
+  text-decoration: none;
+  padding: 0px 20px;
+  visibility: hidden;
+}
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  visibility: visible;
+}
+.text_cell.rendered .input_area {
+  display: none;
+}
+.text_cell.rendered 
+.text_cell.unrendered .text_cell_render {
+  display: none;
+}
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cm-header-1 {
+  font-size: 185.7%;
+}
+.cm-header-2 {
+  font-size: 157.1%;
+}
+.cm-header-3 {
+  font-size: 128.6%;
+}
+.cm-header-4 {
+  font-size: 110%;
+}
+.cm-header-5 {
+  font-size: 100%;
+  font-style: italic;
+}
+.cm-header-6 {
+  font-size: 100%;
+  font-style: italic;
+}
+</style>
+<style type="text/css">.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style>
+<style type="text/css">
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+</style>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Descriptive Statistics is the essential first step in any data analysis. R provides built-in powerful tools for this purpose. We will demonstrate some of those here. The functions used in this article are listed below with their packages in parantheses.</p>
+<ol>
+<li><a href="#head">head</a></li>
+<li><a href="#tail">tail</a></li>
+<li><a href="#dim">dim</a></li>
+<li><a href="#str">str</a></li>
+<li><a href="#summary">summary</a></li>
+<li><a href="#sapply">sapply</a></li>
+<li><a href="#describe">describe (Hmisc)</a></li>
+<li><a href="#stat.desc">stat.desc (pastecs)</a></li>
+<li><a href="#describe-psych">describe (psych)</a></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's use the mtcars data that comes pre-installed with R.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>d<span class="o">=</span>mtcars
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="head">head<a class="anchor-link" href="#head">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [33]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">head</span><span class="p">(</span>d<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th></th><th scope="col">mpg</th><th scope="col">cyl</th><th scope="col">disp</th><th scope="col">hp</th><th scope="col">drat</th><th scope="col">wt</th><th scope="col">qsec</th><th scope="col">vs</th><th scope="col">am</th><th scope="col">gear</th><th scope="col">carb</th></tr></thead>
+<tbody>
+<tr><th scope="row">Mazda RX4</th><td>21.0 </td><td>6    </td><td>160  </td><td>110  </td><td>3.90 </td><td>2.620</td><td>16.46</td><td>0    </td><td>1    </td><td>4    </td><td>4    </td></tr>
+<tr><th scope="row">Mazda RX4 Wag</th><td>21.0 </td><td>6    </td><td>160  </td><td>110  </td><td>3.90 </td><td>2.875</td><td>17.02</td><td>0    </td><td>1    </td><td>4    </td><td>4    </td></tr>
+<tr><th scope="row">Datsun 710</th><td>22.8 </td><td>4    </td><td>108  </td><td> 93  </td><td>3.85 </td><td>2.320</td><td>18.61</td><td>1    </td><td>1    </td><td>4    </td><td>1    </td></tr>
+<tr><th scope="row">Hornet 4 Drive</th><td>21.4 </td><td>6    </td><td>258  </td><td>110  </td><td>3.08 </td><td>3.215</td><td>19.44</td><td>1    </td><td>0    </td><td>3    </td><td>1    </td></tr>
+<tr><th scope="row">Hornet Sportabout</th><td>18.7 </td><td>8    </td><td>360  </td><td>175  </td><td>3.15 </td><td>3.440</td><td>17.02</td><td>0    </td><td>0    </td><td>3    </td><td>2    </td></tr>
+<tr><th scope="row">Valiant</th><td>18.1 </td><td>6    </td><td>225  </td><td>105  </td><td>2.76 </td><td>3.460</td><td>20.22</td><td>1    </td><td>0    </td><td>3    </td><td>1    </td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="tail">tail<a class="anchor-link" href="#tail">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [34]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">tail</span><span class="p">(</span>d<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th></th><th scope="col">mpg</th><th scope="col">cyl</th><th scope="col">disp</th><th scope="col">hp</th><th scope="col">drat</th><th scope="col">wt</th><th scope="col">qsec</th><th scope="col">vs</th><th scope="col">am</th><th scope="col">gear</th><th scope="col">carb</th></tr></thead>
+<tbody>
+<tr><th scope="row">Porsche 914-2</th><td>26.0 </td><td>4    </td><td>120.3</td><td> 91  </td><td>4.43 </td><td>2.140</td><td>16.7 </td><td>0    </td><td>1    </td><td>5    </td><td>2    </td></tr>
+<tr><th scope="row">Lotus Europa</th><td>30.4 </td><td>4    </td><td> 95.1</td><td>113  </td><td>3.77 </td><td>1.513</td><td>16.9 </td><td>1    </td><td>1    </td><td>5    </td><td>2    </td></tr>
+<tr><th scope="row">Ford Pantera L</th><td>15.8 </td><td>8    </td><td>351.0</td><td>264  </td><td>4.22 </td><td>3.170</td><td>14.5 </td><td>0    </td><td>1    </td><td>5    </td><td>4    </td></tr>
+<tr><th scope="row">Ferrari Dino</th><td>19.7 </td><td>6    </td><td>145.0</td><td>175  </td><td>3.62 </td><td>2.770</td><td>15.5 </td><td>0    </td><td>1    </td><td>5    </td><td>6    </td></tr>
+<tr><th scope="row">Maserati Bora</th><td>15.0 </td><td>8    </td><td>301.0</td><td>335  </td><td>3.54 </td><td>3.570</td><td>14.6 </td><td>0    </td><td>1    </td><td>5    </td><td>8    </td></tr>
+<tr><th scope="row">Volvo 142E</th><td>21.4 </td><td>4    </td><td>121.0</td><td>109  </td><td>4.11 </td><td>2.780</td><td>18.6 </td><td>1    </td><td>1    </td><td>4    </td><td>2    </td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="dim">dim<a class="anchor-link" href="#dim">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [35]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">dim</span><span class="p">(</span>d<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<ol class="list-inline">
+<li>32</li>
+<li>11</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="str">str<a class="anchor-link" href="#str">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [32]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>str<span class="p">(</span>d<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>'data.frame':	32 obs. of  11 variables:
+ $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
+ $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...
+ $ disp: num  160 160 108 258 360 ...
+ $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...
+ $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...
+ $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...
+ $ qsec: num  16.5 17 18.6 19.4 17 ...
+ $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...
+ $ am  : num  1 1 1 0 0 0 0 0 0 0 ...
+ $ gear: num  4 4 4 3 3 3 3 4 4 4 ...
+ $ carb: num  4 4 1 1 2 1 4 2 2 4 ...
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="summary">summary<a class="anchor-link" href="#summary">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [2]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">summary</span><span class="p">(</span>d<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_text output_subarea ">
+<pre>      mpg             cyl             disp             hp       
+ Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  
+ 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  
+ Median :19.20   Median :6.000   Median :196.3   Median :123.0  
+ Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  
+ 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  
+ Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  
+      drat             wt             qsec             vs        
+ Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  
+ 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  
+ Median :3.695   Median :3.325   Median :17.71   Median :0.0000  
+ Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  
+ 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  
+ Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  
+       am              gear            carb      
+ Min.   :0.0000   Min.   :3.000   Min.   :1.000  
+ 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  
+ Median :0.0000   Median :4.000   Median :2.000  
+ Mean   :0.4062   Mean   :3.688   Mean   :2.812  
+ 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  
+ Max.   :1.0000   Max.   :5.000   Max.   :8.000  </pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="sapply">sapply<a class="anchor-link" href="#sapply">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">sapply</span><span class="p">(</span>d<span class="p">,</span><span class="kp">mean</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<dl class="dl-horizontal">
+<dt>mpg</dt>
+<dd>20.090625</dd>
+<dt>cyl</dt>
+<dd>6.1875</dd>
+<dt>disp</dt>
+<dd>230.721875</dd>
+<dt>hp</dt>
+<dd>146.6875</dd>
+<dt>drat</dt>
+<dd>3.5965625</dd>
+<dt>wt</dt>
+<dd>3.21725</dd>
+<dt>qsec</dt>
+<dd>17.84875</dd>
+<dt>vs</dt>
+<dd>0.4375</dd>
+<dt>am</dt>
+<dd>0.40625</dd>
+<dt>gear</dt>
+<dd>3.6875</dd>
+<dt>carb</dt>
+<dd>2.8125</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can use any statistical function with sapply, eg: <strong>mean</strong>, <strong>sd</strong>, <strong>var</strong>,  <strong>min</strong>, <strong>max</strong>, <strong>median</strong>, <strong>range</strong>, <strong>quantile</strong>. We are lucky that we do not have <em>NA</em> values or missing data in our dataset. Otherwise we would have to provide another argument <em>na.rm=T</em> like this: <code>sapply(d,mean,na.rm=T)</code></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">sapply</span><span class="p">(</span>d<span class="p">,</span>quantile<span class="p">,</span>na.rm<span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th></th><th scope="col">mpg</th><th scope="col">cyl</th><th scope="col">disp</th><th scope="col">hp</th><th scope="col">drat</th><th scope="col">wt</th><th scope="col">qsec</th><th scope="col">vs</th><th scope="col">am</th><th scope="col">gear</th><th scope="col">carb</th></tr></thead>
+<tbody>
+<tr><th scope="row">0%</th><td>10.400 </td><td>4      </td><td> 71.100</td><td> 52.0  </td><td>2.760  </td><td>1.51300</td><td>14.5000</td><td>0      </td><td>0      </td><td>3      </td><td>1      </td></tr>
+<tr><th scope="row">25%</th><td>15.425 </td><td>4      </td><td>120.825</td><td> 96.5  </td><td>3.080  </td><td>2.58125</td><td>16.8925</td><td>0      </td><td>0      </td><td>3      </td><td>2      </td></tr>
+<tr><th scope="row">50%</th><td>19.200 </td><td>6      </td><td>196.300</td><td>123.0  </td><td>3.695  </td><td>3.32500</td><td>17.7100</td><td>0      </td><td>0      </td><td>4      </td><td>2      </td></tr>
+<tr><th scope="row">75%</th><td>22.800 </td><td>8      </td><td>326.000</td><td>180.0  </td><td>3.920  </td><td>3.61000</td><td>18.9000</td><td>1      </td><td>1      </td><td>4      </td><td>4      </td></tr>
+<tr><th scope="row">100%</th><td>33.900 </td><td>8      </td><td>472.000</td><td>335.0  </td><td>4.930  </td><td>5.42400</td><td>22.9000</td><td>1      </td><td>1      </td><td>5      </td><td>8      </td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="describe">describe<a class="anchor-link" href="#describe">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [38]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">suppressWarnings</span><span class="p">(</span><span class="kn">library</span><span class="p">(</span>Hmisc<span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [9]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>describe<span class="p">(</span>d<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_text output_subarea ">
+<pre>d 
+
+ 11  Variables      32  Observations
+--------------------------------------------------------------------------------
+mpg 
+      n missing  unique    Info    Mean     .05     .10     .25     .50     .75 
+     32       0      25       1   20.09   12.00   14.34   15.43   19.20   22.80 
+    .90     .95 
+  30.09   31.30 
+
+lowest : 10.4 13.3 14.3 14.7 15.0, highest: 26.0 27.3 30.4 32.4 33.9 
+--------------------------------------------------------------------------------
+cyl 
+      n missing  unique    Info    Mean 
+     32       0       3    0.87   6.188 
+
+4 (11, 34%), 6 (7, 22%), 8 (14, 44%) 
+--------------------------------------------------------------------------------
+disp 
+      n missing  unique    Info    Mean     .05     .10     .25     .50     .75 
+     32       0      27       1   230.7   77.35   80.61  120.83  196.30  326.00 
+    .90     .95 
+ 396.00  449.00 
+
+lowest :  71.1  75.7  78.7  79.0  95.1, highest: 360.0 400.0 440.0 460.0 472.0 
+--------------------------------------------------------------------------------
+hp 
+      n missing  unique    Info    Mean     .05     .10     .25     .50     .75 
+     32       0      22       1   146.7   63.65   66.00   96.50  123.00  180.00 
+    .90     .95 
+ 243.50  253.55 
+
+lowest :  52  62  65  66  91, highest: 215 230 245 264 335 
+--------------------------------------------------------------------------------
+drat 
+      n missing  unique    Info    Mean     .05     .10     .25     .50     .75 
+     32       0      22       1   3.597   2.853   3.007   3.080   3.695   3.920 
+    .90     .95 
+  4.209   4.314 
+
+lowest : 2.76 2.93 3.00 3.07 3.08, highest: 4.08 4.11 4.22 4.43 4.93 
+--------------------------------------------------------------------------------
+wt 
+      n missing  unique    Info    Mean     .05     .10     .25     .50     .75 
+     32       0      29       1   3.217   1.736   1.956   2.581   3.325   3.610 
+    .90     .95 
+  4.048   5.293 
+
+lowest : 1.513 1.615 1.835 1.935 2.140, highest: 3.845 4.070 5.250 5.345 5.424 
+--------------------------------------------------------------------------------
+qsec 
+      n missing  unique    Info    Mean     .05     .10     .25     .50     .75 
+     32       0      30       1   17.85   15.05   15.53   16.89   17.71   18.90 
+    .90     .95 
+  19.99   20.10 
+
+lowest : 14.50 14.60 15.41 15.50 15.84, highest: 19.90 20.00 20.01 20.22 22.90 
+--------------------------------------------------------------------------------
+vs 
+      n missing  unique    Info     Sum    Mean 
+     32       0       2    0.74      14  0.4375 
+--------------------------------------------------------------------------------
+am 
+      n missing  unique    Info     Sum    Mean 
+     32       0       2    0.72      13  0.4062 
+--------------------------------------------------------------------------------
+gear 
+      n missing  unique    Info    Mean 
+     32       0       3    0.84   3.688 
+
+3 (15, 47%), 4 (12, 38%), 5 (5, 16%) 
+--------------------------------------------------------------------------------
+carb 
+      n missing  unique    Info    Mean 
+     32       0       6    0.93   2.812 
+
+           1  2 3  4 6 8
+Frequency  7 10 3 10 1 1
+%         22 31 9 31 3 3
+--------------------------------------------------------------------------------</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="stat.desc">stat.desc<a class="anchor-link" href="#stat.desc">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [40]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">suppressWarnings</span><span class="p">(</span><span class="kn">library</span><span class="p">(</span>pastecs<span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [14]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>stat.desc<span class="p">(</span>d<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th></th><th scope="col">mpg</th><th scope="col">cyl</th><th scope="col">disp</th><th scope="col">hp</th><th scope="col">drat</th><th scope="col">wt</th><th scope="col">qsec</th><th scope="col">vs</th><th scope="col">am</th><th scope="col">gear</th><th scope="col">carb</th></tr></thead>
+<tbody>
+<tr><th scope="row">nbr.val</th><td> 32.0000000 </td><td> 32.0000000 </td><td>3.200000e+01</td><td>  32.0000000</td><td> 32.00000000</td><td> 32.0000000 </td><td> 32.0000000 </td><td>32.00000000 </td><td>32.00000000 </td><td> 32.0000000 </td><td>32.0000000  </td></tr>
+<tr><th scope="row">nbr.null</th><td>  0.0000000 </td><td>  0.0000000 </td><td>0.000000e+00</td><td>   0.0000000</td><td>  0.00000000</td><td>  0.0000000 </td><td>  0.0000000 </td><td>18.00000000 </td><td>19.00000000 </td><td>  0.0000000 </td><td> 0.0000000  </td></tr>
+<tr><th scope="row">nbr.na</th><td>  0.0000000 </td><td>  0.0000000 </td><td>0.000000e+00</td><td>   0.0000000</td><td>  0.00000000</td><td>  0.0000000 </td><td>  0.0000000 </td><td> 0.00000000 </td><td> 0.00000000 </td><td>  0.0000000 </td><td> 0.0000000  </td></tr>
+<tr><th scope="row">min</th><td> 10.4000000 </td><td>  4.0000000 </td><td>7.110000e+01</td><td>  52.0000000</td><td>  2.76000000</td><td>  1.5130000 </td><td> 14.5000000 </td><td> 0.00000000 </td><td> 0.00000000 </td><td>  3.0000000 </td><td> 1.0000000  </td></tr>
+<tr><th scope="row">max</th><td> 33.9000000 </td><td>  8.0000000 </td><td>4.720000e+02</td><td> 335.0000000</td><td>  4.93000000</td><td>  5.4240000 </td><td> 22.9000000 </td><td> 1.00000000 </td><td> 1.00000000 </td><td>  5.0000000 </td><td> 8.0000000  </td></tr>
+<tr><th scope="row">range</th><td> 23.5000000 </td><td>  4.0000000 </td><td>4.009000e+02</td><td> 283.0000000</td><td>  2.17000000</td><td>  3.9110000 </td><td>  8.4000000 </td><td> 1.00000000 </td><td> 1.00000000 </td><td>  2.0000000 </td><td> 7.0000000  </td></tr>
+<tr><th scope="row">sum</th><td>642.9000000 </td><td>198.0000000 </td><td>7.383100e+03</td><td>4694.0000000</td><td>115.09000000</td><td>102.9520000 </td><td>571.1600000 </td><td>14.00000000 </td><td>13.00000000 </td><td>118.0000000 </td><td>90.0000000  </td></tr>
+<tr><th scope="row">median</th><td> 19.2000000 </td><td>  6.0000000 </td><td>1.963000e+02</td><td> 123.0000000</td><td>  3.69500000</td><td>  3.3250000 </td><td> 17.7100000 </td><td> 0.00000000 </td><td> 0.00000000 </td><td>  4.0000000 </td><td> 2.0000000  </td></tr>
+<tr><th scope="row">mean</th><td> 20.0906250 </td><td>  6.1875000 </td><td>2.307219e+02</td><td> 146.6875000</td><td>  3.59656250</td><td>  3.2172500 </td><td> 17.8487500 </td><td> 0.43750000 </td><td> 0.40625000 </td><td>  3.6875000 </td><td> 2.8125000  </td></tr>
+<tr><th scope="row">SE.mean</th><td>  1.0654240 </td><td>  0.3157093 </td><td>2.190947e+01</td><td>  12.1203173</td><td>  0.09451874</td><td>  0.1729685 </td><td>  0.3158899 </td><td> 0.08909831 </td><td> 0.08820997 </td><td>  0.1304266 </td><td> 0.2855297  </td></tr>
+<tr><th scope="row">CI.mean.0.95</th><td>  2.1729465 </td><td>  0.6438934 </td><td>4.468466e+01</td><td>  24.7195501</td><td>  0.19277224</td><td>  0.3527715 </td><td>  0.6442617 </td><td> 0.18171719 </td><td> 0.17990541 </td><td>  0.2660067 </td><td> 0.5823417  </td></tr>
+<tr><th scope="row">var</th><td> 36.3241028 </td><td>  3.1895161 </td><td>1.536080e+04</td><td>4700.8669355</td><td>  0.28588135</td><td>  0.9573790 </td><td>  3.1931661 </td><td> 0.25403226 </td><td> 0.24899194 </td><td>  0.5443548 </td><td> 2.6088710  </td></tr>
+<tr><th scope="row">std.dev</th><td>  6.0269481 </td><td>  1.7859216 </td><td>1.239387e+02</td><td>  68.5628685</td><td>  0.53467874</td><td>  0.9784574 </td><td>  1.7869432 </td><td> 0.50401613 </td><td> 0.49899092 </td><td>  0.7378041 </td><td> 1.6152000  </td></tr>
+<tr><th scope="row">coef.var</th><td>  0.2999881 </td><td>  0.2886338 </td><td>5.371779e-01</td><td>   0.4674077</td><td>  0.14866382</td><td>  0.3041285 </td><td>  0.1001159 </td><td> 1.15203687 </td><td> 1.22828533 </td><td>  0.2000825 </td><td> 0.5742933  </td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="describe-psych">describe-psych<a class="anchor-link" href="#describe-psych">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [41]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">suppressWarnings</span><span class="p">(</span><span class="kn">library</span><span class="p">(</span>psych<span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [19]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>describe<span class="p">(</span>d<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th></th><th scope="col">vars</th><th scope="col">n</th><th scope="col">mean</th><th scope="col">sd</th><th scope="col">median</th><th scope="col">trimmed</th><th scope="col">mad</th><th scope="col">min</th><th scope="col">max</th><th scope="col">range</th><th scope="col">skew</th><th scope="col">kurtosis</th><th scope="col">se</th></tr></thead>
+<tbody>
+<tr><th scope="row">mpg</th><td> 1         </td><td>32         </td><td> 20.090625 </td><td>  6.0269481</td><td> 19.200    </td><td> 19.6961538</td><td>  5.4114900</td><td>10.400     </td><td> 33.900    </td><td> 23.500    </td><td> 0.6106550 </td><td>-0.37276603</td><td> 1.06542396</td></tr>
+<tr><th scope="row">cyl</th><td> 2         </td><td>32         </td><td>  6.187500 </td><td>  1.7859216</td><td>  6.000    </td><td>  6.2307692</td><td>  2.9652000</td><td> 4.000     </td><td>  8.000    </td><td>  4.000    </td><td>-0.1746119 </td><td>-1.76211977</td><td> 0.31570933</td></tr>
+<tr><th scope="row">disp</th><td> 3         </td><td>32         </td><td>230.721875 </td><td>123.9386938</td><td>196.300    </td><td>222.5230769</td><td>140.4763500</td><td>71.100     </td><td>472.000    </td><td>400.900    </td><td> 0.3816570 </td><td>-1.20721195</td><td>21.90947271</td></tr>
+<tr><th scope="row">hp</th><td> 4         </td><td>32         </td><td>146.687500 </td><td> 68.5628685</td><td>123.000    </td><td>141.1923077</td><td> 77.0952000</td><td>52.000     </td><td>335.000    </td><td>283.000    </td><td> 0.7260237 </td><td>-0.13555112</td><td>12.12031731</td></tr>
+<tr><th scope="row">drat</th><td> 5         </td><td>32         </td><td>  3.596563 </td><td>  0.5346787</td><td>  3.695    </td><td>  3.5792308</td><td>  0.7042350</td><td> 2.760     </td><td>  4.930    </td><td>  2.170    </td><td> 0.2659039 </td><td>-0.71470062</td><td> 0.09451874</td></tr>
+<tr><th scope="row">wt</th><td> 6         </td><td>32         </td><td>  3.217250 </td><td>  0.9784574</td><td>  3.325    </td><td>  3.1526923</td><td>  0.7672455</td><td> 1.513     </td><td>  5.424    </td><td>  3.911    </td><td> 0.4231465 </td><td>-0.02271075</td><td> 0.17296847</td></tr>
+<tr><th scope="row">qsec</th><td> 7         </td><td>32         </td><td> 17.848750 </td><td>  1.7869432</td><td> 17.710    </td><td> 17.8276923</td><td>  1.4158830</td><td>14.500     </td><td> 22.900    </td><td>  8.400    </td><td> 0.3690453 </td><td> 0.33511422</td><td> 0.31588992</td></tr>
+<tr><th scope="row">vs</th><td> 8         </td><td>32         </td><td>  0.437500 </td><td>  0.5040161</td><td>  0.000    </td><td>  0.4230769</td><td>  0.0000000</td><td> 0.000     </td><td>  1.000    </td><td>  1.000    </td><td> 0.2402577 </td><td>-2.00193762</td><td> 0.08909831</td></tr>
+<tr><th scope="row">am</th><td> 9         </td><td>32         </td><td>  0.406250 </td><td>  0.4989909</td><td>  0.000    </td><td>  0.3846154</td><td>  0.0000000</td><td> 0.000     </td><td>  1.000    </td><td>  1.000    </td><td> 0.3640159 </td><td>-1.92474143</td><td> 0.08820997</td></tr>
+<tr><th scope="row">gear</th><td>10         </td><td>32         </td><td>  3.687500 </td><td>  0.7378041</td><td>  4.000    </td><td>  3.6153846</td><td>  1.4826000</td><td> 3.000     </td><td>  5.000    </td><td>  2.000    </td><td> 0.5288545 </td><td>-1.06975068</td><td> 0.13042656</td></tr>
+<tr><th scope="row">carb</th><td>11         </td><td>32         </td><td>  2.812500 </td><td>  1.6152000</td><td>  2.000    </td><td>  2.6538462</td><td>  1.4826000</td><td> 1.000     </td><td>  8.000    </td><td>  7.000    </td><td> 1.0508738 </td><td> 1.25704307</td><td> 0.28552971</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [24]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>describeBy<span class="p">(</span>d<span class="p">,</span>group<span class="o">=</span>d<span class="o">$</span>cyl<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_text output_subarea ">
+<pre>$`4`
+     vars  n   mean    sd median trimmed   mad   min    max range  skew
+mpg     1 11  26.66  4.51  26.00   26.44  6.52 21.40  33.90 12.50  0.26
+cyl     2 11   4.00  0.00   4.00    4.00  0.00  4.00   4.00  0.00   NaN
+disp    3 11 105.14 26.87 108.00  104.30 43.00 71.10 146.70 75.60  0.12
+hp      4 11  82.64 20.93  91.00   82.67 32.62 52.00 113.00 61.00  0.01
+drat    5 11   4.07  0.37   4.08    4.02  0.34  3.69   4.93  1.24  1.00
+wt      6 11   2.29  0.57   2.20    2.27  0.54  1.51   3.19  1.68  0.30
+qsec    7 11  19.14  1.68  18.90   18.99  1.48 16.70  22.90  6.20  0.55
+vs      8 11   0.91  0.30   1.00    1.00  0.00  0.00   1.00  1.00 -2.47
+am      9 11   0.73  0.47   1.00    0.78  0.00  0.00   1.00  1.00 -0.88
+gear   10 11   4.09  0.54   4.00    4.11  0.00  3.00   5.00  2.00  0.11
+carb   11 11   1.55  0.52   2.00    1.56  0.00  1.00   2.00  1.00 -0.16
+     kurtosis   se
+mpg     -1.65 1.36
+cyl       NaN 0.00
+disp    -1.64 8.10
+hp      -1.71 6.31
+drat     0.12 0.11
+wt      -1.36 0.17
+qsec    -0.02 0.51
+vs       4.52 0.09
+am      -1.31 0.14
+gear    -0.01 0.16
+carb    -2.15 0.16
+
+$`6`
+     vars n   mean    sd median trimmed   mad    min    max  range  skew
+mpg     1 7  19.74  1.45  19.70   19.74  1.93  17.80  21.40   3.60 -0.16
+cyl     2 7   6.00  0.00   6.00    6.00  0.00   6.00   6.00   0.00   NaN
+disp    3 7 183.31 41.56 167.60  183.31 11.27 145.00 258.00 113.00  0.80
+hp      4 7 122.29 24.26 110.00  122.29  7.41 105.00 175.00  70.00  1.36
+drat    5 7   3.59  0.48   3.90    3.59  0.03   2.76   3.92   1.16 -0.74
+wt      6 7   3.12  0.36   3.21    3.12  0.36   2.62   3.46   0.84 -0.22
+qsec    7 7  17.98  1.71  18.30   17.98  1.90  15.50  20.22   4.72 -0.12
+vs      8 7   0.57  0.53   1.00    0.57  0.00   0.00   1.00   1.00 -0.23
+am      9 7   0.43  0.53   0.00    0.43  0.00   0.00   1.00   1.00  0.23
+gear   10 7   3.86  0.69   4.00    3.86  0.00   3.00   5.00   2.00  0.11
+carb   11 7   3.43  1.81   4.00    3.43  0.00   1.00   6.00   5.00 -0.26
+     kurtosis    se
+mpg     -1.91  0.55
+cyl       NaN  0.00
+disp    -1.23 15.71
+hp       0.25  9.17
+drat    -1.40  0.18
+wt      -1.98  0.13
+qsec    -1.75  0.65
+vs      -2.20  0.20
+am      -2.20  0.20
+gear    -1.24  0.26
+carb    -1.50  0.69
+
+$`8`
+     vars  n   mean    sd median trimmed   mad    min    max  range  skew
+mpg     1 14  15.10  2.56  15.20   15.15  1.56  10.40  19.20   8.80 -0.36
+cyl     2 14   8.00  0.00   8.00    8.00  0.00   8.00   8.00   0.00   NaN
+disp    3 14 353.10 67.77 350.50  349.63 73.39 275.80 472.00 196.20  0.45
+hp      4 14 209.21 50.98 192.50  203.67 44.48 150.00 335.00 185.00  0.91
+drat    5 14   3.23  0.37   3.12    3.19  0.16   2.76   4.22   1.46  1.34
+wt      6 14   4.00  0.76   3.75    3.95  0.41   3.17   5.42   2.25  0.99
+qsec    7 14  16.77  1.20  17.18   16.86  0.79  14.50  18.00   3.50 -0.80
+vs      8 14   0.00  0.00   0.00    0.00  0.00   0.00   0.00   0.00   NaN
+am      9 14   0.14  0.36   0.00    0.08  0.00   0.00   1.00   1.00  1.83
+gear   10 14   3.29  0.73   3.00    3.17  0.00   3.00   5.00   2.00  1.83
+carb   11 14   3.50  1.56   3.50    3.25  0.74   2.00   8.00   6.00  1.48
+     kurtosis    se
+mpg     -0.57  0.68
+cyl       NaN  0.00
+disp    -1.26 18.11
+hp       0.09 13.62
+drat     1.08  0.10
+wt      -0.71  0.20
+qsec    -0.92  0.32
+vs        NaN  0.00
+am       1.45  0.10
+gear     1.45  0.19
+carb     2.24  0.42
+
+attr(,"call")
+by.data.frame(data = x, INDICES = group, FUN = describe, type = type)</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [25]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>describeBy<span class="p">(</span>d<span class="p">,</span>group<span class="o">=</span>d<span class="o">$</span>gear<span class="p">,</span>mat<span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th></th><th scope="col">item</th><th scope="col">group1</th><th scope="col">vars</th><th scope="col">n</th><th scope="col">mean</th><th scope="col">sd</th><th scope="col">median</th><th scope="col">trimmed</th><th scope="col">mad</th><th scope="col">min</th><th scope="col">max</th><th scope="col">range</th><th scope="col">skew</th><th scope="col">kurtosis</th><th scope="col">se</th></tr></thead>
+<tbody>
+<tr><th scope="row">mpg1</th><td>1          </td><td>3          </td><td> 1         </td><td>15         </td><td> 16.1066667</td><td>  3.3716182</td><td> 15.500    </td><td> 16.1307692</td><td>  3.261720 </td><td> 10.400    </td><td> 21.500    </td><td> 11.100    </td><td>-0.07358952</td><td>-0.9441784 </td><td> 0.87054808</td></tr>
+<tr><th scope="row">mpg2</th><td>2          </td><td>4          </td><td> 1         </td><td>12         </td><td> 24.5333333</td><td>  5.2767644</td><td> 22.800    </td><td> 24.2700000</td><td>  4.003020 </td><td> 17.800    </td><td> 33.900    </td><td> 16.100    </td><td> 0.53615833</td><td>-1.2736877 </td><td> 1.52327067</td></tr>
+<tr><th scope="row">mpg3</th><td>3          </td><td>5          </td><td> 1         </td><td> 5         </td><td> 21.3800000</td><td>  6.6589789</td><td> 19.700    </td><td> 21.3800000</td><td>  6.968220 </td><td> 15.000    </td><td> 30.400    </td><td> 15.400    </td><td> 0.26707885</td><td>-2.0123768 </td><td> 2.97798590</td></tr>
+<tr><th scope="row">cyl1</th><td>4          </td><td>3          </td><td> 2         </td><td>15         </td><td>  7.4666667</td><td>  1.1872337</td><td>  8.000    </td><td>  7.6923077</td><td>  0.000000 </td><td>  4.000    </td><td>  8.000    </td><td>  4.000    </td><td>-1.83857893</td><td> 2.1894424 </td><td> 0.30654242</td></tr>
+<tr><th scope="row">cyl2</th><td>5          </td><td>4          </td><td> 2         </td><td>12         </td><td>  4.6666667</td><td>  0.9847319</td><td>  4.000    </td><td>  4.6000000</td><td>  0.000000 </td><td>  4.000    </td><td>  6.000    </td><td>  2.000    </td><td> 0.62058627</td><td>-1.7395833 </td><td> 0.28426762</td></tr>
+<tr><th scope="row">cyl3</th><td>6          </td><td>5          </td><td> 2         </td><td> 5         </td><td>  6.0000000</td><td>  2.0000000</td><td>  6.000    </td><td>  6.0000000</td><td>  2.965200 </td><td>  4.000    </td><td>  8.000    </td><td>  4.000    </td><td> 0.00000000</td><td>-2.2000000 </td><td> 0.89442719</td></tr>
+<tr><th scope="row">disp1</th><td>7          </td><td>3          </td><td> 3         </td><td>15         </td><td>326.3000000</td><td> 94.8527355</td><td>318.000    </td><td>330.9538462</td><td> 62.565720 </td><td>120.100    </td><td>472.000    </td><td>351.900    </td><td>-0.24064114</td><td>-0.5915385 </td><td>24.49087099</td></tr>
+<tr><th scope="row">disp2</th><td>8          </td><td>4          </td><td> 3         </td><td>12         </td><td>123.0166667</td><td> 38.9092612</td><td>130.900    </td><td>123.7500000</td><td> 48.777540 </td><td> 71.100    </td><td>167.600    </td><td> 96.500    </td><td>-0.17580189</td><td>-1.8366318 </td><td>11.23213621</td></tr>
+<tr><th scope="row">disp3</th><td>9          </td><td>5          </td><td> 3         </td><td> 5         </td><td>202.4800000</td><td>115.4906360</td><td>145.000    </td><td>202.4800000</td><td> 73.981740 </td><td> 95.100    </td><td>351.000    </td><td>255.900    </td><td> 0.29203347</td><td>-2.1340840 </td><td>51.64898257</td></tr>
+<tr><th scope="row">hp1</th><td>10         </td><td>3          </td><td> 4         </td><td>15         </td><td>176.1333333</td><td> 47.6892720</td><td>180.000    </td><td>176.9230769</td><td> 44.478000 </td><td> 97.000    </td><td>245.000    </td><td>148.000    </td><td>-0.17699853</td><td>-1.1792791 </td><td>12.31331709</td></tr>
+<tr><th scope="row">hp2</th><td>11         </td><td>4          </td><td> 4         </td><td>12         </td><td> 89.5000000</td><td> 25.8931370</td><td> 94.000    </td><td> 89.9000000</td><td> 41.512800 </td><td> 52.000    </td><td>123.000    </td><td> 71.000    </td><td>-0.06791408</td><td>-1.7880342 </td><td> 7.47470482</td></tr>
+<tr><th scope="row">hp3</th><td>12         </td><td>5          </td><td> 4         </td><td> 5         </td><td>195.6000000</td><td>102.8338466</td><td>175.000    </td><td>195.6000000</td><td>124.538400 </td><td> 91.000    </td><td>335.000    </td><td>244.000    </td><td> 0.24132430</td><td>-1.9878156 </td><td>45.98869426</td></tr>
+<tr><th scope="row">drat1</th><td>13         </td><td>3          </td><td> 5         </td><td>15         </td><td>  3.1326667</td><td>  0.2736647</td><td>  3.080    </td><td>  3.1153846</td><td>  0.118608 </td><td>  2.760    </td><td>  3.730    </td><td>  0.970    </td><td> 0.91705694</td><td> 0.2290468 </td><td> 0.07065993</td></tr>
+<tr><th scope="row">drat2</th><td>14         </td><td>4          </td><td> 5         </td><td>12         </td><td>  4.0433333</td><td>  0.3123906</td><td>  3.920    </td><td>  3.9900000</td><td>  0.170499 </td><td>  3.690    </td><td>  4.930    </td><td>  1.240    </td><td> 1.74982139</td><td> 2.5791954 </td><td> 0.09017939</td></tr>
+<tr><th scope="row">drat3</th><td>15         </td><td>5          </td><td> 5         </td><td> 5         </td><td>  3.9160000</td><td>  0.3895254</td><td>  3.770    </td><td>  3.9160000</td><td>  0.340998 </td><td>  3.540    </td><td>  4.430    </td><td>  0.890    </td><td> 0.27642522</td><td>-2.0751595 </td><td> 0.17420103</td></tr>
+<tr><th scope="row">wt1</th><td>16         </td><td>3          </td><td> 6         </td><td>15         </td><td>  3.8926000</td><td>  0.8329929</td><td>  3.730    </td><td>  3.8846154</td><td>  0.429954 </td><td>  2.465    </td><td>  5.424    </td><td>  2.959    </td><td> 0.64365633</td><td>-0.5267312 </td><td> 0.21507783</td></tr>
+<tr><th scope="row">wt2</th><td>17         </td><td>4          </td><td> 6         </td><td>12         </td><td>  2.6166667</td><td>  0.6326687</td><td>  2.700    </td><td>  2.6345000</td><td>  0.733887 </td><td>  1.615    </td><td>  3.440    </td><td>  1.825    </td><td>-0.13814580</td><td>-1.5712118 </td><td> 0.18263573</td></tr>
+<tr><th scope="row">wt3</th><td>18         </td><td>5          </td><td> 6         </td><td> 5         </td><td>  2.6326000</td><td>  0.8189254</td><td>  2.770    </td><td>  2.6326000</td><td>  0.934038 </td><td>  1.513    </td><td>  3.570    </td><td>  2.057    </td><td>-0.19717645</td><td>-1.8944852 </td><td> 0.36623457</td></tr>
+<tr><th scope="row">qsec1</th><td>19         </td><td>3          </td><td> 7         </td><td>15         </td><td> 17.6920000</td><td>  1.3499164</td><td> 17.420    </td><td> 17.6730769</td><td>  0.815430 </td><td> 15.410    </td><td> 20.220    </td><td>  4.810    </td><td> 0.39409862</td><td>-0.6146645 </td><td> 0.34854692</td></tr>
+<tr><th scope="row">qsec2</th><td>20         </td><td>4          </td><td> 7         </td><td>12         </td><td> 18.9650000</td><td>  1.6138801</td><td> 18.755    </td><td> 18.8220000</td><td>  0.867321 </td><td> 16.460    </td><td> 22.900    </td><td>  6.440    </td><td> 0.78173034</td><td> 0.6322501 </td><td> 0.46588707</td></tr>
+<tr><th scope="row">qsec3</th><td>21         </td><td>5          </td><td> 7         </td><td> 5         </td><td> 15.6400000</td><td>  1.1304866</td><td> 15.500    </td><td> 15.6400000</td><td>  1.482600 </td><td> 14.500    </td><td> 16.900    </td><td>  2.400    </td><td> 0.08060013</td><td>-2.1866505 </td><td> 0.50556899</td></tr>
+<tr><th scope="row">vs1</th><td>22         </td><td>3          </td><td> 8         </td><td>15         </td><td>  0.2000000</td><td>  0.4140393</td><td>  0.000    </td><td>  0.1538462</td><td>  0.000000 </td><td>  0.000    </td><td>  1.000    </td><td>  1.000    </td><td> 1.35252850</td><td>-0.1688889 </td><td> 0.10690450</td></tr>
+<tr><th scope="row">vs2</th><td>23         </td><td>4          </td><td> 8         </td><td>12         </td><td>  0.8333333</td><td>  0.3892495</td><td>  1.000    </td><td>  0.9000000</td><td>  0.000000 </td><td>  0.000    </td><td>  1.000    </td><td>  1.000    </td><td>-1.56997287</td><td> 0.5291667 </td><td> 0.11236664</td></tr>
+<tr><th scope="row">vs3</th><td>24         </td><td>5          </td><td> 8         </td><td> 5         </td><td>  0.2000000</td><td>  0.4472136</td><td>  0.000    </td><td>  0.2000000</td><td>  0.000000 </td><td>  0.000    </td><td>  1.000    </td><td>  1.000    </td><td> 1.07331263</td><td>-0.9200000 </td><td> 0.20000000</td></tr>
+<tr><th scope="row">am1</th><td>25         </td><td>3          </td><td> 9         </td><td>15         </td><td>  0.0000000</td><td>  0.0000000</td><td>  0.000    </td><td>  0.0000000</td><td>  0.000000 </td><td>  0.000    </td><td>  0.000    </td><td>  0.000    </td><td>        NaN</td><td>       NaN </td><td> 0.00000000</td></tr>
+<tr><th scope="row">am2</th><td>26         </td><td>4          </td><td> 9         </td><td>12         </td><td>  0.6666667</td><td>  0.4923660</td><td>  1.000    </td><td>  0.7000000</td><td>  0.000000 </td><td>  0.000    </td><td>  1.000    </td><td>  1.000    </td><td>-0.62058627</td><td>-1.7395833 </td><td> 0.14213381</td></tr>
+<tr><th scope="row">am3</th><td>27         </td><td>5          </td><td> 9         </td><td> 5         </td><td>  1.0000000</td><td>  0.0000000</td><td>  1.000    </td><td>  1.0000000</td><td>  0.000000 </td><td>  1.000    </td><td>  1.000    </td><td>  0.000    </td><td>        NaN</td><td>       NaN </td><td> 0.00000000</td></tr>
+<tr><th scope="row">gear1</th><td>28         </td><td>3          </td><td>10         </td><td>15         </td><td>  3.0000000</td><td>  0.0000000</td><td>  3.000    </td><td>  3.0000000</td><td>  0.000000 </td><td>  3.000    </td><td>  3.000    </td><td>  0.000    </td><td>        NaN</td><td>       NaN </td><td> 0.00000000</td></tr>
+<tr><th scope="row">gear2</th><td>29         </td><td>4          </td><td>10         </td><td>12         </td><td>  4.0000000</td><td>  0.0000000</td><td>  4.000    </td><td>  4.0000000</td><td>  0.000000 </td><td>  4.000    </td><td>  4.000    </td><td>  0.000    </td><td>        NaN</td><td>       NaN </td><td> 0.00000000</td></tr>
+<tr><th scope="row">gear3</th><td>30         </td><td>5          </td><td>10         </td><td> 5         </td><td>  5.0000000</td><td>  0.0000000</td><td>  5.000    </td><td>  5.0000000</td><td>  0.000000 </td><td>  5.000    </td><td>  5.000    </td><td>  0.000    </td><td>        NaN</td><td>       NaN </td><td> 0.00000000</td></tr>
+<tr><th scope="row">carb1</th><td>31         </td><td>3          </td><td>11         </td><td>15         </td><td>  2.6666667</td><td>  1.1751393</td><td>  3.000    </td><td>  2.6923077</td><td>  1.482600 </td><td>  1.000    </td><td>  4.000    </td><td>  3.000    </td><td>-0.12780746</td><td>-1.6094332 </td><td> 0.30341966</td></tr>
+<tr><th scope="row">carb2</th><td>32         </td><td>4          </td><td>11         </td><td>12         </td><td>  2.3333333</td><td>  1.3026779</td><td>  2.000    </td><td>  2.3000000</td><td>  1.482600 </td><td>  1.000    </td><td>  4.000    </td><td>  3.000    </td><td> 0.33508509</td><td>-1.7395833 </td><td> 0.37605072</td></tr>
+<tr><th scope="row">carb3</th><td>33         </td><td>5          </td><td>11         </td><td> 5         </td><td>  4.4000000</td><td>  2.6076810</td><td>  4.000    </td><td>  4.4000000</td><td>  2.965200 </td><td>  2.000    </td><td>  8.000    </td><td>  6.000    </td><td> 0.25986578</td><td>-1.9580623 </td><td> 1.16619038</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+  </div>
+  
+<div class="article-tag-list">
+<span class="label label-default">Tags</span>
+	<a href="http://www.hamzazubair.com/tag/r"><i class="fa fa-tag"></i>r</a>&nbsp;
+	<a href="http://www.hamzazubair.com/tag/descriptive"><i class="fa fa-tag"></i>descriptive</a>&nbsp;
+</div>  <hr />
+  <div class="well well-sm">  <!-- Social media sharing buttons -->
+    <!-- Twitter -->
+    <a href="https://twitter.com/share" class="twitter-share-button" 
+       data-via="hamzamohdzubair" >Tweet</a>&nbsp;
+
+    <!-- Google+ -->
+    <div class="g-plus" data-action="share" data-annotation="bubble"></div>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="g-plusone" data-size="medium"></div>&nbsp;
+
+    <!-- Facebook -->
+    <div class="fb-like" 
+        data-href="http://www.hamzazubair.com/first-looks-at-data/quick-numerical-summeries-in-r" 
+        data-layout="button_count" 
+        data-action="like" data-show-faces="true" 
+        data-share="true">
+    </div>
+    &nbsp;
+  </div> <!-- /Social media sharing buttons --><hr />
+<h4>Did you like the article? Did you hate it? Please leave a comment...</h4>
+  <div class="comments">
+	<h2>Comments</h2>
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+				   (function() {
+						var dsq = document.createElement('script');
+						dsq.type = 'text/javascript'; dsq.async = true;
+						dsq.src = '//hamzamohdzubair-github-io.disqus.com/embed.js';
+						(document.getElementsByTagName('head')[0] ||
+						 document.getElementsByTagName('body')[0]).appendChild(dsq);
+				  })();
+	</script>
+  </div>
+</article>
+        </div><!-- /content -->
+
+        <div class="col-md-3 sidebar-nav" id="sidebar">
+<h4><i class="fa fa-pied-piper fa-fw fa-lg"></i> About</h4>
+<h5>Though trained as an Engineer and a Cognitvie Scientist, Hamza Zubair is currently interested in Data Science. He believes AI is not the future but a thing of yesterday. Today is the age of Super Intelligence and all-powerful machines. We may not exist to witness a tomorrow. </h5>
+<div class="row">
+
+<div class="col-xs-6 col-md-12">
+<h4><i class="fa fa-comment fa-fw fa-lg"></i> Connect</h4>
+<ul class="list-unstyled social-links">
+    <li><a href="https://in.linkedin.com/in/hamza-zubair-095022128" target="_blank">
+	  <i class="fa fa-linkedin-square fa-fw fa-lg" title="LinkedIn"></i>
+		LinkedIn
+	</a></li>
+    <li><a href="https://twitter.com/hamzamohdzubair" target="_blank">
+	  <i class="fa fa-twitter-square fa-fw fa-lg" title="Twitter"></i>
+		Twitter
+	</a></li>
+    <li><a href="http://facebook.com/thelionphoenix" target="_blank">
+	  <i class="fa fa-facebook-square fa-fw fa-lg" title="Facebook"></i>
+		Facebook
+	</a></li>
+    <li><a href="mailto:hamzamohdzubair@gmail.com" target="_blank">
+	  <i class="fa fa-envelope-square fa-fw fa-lg" title="Email"></i>
+		Email
+	</a></li>
+</ul>
+</div>
+
+<div class="col-xs-6 col-md-12">
+<h4><i class="fa fa-folder fa-fw fa-lg"></i> Categories</h4>
+<ul class="list-unstyled category-links">
+  <li><a href="http://www.hamzazubair.com/decision-trees" >
+    <i class="fa fa-folder-open-o fa-fw fa-lg"></i> Decision Trees</a></li>
+  <li><a href="http://www.hamzazubair.com/first-looks-at-data" >
+    <i class="fa fa-folder-open-o fa-fw fa-lg"></i> First Looks at Data</a></li>
+  <li><a href="http://www.hamzazubair.com/hitchhikers-guide-to-ggplot2" >
+    <i class="fa fa-folder-open-o fa-fw fa-lg"></i> Hitchhikers Guide to ggplot2</a></li>
+  <li><a href="http://www.hamzazubair.com/playing-with-data" >
+    <i class="fa fa-folder-open-o fa-fw fa-lg"></i> Playing with Data</a></li>
+  <li><a href="http://www.hamzazubair.com/projects" >
+    <i class="fa fa-folder-open-o fa-fw fa-lg"></i> Projects</a></li>
+</ul>
+</div>
+
+</div> <!-- /row -->
+
+
+
+<h4><i class="fa fa-tags fa-fw fa-lg"></i> Tags</h4>
+<p class="tag-cloud">
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/binning">
+        binning
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/movies">
+        movies
+    </a>
+</span>
+<span class="tag-3">
+    <a href="http://www.hamzazubair.com/tag/machine-learning">
+        machine learning
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/housing">
+        housing
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/texas">
+        texas
+    </a>
+</span>
+<span class="tag-3">
+    <a href="http://www.hamzazubair.com/tag/edwisor">
+        edwisor
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/dplyr">
+        dplyr
+    </a>
+</span>
+<span class="tag-1">
+    <a href="http://www.hamzazubair.com/tag/r">
+        r
+    </a>
+</span>
+<span class="tag-3">
+    <a href="http://www.hamzazubair.com/tag/ggplot2">
+        ggplot2
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/c50">
+        c5.0
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/imdb">
+        imdb
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/descriptive">
+        descriptive
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/text-mining">
+        text mining
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/line-plots">
+        line plots
+    </a>
+</span>
+<span class="tag-2">
+    <a href="http://www.hamzazubair.com/tag/decision-trees">
+        decision trees
+    </a>
+</span>
+</p>
+
+
+<hr />
+
+
+
+<h4><i class="fa fa-rss fa-fw fa-lg"></i> Feeds</h4>
+<ul class="list-unstyled">
+    <li><a href="http://www.hamzazubair.com/feeds/all.atom.xml" 
+		   type="application/atom+xml" rel="alternate">
+		<i class="fa fa-rss-square fa-fw fa-lg"></i> Atom Feed</a></li>
+</ul>
+
+<hr />
+
+
+<h4><i class="fa fa-heart fa-fw fa-lg"></i> Sites I Like</h4>
+<ul class="list-unstyled category-links">
+  <li><a href=https://www.r-bloggers.com/ >
+    <i class="fa fa-fw fa-chevron-right fa-lg"></i> R Bloggers</a></li>
+  <li><a href=http://neuralnetworksanddeeplearning.com/ >
+    <i class="fa fa-fw fa-chevron-right fa-lg"></i> Deep Learning</a></li>
+  <li><a href=https://advanceddataanalytics.net/ >
+    <i class="fa fa-fw fa-chevron-right fa-lg"></i> Advanced Data Analytics</a></li>
+  <li><a href=https://www.analyticsvidhya.com/ >
+    <i class="fa fa-fw fa-chevron-right fa-lg"></i> Analytics Vidhya</a></li>
+  <li><a href=http://www.saedsayad.com/data_mining_map.htm >
+    <i class="fa fa-fw fa-chevron-right fa-lg"></i> Saed Sayad</a></li>
+</ul>
+
+<hr />
+
+        </div><!--/sidebar -->
+      </div><!--/row-->
+    </div><!--/.container /#main-container -->
+
+    <footer id="site-footer">
+<hr />
+<p style="text-align:center">&copy; Copyright 2016 Hamza Mohd. Zubair. All rights reserved. Code snippets in the pages are released under <a href=\"http://opensource.org/licenses/MIT\" target=\"_blank\">The MIT License</a>, unless otherwise specified.</p>
+ 
+      <!-- Site built using Pelican.  Theme based on VoidyBootstrap. -->
+    </footer>
+
+<!-- DISQUS script for displaying comment count -->
+<script type="text/javascript">
+    var disqus_shortname = 'hamzamohdzubair-github-io';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+
+    <!-- javascript -->
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+
+<!-- Facebook -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<!-- Google+ -->
+<!-- Synchronous 
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+-->
+<!-- Asynchronous -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>  </body>
+</html>

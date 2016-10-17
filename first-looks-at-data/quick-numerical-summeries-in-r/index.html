@@ -1089,6 +1089,7 @@ h6:hover .anchor-link {
 <li><a href="#tail">tail</a></li>
 <li><a href="#dim">dim</a></li>
 <li><a href="#str">str</a></li>
+<li><a href="#attributes">attributes</a></li>
 <li><a href="#summary">summary</a></li>
 <li><a href="#sapply">sapply</a></li>
 <li><a href="#describe">describe (Hmisc)</a></li>
@@ -1109,7 +1110,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [3]:</div>
+<div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>d<span class="o">=</span>mtcars
@@ -1264,6 +1265,89 @@ h6:hover .anchor-link {
  $ gear: num  4 4 4 3 3 3 3 4 4 4 ...
  $ carb: num  4 4 1 1 2 1 4 2 2 4 ...
 </pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="attributes">attributes<a class="anchor-link" href="#attributes">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">attributes</span><span class="p">(</span>d<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<dl>
+<dt>$names</dt>
+<dd><ol class="list-inline">
+<li>'mpg'</li>
+<li>'cyl'</li>
+<li>'disp'</li>
+<li>'hp'</li>
+<li>'drat'</li>
+<li>'wt'</li>
+<li>'qsec'</li>
+<li>'vs'</li>
+<li>'am'</li>
+<li>'gear'</li>
+<li>'carb'</li>
+</ol>
+</dd>
+<dt>$row.names</dt>
+<dd><ol class="list-inline">
+<li>'Mazda RX4'</li>
+<li>'Mazda RX4 Wag'</li>
+<li>'Datsun 710'</li>
+<li>'Hornet 4 Drive'</li>
+<li>'Hornet Sportabout'</li>
+<li>'Valiant'</li>
+<li>'Duster 360'</li>
+<li>'Merc 240D'</li>
+<li>'Merc 230'</li>
+<li>'Merc 280'</li>
+<li>'Merc 280C'</li>
+<li>'Merc 450SE'</li>
+<li>'Merc 450SL'</li>
+<li>'Merc 450SLC'</li>
+<li>'Cadillac Fleetwood'</li>
+<li>'Lincoln Continental'</li>
+<li>'Chrysler Imperial'</li>
+<li>'Fiat 128'</li>
+<li>'Honda Civic'</li>
+<li>'Toyota Corolla'</li>
+<li>'Toyota Corona'</li>
+<li>'Dodge Challenger'</li>
+<li>'AMC Javelin'</li>
+<li>'Camaro Z28'</li>
+<li>'Pontiac Firebird'</li>
+<li>'Fiat X1-9'</li>
+<li>'Porsche 914-2'</li>
+<li>'Lotus Europa'</li>
+<li>'Ford Pantera L'</li>
+<li>'Ferrari Dino'</li>
+<li>'Maserati Bora'</li>
+<li>'Volvo 142E'</li>
+</ol>
+</dd>
+<dt>$class</dt>
+<dd>'data.frame'</dd>
+</dl>
 </div>
 </div>
 </div>
@@ -1926,14 +2010,9 @@ by.data.frame(data = x, INDICES = group, FUN = describe, type = type)</pre>
 
 <h4><i class="fa fa-tags fa-fw fa-lg"></i> Tags</h4>
 <p class="tag-cloud">
-<span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/line-plots">
-        line plots
-    </a>
-</span>
-<span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/texas">
-        texas
+<span class="tag-2">
+    <a href="http://www.hamzazubair.com/tag/ggplot2">
+        ggplot2
     </a>
 </span>
 <span class="tag-1">
@@ -1942,28 +2021,8 @@ by.data.frame(data = x, INDICES = group, FUN = describe, type = type)</pre>
     </a>
 </span>
 <span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/descriptive">
-        descriptive
-    </a>
-</span>
-<span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/movies">
-        movies
-    </a>
-</span>
-<span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/dplyr">
-        dplyr
-    </a>
-</span>
-<span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/c50">
-        c5.0
-    </a>
-</span>
-<span class="tag-3">
-    <a href="http://www.hamzazubair.com/tag/machine-learning">
-        machine learning
+    <a href="http://www.hamzazubair.com/tag/binning">
+        binning
     </a>
 </span>
 <span class="tag-4">
@@ -1972,28 +2031,23 @@ by.data.frame(data = x, INDICES = group, FUN = describe, type = type)</pre>
     </a>
 </span>
 <span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/texas">
+        texas
+    </a>
+</span>
+<span class="tag-4">
     <a href="http://www.hamzazubair.com/tag/text-mining">
         text mining
     </a>
 </span>
 <span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/binning">
-        binning
+    <a href="http://www.hamzazubair.com/tag/line-plots">
+        line plots
     </a>
 </span>
 <span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/area-plots">
-        area plots
-    </a>
-</span>
-<span class="tag-2">
-    <a href="http://www.hamzazubair.com/tag/ggplot2">
-        ggplot2
-    </a>
-</span>
-<span class="tag-4">
-    <a href="http://www.hamzazubair.com/tag/edwisor">
-        edwisor
+    <a href="http://www.hamzazubair.com/tag/descriptive">
+        descriptive
     </a>
 </span>
 <span class="tag-4">
@@ -2004,6 +2058,36 @@ by.data.frame(data = x, INDICES = group, FUN = describe, type = type)</pre>
 <span class="tag-2">
     <a href="http://www.hamzazubair.com/tag/decision-trees">
         decision trees
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/dplyr">
+        dplyr
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/area-plots">
+        area plots
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/c50">
+        c5.0
+    </a>
+</span>
+<span class="tag-4">
+    <a href="http://www.hamzazubair.com/tag/movies">
+        movies
+    </a>
+</span>
+<span class="tag-3">
+    <a href="http://www.hamzazubair.com/tag/edwisor">
+        edwisor
+    </a>
+</span>
+<span class="tag-3">
+    <a href="http://www.hamzazubair.com/tag/machine-learning">
+        machine learning
     </a>
 </span>
 </p>
@@ -2035,6 +2119,8 @@ by.data.frame(data = x, INDICES = group, FUN = describe, type = type)</pre>
     <i class="fa fa-fw fa-chevron-right fa-lg"></i> Analytics Vidhya</a></li>
   <li><a href=http://www.saedsayad.com/data_mining_map.htm >
     <i class="fa fa-fw fa-chevron-right fa-lg"></i> Saed Sayad</a></li>
+  <li><a href=http://adv-r.had.co.nz/ >
+    <i class="fa fa-fw fa-chevron-right fa-lg"></i> Advanced R</a></li>
 </ul>
 
 <hr />

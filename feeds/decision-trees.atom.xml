@@ -3342,7 +3342,7 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [47]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [2]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;C50&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3366,7 +3366,7 @@ data&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kp"&gt;rbind&lt;/span&gt
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [48]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [3]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;head&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3396,7 +3396,7 @@ data&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kp"&gt;rbind&lt;/span&gt
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [49]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [4]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;str&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3437,7 +3437,7 @@ data&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kp"&gt;rbind&lt;/span&gt
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [50]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [5]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;dim&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3460,7 +3460,7 @@ data&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kp"&gt;rbind&lt;/span&gt
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [51]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [6]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;summary&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3528,7 +3528,7 @@ data&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kp"&gt;rbind&lt;/span&gt
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [52]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [7]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;set.seed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;123456&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3541,7 +3541,7 @@ data.train&lt;span class="o"&gt;=&lt;/span&gt;data&lt;span class="p"&gt;[&lt;/sp
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [53]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [8]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;dim&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data.train&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3564,7 +3564,7 @@ data.train&lt;span class="o"&gt;=&lt;/span&gt;data&lt;span class="p"&gt;[&lt;/sp
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [54]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [9]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;head&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data.train&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3603,7 +3603,7 @@ data.train&lt;span class="o"&gt;=&lt;/span&gt;data&lt;span class="p"&gt;[&lt;/sp
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [55]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [10]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;sample&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3643,7 +3643,7 @@ data.train&lt;span class="o"&gt;=&lt;/span&gt;data&lt;span class="p"&gt;[&lt;/sp
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [56]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [11]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;sample&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3683,7 +3683,7 @@ data.train&lt;span class="o"&gt;=&lt;/span&gt;data&lt;span class="p"&gt;[&lt;/sp
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [57]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [12]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;sample&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3709,7 +3709,7 @@ data.train&lt;span class="o"&gt;=&lt;/span&gt;data&lt;span class="p"&gt;[&lt;/sp
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [58]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [13]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;sample&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3747,13 +3747,13 @@ data.train&lt;span class="o"&gt;=&lt;/span&gt;data&lt;span class="p"&gt;[&lt;/sp
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Now we also need to extrain the test set, which is all the data sets that are not in the training set...&lt;/p&gt;
+&lt;p&gt;Now we also need to extract the test set, which is all the data sets that are not in the training set...&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [59]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [14]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;data.test&lt;span class="o"&gt;=&lt;/span&gt;data&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;train&lt;span class="p"&gt;,]&lt;/span&gt;
@@ -3764,7 +3764,7 @@ data.train&lt;span class="o"&gt;=&lt;/span&gt;data&lt;span class="p"&gt;[&lt;/sp
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [60]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [15]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;dim&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data.test&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3787,7 +3787,7 @@ data.train&lt;span class="o"&gt;=&lt;/span&gt;data&lt;span class="p"&gt;[&lt;/sp
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [61]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [16]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;head&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data.test&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3820,16 +3820,16 @@ data.train&lt;span class="o"&gt;=&lt;/span&gt;data&lt;span class="p"&gt;[&lt;/sp
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Now we have the data divided into a training set and a test set. Now let's build the decision tree using C5.0 algorithm. First we will see the rules it generates, then we will look at the tree.&lt;/p&gt;
+&lt;h2 id="The-Rules"&gt;The Rules&lt;a class="anchor-link" href="#The-Rules"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Now we have the data divided into a training set and a test set. Now let's build the decision tree using C5.0 algorithm. First we will see the rules it generates, then we will look at the tree.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [62]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [34]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;rulemodel&lt;span class="o"&gt;=&lt;/span&gt; C5.0&lt;span class="p"&gt;(&lt;/span&gt;churn &lt;span class="o"&gt;~&lt;/span&gt; &lt;span class="m"&gt;.&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; data&lt;span class="o"&gt;=&lt;/span&gt;data.train&lt;span class="p"&gt;,&lt;/span&gt;rules&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;T&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;rulemodel &lt;span class="o"&gt;=&lt;/span&gt; C5.0&lt;span class="p"&gt;(&lt;/span&gt;churn &lt;span class="o"&gt;~&lt;/span&gt; &lt;span class="m"&gt;.&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; data &lt;span class="o"&gt;=&lt;/span&gt; data.train&lt;span class="p"&gt;,&lt;/span&gt; rules &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;T&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -3846,7 +3846,7 @@ data.train&lt;span class="o"&gt;=&lt;/span&gt;data&lt;span class="p"&gt;[&lt;/sp
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [63]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [35]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;rulemodel
@@ -3886,7 +3886,7 @@ Non-standard options: attempt to group attributes
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [64]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [19]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;summary&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;rulemodel&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3903,7 +3903,7 @@ Call:
 C5.0.formula(formula = churn ~ ., data = data.train, rules = T)
 
 
-C5.0 [Release 2.07 GPL Edition]  	Fri Oct  7 19:51:50 2016
+C5.0 [Release 2.07 GPL Edition]  	Wed Oct 19 19:45:12 2016
 -------------------------------
 
 Class specified by attribute `outcome'
@@ -4055,7 +4055,7 @@ Evaluation on training data (4800 cases):
 	  0.56%	total_night_calls
 
 
-Time: 0.2 secs
+Time: 0.1 secs
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -4073,7 +4073,7 @@ Time: 0.2 secs
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [65]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [20]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;test.pred &lt;span class="o"&gt;=&lt;/span&gt; predict&lt;span class="p"&gt;(&lt;/span&gt;rulemodel&lt;span class="p"&gt;,&lt;/span&gt;data.test&lt;span class="p"&gt;[,&lt;/span&gt;&lt;span class="m"&gt;-20&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;type&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"class"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -4084,7 +4084,7 @@ Time: 0.2 secs
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [66]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [21]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;test.pred
@@ -4314,7 +4314,7 @@ Time: 0.2 secs
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [67]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [22]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;table&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;data.test&lt;span class="p"&gt;[,&lt;/span&gt;&lt;span class="m"&gt;20&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;test.pred&lt;span class="p"&gt;)&lt;/span&gt;
@@ -4340,7 +4340,64 @@ Time: 0.2 secs
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Beautiful way of checking how your model performed.&lt;/p&gt;
+&lt;p&gt;Beautiful way of checking how your model performed. The rows are the actual classes and the columns are the predicted classes. So you can see it made 13 errors (12+1).&lt;/p&gt;
+&lt;p&gt;Another method of doing this is by using the &lt;em&gt;gmodels&lt;/em&gt; package.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [24]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;gmodels&lt;span class="p"&gt;)&lt;/span&gt;
+CrossTable&lt;span class="p"&gt;(&lt;/span&gt;data.test&lt;span class="p"&gt;[,&lt;/span&gt;&lt;span class="m"&gt;20&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;test.pred&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;
+ 
+   Cell Contents
+|-------------------------|
+|                       N |
+| Chi-square contribution |
+|           N / Row Total |
+|           N / Col Total |
+|         N / Table Total |
+|-------------------------|
+
+ 
+Total Observations in Table:  200 
+
+ 
+                | test.pred 
+data.test[, 20] |       yes |        no | Row Total | 
+----------------|-----------|-----------|-----------|
+            yes |        18 |        12 |        30 | 
+                |    80.534 |     8.454 |           | 
+                |     0.600 |     0.400 |     0.150 | 
+                |     0.947 |     0.066 |           | 
+                |     0.090 |     0.060 |           | 
+----------------|-----------|-----------|-----------|
+             no |         1 |       169 |       170 | 
+                |    14.212 |     1.492 |           | 
+                |     0.006 |     0.994 |     0.850 | 
+                |     0.053 |     0.934 |           | 
+                |     0.005 |     0.845 |           | 
+----------------|-----------|-----------|-----------|
+   Column Total |        19 |       181 |       200 | 
+                |     0.095 |     0.905 |           | 
+----------------|-----------|-----------|-----------|
+
+ 
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -4349,16 +4406,16 @@ Time: 0.2 secs
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;This is how we read in the rules created by the decision tree but we can also visualize the decision tree itself.&lt;/p&gt;
+&lt;h2 id="The-Tree"&gt;The Tree&lt;a class="anchor-link" href="#The-Tree"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;This is how we read in the rules created by the decision tree but we can also visualize the decision tree itself.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [68]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [38]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;tree &lt;span class="o"&gt;=&lt;/span&gt; C5.0&lt;span class="p"&gt;(&lt;/span&gt;churn &lt;span class="o"&gt;~&lt;/span&gt; &lt;span class="m"&gt;.&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; data&lt;span class="o"&gt;=&lt;/span&gt;data.train&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;tree &lt;span class="o"&gt;=&lt;/span&gt; C5.0&lt;span class="p"&gt;(&lt;/span&gt;churn &lt;span class="o"&gt;~&lt;/span&gt; &lt;span class="m"&gt;.&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; data &lt;span class="o"&gt;=&lt;/span&gt; data.train&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -4366,7 +4423,7 @@ Time: 0.2 secs
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [69]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [39]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;tree
@@ -4406,7 +4463,7 @@ Non-standard options: attempt to group attributes
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [70]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [27]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;summary&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;tree&lt;span class="p"&gt;)&lt;/span&gt;
@@ -4423,7 +4480,7 @@ Call:
 C5.0.formula(formula = churn ~ ., data = data.train)
 
 
-C5.0 [Release 2.07 GPL Edition]  	Fri Oct  7 19:51:51 2016
+C5.0 [Release 2.07 GPL Edition]  	Wed Oct 19 19:45:39 2016
 -------------------------------
 
 Class specified by attribute `outcome'
@@ -4527,7 +4584,7 @@ Evaluation on training data (4800 cases):
 	  0.23%	total_night_calls
 
 
-Time: 0.2 secs
+Time: 0.1 secs
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -4545,7 +4602,7 @@ Time: 0.2 secs
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [85]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [28]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;png&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"dectree.png"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;width&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;4000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;height&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;2000&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -4577,7 +4634,7 @@ dev.off&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [86]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [29]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;plot&lt;span class="p"&gt;(&lt;/span&gt;tree&lt;span class="p"&gt;,&lt;/span&gt;trial&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;subtree&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;38&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;

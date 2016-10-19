@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.hamzazubair.com/</loc>
-<lastmod>2016-10-19T15:41:11-00:00</lastmod>
+<lastmod>2016-10-19T19:23:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>http://www.hamzazubair.com/archives.html</loc>
-<lastmod>2016-10-19T15:41:11-00:00</lastmod>
+<lastmod>2016-10-19T19:23:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>http://www.hamzazubair.com/tags.html</loc>
-<lastmod>2016-10-19T15:41:11-00:00</lastmod>
+<lastmod>2016-10-19T19:23:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>http://www.hamzazubair.com/categories.html</loc>
-<lastmod>2016-10-19T15:41:11-00:00</lastmod>
+<lastmod>2016-10-19T19:23:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -67,15 +67,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://www.hamzazubair.com/tag/machine-learning</loc>
-<lastmod>2016-10-05T00:00:00+05:53</lastmod>
+<loc>http://www.hamzazubair.com/tag/ggplot2</loc>
+<lastmod>2016-10-09T00:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://www.hamzazubair.com/tag/imdb</loc>
-<lastmod>2016-09-18T00:00:00+05:53</lastmod>
+<loc>http://www.hamzazubair.com/tag/machine-learning</loc>
+<lastmod>2016-10-05T00:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -88,14 +88,42 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://www.hamzazubair.com/tag/line-plots</loc>
-<lastmod>2016-10-02T00:00:00+05:53</lastmod>
+<loc>http://www.hamzazubair.com/tag/housing</loc>
+<lastmod>2016-10-01T00:00:00+05:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>http://www.hamzazubair.com/tag/area-plots</loc>
+<lastmod>2016-10-09T00:00:00+05:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>http://www.hamzazubair.com/tag/imdb</loc>
+<lastmod>2016-09-18T00:00:00+05:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>http://www.hamzazubair.com/tag/edwisor</loc>
+<lastmod>2016-10-07T00:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>http://www.hamzazubair.com/tag/movies</loc>
+<lastmod>2016-09-18T00:00:00+05:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>http://www.hamzazubair.com/tag/binning</loc>
 <lastmod>2016-09-18T00:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
@@ -109,8 +137,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://www.hamzazubair.com/tag/ggplot2</loc>
-<lastmod>2016-10-09T00:00:00+05:53</lastmod>
+<loc>http://www.hamzazubair.com/tag/c50</loc>
+<lastmod>2016-10-05T00:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -123,13 +151,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://www.hamzazubair.com/tag/texas</loc>
-<lastmod>2016-10-01T00:00:00+05:53</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
 <loc>http://www.hamzazubair.com/tag/r</loc>
 <lastmod>2016-10-09T00:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
@@ -137,22 +158,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://www.hamzazubair.com/tag/binning</loc>
-<lastmod>2016-09-18T00:00:00+05:53</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>http://www.hamzazubair.com/tag/area-plots</loc>
-<lastmod>2016-10-09T00:00:00+05:53</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>http://www.hamzazubair.com/tag/housing</loc>
+<loc>http://www.hamzazubair.com/tag/texas</loc>
 <lastmod>2016-10-01T00:00:00+05:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>http://www.hamzazubair.com/tag/line-plots</loc>
+<lastmod>2016-10-02T00:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -160,20 +174,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://www.hamzazubair.com/tag/descriptive</loc>
 <lastmod>2016-10-08T00:00:00+05:53</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>http://www.hamzazubair.com/tag/c50</loc>
-<lastmod>2016-10-05T00:00:00+05:53</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>http://www.hamzazubair.com/tag/edwisor</loc>
-<lastmod>2016-10-07T00:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
